@@ -27,10 +27,9 @@
     padding-bottom: 50px;
     
     }
-/* 화살표 */
 .slick-arrow {
-	z-index: 2; /* prev버튼은 위치 이동시 이미지 뒤로 숨겨짐 */
-	position: absolute; /* 원하는 위치에 지정 */
+	z-index: 2; 
+	position: absolute; 
 	top: 50%;
 	width: 50px;
 	height: 50px;
