@@ -4,7 +4,7 @@
 <%@ page session="false" %>
 <html>
 <head>
-	<title>Home</title>
+	<title>asdasd</title>
 </head>
 <body>
 <h1>
