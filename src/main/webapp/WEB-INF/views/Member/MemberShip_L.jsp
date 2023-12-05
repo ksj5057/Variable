@@ -299,6 +299,7 @@
 	vertical-align: top;
 	display: inline-block;
 	cursor: pointer;
+	text-decoration-line: none;
 }
 
 .btn_center {
@@ -321,8 +322,6 @@
     background: #fff;
     margin-top: 6px;
     }
-    
-    
 </style>
 </head>
 <body>
@@ -332,57 +331,7 @@
 		<form name="editForm" action="join_persist.do" method="post"
 			onsubmit="return checkformField( this, null );">
 
-			<input type="hidden" id="roadFullAddr" name="roadFullAddr"
-				style="width: 85%">
-			<!--전체 도로명주소  -->
-			<input type="hidden" id="roadAddrPart1" name="roadAddrPart1"
-				style="width: 85%">
-			<!--주소  -->
-			<input type="hidden" id="jibunAddr" name="jibunAddr"
-				style="width: 40%" value="">
-			<!-- 상세주소  -->
-			<input type="hidden" id="zipNo" name="zipNo" style="width: 40%"
-				value="">
-			<!--우편번호  -->
-			<input type="hidden" id="rnMgtSn" name="rnMgtSn" style="width: 40%"
-				value="">
-			<!-- 도로명코드  -->
-
-			<input type="hidden" id="bdNm" name="bdNm" style="width: 40%"
-				value="">
-			<!-- 건물명  -->
-			<input type="hidden" id="siNm" name="siNm" style="width: 40%"
-				value="">
-			<!-- 시도명  -->
-			<input type="hidden" id="sggNm" name="sggNm" style="width: 40%"
-				value="">
-			<!-- 시군구명  -->
-			<input type="hidden" id="emdNm" name="emdNm" style="width: 40%"
-				value="">
-			<!-- 읍면동명  -->
-			<input type="hidden" id="liNm" name="liNm" style="width: 40%"
-				value="">
-			<!-- 법정리명  -->
-
-			<input type="hidden" id="rn" name="rn" style="width: 40%" value="">
-			<!-- 도로명  -->
-			<input type="hidden" id="buldMnnm" name="buldMnnm" style="width: 40%"
-				value="">
-			<!-- 건물본명  -->
-			<input type="hidden" id="buldSlno" name="buldSlno" style="width: 40%"
-				value="">
-			<!-- 건물부번  -->
-			<input type="hidden" id="lnbrMnnm" name="lnbrMnnm" style="width: 40%"
-				value="">
-			<!-- 지번본번  -->
-			<input type="hidden" id="emdNo" name="emdNo" style="width: 40%"
-				value="">
-			<!-- 읍면동일련번호  -->
-
-			<input type="hidden" name="sex" value="M">
-
-			<fieldset>
-
+<fieldset>
 				<table class="table_type2">
 					<tbody>
 						<tr>
@@ -464,81 +413,6 @@
 							</td>
 						</tr>
 
-						<tr>
-							<th>우편번호 <strong class="cor_point">*<span
-									class="skip">필수입력</span></strong></th>
-							<td colspan="3">
-								<p>
-									<input type="hidden" name="zip_seq_no" value=""> <input
-										class="input_text2" type="text" readonly="readonly"
-										title="우편번호" id="postNum" name="zipcd" value=""> <em></em>
-									<a href="javascript:void(0)" onclick="goPopup();"
-										class="btn_gray" title="새 창 열림">우편번호 검색</a> <strong
-										class="cor_point"><span id="checkZip1"></span></strong> <strong
-										class="cor_point"><span id="checkZip1"></span></strong>
-								</p>
-							</td>
-						</tr>
-
-						<tr>
-							<th>주소 <strong class="cor_point">*<span
-									class="skip">필수입력</span></strong></th>
-							<td colspan="3">
-								<p>
-									<label for="address" class="skip">주소</label> <input
-										class="input_text10" type="text" readonly="readonly"
-										title="주소" id="address" name="addr" maxlength="50" value="">
-									<strong class="cor_point"><span id="checkZip2"></span></strong>
-								</p>
-							</td>
-						</tr>
-
-						<tr>
-							<th>상세주소 <strong class="cor_point">*<span
-									class="skip">필수입력</span></strong></th>
-							<td colspan="3">
-								<p>
-									<label for="addressDetail" class="skip">상세주소</label> <input
-										class="input_text10" type="text" title="상세주소"
-										id="addressDetail" name="detl_addr" maxlength="50" value="">
-									<strong class="cor_point"><span id="checkZip3"></span></strong>
-								</p>
-							</td>
-						</tr>
-
-						<tr>
-							<th>집 전화번호</th>
-							<td colspan="3">
-								<p>
-									<label for="phone" class="skip">집 전화번호</label> <select
-										class="input_select1" title="집 전화번호 지역번호 선택" id="phone"
-										name="tel_no01">
-										<option value="">선택</option>
-										<option value="02">02</option>
-										<option value="031">031</option>
-										<option value="032">032</option>
-										<option value="033">033</option>
-										<option value="041">041</option>
-										<option value="042">042</option>
-										<option value="043">043</option>
-										<option value="044">044</option>
-										<option value="051">051</option>
-										<option value="052">052</option>
-										<option value="054">054</option>
-										<option value="055">055</option>
-										<option value="061">061</option>
-										<option value="062">062</option>
-										<option value="063">063</option>
-										<option value="064">064</option>
-										<option value="070">070</option>
-									</select> <span class="empty">- </span> <input class="input_text2"
-										type="tel" maxlength="4" title="집 전화번호 중간자리" name="tel_no02">
-									<span class="empty">- </span> <input class="input_text2"
-										type="tel" maxlength="4" title="집 전화번호 끝자리" name="tel_no03">
-									<strong class="cor_point"><span id="checkTel"></span></strong>
-								</p>
-							</td>
-						</tr>
 
 						<tr>
 							<th>핸드폰 번호 <strong class="cor_point">*<span
