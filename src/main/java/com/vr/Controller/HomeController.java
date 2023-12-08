@@ -47,30 +47,35 @@ public class HomeController {
 	
 	//회원가입 화면에서 회원가입 버튼 클릭시 메소드 실행
 	@RequestMapping(value = "member", method = RequestMethod.POST)
-	public void qwerty(MemberDTO member) {
+	public String qwerty(MemberDTO member) {
 		ms.join(member);
-		
+		return "Member/Login_L";
 	}
 	
-	@GetMapping("logform")
-	public void logform() {
-		
+	// 로그인 화면 jsp
+	@RequestMapping(value="Login_L", method = {RequestMethod.GET, RequestMethod.POST})
+	public String Loginr() {
+		return "Member/Login_L";
+	}	
+	// 회원가입 화면 jsp
+	@GetMapping("MemberShip_L")
+	public String MemberShip_L() {
+		return "Member/MemberShip_L";
 	}
-	
+
 	@PostMapping("login")
-	public String login(MemberDTO member, HttpSession session) {
+	public String login(MemberDTO member, HttpSession session, Model model) {
 		//ms.login값이 null이 아니면
 		if(ms.login(member) != null) {
 		//로그인해라
 		session.setAttribute("login", ms.login(member));
 		//그리고 로그인 화면으로 이동
-		return "redirect:/";
+		return "main_m";
 		//그렇지않으면
 		}else {
 		//로그인 하지마라
-		
 		//로그인 화면으로 이동.
-		return "login";
+		return "Member/Login_L";
 		}
 	}
 		

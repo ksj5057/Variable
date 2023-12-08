@@ -13,7 +13,7 @@
 <div id="container_wrapper">
 	<div class="mt30">
 		<h5 class="tit_h5">통합회원기본 정보</h5>
-		<form name="form" action="Login_L" method="post" onsubmit="return check_all()" > 
+		<form action="member" method="post" onsubmit="return check_all()" > 
 
 <fieldset> 
 				<table class="table_type2">
@@ -23,7 +23,7 @@
 							
 								<td>
 								<!-- 이름 입력-->
-								<input class="input_text" type="text" name="name" id="name" > 
+								<input class="input_text" type="text" name="mname" id="name" > 
 								<br><span id="check_name_L"></span></td>
 								
 							<th>주민등록번호 <strong class="cor_point">*<span class="skip">필수입력</span></strong>
@@ -31,7 +31,7 @@
 							</th>
 							<td>
 							<!-- 주민등록번호 입력 -->
-							<input class="input_text" maxlength="13" type="text" name="birth" id="birth" placeholder="주민등록번호 13자리" >
+							<input class="input_text" maxlength="13" type="text" name="rrn" id="birth" placeholder="주민등록번호 13자리" >
 							<br><label id="check_birth_L"></label>
 							<br>
 							</td>
