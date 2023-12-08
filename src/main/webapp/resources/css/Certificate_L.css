@@ -148,12 +148,11 @@
 	background: #33aa33;
 }
 
-@media ( max-width :1023px) {
 	.ctfBox_wrap .ctfBox {
 		padding: 20px;
 	}
 	.ctfBox_wrap .ctfBox .ctfBox_header .tit {
-		font-size: 21px;
+		font-size: 30px;
 		line-height: 30px;
 	}
 	.ctfBox_wrap .ctfBox .ctfBox_header .txt {
@@ -164,11 +163,11 @@
 		padding: 14px 20px;
 	}
 	.ctfBox_wrap .ctfBox .ctfBox_contents .tit {
-		font-size: 17px;
+		font-size: 25px;
 		line-height: 27px;
 	}
 	.ctfBox_wrap .ctfBox_contents .bul_sty {
-		font-size: 14px;
+		font-size: 18px;
 		line-height: 24px;
 	}
 	.ctfBox_wrap .ctfBox_contents .bul_sty+.bul_sty {
@@ -180,6 +179,7 @@
 		line-height: 24px;
 	}
 	.ctfBox_wrap .ctfBox_btm a span {
-		font-size: 14px;
+		font-size: 18px;
 	}
-}
+	a, a:link, a:visited {
+    text-decoration: none;}

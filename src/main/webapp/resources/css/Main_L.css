@@ -1,0 +1,18 @@
+@charset "UTF-8";
+body{
+	background: url(/resources/image/Main_M.png) no-repeat center 0;
+	background-size:100% 937px;
+	font-family: 'Nanum Gothic', Nanum Gothic, '나눔고딕', Dotum, '돋움', Gulim, '굴림',sans-serif;}
+	
+a, a:link, a:visited {
+    text-decoration: none;
+}
+	
+	
+#login{color: #444;
+    font-size: 12px;
+    font-weight: 600;
+    position: absolute;
+    left: 68.4%;
+    top: 18.4px;
+}

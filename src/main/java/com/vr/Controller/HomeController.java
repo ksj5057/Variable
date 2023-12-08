@@ -14,7 +14,7 @@ public class HomeController {
 	
 	@GetMapping("/")
 	public String Main() {
-		return "main_m";
+		return "main_L";
 	}
 	
 	@PostMapping("main_m")
