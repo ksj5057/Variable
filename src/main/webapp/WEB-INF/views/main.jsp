@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="/resources/css/main.css">
 
 <meta charset="UTF-8">
-<title>그린대학교병원</title>
+<title>그린대학교병원ㄴㄴ</title>
 </head>
 <body>
 
