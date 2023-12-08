@@ -6,7 +6,7 @@
 <!-- main.jsp 외부 CSS 스타일 시트 적용 -->
 <link rel="stylesheet" href="/resources/css/main.css" />
 <meta charset="UTF-8">
-<title>그린대학교dd</title>
+<title>그린대학교</title>
 </head>
 <body>
 
