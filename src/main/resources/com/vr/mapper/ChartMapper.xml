@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">    
+
+<mapper namespace="com.vr.Mapper.ChartMapper">
+	<insert id = "chartwrite">
+		insert into chart(cname, rrn, disease, operation, operd, enterd, exitd, dcode) 
+		values(#{cname},#{rrn},#{disease},#{operation},#{operd},#{enterd},#{exitd},#{dcode});
+	</insert>
+	
+	<select id="list" resultType="com.vr.Model.ChartDTO">
+  			select *
+			from(
+				select @rownum:=@rownum+1 rownum, b.*
+				from chart b, (select @rownum:=0) as tmp
+				<if test="keyword != null">
+					<choose>
+						<when test="type=='T'.toString()">
+							 where cname like concat('%',#{keyword},'%')
+						</when>
+						<when test="type=='C'.toString()">
+							where dcode like concat('%',#{keyword},'%')
+						</when>
+						<otherwise>
+							where cname like concat('%',#{keyword},'%')
+					      OR  dcode like concat('%',#{keyword},'%')
+						</otherwise>
+					
+					</choose>
+
+			    </if>
+			    order by cno desc
+			) as chartlist
+			<![CDATA[
+				where rownum > (#{pagenum}-1)*#{amount} and rownum <= #{pagenum}*#{amount}
+				]]>
+  		</select>
+		
+		<select id="total" resultType="int">
+  			select count(*) from chart
+  			<if test="keyword != null">
+						
+			<choose>
+				<when test="type=='T'.toString()">
+					 where cname like concat('%',#{keyword},'%')
+				</when>
+				<when test="type=='C'.toString()">
+					where dcode like concat('%',#{keyword},'%')
+				</when>
+				<otherwise>
+					where cname like concat('%',#{keyword},'%')
+			      OR  dcode like concat('%',#{keyword},'%')
+				</otherwise>
+			
+			</choose>
+			
+			
+			</if>
+  		</select>
+  		
+  		<select id = "modifyForm" resultType="com.vr.Model.ChartDTO">
+  			select * from chart where cno = #{cno}
+  		</select>
+  		
+  		<update id = "chartmodify">
+  			update chart set disease = #{disease}, operation = #{operation},
+  			operd = #{operd}, enterd = #{enterd}, exitd = #{exitd}, dcode = #{dcode} 
+  			where cno = #{cno};
+  		</update>
+  		
+  		<delete id = "chartdelete">
+  			delete from chart where cno = #{cno}
+  		</delete>
+</mapper>
