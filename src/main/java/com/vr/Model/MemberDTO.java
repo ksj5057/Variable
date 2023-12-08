@@ -34,6 +34,11 @@ public class MemberDTO {
 	public void setRrn(String rrn) {
 		this.rrn = rrn;
 	}
+	@Override
+	public String toString() {
+		return "MemberDTO [mname=" + mname + ", id=" + id + ", pw=" + pw + ", rrn=" + rrn + "]";
+	}
+	
 	
 } 
    

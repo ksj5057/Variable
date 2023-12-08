@@ -8,18 +8,19 @@
 <link rel="stylesheet" href="/resources/css/Login.css">	
 </head>
 <body>
-<fieldset>
+<form action = "login" method = "post">
+	<fieldset>
 					<legend>회원 로그인</legend>
 					<div class="bh_all_login_section bh_mgb30">
 						<div class="bh_all_login_form">
 							<div class="bh_all_login_box">
 								<p class="bh_all_login_id">
 									<label for="userid" class="skip">아이디</label>
-									<input placeholder="아이디를 입력해 주세요." id="userid" name="userid" type="text" title="아이디" value="" class="bh_all_login_btn_id" style="ime-mode:disabled;">
+									<input placeholder="아이디를 입력해 주세요." id="userid" name="id" type="text" title="아이디" value="" class="bh_all_login_btn_id" style="ime-mode:disabled;">
 								</p>
 								<p class="bh_all_login_pw">
 									<label id="password" class="skip">비밀번호</label>
-									<input placeholder="비밀번호를 입력해 주세요." id="password" name="password" type="password" value="" title="비밀번호" class="bh_all_login_btn_pw">
+									<input placeholder="비밀번호를 입력해 주세요." id="password" name="pw" type="password" value="" title="비밀번호" class="bh_all_login_btn_pw">
 								</p>
                 
                           
@@ -48,5 +49,6 @@
 						</div>
 					</div>
 				</fieldset>
+			</form>
 </body>
 </html>
