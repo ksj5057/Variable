@@ -3,7 +3,6 @@
 .tit_h5 {
     font-size: 21px;
     color: #1a1a1a;
-    background: url(/front/images/member/bg_bar.gif) no-repeat 0 0;
     padding-top: 10px;
     font-weight: 600;
     margin-bottom: 17px;
@@ -38,7 +37,6 @@
 
 .add_member_ul li {
     margin: 7px 0;
-    background: url(views/image/member/ico_dot.gif) no-repeat 0 5px;
     color: #444;
     text-align: left;
     padding-left: 10px;
