@@ -8,6 +8,7 @@
 </head>
 <body>
 <a href="Login_L">로그인</a>
+<a href="Certificate_L">재증명 발급</a>
 <div class="inner">
                 <dl class="center_dec">
                     <dt class="tit"><em>분당서울대학교병원</em><strong>국제진료센터</strong></dt>

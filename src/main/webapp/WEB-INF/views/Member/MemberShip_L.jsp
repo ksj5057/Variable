@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입</title>
-<link rel="stylesheet" href="/resources/css/MemberShip.css">	
+<link rel="stylesheet" href="/resources/css/MemberShip_L.css">	
 </head>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="/../../resources/js/member/MemberShip.js"></script>

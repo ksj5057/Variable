@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+.ctfBox_wrap {
+	display: flex;
+	gap: 24px;
+	flex-wrap: wrap;
+}
+
+.ctfBox_wrap .ctfBox {
+	flex: 1;
+	padding: 30px;
+	box-sizing: border-box;
+	border: 1px solid #d7d7d7;
+	border-top: 2px solid #2d58b6;
+	min-width: 300px;
+}
+
+.ctfBox_wrap .ctfBox .ctfBox_header {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.ctfBox_wrap .ctfBox .ctfBox_header .tit {
+	font-size: 27px;
+	font-weight: 700;
+	color: #2d58b6;
+	line-height: 37px;
+	margin-bottom: 10px;
+	letter-spacing: -1.5px;
+}
+
+.ctfBox_wrap .ctfBox .ctfBox_header .txt {
+	font-size: 18px;
+	font-weight: 500;
+	color: #444;
+	line-height: 28px;
+	letter-spacing: -1.5px;
+}
+
+.ctfBox_wrap .ctfBox_contents {
+	padding: 28px 40px;
+	background: #f0f3fa;
+	text-align: center;
+}
+
+.ctfBox_wrap .ctfBox_contents .tit {
+	font-size: 19px;
+	font-weight: 700;
+	color: #444;
+	letter-spacing: -0.75px;
+	line-height: 30px;
+	margin-bottom: 20px;
+}
+
+.ctfBox_wrap .ctfBox_contents .bul_sty {
+	padding-left: 26px;
+	font-size: 17px;
+	font-weight: 500;
+	color: #444;
+	line-height: 20px;
+	background: url(/front/images/sub/ico_check_blue.png) no-repeat 0 5px;
+	letter-spacing: -1.5px;
+	text-align: left;
+}
+
+.ctfBox_wrap .ctfBox_contents .bul_sty+.bul_sty {
+	margin-top: 10px;
+}
+
+.ctfBox_wrap .ctfBox_contents .txt {
+	font-size: 17px;
+	font-weight: 500;
+	color: #444;
+	line-height: 20px;
+	letter-spacing: -1.5px;
+	margin-top: 10px;
+	text-align: left;
+}
+
+.ctfBox_wrap .ctfBox_btm {
+	display: flex;
+	gap: 10px;
+	margin-top: 30px;
+	justify-content: space-between;
+}
+
+.ctfBox_wrap .ctfBox_btm a {
+	flex: 1 auto;
+	display: block;
+	background: #2d58b6;
+	text-align: center;
+}
+
+.ctfBox_wrap .ctfBox_btm a span {
+	display: block;
+	font-size: 16px;
+	font-weight: 700;
+	color: #fff;
+	height: 45px;
+	line-height: 45px;
+}
+
+.ctfBox_wrap .ctfBox_btm a+a {
+	margin-left: 10px;
+}
+
+.ctfBox_wrap .ctfBox.sty01 {
+	border-top: 2px solid #2d58b6
+}
+
+.ctfBox_wrap .ctfBox.sty01 .ctfBox_header .tit {
+	color: #2d58b6;
+}
+
+.ctfBox_wrap .ctfBox.sty01 .ctfBox_btm a {
+	background: #2d58b6;
+}
+
+.ctfBox_wrap .ctfBox.sty02 {
+	border-top: 2px solid #0080fb
+}
+
+.ctfBox_wrap .ctfBox.sty02 .ctfBox_header .tit {
+	color: #0080fb;
+}
+
+.ctfBox_wrap .ctfBox.sty02 .ctfBox_contents {
+	background: #edf6ff
+}
+
+.ctfBox_wrap .ctfBox.sty02 .ctfBox_btm a {
+	background: #0080fb;
+}
+
+.ctfBox.sty03 {
+	border-top: 2px solid #33aa33
+}
+
+.ctfBox.sty03 .ctfBox_header .tit {
+	color: #33aa33;
+}
+
+.ctfBox.sty03 .ctfBox_contents {
+	background: #f6f9e8
+}
+
+.ctfBox.sty03 .ctfBox_btm a {
+	background: #33aa33;
+}
+
+@media ( max-width :1023px) {
+	.ctfBox_wrap .ctfBox {
+		padding: 20px;
+	}
+	.ctfBox_wrap .ctfBox .ctfBox_header .tit {
+		font-size: 21px;
+		line-height: 30px;
+	}
+	.ctfBox_wrap .ctfBox .ctfBox_header .txt {
+		font-size: 16px;
+		line-height: 26px;
+	}
+	.ctfBox_wrap .ctfBox_contents {
+		padding: 14px 20px;
+	}
+	.ctfBox_wrap .ctfBox .ctfBox_contents .tit {
+		font-size: 17px;
+		line-height: 27px;
+	}
+	.ctfBox_wrap .ctfBox_contents .bul_sty {
+		font-size: 14px;
+		line-height: 24px;
+	}
+	.ctfBox_wrap .ctfBox_contents .bul_sty+.bul_sty {
+		margin-top: 5px;
+	}
+	.ctfBox_wrap .ctfBox_contents .txt {
+		margin-top: 5px;
+		font-size: 14px;
+		line-height: 24px;
+	}
+	.ctfBox_wrap .ctfBox_btm a span {
+		font-size: 14px;
+	}
+}

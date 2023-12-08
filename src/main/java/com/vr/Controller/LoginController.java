@@ -17,5 +17,7 @@ public class LoginController {
 	public String MemberShip_L() {
 		return "Member/MemberShip_L";
 	}
+	
+	
 
 }
