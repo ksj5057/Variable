@@ -4,7 +4,7 @@
 <head>
 <meta charset="EUC-KR">
 <title>증명서 상세 내역</title>
-<link rel="stylesheet" href="/resources/css/CertificateDetails.css">
+<link rel="stylesheet" href="/resources/css/HospitalizationCertificateDetails.css">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
 	<div id="filed">
 <table class="line">
 			<tr>
-			<td rowspan="3" id= "title">수 술 확 인 서</td>
+			<td rowspan="3" id= "title">입·퇴원 확 인 서</td>
 			<td class="nav">진 료 과</td>
 			<td class="nav2"></td>
 			</tr>
@@ -72,27 +72,12 @@
 			</table>
 			<table class="line">
 			<tr>
-			<td class="content" id="insert">진단 내용</td>
+			<td class="content" id="insert">입 원 내 용</td>
 			<td></td>
 			</tr>
 			</table>
 			</div>
-			<label>위 환자는 20&nbsp;&nbsp;년 &nbsp;&nbsp; 월&nbsp;&nbsp; 일 부터 20&nbsp;&nbsp;년 &nbsp;&nbsp;월 &nbsp;&nbsp;일 까지 본원에서 아래와 같이 수술을 시행하였음을 확인함.</label>
-			<ul>
-			<li>수 술 명:</li>
-			</ul>
-			<ul>
-			<li>수 술 일 자:</li>
-			</ul>
-			<ul>
-			<li>발 행 일:</li>
-			</ul>
-		<ul>
-			<li>의 사 성 명:</li>
-			</ul>
-			<ul>
-			<li>면 허 번 호:</li>
-			</ul>
+		
 				<div id="doc">
 					<label>담당의사:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(인)</label>
 					</div>

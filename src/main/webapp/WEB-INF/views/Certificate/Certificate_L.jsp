@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>   
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
-<!--<c:choose>
+<!--  
+<c:choose>
 <c:when test="${sessionScope.login.id eq null}">
 <script>
 //로그인 값이 null일 경우 로그인 멘트 후 강제로 로그인화면으로 이동시키기.
@@ -18,8 +18,8 @@ location.href="Serch";
 </script>
 </c:when>
 
-</c:choose> -->
-
+</c:choose> 
+-->
 
 <!DOCTYPE html>
 <html>
@@ -68,7 +68,7 @@ location.href="Serch";
 <p class="bul_sty">이름 및 주민등록번호가 기재되어 있음</p> 
 <p class="bul_sty">통원 일자만 기재되어 있음</p> 
 <p class="bul_sty">개인정보 유출에 주의</p> </div> 
-<div class="ctfBox_btm"> <a href="CertificateDetails_L"><span>발급 받기</span></a>  </div> </div> 
+<div class="ctfBox_btm"> <a href="ClinicCertificateDetails_L"><span>발급 받기</span></a>  </div> </div> 
 
 <!--  입퇴원확인서-->
 <div class="ctfBox sty02"> 
@@ -81,7 +81,7 @@ location.href="Serch";
 <p class="bul_sty">입원 기간만 기재되어 있음</p> 
 <p class="bul_sty">개인정보 유출에 주의</p> 
 </div> 
-<div class="ctfBox_btm"> <a href="CertificateDetails_L" ><span>발급 받기</span></a> </div> </div> 
+<div class="ctfBox_btm"> <a href="HospitalizationCertificateDetails_L" ><span>발급 받기</span></a> </div> </div> 
 
 <!--  수술확인서-->
 <div class="ctfBox sty03"> 
@@ -94,7 +94,7 @@ location.href="Serch";
 <p class="bul_sty">이름 및 주민등록번호가 기재되어 있음</p> 
 <p class="bul_sty">병명 및 수술내역이 기재되어 있음</p> 
 <p class="bul_sty">개인정보 유출에 주의</p> </div> 
-<div class="ctfBox_btm"> <a href="CertificateDetails_L"><span>발급 받기</span></a> </div> </div> </div> </div>  </div>
+<div class="ctfBox_btm"> <a href="OperationCertificateDetails_L"><span>발급 받기</span></a> </div> </div> </div> </div>  </div>
 
 	</div>
 </section>

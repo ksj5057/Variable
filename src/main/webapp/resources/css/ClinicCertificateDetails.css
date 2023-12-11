@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+#page {
+	width: 21cm;
+	min-height: 29.7cm;
+	padding: 1.5cm 1.5cm 2cm 1.5cm;
+}
+
+.line {
+	width: 100%;
+}
+
+#main {
+	width: 1200px;
+}
+
+#title {
+	width: 75%;
+	font-size: 40px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+.nav {
+	width: 10%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+.nav2 {
+	width: 15%;
+}
+
+.titlenumber {
+	width: 7%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+.nav3 {
+	width: 30%;
+}
+
+#Hospitalization {
+	width: 11%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+#in {
+	width: 10%;
+	font-size: 18px;
+	text-align: center;
+}
+
+#room {
+	width: 7%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+#day1 {
+	width: 9%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+#day2 {
+	width: 15%;
+	font-size: 18px;
+	text-align: center;
+}
+
+#in {
+	width: 16%;
+	font-size: 18px;
+	text-align: center;
+}
+
+.content {
+	width: 19%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+#name {
+	width: 19.2%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+#gender {
+	width: 9.2%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+#age {
+	width: 10%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+#o1 {
+	width: 9%;
+	font-size: 18px;
+	text-align: center;
+}
+
+#o2 {
+	width: 9%;
+	font-size: 18px;
+	text-align: center;
+}
+
+#o3 {
+	width: 15.7%;
+	font-size: 18px;
+	text-align: center;
+}
+
+#o4 {
+	width: 19%;
+	font-size: 18px;
+	text-align: center;
+}
+
+#birth {
+	width: 12.2%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+#age {
+	width: 12%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+#insert {
+	height: 350px;
+	pxfont-size: 18px;
+	text-align: center;
+	pxfont-size: 18px;
+	background: #F6F6F6;
+}
+
+td {
+	border: 1px solid #2d58b6;
+}
+
+#boss {
+	position: absolute;
+	left: 20%;
+	top:89%;
+}
+
+#doc {
+    position: relative;
+    left: 78%;
+    top: 82%;
+}
