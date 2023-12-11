@@ -23,6 +23,7 @@
 						<a href="/"> <img src="/resources/image/main_logo.png" alt="그린대학교병원"></a>
 					</h1>
 					<ul class="header_login_m">
+						<li><a href="admin_L">관리자전용</a></li>
 						<li><a href="Login_L">로그인</a></li>
 						<li><a href="MemberShip_L">회원가입</a></li>
 					</ul>
