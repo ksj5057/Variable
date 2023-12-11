@@ -22,7 +22,7 @@
 			<td class="nav2"></td>			
 			</tr>
 			<tr>
-			<td class="nav">일   자 </td>
+			<td class="nav">일&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;자 </td>
 			<td class="nav2"></td>
 			</tr>
 	
@@ -41,11 +41,11 @@
 			
 	<table  class="line">
 			<tr>
-			<td id="Hospitalization">입원과</td>
+			<td id="Hospitalization">입 원 과</td>
 			<td id="in"></td>
-			<td id="room">호실</td>
+			<td id="room">호 실</td>
 			<td id="day1">입월 년월일</td>
-			<td id="day2">년 월 일</td>
+			<td id="day2"></td>
 			</tr>		
 	</table>
 	<table  class="line">
@@ -56,28 +56,28 @@
 			<td id="o2"></td>
 			<td id="birth">생년월일</td>
 			<td id="o3"></td>
-			<td id="age">연령</td>
+			<td id="age">연 령</td>
 			<td id="o4"></td>
 			</tr>	
 				</table>
 		<table  class="line">
 			<tr>
-			<td class="content">주소</td>
+			<td class="content">주 소</td>
 			<td ></td>
 			</tr>
 			<tr>
-			<td class="content">진단명
+			<td class="content">진 단 명
 			<td></td>
 			</tr>
 			</table>
 			<table class="line">
 			<tr>
-			<td class="content" id="insert">진단내용</td>
+			<td class="content" id="insert">진단 내용</td>
 			<td></td>
 			</tr>
 			</table>
 			</div>
-			<label>위 환자는 년 월 일부터 년 월 일 까지 본원에서 아래와 같이 수술을 시행하였음을 확인함.</label>
+			<label>위 환자는 20&nbsp;&nbsp;년 &nbsp;&nbsp; 월&nbsp;&nbsp; 일 부터 20&nbsp;&nbsp;년 &nbsp;&nbsp;월 &nbsp;&nbsp;일 까지 본원에서 아래와 같이 수술을 시행하였음을 확인함.</label>
 			<ul>
 			<li>수 술 명:</li>
 			</ul>
@@ -93,11 +93,12 @@
 			<ul>
 			<li>면 허 번 호:</li>
 			</ul>
-			
-					<label>담당의사:     (인)</label>
-					
-					<label>... 병원장</label>
-				
+				<div id="doc">
+					<label>담당의사:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(인)</label>
+					</div>
+					<div id="boss">
+					<h1><label>그린대학교병원</label></h1>
+				</div>
 </div>
 </body>
 </html>
