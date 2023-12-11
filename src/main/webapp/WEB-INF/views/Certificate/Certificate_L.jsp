@@ -1,9 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>   
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<c:if test="sessionScope.id == null">
-${"<Script> Alert('로그인 후 이용해주시기 바랍니다.')</Script>" };
-</c:if>
+<!--<c:choose>
+<c:when test="${sessionScope.login.id eq null}">
+<script>
+//로그인 값이 null일 경우 로그인 멘트 후 강제로 로그인화면으로 이동시키기.
+alert("로그인 후 이용 부탁드립니다."), location.href="Login_L";
+</script>
+
+</c:when>
+
+<c:when test="${sessionScope.login.id ne null}">
+<script>
+location.href="Serch";
+//로그인하면 id값을 따서 3개월의 진료내역을 확인하여 내역 띄우기
+
+</script>
+</c:when>
+
+</c:choose> -->
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,7 +68,7 @@ ${"<Script> Alert('로그인 후 이용해주시기 바랍니다.')</Script>" };
 <p class="bul_sty">이름 및 주민등록번호가 기재되어 있음</p> 
 <p class="bul_sty">통원 일자만 기재되어 있음</p> 
 <p class="bul_sty">개인정보 유출에 주의</p> </div> 
-<div class="ctfBox_btm"> <a href=""><span>발급 받기</span></a>  </div> </div> 
+<div class="ctfBox_btm"> <a href="CertificateDetails_L"><span>발급 받기</span></a>  </div> </div> 
 
 <!--  입퇴원확인서-->
 <div class="ctfBox sty02"> 
@@ -64,7 +81,7 @@ ${"<Script> Alert('로그인 후 이용해주시기 바랍니다.')</Script>" };
 <p class="bul_sty">입원 기간만 기재되어 있음</p> 
 <p class="bul_sty">개인정보 유출에 주의</p> 
 </div> 
-<div class="ctfBox_btm"> <a href="" ><span>발급 받기</span></a> </div> </div> 
+<div class="ctfBox_btm"> <a href="CertificateDetails_L" ><span>발급 받기</span></a> </div> </div> 
 
 <!--  수술확인서-->
 <div class="ctfBox sty03"> 
@@ -77,7 +94,7 @@ ${"<Script> Alert('로그인 후 이용해주시기 바랍니다.')</Script>" };
 <p class="bul_sty">이름 및 주민등록번호가 기재되어 있음</p> 
 <p class="bul_sty">병명 및 수술내역이 기재되어 있음</p> 
 <p class="bul_sty">개인정보 유출에 주의</p> </div> 
-<div class="ctfBox_btm"> <a href=""><span>발급 받기</span></a> </div> </div> </div> </div>  </div>
+<div class="ctfBox_btm"> <a href="CertificateDetails_L"><span>발급 받기</span></a> </div> </div> </div> </div>  </div>
 
 	</div>
 </section>
