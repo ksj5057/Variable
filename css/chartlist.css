@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+#searchForm{
+	posi  tion : relative;
+	left : 80px;
+} 
+
+#container{
+	position : relative;
+	left : 80px;
+	border : 2px solid black;
+	border-collapse : collapse;	
+}
+
+.table1{
+	
+}
+/* 테이블 제일 윗줄 영역 */
+#tr1{
+	background-color: #6ed3d8;
+    border-left : 1px solid #6ed3d8;
+    border-right : 1px solid #6ed3d8;
+}
+
+td{
+	text-align : center;
+	height : 45px;
+/* 	border-bottom : 1px solid black; */
+}
+
+/* 차트 내용에 마우스 갖다댔을 때 */
+#tr2:hover{
+	background-color : silver;
+}
+
+#writeform{
+	position : relative;
+	float : right;
+	right : 165px;
+	
+}
+
+/* 페이징 숫자, 다음칸 */
+.paging{
+	position : relative;
+	padding : 10px;
+	top : 60px;
+	left : 700px;
+	text-decoration : none;
+	font-size : 18px;
+}
+
+.paging:link, .paging:visited{
+	color : black;
+}
+
+/* 페이징 숫자, 다음칸 마우스 갖다댔을때 */
+.paging:hover{
+	color : #6ed3d8;
+}
