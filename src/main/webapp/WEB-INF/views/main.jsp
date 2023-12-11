@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +23,13 @@
 						<a href="/"> <img src="/resources/image/main_logo.png" alt="그린대학교병원"></a>
 					</h1>
 					<ul class="header_login_m">
+<<<<<<< HEAD
+					<c:if test="${sessionScope.login.id ne null}">
+						<li><a href="Login_L">관리자 전용 페이지</a></li>
+					</c:if>
+=======
 						<li><a href="admin_L">관리자전용</a></li>
+>>>>>>> branch 'koo' of https://github.com/ksj5057/Variable.git
 						<li><a href="Login_L">로그인</a></li>
 						<li><a href="MemberShip_L">회원가입</a></li>
 					</ul>
