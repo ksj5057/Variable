@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'OTWelcomeRA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     width: 100%;
 }
@@ -36,13 +43,14 @@ body {
     margin-top: 70px;
 }
 
-ol, ul {
+.maincss ol, ul {
 	list-style-type: none;
 	list-style: none;
 }
 
-ol, ul, li {
+.maincss ol, ul, li {
 	list-style: none;
+	font-family: 'OTWelcomeRA';
 }
 
 ul.header_login_m {
@@ -71,18 +79,20 @@ a, a:link, a:visited.main_a1_m {
     font-weight: 600;
 }
 
-input#bh_search_txts {
-    width: 90%;
+#bh_search_txts {
+	float: right;
+    width: 450px;
     height: 30px;
-    border: 4px solid #2d58b5;
+    border: 4px solid #006633;
     background: #fff;
-    text-align: left;
+    text-align: center;
     padding-left: 10px;
     font-size: 16px;
     line-height: 31px;
+    font-family: 'OTWelcomeRA';
 }
 
-input.btn_search {
+#btn_search {
     display: block;
     position: absolute;
     top: 0;
@@ -90,13 +100,14 @@ input.btn_search {
     width: 87px;
     height: 39px;
     padding: 0;
-    border: 1px solid #2d58b5;
-    background: #2d58b5;
+    border: 1px solid #006633;
+    background: #006633;
     color: #fff;
     text-align: center;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    font-family: 'OTWelcomeRA';
 }
 /* 상단 메뉴 끝 */
 
@@ -117,7 +128,7 @@ input.btn_search {
     padding: 0;
     margin: 0 auto;
     max-width: 1200px;
-    margin-top: -355px;
+    margin-top: -280px;
 }
 
 .main_menu_section_m .m_ddd_m {
@@ -155,7 +166,24 @@ input.btn_search {
 }
 
 .main_li_1 dl {
-    padding-top: 45px;
+	margin: 0;
+    padding-top: 60px;
+    padding-bottom: 75px;
+}
+
+input#consulting_m {
+    width: 130px;
+    height: 33px;
+    padding: 0;
+    border: 1px solid #006633;
+    background: #006633;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    font-family: 'OTWelcomeRA';
 }
 
 .main_li_2 a, dt {
@@ -172,11 +200,20 @@ input.btn_search {
     font-weight: 600;
     padding-right: 39px;
     padding-top: 15px;
+    margin: 0;
+    padding-right: 0px;
 }
 
 .main_li_2 dl {
-    padding-top: 45px;
-    background-image: url("/resources/image/main/main_ico_1.png")
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-image: url("/resources/image/ico_1.png");
+    background-color: #F2F2F2;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center 80%;
+    
 }
 
 .main_li_3 a, dt {
@@ -191,11 +228,12 @@ input.btn_search {
     letter-spacing: -1px;
     font-size: 14px;
     font-weight: 600;
+    margin: 0;    
 }
 
-.main_menu_section_m .m_ddd_m li.main_li_1 dl {
+.main_menu_section_m .m_ddd_m li .main_li_1 dl {
     height: 184px;
-    padding-top: 45px;
+
 }
 
 .main_li_3 a, dt {
@@ -212,10 +250,14 @@ input.btn_search {
     font-weight: 600;
     margin: 0;
     padding-top: 15px;
+    margin: 0;
 }
 
 .main_li_3 dl {
-    padding-top: 45px;
+    margin: 0;
+    padding-top: 55px;
+    padding-bottom: 75px;
+    background-color: #E4F6FF;
 }
 
 .main_li_3 p {
@@ -223,26 +265,27 @@ input.btn_search {
     margin-bottom: 10px;
 }
 
-input#search_txt_m {
-    border: 1px solid #2d58b5;
-    height: 20px;
-    border: 4px solid #2d58b5;
+#search_txt_m {
+	width: 150px;
+    height: 30px;
+    border: 4px solid #006633;
     text-align: center;
+    font-family: 'OTWelcomeRA';
 }
 
 input#search_btn_m {
-	top: 0;
-    right: 0;
-    width: 70px;
-    height: 25px;
+    width: 60px;
+    height: 30px;
     padding: 0;
-    border: 1px solid #2d58b5;
-    background: #2d58b5;
+    border: 1px solid #006633;
+    background: #006633;
     color: #fff;
     text-align: center;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
+    font-family: 'OTWelcomeRA';
+    margin-top: 10px;
 }
 
 .main_li_4 a, dt {
@@ -259,10 +302,18 @@ input#search_btn_m {
     font-weight: 600;
     padding-top: 15px;
     margin-left: 0px;
+    margin-top: 0px;
 }
 
-.main_li_4 dl {
-    padding-top: 45px;
+.main_li_4 dl {	
+    margin: 0;
+    padding-top: 55px;
+    padding-bottom: 100px;
+    background-image: url(/resources/image/ico_2.png);
+    background-color: #FEFFCB;
+    background-size: 22%;
+    background-repeat: no-repeat;
+    background-position: center 77%;    
 }
 
 .main_li_5 a, dt {
@@ -279,10 +330,18 @@ input#search_btn_m {
     font-weight: 600;
     padding-top: 15px;
     margin-left: 0px;
+    margin-top: 0px;
 }
 
 .main_li_5 dl {
-    padding-top: 45px;
+    margin: 0;
+    padding-top: 55px;
+    padding-bottom: 100px;
+    background-image: url(/resources/image/ico_3.png);
+    background-color: #FFE7BC;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center 65%;  
 }
 
 .main_li_6 a, dt {
@@ -299,10 +358,18 @@ input#search_btn_m {
     font-weight: 600;
     padding-top: 15px;
     margin-left: 0px;
+    margin-top: 0px;
 }
 
 .main_li_6 dl {
-    padding-top: 45px;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-image: url(/resources/image/ico_4.png);
+    background-color: #E9D7EF;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center 85%;  
 }
 
 .main_li_7 a, dt {
@@ -319,10 +386,18 @@ input#search_btn_m {
     font-weight: 600;
     padding-top: 15px;
     margin-left: 0px;
+    margin-top: 0px;
 }
 
 .main_li_7 dl {
-    padding-top: 45px;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-image: url(/resources/image/ico_5.png);
+    background-color: #CECECE;
+    background-size: 33%;
+    background-repeat: no-repeat;
+    background-position: center 78%;
 }
 
 .main_li_8 a, dt {
@@ -339,17 +414,49 @@ input#search_btn_m {
     font-weight: 600;
     padding-top: 15px;
     margin-left: 0px;
+    margin-top: 0px;
 }
 
 .main_li_8 dl {
+	margin: 0;
     padding-top: 45px;
+    padding-bottom: 110px;
+    background-image: url(/resources/image/ico_6.png);
+    background-color: #DAC09E;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center 80%;
 }
 
-.skip_m {
-/* 	overflow: hidden; */
+.main_conts_set_m {
+	background-image: url('/resources/image/main_conts.jpg');
+	background-size: cover;
+	margin-top: 30px;
 }
 
+.skip {
+	display: none;
+}
 
+.footer_section_m1 {
+    position: relative;
+    margin-top: 70px;
+    padding-left: 0px;
+}
+
+.footer_inner_m1 {
+	padding-left: 0px;
+}
+
+.company_call {
+    position: relative;
+    text-align: center;
+    padding: 24px 0px;
+    font-size: 16px;
+    background-color: #4E4E4E;
+    color: #F0F0F0;
+    line-height: 26px;
+}
 
 
 
