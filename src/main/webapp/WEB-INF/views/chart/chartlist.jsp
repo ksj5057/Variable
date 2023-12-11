@@ -9,7 +9,7 @@
 <title>차트 리스트</title>
 </head>
 <body>
-
+<div class="main"><h2>차트 리스트</h2></div>
 <form id="searchform" action="/chart/chartlist" method="get">
 
 	<select name="type">
@@ -17,8 +17,6 @@
 		<option value="C">환자코드번호</option>
 	</select>
 	<input type="text" name="keyword" value="${paging.cri.keyword}">
-<%-- 	<input type="text" name="pagenum" value="${paging.cri.pagenum}"> --%>
-<%-- 	<input type="text" name="amount" value="${paging.cri.amount}"> --%>
 	<input type="submit" value="검색">
 </form>
 
