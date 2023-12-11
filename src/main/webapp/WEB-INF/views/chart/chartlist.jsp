@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<form id="searchForm" action="/chart/chartlist" method="get">
+<form id="searchform" action="/chart/chartlist" method="get">
 
 	<select name="type">
 		<option value="T">이름</option>

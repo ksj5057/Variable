@@ -27,8 +27,9 @@
 										alt="그린대학교병원"></a>
 								</h1>
 								<ul class="utility_section fix">
-									<li><a href="javascript:memberLogin()">로그인</a></li>
-									<li><a href="/member/joinSelect.do">회원가입</a></li>
+									<li><a href="Login_L">로그인</a></li>
+									<li><a href="MemberShip_L">회원가입</a></li>
+									<li><a href="Certificate_L">재증명 발급</a></li>
 								</ul>
 							</div>
 						</div>

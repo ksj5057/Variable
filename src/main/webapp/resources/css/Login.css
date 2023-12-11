@@ -158,7 +158,4 @@ div {
 .bh_all_login_sns {
     font-size: 0;
 }
-a, address, blockquote, br, fieldset, legend, label, form, input, select, textarea, button, table, th, td caption, cite, code, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, div, iframe, ul, ol, li, hr, img {
-    margin: 0;
-    padding: 0;
-}
+

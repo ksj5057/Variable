@@ -27,17 +27,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 	
+	//객체 생성
 	@Autowired
 	MemberService ms;
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
+	//메인화면 이동
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 		public String main() {
-			return "main_m";
+			return "main";
 		}
 	
 	@RequestMapping(value = "member", method = RequestMethod.GET)
