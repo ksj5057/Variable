@@ -54,6 +54,7 @@ public class HomeController {
 	public String Loginr() {
 		return "Member/Login_L";
 	}	
+	
 	// 회원가입 화면 js p
 	@GetMapping("MemberShip_L")
 	public String MemberShip_L() {
