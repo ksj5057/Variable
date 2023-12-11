@@ -25,7 +25,8 @@
 	width: 10%;
 	font-size: 18px;
 	text-align: center;
-background: #F6F6F6;}
+	background: #F6F6F6;
+}
 
 .nav2 {
 	width: 15%;
@@ -35,7 +36,8 @@ background: #F6F6F6;}
 	width: 7%;
 	font-size: 18px;
 	text-align: center;
-background: #F6F6F6;}
+	background: #F6F6F6;
+}
 
 .nav3 {
 	width: 30%;
@@ -45,7 +47,8 @@ background: #F6F6F6;}
 	width: 11%;
 	font-size: 18px;
 	text-align: center;
-background: #F6F6F6;}
+	background: #F6F6F6;
+}
 
 #in {
 	width: 10%;
@@ -57,13 +60,15 @@ background: #F6F6F6;}
 	width: 7%;
 	font-size: 18px;
 	text-align: center;
-background: #F6F6F6;}
+	background: #F6F6F6;
+}
 
 #day1 {
 	width: 9%;
 	font-size: 18px;
 	text-align: center;
-background: #F6F6F6;}
+	background: #F6F6F6;
+}
 
 #day2 {
 	width: 15%;
@@ -81,25 +86,29 @@ background: #F6F6F6;}
 	width: 11%;
 	font-size: 18px;
 	text-align: center;
-background: #F6F6F6;}
+	background: #F6F6F6;
+}
 
 #name {
 	width: 19.2%;
 	font-size: 18px;
 	text-align: center;
-background: #F6F6F6;}
+	background: #F6F6F6;
+}
 
 #gender {
 	width: 9.2%;
 	font-size: 18px;
 	text-align: center;
-background: #F6F6F6;}
+	background: #F6F6F6;
+}
 
 #age {
 	width: 10%;
 	font-size: 18px;
 	text-align: center;
-background: #F6F6F6;}
+	background: #F6F6F6;
+}
 
 #o1 {
 	width: 9%;
@@ -129,18 +138,36 @@ background: #F6F6F6;}
 	width: 12.2%;
 	font-size: 18px;
 	text-align: center;
-background: #F6F6F6;}
+	background: #F6F6F6;
+}
 
 #age {
 	width: 12%;
 	font-size: 18px;
 	text-align: center;
-background: #F6F6F6;}
+	background: #F6F6F6;
+}
 
 #insert {
-	height: 170px; 
-	pxfont-size : 18px;
+	height: 170px;
+	pxfont-size: 18px;
 	text-align: center;
 	pxfont-size: 18px;
-background: #F6F6F6;}
-td{border: 1px solid #2d58b6;}
+	background: #F6F6F6;
+}
+
+td {
+	border: 1px solid #2d58b6;
+}
+
+#boss {
+	position: absolute;
+	left: 20%;
+	top:89%;
+}
+
+#doc {
+    position: relative;
+    left: 78%;
+    top: 82%;
+}
