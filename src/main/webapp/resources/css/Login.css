@@ -1,8 +1,13 @@
 @charset "UTF-8";
 
+.bh_all_login_section.bh_mgb30 {
+    margin-top: 50px;
+}
+
 a, a:link, a:visited {
     text-decoration: none;
 }
+
 .bh_all_login_box .bh_btn_all_login {
     position: absolute;
     top: 0;

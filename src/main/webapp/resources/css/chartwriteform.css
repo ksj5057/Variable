@@ -1,80 +1,166 @@
 @charset "UTF-8";
 
-#main{
-	position : relative;
-	text-align : center;
-	right : 50px;
+@import
+	url('https://fonts.googleapis.com/css2? family= Noto+Serif+KR:wght@300 & display=swap')
+	;
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Serif+KR:wght@300&display=swap')
+	;
+
+.chart_box {
+	position: relative;
+	margin-top: 100px;
+	text-align: center;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
-#inid, #inrrn, #indis, #inoper, #inoperd, #inenterd, #inexitd{
-	width: 200px;
-	height: 32px;
-	font-size: 15px;
-	border: 0;
-	border-radius: 15px;
-	outline: none;
+.chartwrite_box input {
+	height: 25px;
+}
+
+.chartwrite_box select {
+    border-radius: 8px;
+    border: #999999 1px solid;
+    height: 30px;
+    margin-left: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 8px;
+    padding-right: 10px;
+}
+
+.container input::placeholder {
+    color: #CCCCCC;
+    font-size: 15px;
+}
+
+input#inoperd {
+	width: 165px;
+	border-radius: 8px;
+	border: #999999 1px solid;
+	margin-left: 10px;
+	font-family: 'Noto Sans KR', sans-serif;
 	padding-left: 10px;
-	background-color: rgb(233, 233, 233);
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 4px;
 }
 
-#select{
-	height: 32px;
-	font-size: 15px;
-	border: 0;
-	border-radius: 15px;
-	outline: none;
+input#inexitd {
+	width: 165px;
+	border-radius: 8px;
+	border: #999999 1px solid;
+	margin-left: 10px;
+	font-family: 'Noto Sans KR', sans-serif;
 	padding-left: 10px;
-	background-color: rgb(233, 233, 233);
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 4px;
 }
 
-
-#container{
-	position : relative;
-	left : 300px;
-	border : 2px solid black;
-	border-collapse : collapse;
-	width : 1200px;
-	height : 600px;
-	text-align : center;
+input#inenterd {
+	width: 165px;
+	border-radius: 8px;
+	border: #999999 1px solid;
+	margin-left: 10px;
+	font-family: 'Noto Sans KR', sans-serif;
+	padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 4px;
 }
 
-.name{
-	position : relative;
-	
+input#inid {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 18px;
+	color: #222222;
+	width: 300px;
+	border: none;
+	padding-left: 10px;
+	position: relative;
+	background: none;
+	z-index: 5;
 }
 
-.dcode{
-	
+input#inrrn {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 18px;
+	color: #222222;
+	width: 300px;
+	border: none;
+	padding-left: 10px;
+	position: relative;
+	background: none;
+	z-index: 5;
 }
 
-.rrn{
-	
-	
+input#indis {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 18px;
+	color: #222222;
+	width: 300px;
+	border: none;
+	padding-left: 10px;
+	position: relative;
+	background: none;
+	z-index: 5;
 }
 
-.disease{
-	
+textarea#inoper {
+    border-radius: 8px;
+    border: #999999 1px solid;
+    padding: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
-.operation{
-	
+table.container {
+	border-collapse: collapse;
+	text-align: left;
+	line-height: 1.5;
+	border: 1px solid #ccc;
+	margin: 20px 10px;
 }
 
-.operd{
-	
+table.container th {
+	padding-left: 20px;
+	padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+	width: 150px;
+	font-weight: bold;
+	vertical-align: top;
+	border-bottom: 1px solid #ccc;
+	background: #99CC99;
+	color: #FAFAFA;
 }
 
-.enterd{
-	
+table.container td {
+	width: 250px;
+	padding: 10px;
+	vertical-align: top;
+	border-bottom: 1px solid #ccc;
 }
 
-.exitd{
-	
-	
+table.container {
+	margin: auto;
 }
 
-#writebutton{
-	position : relative;
-	float : right;
-	right : 500px;
+td.chart_memo {
+	height: 400px;
+}
+
+.chart_write_btn input[type="submit"] {
+    width: 80px;
+    height: 40px;
+    border: none;
+    border-bottom: 3px solid #99CC99;
+    background-color: #F2F2F2;
+}
+
+.chart_write_btn {
+    position: absolute;
+    right: 237px;
+    margin-top: 20px;
 }
