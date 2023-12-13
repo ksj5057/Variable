@@ -92,6 +92,6 @@
 	<c:if test="${paging.next}">
 		<a class = "paging" href="/chart/chartlist?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${paging.endpage+1}&amount=${paging.cri.amount}">▶</a>
 	</c:if>
-
+ 
 </body>
 </html>   
