@@ -1,9 +1,24 @@
 @charset "UTF-8";
 
+#line {
+	width: 1200px;
+}
+
 #page {
 	width: 21cm;
-	min-height: 29.7cm;
+	max-height: 29.7cm;
 	padding: 1.5cm 1.5cm 2cm 1.5cm;
+	margin: 0px auto;
+	background-color: #ddd;
+	}
+
+#printimage {
+	background: url(/resources/image/print.png) 0 center no-repeat;
+	width: 43px;
+	height: 35px;}
+#printimage2{
+	position: absolute;
+	left: 50%;
 }
 
 .line {
@@ -19,6 +34,7 @@
 	font-size: 40px;
 	text-align: center;
 	background: #F6F6F6;
+	height: 130px;
 }
 
 .nav {
@@ -37,6 +53,7 @@
 	font-size: 18px;
 	text-align: center;
 	background: #F6F6F6;
+	height: 35px;
 }
 
 .nav3 {
@@ -48,7 +65,7 @@
 	font-size: 18px;
 	text-align: center;
 	background: #F6F6F6;
-}
+	height:35px;}
 
 #in {
 	width: 10%;
@@ -83,10 +100,11 @@
 }
 
 .content {
-	width: 11%;
+	width: 19%;
 	font-size: 18px;
 	text-align: center;
 	background: #F6F6F6;
+	height: 35px;
 }
 
 #name {
@@ -94,6 +112,7 @@
 	font-size: 18px;
 	text-align: center;
 	background: #F6F6F6;
+	height: 35px;
 }
 
 #gender {
@@ -149,7 +168,7 @@
 }
 
 #insert {
-	height: 170px;
+	height: 600px;
 	pxfont-size: 18px;
 	text-align: center;
 	pxfont-size: 18px;
@@ -161,13 +180,11 @@ td {
 }
 
 #boss {
-	position: absolute;
-	left: 20%;
-	top:89%;
+    position: relative;
+    text-align: center;
+    top: 50px;
+}
+#doc {
+	    float: right;
 }
 
-#doc {
-    position: relative;
-    left: 78%;
-    top: 82%;
-}
