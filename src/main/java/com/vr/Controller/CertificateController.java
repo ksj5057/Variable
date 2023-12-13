@@ -19,9 +19,21 @@ public class CertificateController {
 	 return "Certificate/Certificate_L";
 	}
 	
-	//재증명 발급 상세내역
-	@GetMapping("CertificateDetails_L")
-	public String CertificateDetails() {
-		return "Certificate/CertificateDetails_L";
+	//재증명 발급 상세내역 수술확인서
+	@GetMapping("OperationCertificateDetails_L")
+	public String OperationCertificateDetails_L() {
+		return "Certificate/OperationCertificateDetails_L";
+	}
+	
+	//재증명 발급 입 퇴원 확인서
+	@GetMapping("HospitalizationCertificateDetails_L")
+	public String HospitalizationCertificateDetails_L() {
+		return "Certificate/HospitalizationCertificateDetails_L";
+	}
+	
+	//재증명 발급 진료 확인서
+	@GetMapping("ClinicCertificateDetails_L")
+	public String ClinicCertificateDetails_La() {
+		return "Certificate/ClinicCertificateDetails_L";
 	}
 }
