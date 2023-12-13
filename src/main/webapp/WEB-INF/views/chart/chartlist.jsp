@@ -4,12 +4,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel = "stylesheet" type = "text/css" href = "../../../resources/css/chartlist.css">
+<link rel = "stylesheet" href = "/resources/css/chartlist.css">
 <meta charset="UTF-8">
 <title>차트 리스트</title>
 </head>
 <body>
-<div class="main"><h2>차트 리스트</h2></div>
+<div class="headline"><h2>차트 리스트</h2></div>
+
 <form id="searchform" action="/chart/chartlist" method="get">
 
 	<select name="type">
@@ -47,13 +48,14 @@
 			<td class = "td1">${chartlist.exitd}</td>
 			<td class = "td1">${chartlist.dcode}</td>
 			<td>
-				<a href = "chartmodifyForm?cno=${chartlist.cno}"><button>차트수정</button></a>
-				<a href = "chartdelete?cno=${chartlist.cno}"><button>차트삭제</button></a>
+				<a href = "chartmodifyForm?cno=${chartlist.cno}"><button id="modify">차트수정</button></a>
+				<a href = "chartdelete?cno=${chartlist.cno}"><button id="delete">차트삭제</button></a>
 			</td>
 		<tr>
 		</c:forEach>
 	</table><br>
-	<a id = "writeform" href = "chartwriteForm"><button>차트 작성</button></a><br>
+	<a id = "writeform" href = "chartwriteForm"><button id = "write">차트 작성</button></a><br>
+	
 	<c:if test="${paging.prev}">
 		<a class = "paging" href="/chart/chartlist?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${paging.startpage-1}&amount=${paging.cri.amount}">◀</a>
 	</c:if>

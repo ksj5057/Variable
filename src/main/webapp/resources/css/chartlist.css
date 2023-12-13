@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+.headline{
+	position : relative;
+	text-align : center;
+	right : 50px;
+}
+
 #searchform{
 	position : relative;
 	left : 80px;
@@ -57,4 +63,25 @@ td{
 /* 페이징 숫자, 다음칸 마우스 갖다댔을때 */
 .paging:hover{
 	color : #6ed3d8;
+}
+
+#modify,
+#delete,
+#write {
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#modify {
+    background-color: #03A9F4;
+}
+
+#delete {
+    background-color: #E91E63;
+}
+
+#write {
+	background-color: #74D36D;
 }
