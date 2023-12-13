@@ -81,5 +81,10 @@ public class ChartController {
 		cs.chartdelete(chart);
 		return "redirect:/chart/chartlist";
 	}
+	
+	@RequestMapping(value = "chart/chartdetail", method = RequestMethod.GET)
+	public void chartdetail(ChartDTO chart) {
+		cs.chartdetail(chart);
+	}
 } 
 	   

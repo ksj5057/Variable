@@ -38,5 +38,11 @@ public class ChartServiceImpl implements ChartService {
 	public void chartdelete(ChartDTO chart) {
 		cm.chartdelete(chart);
 	}
+
+	@Override
+	public ChartDTO chartdetail(ChartDTO chart) {
+		// TODO Auto-generated method stub
+		return cm.chartdetail(chart);
+	}
 }
     
