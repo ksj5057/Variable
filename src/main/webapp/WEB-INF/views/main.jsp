@@ -23,17 +23,16 @@
 						<a href="/"> <img src="/resources/image/main_logo.png" alt="그린대학교병원"></a>
 					</h1>
 					<ul class="header_login_m">
-<<<<<<< HEAD
-					<c:if test="${sessionScope.login.id ne null}">
-						<li><a href="Login_L">관리자 전용 페이지</a></li>
-					</c:if>
-=======
-						<li><a href="admin_L">관리자전용</a></li>
->>>>>>> branch 'koo' of https://github.com/ksj5057/Variable.git
+		
+				<!-- 관리자 아이디 admin 으로 로그인했을때만 보이게 -->
+				<c:if test="${login.id.equals('admin1')}">
+					<li><a href="chartlist">차트관리</a></li>
+				</c:if>
 						<li><a href="Login_L">로그인</a></li>
 						<li><a href="MemberShip_L">회원가입</a></li>
 					</ul>
-
+			
+		
 					<!--검색-->
 					<div class="header_search_m">
 						<input class="" id="bh_search_txts" type="text"
