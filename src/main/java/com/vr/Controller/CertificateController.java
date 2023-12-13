@@ -1,16 +1,27 @@
 package com.vr.Controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import com.vr.Model.MemberDTO;
+import com.vr.Service.CertificateService;
 
 @Controller
 public class CertificateController {
 
+	@Autowired
+	CertificateService cs;
 	
 	//재증명 발급 화면으로 이동
+	//환자의 3개월치 이력이 있는지 확인하고 창 띄어주기.
 	@GetMapping("Certificate_L")
-	public String Certificate() {
-		return "Certificate/Certificate_L";
+	public String Certificate(MemberDTO md) {
+//		if(cs.serch(md) > 0) {
+//			return "Certificate/Certificate_L";
+//		}
+//		
+			return "Certificate/Certificate_L";
 	}
 	
 	//진료 기록 확인하기

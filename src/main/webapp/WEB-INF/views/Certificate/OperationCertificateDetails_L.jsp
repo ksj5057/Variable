@@ -6,7 +6,7 @@
 <meta charset="EUC-KR">
 <title>증명서 상세 내역</title>
 <!-- 수술확인서 -->
-<link rel="stylesheet" href="/resources/css/OperationCertificateDetails.css">
+<link rel="stylesheet" href="/resources/css/certificate/OperationCertificateDetails.css">
 <script src="/../../resources/js/print/Print.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
@@ -37,7 +37,7 @@
 			<table class="line">
 				<tr>
 					<!-- 본문 -->
-					<td colspan="2" class="titlenumber">병록 번호</td>
+					<td colspan="2" class="titlenumber">차트 번호</td>
 					<td class="nav3"></td>
 				</tr>
 				<tr>
