@@ -11,6 +11,10 @@
 <title>차트 리스트</title>
 </head>
 <body>
+
+	<!-- 헤더 -->
+	<jsp:include page="../include/header.jsp"></jsp:include>
+	
 <div class="headline"><h2>차트 리스트 (관리자 전용)</h2></div>
 
 <form id="searchform" action="/chart/chartlist" method="get">
@@ -43,7 +47,7 @@
 			<td class = "td1">${chartlist.cno}</td>
 			<td class = "td1">${chartlist.cname}</td>
 			<td class = "td1">${chartlist.rrn}</td>
-			<td class = "td1"><a href = "chartdetail?cno=${chartlist.cno}">${chartlist.disease}</a></td>
+			<td class = "td1"><a class="detailc" href = "chartdetail?cno=${chartlist.cno}">${chartlist.disease}</a></td>
 <%-- 			<td class = "td1">${chartlist.operation}</td> --%>
 			<td class = "td1">${chartlist.operd}</td>
 			<td class = "td1">
