@@ -1,8 +1,21 @@
 @charset "UTF-8";
 
+@import
+	url('https://fonts.googleapis.com/css2? family= Noto+Serif+KR:wght@300 & display=swap')
+	;
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Serif+KR:wght@300&display=swap')
+	;
+
+.bh_all_login_section.bh_mgb30 {
+    margin-top: 50px;
+}
+
 a, a:link, a:visited {
     text-decoration: none;
 }
+
 .bh_all_login_box .bh_btn_all_login {
     position: absolute;
     top: 0;
@@ -77,6 +90,7 @@ a, a:link, a:visited {
     font-size: 14px;
     font-family: inherit;
     line-height: 40px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .bh_all_login_box .bh_all_login_btn_pw {
@@ -157,5 +171,17 @@ div {
 
 .bh_all_login_sns {
     font-size: 0;
+}
+
+input#userid {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+input#password {
+	 font-family: 'Noto Sans KR', sans-serif;
+}
+
+input.bh_btn_all_login {
+	font-family: 'Noto Sans KR', sans-serif;
 }
 

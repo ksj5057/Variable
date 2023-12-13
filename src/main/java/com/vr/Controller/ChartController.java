@@ -83,8 +83,10 @@ public class ChartController {
 	}
 	
 	@RequestMapping(value = "chart/chartdetail", method = RequestMethod.GET)
-	public void chartdetail(ChartDTO chart) {
+	public String chartdetail(ChartDTO chart, Model model) {
 		cs.chartdetail(chart);
+		model.addAttribute("chartdetail", cs.chartdetail(chart));
+		return "chart/chartdetail";
 	}
 } 
 	   

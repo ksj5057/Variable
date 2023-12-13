@@ -30,8 +30,12 @@ location.href="Serch";
 <link rel="stylesheet" href="/resources/css/Certificate.css">
 </head>
 <body>
+
+	<!-- 헤더 -->
+	<jsp:include page="../include/header.jsp"></jsp:include>
+
 	<div class="contents_section">
-		<div>
+		<div class="contents_section_L">
 			<div class="bh_mgb35">
 				<h5 class="tit_h5">온라인 발급 (병원 방문 없이 인터넷(휴대폰/PC) 신청 후 직접 발급 가능)</h5>
 			</div>

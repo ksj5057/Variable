@@ -1,11 +1,12 @@
 @charset "UTF-8";
 
-@font-face {
-    font-family: 'OTWelcomeRA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
+@import
+	url('https://fonts.googleapis.com/css2? family= Noto+Serif+KR:wght@300 & display=swap')
+	;
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Serif+KR:wght@300&display=swap')
+	;
 
 body {
     width: 100%;
@@ -50,7 +51,7 @@ body {
 
 .maincss ol, ul, li {
 	list-style: none;
-	font-family: 'OTWelcomeRA';
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
 ul.header_login_m {
@@ -77,9 +78,12 @@ a, a:link, a:visited.main_a1_m {
 	color: #444;
     font-size: 16px;
     font-weight: 600;
+    margin-right: 5px;
 }
 
 #bh_search_txts {
+	padding-top: 1px;
+    padding-bottom: 2px;
 	float: right;
     width: 450px;
     height: 30px;
@@ -89,10 +93,11 @@ a, a:link, a:visited.main_a1_m {
     padding-left: 10px;
     font-size: 16px;
     line-height: 31px;
-    font-family: 'OTWelcomeRA';
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 #btn_search {
+	padding-top: 10px;
     display: block;
     position: absolute;
     top: 0;
@@ -107,7 +112,7 @@ a, a:link, a:visited.main_a1_m {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    font-family: 'OTWelcomeRA';
+    font-family: 'Noto Sans KR', sans-serif;
 }
 /* 상단 메뉴 끝 */
 
@@ -167,7 +172,7 @@ a, a:link, a:visited.main_a1_m {
 
 .main_li_1 dl {
 	margin: 0;
-    padding-top: 60px;
+    padding-top: 45px;
     padding-bottom: 75px;
 }
 
@@ -183,7 +188,7 @@ input#consulting_m {
     font-weight: 600;
     cursor: pointer;
     margin-top: 15px;
-    font-family: 'OTWelcomeRA';
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .main_li_2 a, dt {
@@ -206,7 +211,7 @@ input#consulting_m {
 
 .main_li_2 dl {
     margin: 0;
-    padding-top: 50px;
+    padding-top: 42px;
     padding-bottom: 100px;
     background-image: url("/resources/image/ico_1.png");
     background-color: #F2F2F2;
@@ -255,7 +260,7 @@ input#consulting_m {
 
 .main_li_3 dl {
     margin: 0;
-    padding-top: 55px;
+    padding-top: 45px;
     padding-bottom: 75px;
     background-color: #E4F6FF;
 }
@@ -270,7 +275,7 @@ input#consulting_m {
     height: 30px;
     border: 4px solid #006633;
     text-align: center;
-    font-family: 'OTWelcomeRA';
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 input#search_btn_m {
@@ -284,7 +289,7 @@ input#search_btn_m {
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    font-family: 'OTWelcomeRA';
+    font-family: 'Noto Sans KR', sans-serif;
     margin-top: 10px;
 }
 
@@ -307,13 +312,13 @@ input#search_btn_m {
 
 .main_li_4 dl {	
     margin: 0;
-    padding-top: 55px;
-    padding-bottom: 100px;
+    padding-top: 40px;
+    padding-bottom: 110px;
     background-image: url(/resources/image/ico_2.png);
     background-color: #FEFFCB;
     background-size: 22%;
     background-repeat: no-repeat;
-    background-position: center 77%;    
+    background-position: center 73%;    
 }
 
 .main_li_5 a, dt {
@@ -335,7 +340,7 @@ input#search_btn_m {
 
 .main_li_5 dl {
     margin: 0;
-    padding-top: 55px;
+    padding-top: 45px;
     padding-bottom: 100px;
     background-image: url(/resources/image/ico_3.png);
     background-color: #FFE7BC;
@@ -363,7 +368,7 @@ input#search_btn_m {
 
 .main_li_6 dl {
     margin: 0;
-    padding-top: 50px;
+    padding-top: 42px;
     padding-bottom: 100px;
     background-image: url(/resources/image/ico_4.png);
     background-color: #E9D7EF;
@@ -390,14 +395,14 @@ input#search_btn_m {
 }
 
 .main_li_7 dl {
-    margin: 0;
-    padding-top: 50px;
-    padding-bottom: 100px;
+	margin: 0;
+    padding-top: 38px;
+    padding-bottom: 110px;
     background-image: url(/resources/image/ico_5.png);
     background-color: #CECECE;
     background-size: 33%;
     background-repeat: no-repeat;
-    background-position: center 78%;
+    background-position: center 82%;
 }
 
 .main_li_8 a, dt {
@@ -419,13 +424,13 @@ input#search_btn_m {
 
 .main_li_8 dl {
 	margin: 0;
-    padding-top: 45px;
+    padding-top: 32px;
     padding-bottom: 110px;
     background-image: url(/resources/image/ico_6.png);
     background-color: #DAC09E;
     background-size: 30%;
     background-repeat: no-repeat;
-    background-position: center 80%;
+    background-position: center 82%;
 }
 
 .main_conts_set_m {
