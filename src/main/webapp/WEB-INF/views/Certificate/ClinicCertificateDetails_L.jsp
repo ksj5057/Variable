@@ -1,84 +1,90 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Áõ¸í¼­ »ó¼¼ ³»¿ª</title>
-<link rel="stylesheet"
-	href="/resources/css/ClinicCertificateDetails.css">
+<title>ì¦ëª…ì„œ ìƒì„¸ ë‚´ì—­</title>
+<!-- ì§„ë£í™•ì¸ì„œ -->
+<link rel="stylesheet" href="/resources/css/CertificateDetails.css">
+<script src="/../../resources/js/print/Print.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 </head>
 <body>
-
+<button onclick="CdownloadPdf()">ë‹¤ìš´ë¡œë“œ </button>
+		<div  id="printimage2" class="a4"><button onclick="return printPage()" id="printimage"></button><label onclick="return printPage()">ì¶œë ¥</label></div>
+	<div id="printpage">
 	<div id="page">
-		<!-- Á¦¸ñ -->
+		<!-- ì œëª© -->
 		<div id="filed">
 			<table class="line">
 				<tr>
-					<td rowspan="3" id="title">Áø ·á È® ÀÎ ¼­</td>
-					<td class="nav">Áø ·á °ú</td>
+					<td rowspan="3" id="title">ì§„ ë£Œ í™• ì¸ ì„œ</td>
+					<td class="nav">ì§„ ë£Œ ê³¼</td>
 					<td class="nav2"></td>
 				</tr>
 				<tr>
-					<td class="nav">ÀÛ ¼º ÀÚ</td>
+					<td class="nav">ìž‘ ì„± ìž</td>
 					<td class="nav2"></td>
 				</tr>
 				<tr>
-					<td class="nav">ÀÏ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ÀÚ</td>
+					<td class="nav">ì¼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ìž</td>
 					<td class="nav2"></td>
 				</tr>
 
 			</table>
 			<table class="line">
 				<tr>
-					<!-- º»¹® -->
-					<td colspan="2" class="titlenumber">º´·Ï ¹øÈ£</td>
+					<!-- ë³¸ë¬¸ -->
+					<td colspan="2" class="titlenumber">ë³‘ë¡ ë²ˆí˜¸</td>
 					<td class="nav3"></td>
 				</tr>
 				<tr>
-					<td colspan="2" class="titlenumber">¸é ¹øÈ£</td>
+					<td colspan="2" class="titlenumber">ë©´ ë²ˆí˜¸</td>
 					<td class="nav3"></td>
 				</tr>
 			</table>
 
 			<table class="line">
 				<tr>
-					<td id="name">¼º ¸í</td>
+					<td id="name">ì„± ëª…</td>
 					<td id="o1"></td>
-					<td id="gender">¼º º°</td>
+					<td id="gender">ì„± ë³„</td>
 					<td id="o2"></td>
-					<td id="birth">»ý³â¿ùÀÏ</td>
+					<td id="birth">ìƒë…„ì›”ì¼</td>
 					<td id="o3"></td>
-					<td id="age">¿¬ ·É</td>
+					<td id="age">ì—° ë ¹</td>
 					<td id="o4"></td>
 				</tr>
 			</table>
 			<table class="line">
 				<tr>
-					<td class="content">ÁÖ ¼Ò</td>
+					<td class="content">ì£¼ ì†Œ</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td class="content">Áø ´Ü ¸í
+					<td class="content">ì§„ ë‹¨ ëª…
 					<td></td>
 				</tr>
 			</table>
 			<table class="line">
 				<tr>
-					<td class="content" id="insert">Áø ´Ü ³» ¿ë</td>
+					<td class="content" id="insert">ì§„ ë‹¨ ë‚´ ìš©</td>
 					<td></td>
 				</tr>
 			</table>
 		</div>
 
 		<div id="doc">
-			<label>´ã´çÀÇ»ç:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ÀÎ)</label>
+			<label>ì£¼ ì¹˜ ì˜:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ì¸)</label>
 		</div>
 		<div id="boss">
 			<h1>
-				<label>±×¸°´ëÇÐ±³º´¿ø</label>
+				<label>ê·¸ë¦°ëŒ€í•™êµë³‘ì›</label>
 			</h1>
 		</div>
+	</div>
 	</div>
 </body>
 </html>
