@@ -30,6 +30,10 @@ location.href="Serch";
 <link rel="stylesheet" href="/resources/css/Certificate.css">
 </head>
 <body>
+
+	<!-- Çì´õ -->
+	<jsp:include page="../include/header.jsp"></jsp:include>
+
 	<div class="contents_section">
 		<div>
 			<div class="bh_mgb35">
