@@ -317,7 +317,7 @@ a, a:link, a:visited {
 	padding-top: 10px;
 	font-weight: 600;
 	margin-bottom: 17px;
-	font-family: KoPub Dotum, 'KoPub Dotum';
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
 .tit_h4 {
@@ -353,10 +353,11 @@ ul, ol, li {
 }
 
 .contents_section {
+	position: relative;
 	min-width: 960px;
 	max-width: 1200px;
-	padding: 0 20px;
-	margin: 0 auto;
 	clear: both;
-	padding: 0 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
 }
