@@ -8,6 +8,10 @@
 <title>차트 수정</title>
 </head>
 <body>   
+
+	<!-- 헤더 -->
+	<jsp:include page="../include/header.jsp"></jsp:include>
+
 <form action="chartmodify" method = "post">
 	<table>
 		<tr>

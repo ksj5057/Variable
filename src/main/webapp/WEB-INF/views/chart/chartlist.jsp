@@ -11,6 +11,10 @@
 <title>차트 리스트</title>
 </head>
 <body>
+
+	<!-- 헤더 -->
+	<jsp:include page="../include/header.jsp"></jsp:include>
+
 <div class="headline"><h2>차트 리스트 (관리자 전용)</h2></div>
 
 <form id="searchform" action="/chart/chartlist" method="get">
