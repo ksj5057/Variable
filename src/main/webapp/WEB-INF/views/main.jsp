@@ -22,16 +22,25 @@
 					<h1>
 						<a href="/"> <img src="/resources/image/main_logo.png" alt="그린대학교병원"></a>
 					</h1>
-					<ul class="header_login_m">
-		
-				<!-- 관리자 아이디 admin 으로 로그인했을때만 보이게 -->
+					<ul class="header_login_m">			
+				
+				<!-- 로그인하면 안보이게 -->
+				<c:if test="${login.id == null}">
+					<li><a href="Login_L">로그인</a></li>
+					<li><a href="MemberShip_L">회원가입</a></li>
+				</c:if>						
+				
+				<!-- 로그인하면 보이게  -->
+				<c:if test="${login.id ne null}">	
+					<li><a href="#">${sessionScope.login.mname}님 환영합니다.</a><li>
+				
+				<!-- 관리자 아이디로 로그인했을때만 보이게 -->
 				<c:if test="${login.id.equals('admin1')}">
-					<li><a href="chartlist">차트관리</a></li>
+					<li><a href="chart/chartlist">차트관리</a></li>
 				</c:if>
-						<li><a href="Login_L">로그인</a></li>
-						<li><a href="MemberShip_L">회원가입</a></li>
-					</ul>
-			
+					<li><a href="logout">로그아웃</a></li>
+				</c:if>
+					</ul>			
 		
 					<!--검색-->
 					<div class="header_search_m">
