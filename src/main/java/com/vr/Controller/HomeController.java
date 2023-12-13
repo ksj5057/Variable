@@ -76,17 +76,18 @@ public class HomeController {
 		return "Member/Login_L";
 		}
 	}
-		
-	@PostMapping("logout")
+	
+	// 로그아웃누르면 메인으로
+	@GetMapping("logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
-		return "logform";
+		return "main";
 	}
 	
 	// 관리자전용 클릭시 차트리스트 실행	
 	@GetMapping("chartlist")
 	public String chartlist(MemberDTO member) {
 		return "chart/chartlist";
-	}
+	}	
 	
 }    
