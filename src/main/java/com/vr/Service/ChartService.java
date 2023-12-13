@@ -19,5 +19,7 @@ public interface ChartService {
    
 	public void chartdelete(ChartDTO chart);
 	
+	public ChartDTO chartdetail(ChartDTO chart);
+	
 }
  

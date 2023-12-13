@@ -5,20 +5,22 @@
 <html>
 <head>
 <link rel = "stylesheet" href = "/resources/css/chartlist.css">
+<script src = "/resources/js/chart/chartlist.js"></script>
+
 <meta charset="UTF-8">
 <title>차트 리스트</title>
 </head>
 <body>
-<div class="headline"><h2>차트 리스트</h2></div>
+<div class="headline"><h2>차트 리스트 (관리자 전용)</h2></div>
 
 <form id="searchform" action="/chart/chartlist" method="get">
 
-	<select name="type">
+	<select name="type" style= "border-radius : 20px">
 		<option value="T">이름</option>
 		<option value="C">환자코드번호</option>
 	</select>
-	<input type="text" name="keyword" value="${paging.cri.keyword}">
-	<input type="submit" value="검색">
+	<input type="text" name="keyword" style= "border-radius : 20px" value="${paging.cri.keyword}">
+	<input type="submit" id="searchb" value="검색">
 </form>
 
 <br>
@@ -29,8 +31,8 @@
 			<td style = "width : 100px">이름</td>
 			<td style = "width : 180px">주민번호</td>
 			<td style = "width : 220px">진단내용</td>
-			<td style = "width : 220px">치료내용</td>
-			<td style = "width : 170px">수술날짜</td>
+<!-- 			<td style = "width : 220px">상태 및 소견</td> -->
+			<td style = "width : 170px">작성날짜</td>
 			<td style = "width : 170px">입원날짜</td>
 			<td style = "width : 170px">퇴원날짜</td>
 			<td style = "width : 100px">환자코드</td>
@@ -41,11 +43,28 @@
 			<td class = "td1">${chartlist.cno}</td>
 			<td class = "td1">${chartlist.cname}</td>
 			<td class = "td1">${chartlist.rrn}</td>
-			<td class = "td1">${chartlist.disease}</td>
-			<td class = "td1">${chartlist.operation}</td>
+			<td class = "td1"><a href = "chartdetail?cno=${chartlist.cno}">${chartlist.disease}</a></td>
+<%-- 			<td class = "td1">${chartlist.operation}</td> --%>
 			<td class = "td1">${chartlist.operd}</td>
-			<td class = "td1">${chartlist.enterd}</td>
-			<td class = "td1">${chartlist.exitd}</td>
+			<td class = "td1">
+			<c:choose>
+				<c:when test = "${chartlist.enterd eq ''}">
+					해당없음 
+				</c:when>
+				<c:otherwise>
+					${chartlist.enterd}
+				</c:otherwise>
+			</c:choose>
+			</td>
+			<td class = "td1">
+			<c:choose>
+				<c:when test = "${chartlist.exitd eq ''}">
+					해당없음 
+				</c:when>
+				<c:otherwise>
+					${chartlist.exitd}
+				</c:otherwise>
+			</c:choose></td>
 			<td class = "td1">${chartlist.dcode}</td>
 			<td>
 				<a href = "chartmodifyForm?cno=${chartlist.cno}"><button id="modify">차트수정</button></a>
