@@ -72,4 +72,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   		<delete id = "chartdelete">
   			delete from chart where cno = #{cno}
   		</delete>
+  		
+  		<select id = "chartdetail" resultType="com.vr.Model.ChartDTO">
+  			select * from chart where cno = #{cno};
+  		</select>
 </mapper>

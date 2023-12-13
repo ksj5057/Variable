@@ -18,5 +18,7 @@ public interface ChartMapper {
 	public ChartDTO modifyForm(ChartDTO chart);
 	//chart 삭제
 	public void chartdelete(ChartDTO chart);
+	
+	public ChartDTO chartdetail(ChartDTO chart);
 }
     
