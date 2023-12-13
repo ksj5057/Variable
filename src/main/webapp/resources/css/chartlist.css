@@ -22,7 +22,7 @@ input[type="submit"] {
 #container{
 	position : relative;
 	left : 200px;
-	border : 2px solid black;
+	border : 1px solid #ccc;
 	border-collapse : collapse;	
 }
 
@@ -50,7 +50,7 @@ td{
 #writeform{
 	position : relative;
 	float : right;
-	right : 280px;
+	right : 268px;
 }
 
 /* 페이징 숫자, 다음칸 */
@@ -70,6 +70,10 @@ td{
 /* 페이징 숫자, 다음칸 마우스 갖다댔을때 */
 .paging:hover{
 	color : #6ed3d8;
+}
+
+.detailc:link{
+	text-decoration : none;
 }
 
 #modify,
