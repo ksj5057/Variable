@@ -68,7 +68,7 @@ public class HomeController {
 		//로그인해라
 		session.setAttribute("login", ms.login(member));
 		//그리고 로그인 화면으로 이동
-		return "main_m";
+		return "main";
 		//그렇지않으면
 		}else {
 		//로그인 하지마라
@@ -82,4 +82,11 @@ public class HomeController {
 		session.invalidate();
 		return "logform";
 	}
+	
+	// 관리자전용 클릭시 차트리스트 실행	
+	@GetMapping("chartlist")
+	public String chartlist(MemberDTO member) {
+		return "chart/chartlist";
+	}
+	
 }    
