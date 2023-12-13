@@ -38,11 +38,6 @@
 	text-align : center;
 }
 
-.category{
-	position : relative;
-	float : right;
-}
-
 .name{
 	position : relative;
 	
@@ -53,6 +48,7 @@
 }
 
 .rrn{
+	
 	
 }
 
@@ -77,7 +73,8 @@
 	
 }
 
-#button{
-	
-	
+#writebutton{
+	position : relative;
+	float : right;
+	right : 500px;
 }
