@@ -66,7 +66,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   		<update id = "chartmodify">
   			update chart set disease = #{disease}, operation = #{operation},
   			operd = #{operd}, enterd = #{enterd}, exitd = #{exitd}, dcode = #{dcode} 
-  			where cno = #{cno}; 
+  			where cno = #{cno};
   		</update>
   		
   		<delete id = "chartdelete">
