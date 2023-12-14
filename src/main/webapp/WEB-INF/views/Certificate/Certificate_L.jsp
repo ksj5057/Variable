@@ -1,142 +1,123 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!--  
-<c:choose>
-<c:when test="${sessionScope.login.id eq null}">
-<script>
-//·Î±×ÀÎ °ªÀÌ nullÀÏ °æ¿ì ·Î±×ÀÎ ¸àÆ® ÈÄ °­Á¦·Î ·Î±×ÀÎÈ­¸éÀ¸·Î ÀÌµ¿½ÃÅ°±â.
-alert("·Î±×ÀÎ ÈÄ ÀÌ¿ë ºÎÅ¹µå¸³´Ï´Ù."), location.href="Login_L";
-</script>
 
-</c:when>
-
-<c:when test="${sessionScope.login.id ne null}">
-<script>
-location.href="Serch";
-//·Î±×ÀÎÇÏ¸é id°ªÀ» µû¼­ 3°³¿ùÀÇ Áø·á³»¿ªÀ» È®ÀÎÇÏ¿© ³»¿ª ¶ç¿ì±â
-
-</script>
-</c:when>
-
-</c:choose> 
--->
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Áõ¸í¼­ ¹ß±Þ</title>
-<link rel="stylesheet" href="/resources/css/Certificate.css">
+<meta charset="UTF-8">
+<title>ì¦ëª…ì„œ ë°œê¸‰</title>
+<link rel="stylesheet" href="/resources/css/Certificate/Certificate.css">
 </head>
 <body>
 
-	<!-- Çì´õ -->
+	<!-- í—¤ë” -->
 	<jsp:include page="../include/header.jsp"></jsp:include>
 
 	<div class="contents_section">
 		<div class="contents_section_L">
 			<div class="bh_mgb35">
-				<h5 class="tit_h5">¿Â¶óÀÎ ¹ß±Þ (º´¿ø ¹æ¹® ¾øÀÌ ÀÎÅÍ³Ý(ÈÞ´ëÆù/PC) ½ÅÃ» ÈÄ Á÷Á¢ ¹ß±Þ °¡´É)</h5>
+				<h5 class="tit_h5">ì˜¨ë¼ì¸ ë°œê¸‰ (ë³‘ì› ë°©ë¬¸ ì—†ì´ ì¸í„°ë„·(íœ´ëŒ€í°/PC) ì‹ ì²­ í›„ ì§ì ‘ ë°œê¸‰ ê°€ëŠ¥)</h5>
 			</div>
 			<div class="bh_mgb35">
-				<h6 class="tit_h4">½ÅÃ» ÀýÂ÷</h6>
+				<h6 class="tit_h4">ì‹ ì²­ ì ˆì°¨</h6>
 				<div class="bh_flow_circle8_wrap">
 					<ol class="bh_flow_circle8_ol sty1">
-						<li class="bh_flow_circle8_li_1"><strong>·Î±×ÀÎ<span></span></strong></li>
-						<li class="bh_flow_circle8_li_2"><strong>½ÅÃ» ¹× <span></span>±¸ºñ¼­·ù
-								¾÷·Îµå
+						<li class="bh_flow_circle8_li_1"><strong>ë¡œê·¸ì¸<span></span></strong></li>
+						<li class="bh_flow_circle8_li_2"><strong>ì‹ ì²­ ë° <span></span>êµ¬ë¹„ì„œë¥˜
+								ì—…ë¡œë“œ
 						</strong></li>
-						<li class="bh_flow_circle8_li_3"><strong>´ã´çÀÚ È®ÀÎ<span></span><em><br>(¾÷¹«ÀÏ
-									±âÁØ ÃÖ´ë 3ÀÏ ¼Ò¿ä)</em></strong></li>
-						<li class="bh_flow_circle8_li_4"><strong>¿Â¶óÀÎ °áÁ¦<span></span><em><br>(º»ÀÎ
-									½ÅºÐ È®ÀÎ)</em></strong></li>
-						<li class="bh_flow_circle8_li_5"><strong>Ãâ·Â ¶Ç´Â<span></span>PDF
-								´Ù¿î·Îµå
+						<li class="bh_flow_circle8_li_3"><strong>ë‹´ë‹¹ìž í™•ì¸<span></span><em><br>(ì—…ë¬´ì¼
+									ê¸°ì¤€ ìµœëŒ€ 3ì¼ ì†Œìš”)</em></strong></li>
+						<li class="bh_flow_circle8_li_4"><strong>ì˜¨ë¼ì¸ ê²°ì œ<span></span><em><br>(ë³¸ì¸
+									ì‹ ë¶„ í™•ì¸)</em></strong></li>
+						<li class="bh_flow_circle8_li_5"><strong>ì¶œë ¥ ë˜ëŠ”<span></span>PDF
+								ë‹¤ìš´ë¡œë“œ
 						</strong></li>
 					</ol>
 				</div>
 			</div>
 			<br>
 
-			<p class="bh_normal_txt">- ¿Â¶óÀÎ ÀÇ¹«±â·Ï»çº» ¹ß±ÞÀº È¯ÀÚ º»ÀÎ°ú È¯ÀÚÀÇ Ä£Á·¿¡ ÇÑÇØ¼­¸¸
-				°¡´ÉÇÕ´Ï´Ù.(°ü·Ã±Ù°Å ÀÇ·á¹ý ½ÃÇà±ÔÄ¢ Á¦13Á¶ÀÇ3)</p>
+			<p class="bh_normal_txt">- ì˜¨ë¼ì¸ ì˜ë¬´ê¸°ë¡ì‚¬ë³¸ ë°œê¸‰ì€ í™˜ìž ë³¸ì¸ê³¼ í™˜ìžì˜ ì¹œì¡±ì— í•œí•´ì„œë§Œ
+				ê°€ëŠ¥í•©ë‹ˆë‹¤.(ê´€ë ¨ê·¼ê±° ì˜ë£Œë²• ì‹œí–‰ê·œì¹™ ì œ13ì¡°ì˜3)</p>
 			<p class="bh_normal_txt">
-				- <em class="bh_color_red">¿µ»óÀÚ·á(CD/DVD)´Â Á÷Á¢ ¹æ¹®ÇÏ¼Å¾ß ¹ß±Þ °¡´ÉÇÕ´Ï´Ù(¿Â¶óÀÎ
-					½ÅÃ» ºÒ°¡)</em>
+				- <em class="bh_color_red">ì˜ìƒìžë£Œ(CD/DVD)ëŠ” ì§ì ‘ ë°©ë¬¸í•˜ì…”ì•¼ ë°œê¸‰ ê°€ëŠ¥í•©ë‹ˆë‹¤(ì˜¨ë¼ì¸
+					ì‹ ì²­ ë¶ˆê°€)</em>
 			</p>
 		</div>
 		<div class="bh_mgb35">
 			<ul class="bh_normal_txt">
-				<li>* Áø·á±â·Ï(¿Ü·¡±â·Ï, ÀÔ¿ø±â·Ï µî), °Ë»ç°á°úÁö(Ç÷¾×°Ë»ç, ¼Òº¯°Ë»ç, Á¶Á÷°Ë»ç, CTÆÇµ¶ °á°ú µî)
-					»çº»¹ß±ÞÀÌ °¡´ÉÇÕ´Ï´Ù.</li>
-				<li>* Áø·áÈ®ÀÎ¼­, ¿µ¼öÁõ, ¼¼ºÎ³»¿ª¼­ µîÀº ¿Â¶óÀÎÁõ¸í¼­ ½ÅÃ»¿¡¼­ ¹ß±Þ°¡´ÉÇÕ´Ï´Ù.</li>
-				<li>* PDF ´Ù¿î·Îµå ½Ã, º°µµ ¼ö¼ö·á(\2,200¿ø) ¹ß»ýÇÕ´Ï´Ù.</li>
+				<li>* ì§„ë£Œê¸°ë¡(ì™¸ëž˜ê¸°ë¡, ìž…ì›ê¸°ë¡ ë“±), ê²€ì‚¬ê²°ê³¼ì§€(í˜ˆì•¡ê²€ì‚¬, ì†Œë³€ê²€ì‚¬, ì¡°ì§ê²€ì‚¬, CTíŒë… ê²°ê³¼ ë“±)
+					ì‚¬ë³¸ë°œê¸‰ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.</li>
+				<li>* ì§„ë£Œí™•ì¸ì„œ, ì˜ìˆ˜ì¦, ì„¸ë¶€ë‚´ì—­ì„œ ë“±ì€ ì˜¨ë¼ì¸ì¦ëª…ì„œ ì‹ ì²­ì—ì„œ ë°œê¸‰ê°€ëŠ¥í•©ë‹ˆë‹¤.</li>
+				<li>* PDF ë‹¤ìš´ë¡œë“œ ì‹œ, ë³„ë„ ìˆ˜ìˆ˜ë£Œ(\2,200ì›) ë°œìƒí•©ë‹ˆë‹¤.</li>
 			</ul>
 		</div>
 		<section class="subContents">
 			<div class="contBlock">
 
 				<div class="contents_form">
-					<!-- Áõ¸í¼­ ¹ß±Þ -->
+					<!-- ì¦ëª…ì„œ ë°œê¸‰ -->
 					<div class="ctfIssue_section">
 						<div class="ctfBox_wrap">
 							<div class="ctfBox sty01">
 								<div class="ctfBox_header">
-									<!--  Áø·áÈ®ÀÎ¼­ -->
-									<p class="tit">Áø·á È®ÀÎ¼­</p>
+									<!--  ì§„ë£Œí™•ì¸ì„œ -->
+									<p class="tit">ì§„ë£Œ í™•ì¸ì„œ</p>
 									<p class="txt">
 										<br>
 									</p>
 								</div>
 								<div class="ctfBox_contents">
-									<p class="tit">È®ÀÎ »çÇ×</p>
-									<p class="bul_sty">ÀÌ¸§ ¹× ÁÖ¹Îµî·Ï¹øÈ£°¡ ±âÀçµÇ¾î ÀÖÀ½</p>
-									<p class="bul_sty">Åë¿ø ÀÏÀÚ¸¸ ±âÀçµÇ¾î ÀÖÀ½</p>
-									<p class="bul_sty">°³ÀÎÁ¤º¸ À¯Ãâ¿¡ ÁÖÀÇ</p>
+									<p class="tit">í™•ì¸ ì‚¬í•­</p>
+									<p class="bul_sty">ì´ë¦„ ë° ì£¼ë¯¼ë“±ë¡ë²ˆí˜¸ê°€ ê¸°ìž¬ë˜ì–´ ìžˆìŒ</p>
+									<p class="bul_sty">í†µì› ì¼ìžë§Œ ê¸°ìž¬ë˜ì–´ ìžˆìŒ</p>
+									<p class="bul_sty">ê°œì¸ì •ë³´ ìœ ì¶œì— ì£¼ì˜</p>
 								</div>
 								<div class="ctfBox_btm">
-									<a href="ClinicCertificateDetails_L"><span>¹ß±Þ ¹Þ±â</span></a>
+									<a href="ClinicCertificateDetails_L"><span>ë°œê¸‰ ë°›ê¸°</span></a>
 								</div>
 							</div>
 
-							<!--  ÀÔÅð¿øÈ®ÀÎ¼­-->
+							<!--  ìž…í‡´ì›í™•ì¸ì„œ-->
 							<div class="ctfBox sty02">
 								<div class="ctfBox_header">
-									<p class="tit">ÀÔ¡¤Åð¿ø È®ÀÎ¼­</p>
+									<p class="tit">ìž…Â·í‡´ì› í™•ì¸ì„œ</p>
 									<p class="txt">
 										<br>
 									</p>
 								</div>
 								<div class="ctfBox_contents">
-									<p class="tit">È®ÀÎ »çÇ×</p>
-									<p class="bul_sty">ÀÌ¸§ ¹× ÁÖ¹Îµî·Ï¹øÈ£°¡ ±âÀçµÇ¾î ÀÖÀ½</p>
-									<p class="bul_sty">ÀÔ¿ø ±â°£¸¸ ±âÀçµÇ¾î ÀÖÀ½</p>
-									<p class="bul_sty">°³ÀÎÁ¤º¸ À¯Ãâ¿¡ ÁÖÀÇ</p>
+									<p class="tit">í™•ì¸ ì‚¬í•­</p>
+									<p class="bul_sty">ì´ë¦„ ë° ì£¼ë¯¼ë“±ë¡ë²ˆí˜¸ê°€ ê¸°ìž¬ë˜ì–´ ìžˆìŒ</p>
+									<p class="bul_sty">ìž…ì› ê¸°ê°„ë§Œ ê¸°ìž¬ë˜ì–´ ìžˆìŒ</p>
+									<p class="bul_sty">ê°œì¸ì •ë³´ ìœ ì¶œì— ì£¼ì˜</p>
 								</div>
 								<div class="ctfBox_btm">
-									<a href="HospitalizationCertificateDetails_L"><span>¹ß±Þ
-											¹Þ±â</span></a>
+									<a href="HospitalizationCertificateDetails_L"><span>ë°œê¸‰
+											ë°›ê¸°</span></a>
 								</div>
 							</div>
 
-							<!--  ¼ö¼úÈ®ÀÎ¼­-->
+							<!--  ìˆ˜ìˆ í™•ì¸ì„œ-->
 							<div class="ctfBox sty03">
 								<div class="ctfBox_header">
-									<p class="tit">¼ö¼ú È®ÀÎ¼­</p>
+									<p class="tit">ìˆ˜ìˆ  í™•ì¸ì„œ</p>
 									<p class="txt">
 										<br>
 									</p>
 								</div>
 
 								<div class="ctfBox_contents">
-									<p class="tit">È®ÀÎ »çÇ×</p>
-									<p class="bul_sty">ÀÌ¸§ ¹× ÁÖ¹Îµî·Ï¹øÈ£°¡ ±âÀçµÇ¾î ÀÖÀ½</p>
-									<p class="bul_sty">º´¸í ¹× ¼ö¼ú³»¿ªÀÌ ±âÀçµÇ¾î ÀÖÀ½</p>
-									<p class="bul_sty">°³ÀÎÁ¤º¸ À¯Ãâ¿¡ ÁÖÀÇ</p>
+									<p class="tit">í™•ì¸ ì‚¬í•­</p>
+									<p class="bul_sty">ì´ë¦„ ë° ì£¼ë¯¼ë“±ë¡ë²ˆí˜¸ê°€ ê¸°ìž¬ë˜ì–´ ìžˆìŒ</p>
+									<p class="bul_sty">ë³‘ëª… ë° ìˆ˜ìˆ ë‚´ì—­ì´ ê¸°ìž¬ë˜ì–´ ìžˆìŒ</p>
+									<p class="bul_sty">ê°œì¸ì •ë³´ ìœ ì¶œì— ì£¼ì˜</p>
 								</div>
 								<div class="ctfBox_btm">
-									<a href="OperationCertificateDetails_L"><span>¹ß±Þ ¹Þ±â</span></a>
+									<a href="OperationCertificateDetails_L"><span>ë°œê¸‰ ë°›ê¸°</span></a>
 								</div>
 							</div>
 						</div>

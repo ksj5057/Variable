@@ -3,10 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>증명서 상세 내역</title>
 <!-- 입퇴원확인서 -->
-<link rel="stylesheet" href="/resources/css/certificate/HospitalizationCertificateDetails.css">
+<link rel="stylesheet" href="/resources/css/Certificate/HospitalizationCertificateDetails.css">
 <script src="/../../resources/js/print/Print.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
