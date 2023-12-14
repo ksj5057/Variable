@@ -1,33 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!--  
-<c:choose>
-<c:when test="${sessionScope.login.id eq null}">
-<script>
-//로그인 값이 null일 경우 로그인 멘트 후 강제로 로그인화면으로 이동시키기.
-alert("로그인 후 이용 부탁드립니다."), location.href="Login_L";
-</script>
 
-</c:when>
-
-<c:when test="${sessionScope.login.id ne null}">
-<script>
-location.href="Serch";
-//로그인하면 id값을 따서 3개월의 진료내역을 확인하여 내역 띄우기
-
-</script>
-</c:when>
-
-</c:choose> 
--->
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
 <title>증명서 발급</title>
-<link rel="stylesheet" href="/resources/css/Certificate.css">
+<link rel="stylesheet" href="/resources/css/Certificate/Certificate.css">
 </head>
 <body>
 
@@ -70,6 +51,7 @@ location.href="Serch";
 			<ul class="bh_normal_txt">
 				<li>* 진료기록(외래기록, 입원기록 등), 검사결과지(혈액검사, 소변검사, 조직검사, CT판독 결과 등)
 					사본발급이 가능합니다.</li>
+				<li>* 진료기록 및 수술, 입퇴원 확인서는 10년 보관을 법으로 명시하고있습니다.
 				<li>* 진료확인서, 영수증, 세부내역서 등은 온라인증명서 신청에서 발급가능합니다.</li>
 				<li>* PDF 다운로드 시, 별도 수수료(\2,200원) 발생합니다.</li>
 			</ul>
