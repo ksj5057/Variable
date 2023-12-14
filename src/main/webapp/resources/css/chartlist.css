@@ -80,6 +80,10 @@ td{
 	color : black;
 }
 
+.detailc:hover{
+	text-decoration : initial;
+}
+
 
 #modify,
 #delete,
