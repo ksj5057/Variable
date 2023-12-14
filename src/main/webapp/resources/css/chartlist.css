@@ -72,9 +72,18 @@ td{
 	color : #6ed3d8;
 }
 
-.detailc:link{
+.detailc{
 	text-decoration : none;
 }
+
+.detailc:link, .detailc:visited{
+	color : black;
+}
+
+.detailc:hover{
+	text-decoration : initial;
+}
+
 
 #modify,
 #delete,
