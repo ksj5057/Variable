@@ -1,12 +1,11 @@
 @charset "UTF-8";
 
-@import
-	url('https://fonts.googleapis.com/css2? family= Noto+Serif+KR:wght@300 & display=swap')
-	;
-
-@import
-	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Serif+KR:wght@300&display=swap')
-	;
+@font-face {
+     font-family: 'locus_sangsang';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
 
 body {
     width: 100%;
@@ -51,7 +50,7 @@ body {
 
 .maincss ol, ul, li {
 	list-style: none;
-	font-family: 'Noto Sans KR', sans-serif;
+	font-family: 'locus_sangsang';
 }
 
 ul.header_login_m {
@@ -93,7 +92,7 @@ a, a:link, a:visited.main_a1_m {
     padding-left: 10px;
     font-size: 16px;
     line-height: 31px;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'locus_sangsang';
 }
 
 #btn_search {
@@ -112,7 +111,7 @@ a, a:link, a:visited.main_a1_m {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'locus_sangsang';
 }
 /* 상단 메뉴 끝 */
 
@@ -150,7 +149,7 @@ a, a:link, a:visited.main_a1_m {
     text-align: center;
     margin-left: 0px;
     background: #fff;
-    border: 1px solid #dddcdc;
+    border: 1px solid white;
     vertical-align: middle;
 }
 
@@ -171,9 +170,13 @@ a, a:link, a:visited.main_a1_m {
 }
 
 .main_li_1 dl {
-	margin: 0;
+    margin: 0;
     padding-top: 45px;
-    padding-bottom: 75px;
+    padding-bottom: 110px;
+    background-image: url(/resources/image/ico_1.png);
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center 80%;
 }
 
 input#consulting_m {
@@ -188,7 +191,7 @@ input#consulting_m {
     font-weight: 600;
     cursor: pointer;
     margin-top: 15px;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'locus_sangsang';
 }
 
 .main_li_2 a, dt {
@@ -210,14 +213,14 @@ input#consulting_m {
 }
 
 .main_li_2 dl {
-    margin: 0;
-    padding-top: 42px;
-    padding-bottom: 100px;
-    background-image: url("/resources/image/ico_1.png");
+	margin: 0;
+    padding-top: 38px;
+    padding-bottom: 115px;
+    background-image: url(/resources/image/ico_2.png);
     background-color: #F2F2F2;
-    background-size: 50%;
+    background-size: 35%;
     background-repeat: no-repeat;
-    background-position: center 80%;
+    background-position: center 82%;
     
 }
 
@@ -259,10 +262,14 @@ input#consulting_m {
 }
 
 .main_li_3 dl {
-    margin: 0;
-    padding-top: 45px;
-    padding-bottom: 75px;
+	margin: 0;
+    padding-top: 40px;
+    padding-bottom: 115px;
     background-color: #E4F6FF;
+    background-image: url(/resources/image/ico_3.png);
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center 82%;
 }
 
 .main_li_3 p {
@@ -275,7 +282,7 @@ input#consulting_m {
     height: 30px;
     border: 4px solid #006633;
     text-align: center;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'locus_sangsang';
 }
 
 input#search_btn_m {
@@ -289,8 +296,8 @@ input#search_btn_m {
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    font-family: 'Noto Sans KR', sans-serif;
     margin-top: 10px;
+    font-family: 'locus_sangsang';
 }
 
 .main_li_4 a, dt {
@@ -313,12 +320,12 @@ input#search_btn_m {
 .main_li_4 dl {	
     margin: 0;
     padding-top: 40px;
-    padding-bottom: 110px;
-    background-image: url(/resources/image/ico_2.png);
+    padding-bottom: 115px;
+    background-image: url(/resources/image/ico_4.png);
     background-color: #FEFFCB;
-    background-size: 22%;
+    background-size: 35%;
     background-repeat: no-repeat;
-    background-position: center 73%;    
+    background-position: center 80%;  
 }
 
 .main_li_5 a, dt {
@@ -339,14 +346,14 @@ input#search_btn_m {
 }
 
 .main_li_5 dl {
-    margin: 0;
+	margin: 0;
     padding-top: 45px;
-    padding-bottom: 100px;
-    background-image: url(/resources/image/ico_3.png);
+    padding-bottom: 115px;
+    background-image: url(/resources/image/ico_5.png);
     background-color: #FFE7BC;
-    background-size: 30%;
+    background-size: 35%;
     background-repeat: no-repeat;
-    background-position: center 65%;  
+    background-position: center 65%; 
 }
 
 .main_li_6 a, dt {
@@ -367,14 +374,14 @@ input#search_btn_m {
 }
 
 .main_li_6 dl {
-    margin: 0;
-    padding-top: 42px;
-    padding-bottom: 100px;
-    background-image: url(/resources/image/ico_4.png);
+	margin: 0;
+    padding-top: 38px;
+    padding-bottom: 115px;
+    background-image: url(/resources/image/ico_6.png);
     background-color: #E9D7EF;
-    background-size: 40%;
+    background-size: 35%;
     background-repeat: no-repeat;
-    background-position: center 85%;  
+    background-position: center 82%;
 }
 
 .main_li_7 a, dt {
@@ -396,11 +403,11 @@ input#search_btn_m {
 
 .main_li_7 dl {
 	margin: 0;
-    padding-top: 38px;
-    padding-bottom: 110px;
-    background-image: url(/resources/image/ico_5.png);
+    padding-top: 40px;
+    padding-bottom: 115px;
+    background-image: url(/resources/image/ico_7.png);
     background-color: #CECECE;
-    background-size: 33%;
+    background-size: 35%;
     background-repeat: no-repeat;
     background-position: center 82%;
 }
@@ -423,14 +430,14 @@ input#search_btn_m {
 }
 
 .main_li_8 dl {
-	margin: 0;
-    padding-top: 32px;
-    padding-bottom: 110px;
-    background-image: url(/resources/image/ico_6.png);
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 120px;
+    background-image: url(/resources/image/ico_8.png);
     background-color: #DAC09E;
-    background-size: 30%;
+    background-size: 35%;
     background-repeat: no-repeat;
-    background-position: center 82%;
+    background-position: center 75%;
 }
 
 .main_conts_set_m {
