@@ -61,7 +61,7 @@ public class ChartController {
 	@RequestMapping(value = "chart/chartmodifyForm", method = RequestMethod.GET)
 	public String chartmodifyForm(ChartDTO chart, Model model) {
 		System.out.println(chart);
-		model.addAttribute("modifyForm", cs.modifyForm(chart));
+		model.addAttribute("modifyform", cs.modifyForm(chart));
 		cs.modifyForm(chart);
 		return "chart/chartmodifyForm";
 	}
@@ -74,6 +74,7 @@ public class ChartController {
 		rttr.addAttribute("cno", chart.getCno());
 		return "redirect:/chart/chartlist";
 	}
+	
 	
 	// 차트 삭제 버튼
 	@RequestMapping(value = "chart/chartdelete", method = RequestMethod.GET)
@@ -98,5 +99,7 @@ public class ChartController {
 	public String chartMembership() {
 		return "redirect:/MemberShip_L";
 	}
+	
+	
 } 
 	   
