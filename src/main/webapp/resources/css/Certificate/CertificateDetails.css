@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+@font-face {
+     font-family: 'locus_sangsang';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
 #line {
 	width: 1200px;
 }
@@ -10,15 +17,17 @@
 	padding: 1.5cm 1.5cm 2cm 1.5cm;
 	margin: 0px auto;
 	background-color: #ddd;
-	}
+	margin-top: 20px;
+}
 
 #printimage {
 	background: url(/resources/image/print.png) 0 center no-repeat;
 	width: 43px;
-	height: 35px;}
-#printimage2{
-	position: absolute;
-	left: 50%;
+	height: 35px;
+}
+
+#printimage2 {
+	position: relative;
 }
 
 .line {
@@ -65,7 +74,8 @@
 	font-size: 18px;
 	text-align: center;
 	background: #F6F6F6;
-	height:35px;}
+	height: 35px;
+}
 
 #in {
 	width: 10%;
@@ -180,11 +190,139 @@ td {
 }
 
 #boss {
-    position: relative;
-    text-align: center;
-    top: 50px;
-}
-#doc {
-	    float: right;
+	position: relative;
+	text-align: center;
+	top: 50px;
 }
 
+#doc {
+	float: right;
+}
+
+@import
+	url('https://fonts.googleapis.com/css?family=Rubik:700&display=swap');
+
+$
+bg: #fff ; $text: #382b22 ; $light-pink: #fff0f0 ; $pink: #ffe9e9 ; $dark-pink: #f9c4d2 
+	; $pink-border: #b18597 ; $pink-shadow: #ffe3e2 ; * {
+	box-sizing: border-box;
+	&::
+	before
+	,
+	&
+	:
+	:
+	after
+	{
+	
+	
+    
+	
+	box-sizing
+	:
+	
+	 
+	
+	border-box;
+}
+
+}
+body {
+	font-family: 'Rubik', sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	min-height: 100vh;
+	background: $bg;
+}
+
+button.cfd_btn {
+	background: #1AAB8A;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 40px;
+    font-size: 1em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+    font-family: 'locus_sangsang';
+}
+
+button:hover.cfd_btn {
+	background: #fff;
+	color: #1AAB8A;
+}
+
+button:before, button:after.cfd_btn {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 2px;
+	width: 0;
+	background: #1AAB8A;
+	transition: 400ms ease all;
+}
+
+button:after.cfd_btn {
+	right: inherit;
+	top: inherit;
+	left: 0;
+	bottom: 0;
+}
+
+button:hover:before, button:hover:after.cfd_btn {
+	width: 100%;
+	transition: 800ms ease all;
+}
+
+div#printimage2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button.cfd_btn1 {
+	background: #1AAB8A;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 40px;
+    font-size: 1em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+    font-family: 'locus_sangsang';
+}
+
+button:hover.cfd_btn1 {
+	background: #fff;
+	color: #1AAB8A;
+}
+
+button:before, button:after.cfd_btn1 {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 2px;
+	width: 0;
+	background: #1AAB8A;
+	transition: 400ms ease all;
+}
+
+button:after.cfd_btn1 {
+	right: inherit;
+	top: inherit;
+	left: 0;
+	bottom: 0;
+}
+
+button:hover:before, button:hover:after.cfd_btn1 {
+	width: 100%;
+	transition: 800ms ease all;
+}

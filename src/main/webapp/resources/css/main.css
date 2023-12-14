@@ -239,7 +239,7 @@ input#consulting_m {
     margin: 0;    
 }
 
-.main_menu_section_m .m_ddd_m li .main_li_1 dl {
+.main_menu_section_m .m_ddd_m li ._li_1 dl {
     height: 184px;
 
 }
@@ -444,6 +444,7 @@ input#search_btn_m {
 	background-image: url('/resources/image/main_conts.jpg');
 	background-size: cover;
 	margin-top: 30px;
+	opacity: 0.5;
 }
 
 .skip {
@@ -468,6 +469,10 @@ input#search_btn_m {
     background-color: #4E4E4E;
     color: #F0F0F0;
     line-height: 26px;
+}
+
+a.login_name_m {
+  color : #666699;
 }
 
 

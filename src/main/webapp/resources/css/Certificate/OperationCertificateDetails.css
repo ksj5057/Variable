@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-#line{
-	width:1200px;
+#line {
+	width: 1200px;
 }
 
 #page {
@@ -10,15 +10,19 @@
 	padding: 1.5cm 1.5cm 2cm 1.5cm;
 	margin: 0px auto;
 	background-color: #ddd;
-	}
+	margin-top: 20px;
+}
 
 #printimage {
 	background: url(/resources/image/print.png) 0 center no-repeat;
 	width: 43px;
-	height: 35px;}
-#printimage2{
-	position: absolute;
-	left: 50%;
+	height: 35px;
+}
+
+#printimage2 {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .line {
@@ -35,7 +39,7 @@
 	text-align: center;
 	background: #F6F6F6;
 	height: 130px;
-	}
+}
 
 .nav {
 	width: 10%;
@@ -53,7 +57,7 @@
 	font-size: 18px;
 	text-align: center;
 	background: #F6F6F6;
-height: 50px;
+	height: 50px;
 }
 
 .nav3 {
@@ -104,7 +108,8 @@ height: 50px;
 	font-size: 18px;
 	text-align: center;
 	background: #F6F6F6;
-	height: 50px;}
+	height: 50px;
+}
 
 #name {
 	width: 19.2%;
@@ -179,11 +184,96 @@ td {
 }
 
 #boss {
-    position: relative;
-    text-align: center;
-    top: 40px;
-    left:10%;
+	position: relative;
+	text-align: center;
+	top: 40px;
+	left: 10%;
 }
+
 #doc {
-	    float: right;
+	float: right;
+}
+
+button.ocd_btn {
+	background: #1AAB8A;
+	color: #fff;
+	border: none;
+	position: relative;
+	height: 40px;
+	font-size: 1em;
+	padding: 0 2em;
+	cursor: pointer;
+	transition: 800ms ease all;
+	outline: none;
+	font-family: 'locus_sangsang';
+}
+
+button:hover.ocd_btn {
+	background: #fff;
+	color: #1AAB8A;
+}
+
+button:before, button:after.ocd_btn {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 2px;
+	width: 0;
+	background: #1AAB8A;
+	transition: 400ms ease all;
+}
+
+button:after.ocd_btn {
+	right: inherit;
+	top: inherit;
+	left: 0;
+	bottom: 0;
+}
+
+button:hover:before, button:hover:after.ocd_btn {
+	width: 100%;
+	transition: 800ms ease all;
+}
+
+button.ocd_btn1 {
+	background: #1AAB8A;
+	color: #fff;
+	border: none;
+	position: relative;
+	height: 40px;
+	font-size: 1em;
+	padding: 0 2em;
+	cursor: pointer;
+	transition: 800ms ease all;
+	outline: none;
+	font-family: 'locus_sangsang';
+}
+
+button:hover.ocd_btn1 {
+	background: #fff;
+	color: #1AAB8A;
+}
+
+button:before, button:after.ocd_btn1 {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 2px;
+	width: 0;
+	background: #1AAB8A;
+	transition: 400ms ease all;
+}
+
+button:after.ocd_btn1 {
+	right: inherit;
+	top: inherit;
+	left: 0;
+	bottom: 0;
+}
+
+button:hover:before, button:hover:after.ocd_btn1 {
+	width: 100%;
+	transition: 800ms ease all;
 }
