@@ -73,15 +73,17 @@ td{
 }
 
 .detailc{
-	text-decoration : none;
+	text-decoration : underline;
 }
 
 .detailc:link, .detailc:visited{
 	color : black;
+	text-decoration : none;
+	
 }
 
 .detailc:hover{
-	text-decoration : initial;
+	text-decoration : underline;
 }
 
 
