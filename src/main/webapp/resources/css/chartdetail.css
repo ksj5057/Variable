@@ -151,7 +151,7 @@ td.chart_memo {
 	height: 400px;
 }
 
-.chart_write_btn input[type="submit"] {
+.chart_write_btn input[type="button"] {
     width: 80px;
     height: 40px;
     border: none;
@@ -161,6 +161,6 @@ td.chart_memo {
 
 .chart_write_btn {
     position: absolute;
-    right: 439px;
+    right: 500px;
     margin-top: 20px;
 }

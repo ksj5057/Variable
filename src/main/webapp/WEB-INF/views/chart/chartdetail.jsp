@@ -64,7 +64,7 @@
 			</tr>		
 		</table>
 		<div class="chart_write_btn">
-		<input type="submit" value="작성완료">
+		<input type="button" value="차트목록">
 		</div>
 	</div>
 	</div>
