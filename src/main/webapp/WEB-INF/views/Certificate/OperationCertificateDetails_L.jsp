@@ -6,7 +6,7 @@
 <meta charset="EUC-KR">
 <title>증명서 상세 내역</title>
 <!-- 수술확인서 -->
-<link rel="stylesheet" href="/resources/css/OperationCertificateDetails.css">
+<link rel="stylesheet" href="/resources/css/Certificate/OperationCertificateDetails.css">
 <script src="/../../resources/js/print/Print.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
