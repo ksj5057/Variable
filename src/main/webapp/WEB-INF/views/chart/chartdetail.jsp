@@ -64,7 +64,7 @@
 			</tr>		
 		</table>
 		<div class="chart_write_btn">
-		<input type="button" value="차트목록">
+		<a href = "chartlist"><input type="button" value="차트목록"></a>
 		</div>
 	</div>
 	</div>
