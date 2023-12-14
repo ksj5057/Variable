@@ -21,7 +21,10 @@
 		<table class="container">
 			<tr>
 				<th>이름 </th>
-				<td><input type="hidden" name="cname" id="inid" value = "${modifyform.cname}">${modifyform.cname}</td>
+				<td>
+					<input type="hidden" name="cname" id="inid" value = "${modifyform.cname}">
+					<input type="hidden" name="cno" id="inid" value = "${modifyform.cno}">
+					${modifyform.cname}</td>
 				<th>환자코드</th>
 				<td><select id="select" name="dcode">
 					<option selected disabled>${modifyform.dcode}</option>
