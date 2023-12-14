@@ -88,5 +88,15 @@ public class ChartController {
 		model.addAttribute("chartdetail", cs.chartdetail(chart));
 		return "chart/chartdetail";
 	}
+	
+	@RequestMapping(value = "chart/Login_L", method = RequestMethod.GET)
+	public String chartlogin() {
+		return "redirect:/Login_L";
+	}
+	
+	@RequestMapping(value = "chart/MemberShip_L", method = RequestMethod.GET)
+	public String chartMembership() {
+		return "redirect:/MemberShip_L";
+	}
 } 
 	   
