@@ -1,14 +1,11 @@
-function filter(){
-	var value, name, item, i;
-
-		value = document.getElementById("value").value.toUpperCase();
-		item = document.getElementsByClassName("item");
-		for(i=0;i<item.length;i++){
-			name = item[i].getElementsByClassName("name");
-			if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
-				item[i].style.display = "flex";
-			}else{
-				item[i].style.display = "none";
-			}
-		}
+function deletec(comn){
+	let result = confirm("정말 삭제하시겠습니까"); 
+	console.log(result);
+	if(result == true){
+		alert("삭제되었습니다.")
+		location.href = "chartdelete?cno="+comn;
+	}else{
+		alert("취소되었습니다.")
+		location.reload();
 	}
+}
