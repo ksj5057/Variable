@@ -136,42 +136,42 @@ function check_birth(){
 	if(birth == 1){//남자
 		check_birth_L.innerHTML = "감사합니다"
 			check_birth_L.style="color:green";
-		gender.value = "남자";
+		gender.value = "M";
 		age.value= "19"+birth1;
 		return true;
 
 	}else if(birth == 3){		
 		check_birth_L.innerHTML = "감사합니다"
 			check_birth_L.style="color:green";
-		gender.value = "남자";
+		gender.value = "M";
 		age.value= "20"+birth1;
 		return true;
 
 	}else if(birth == 2){	//여자
 		check_birth_L.innerHTML = "감사합니다"
 			check_birth_L.style="color:green";
-		gender.value = "여자";
+		gender.value = "F";
 		age.value= "19"+birth1;
 		return true;
 
 	}else if(birth == 4)	{
 		check_birth_L.innerHTML = "감사합니다"
 			check_birth_L.style="color:green";
-		gender.value = "여자";
+		gender.value = "F";
 		age.value= "20"+birth1;
 		return true;
 
 	}else if(birth == 6 || birth == 8){//외국인 여자
 		check_birth_L.innerHTML = "Thank you"
 			check_birth_L.style="color:green";
-		gender.value = "여자";
+		gender.value = "F";
 		age.value= "20"+birth1;
 		return true;
 
 	}else if(birth == 5 || birth == 7){//외국인 남자
 		check_birth_L.innerHTML = "Thank you"
 			check_birth_L.style="color:green";
-		gender.value = "남자";
+		gender.value = "M";
 		return true;
 	}
 

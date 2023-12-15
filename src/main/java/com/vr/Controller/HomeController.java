@@ -24,7 +24,7 @@ import com.vr.Service.MemberService;
 public class HomeController {
 	
 	//현재 년도 가져오기
-	String pattern = "yyyMMdd";
+	String pattern = "yyyyMMdd";
 	SimpleDateFormat sdf = new SimpleDateFormat(pattern);
 	java.util.Date now = new java.util.Date();
 	String nowString = sdf.format(now);
@@ -46,10 +46,15 @@ public class HomeController {
 	
 	//회원가입 화면에서 회원가입 버튼 클릭시 메소드 실행
 	@RequestMapping(value = "member", method = RequestMethod.POST)
+	
 	public String qwerty(MemberDTO member) {
+		//age의 값 가져오기
 		int a = member.getAge();
+		// 현재 년도 가져오기
 		int b = Integer.parseInt(nowString);
+		//  현재년도 - age값  나이구하기
 		int c =(int) ((int)Math.floor(b-a)*0.0001);
+		//나이값 저장
 		member.setAge(c);
 		ms.join(member);
 		return "Member/Login_L";
