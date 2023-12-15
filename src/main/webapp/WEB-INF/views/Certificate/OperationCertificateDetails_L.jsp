@@ -53,30 +53,23 @@
 
 				<table class="line">
 					<tr>
-						<td id="Hospitalization">입 원 과</td>
+						<td id="Hospitalization">입 원 일/호 실</td>
 						<td id="in"></td>
-						<td id="room">호 실</td>
-						<td id="day1">입월 년월일</td>
+						<td id="day1">퇴 원 일</td>
 						<td id="day2"></td>
 					</tr>
 				</table>
 				<table class="line">
-					<tr>
+						<tr>
 						<td id="name">성 명</td>
 						<td id="o1"></td>
-						<td id="gender">성 별</td>
-						<td id="o2"></td>
-						<td id="birth">생년월일</td>
+						<td id="birth">생 년 월 일</td>
 						<td id="o3"></td>
-						<td id="age">연 령</td>
+						<td id="age">나 이/성 별</td>
 						<td id="o4"></td>
 					</tr>
 				</table>
 				<table class="line">
-					<tr>
-						<td class="content">주 소</td>
-						<td></td>
-					</tr>
 					<tr>
 						<td class="content">진 단 명
 						<td></td>
