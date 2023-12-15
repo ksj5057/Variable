@@ -73,7 +73,7 @@
 			<td class = "td1">${chartlist.dcode}</td>
 			<td>
 				<a href = "chartmodifyForm?cno=${chartlist.cno}"><button id="modify">차트수정</button></a>
-				<input type = "button" onclick = "deletec(${chartlist.cno})" value = "차트삭제">
+				<input type = "button" id = "delete" onclick = "deletec(${chartlist.cno})" value = "차트삭제">
 			</td>
 		<tr>
 		</c:forEach>
