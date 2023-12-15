@@ -40,7 +40,7 @@
 			<td style = "width : 170px">작성날짜</td>
 			<td style = "width : 170px">입원날짜</td>
 			<td style = "width : 170px">퇴원날짜</td>
-			<td style = "width : 100px">환자코드</td>
+			<td style = "width : 100px">진료과</td>
 			<td style = "width : 220px">차트수정 / 삭제</td> 
 		<tr>
 		<c:forEach items="${list}" var="chartlist">
@@ -70,7 +70,7 @@
 					${chartlist.exitd}
 				</c:otherwise>
 			</c:choose></td>
-			<td class = "td1">${chartlist.dcode}</td>
+			<td class = "td1">${chartlist.speciality}</td>
 			<td>
 				<a href = "chartmodifyForm?cno=${chartlist.cno}"><button id="modify">차트수정</button></a>
 				<input type = "button" id = "delete" onclick = "deletec(${chartlist.cno})" value = "차트삭제">
