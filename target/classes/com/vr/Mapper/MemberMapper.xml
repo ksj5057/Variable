@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.vr.Mapper.MemberMapper">
 	<insert id="join">
-		insert into member values(#{mname},#{id},#{pw},#{rrn});
+		insert into member(id,pw,mname,gender,birth,age) values(#{id},#{pw},#{mname},#{gender},#{birth},#{age});
 	</insert>
 	
 	<select id="login" resultType="com.vr.Model.MemberDTO">
