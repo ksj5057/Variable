@@ -21,7 +21,7 @@ public class CertificateController {
 	//재증명 발급 화면으로 이동
 	@GetMapping("Certificate_L")
 	public String Certificate(MemberDTO md,HttpSession session,HttpServletResponse response) {
-		//로그인 시 DB와 비교하여 가져온 세션 정보값을 가져와서 MemberDTO 타입의 login변수에 저장
+	/*	//로그인 시 DB와 비교하여 가져온 세션 정보값을 가져와서 MemberDTO 타입의 login변수에 저장
 		MemberDTO login = (MemberDTO)session.getAttribute("login");
 		
 		
@@ -57,12 +57,12 @@ public class CertificateController {
 				return "재증명 창으로 이동"; // 리턴은 작동은 작동하지않음
 				
 			//로그인 하고 진료기록이 있다면 재증명 창으로 이동
-			}else {
+			}else {*/
 				return "Certificate/Certificate_L";
 			}
 			
 			
-		}
+		
 	
 	
 	//진료기록 확인 후 이동 

@@ -13,7 +13,7 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 <script src="/resources/js/main/main.js"></script>
 <meta charset="UTF-8">
-<title>그린대학교</title>
+	<title>그린대학병원</title>
 </head>
 <body class="maincss">
 
@@ -40,7 +40,7 @@
 
 						<!-- 로그인하면 보이게  -->
 						<c:if test="${login.id ne null}">
-							<li><a href="#" class="login_name_m">${sessionScope.login.mname}</a> 님 환영합니다 (੭˙ ˘ ˙)੭ /
+							<li class="main_name"><a href="#" class="login_name_m">${sessionScope.login.mname}</a> 님 환영합니다 (˙ ˘ ˙) /
 							<li>
 								<!-- 관리자 아이디로 로그인했을때만 보이게 --> <c:if
 									test="${login.id.equals('admin1')}">
@@ -154,12 +154,18 @@
 							</dl>
 					</a></li>
 					<!--/증명서/의무기록 발급-->
-
 				</ul>
 			</div>
-
 		</div>
+		
+		<div class="main_conts_m">
+		<h2>콘텐츠</h2>
+		</div>
+		
+		
 	</div>
+	
+	
 	<!-- /main_cont end -->
 </body>
 </html>
