@@ -22,6 +22,8 @@ public class ChartDTO {
 	// 환자코드
 	private int dcode;
 	
+	private String speciality;
+	
 	public int getCno() {
 		return cno;
 	}
@@ -77,13 +79,19 @@ public class ChartDTO {
 	public void setDcode(int dcode) {
 		this.dcode = dcode;
 	}
-
+	public String getSpeciality() {
+		return speciality;
+	}
+	public void setSpeciality(String speciality) {
+		this.speciality = speciality;
+	}
 	
 	@Override
 	public String toString() {
 		return "ChartDTO [cno=" + cno + ", cname=" + cname + ", rrn=" + rrn + ", disease=" + disease + ", operation="
 				+ operation + ", operd=" + operd + ", enterd=" + enterd + ", exitd=" + exitd + ", dcode=" + dcode + "]";
 	}
+	
  	
 
 	
