@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 @font-face {
-     font-family: 'locus_sangsang';
-     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff') format('woff');
-     font-weight: normal;
-     font-style: normal;
+    font-family: 'OTWelcomeRA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
@@ -50,7 +50,7 @@ body {
 
 .maincss ol, ul, li {
 	list-style: none;
-	font-family: 'locus_sangsang';
+	font-family: 'OTWelcomeRA';
 }
 
 ul.header_login_m {
@@ -65,8 +65,13 @@ ul.header_login_m {
 	float: left;
 }
 
+li.main_name {
+    margin-top: 0;
+}
+
 .header_login_m a {
 	margin: 10px;
+	padding-top: 10px;
 }
 
 a, a:link, a:visited.main_a1_m {
@@ -92,7 +97,7 @@ a, a:link, a:visited.main_a1_m {
     padding-left: 10px;
     font-size: 16px;
     line-height: 31px;
-    font-family: 'locus_sangsang';
+    font-family: 'OTWelcomeRA';
 }
 
 #btn_search {
@@ -111,7 +116,7 @@ a, a:link, a:visited.main_a1_m {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    font-family: 'locus_sangsang';
+    font-family: 'OTWelcomeRA';
 }
 /* 상단 메뉴 끝 */
 
@@ -191,7 +196,7 @@ input#consulting_m {
     font-weight: 600;
     cursor: pointer;
     margin-top: 15px;
-    font-family: 'locus_sangsang';
+    font-family: 'OTWelcomeRA';
 }
 
 .main_li_2 a, dt {
@@ -282,7 +287,7 @@ input#consulting_m {
     height: 30px;
     border: 4px solid #006633;
     text-align: center;
-    font-family: 'locus_sangsang';
+    font-family: 'OTWelcomeRA';
 }
 
 input#search_btn_m {
@@ -297,7 +302,7 @@ input#search_btn_m {
     font-weight: 600;
     cursor: pointer;
     margin-top: 10px;
-    font-family: 'locus_sangsang';
+    font-family: 'OTWelcomeRA';
 }
 
 .main_li_4 a, dt {

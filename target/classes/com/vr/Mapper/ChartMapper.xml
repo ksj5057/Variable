@@ -10,7 +10,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 	
 	<select id="list" resultType="com.vr.Model.ChartDTO">
-  			select *
+  			select  cno, cname, rrn ,disease, operation, operd, enterd, exitd,
+  			case
+				when dcode = 1 then '내과'
+				when dcode = 2 then '정형외과'
+				when dcode = 3 then '이비인후과'
+				when dcode = 4 then '산부인과'
+				when dcode = 5 then '피부과'
+			  	when dcode = 6 then '소아과'
+			end as 'speciality'
+  			
 			from(
 				select @rownum:=@rownum+1 rownum, b.*
 				from chart b, (select @rownum:=0) as tmp

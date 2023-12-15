@@ -1,12 +1,11 @@
 @charset "UTF-8";
 
-@import
-	url('https://fonts.googleapis.com/css2? family= Noto+Serif+KR:wght@300 & display=swap')
-	;
-
-@import
-	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Serif+KR:wght@300&display=swap')
-	;
+@font-face {
+    font-family: 'OTWelcomeRA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .bh_all_login_section.bh_mgb30 {
     margin-top: 50px;
@@ -90,7 +89,7 @@ a, a:link, a:visited {
     font-size: 14px;
     font-family: inherit;
     line-height: 40px;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'OTWelcomeRA';
 }
 
 .bh_all_login_box .bh_all_login_btn_pw {
@@ -174,14 +173,14 @@ div {
 }
 
 input#userid {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'OTWelcomeRA';
 }
 
 input#password {
-	 font-family: 'Noto Sans KR', sans-serif;
+	 font-family: 'OTWelcomeRA';
 }
 
 input.bh_btn_all_login {
-	font-family: 'Noto Sans KR', sans-serif;
+	font-family: 'OTWelcomeRA';
 }
 

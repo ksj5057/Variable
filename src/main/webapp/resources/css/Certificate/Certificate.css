@@ -1,5 +1,13 @@
+@font-face {
+    font-family: 'OTWelcomeRA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 a, a:link, a:visited {
 	text-decoration: none;
+	font-family: 'OTWelcomeRA';
 }
 
 .ctfBox_wrap {
@@ -29,6 +37,7 @@ a, a:link, a:visited {
 	line-height: 37px;
 	margin-bottom: 10px;
 	letter-spacing: -1.5px;
+	font-family: 'OTWelcomeRA';
 }
 
 .ctfBox_wrap .ctfBox .ctfBox_header .txt {
@@ -52,6 +61,7 @@ a, a:link, a:visited {
 	letter-spacing: -0.75px;
 	line-height: 30px;
 	margin-bottom: 20px;
+	font-family: 'OTWelcomeRA';
 }
 
 .ctfBox_wrap .ctfBox_contents .bul_sty {
@@ -62,6 +72,7 @@ a, a:link, a:visited {
 	line-height: 20px;
 	letter-spacing: -1.5px;
 	text-align: left;
+	font-family: 'OTWelcomeRA';
 }
 
 .ctfBox_wrap .ctfBox_contents .bul_sty+.bul_sty {
@@ -76,6 +87,7 @@ a, a:link, a:visited {
 	letter-spacing: -1.5px;
 	margin-top: 10px;
 	text-align: left;
+	font-family: 'OTWelcomeRA';
 }
 
 .ctfBox_wrap .ctfBox_btm {
@@ -99,6 +111,7 @@ a, a:link, a:visited {
 	color: #fff;
 	height: 45px;
 	line-height: 45px;
+	font-family: 'OTWelcomeRA';
 }
 
 .ctfBox_wrap .ctfBox_btm a+a {
@@ -161,6 +174,7 @@ a, a:link, a:visited {
 .ctfBox_wrap .ctfBox .ctfBox_header .txt {
 	font-size: 16px;
 	line-height: 26px;
+	font-family: 'OTWelcomeRA';
 }
 
 .ctfBox_wrap .ctfBox_contents {
@@ -185,6 +199,7 @@ a, a:link, a:visited {
 	margin-top: 5px;
 	font-size: 14px;
 	line-height: 24px;
+	font-family: 'OTWelcomeRA';
 }
 
 .ctfBox_wrap .ctfBox_btm a span {
@@ -202,6 +217,7 @@ a, a:link, a:visited {
 	vertical-align: top;
 	text-align: center;
 	margin-left: 61px;
+	font-family: 'OTWelcomeRA';
 }
 
 .bh_flow_circle8_ol .bh_flow_circle8_li_1 {
@@ -299,6 +315,7 @@ a, a:link, a:visited {
 .bh_flow_circle8_ol li strong em {
 	font-size: 12px;
 	letter-spacing: -1.5px;
+	font-family: 'OTWelcomeRA';
 }
 
 .tit_h4 {
@@ -308,6 +325,7 @@ a, a:link, a:visited {
 	font-size: 16px;
 	font-weight: 600;
 	margin-bottom: 15px;
+	font-family: 'OTWelcomeRA';
 }
 
 .tit_h5 {
@@ -317,7 +335,7 @@ a, a:link, a:visited {
 	padding-top: 10px;
 	font-weight: 600;
 	margin-bottom: 17px;
-	font-family: 'Noto Sans KR', sans-serif;
+	font-family: 'OTWelcomeRA';
 }
 
 .tit_h4 {
@@ -327,6 +345,7 @@ a, a:link, a:visited {
 	font-size: 16px;
 	font-weight: 600;
 	margin-bottom: 15px;
+	font-family: 'OTWelcomeRA';
 }
 
 .bh_color_red {
@@ -342,6 +361,7 @@ ul, ol, li {
 	line-height: 1.5;
 	letter-spacing: -0.25px;
 	color: #444;
+	font-family: 'OTWelcomeRA';
 }
 
 .container_wrapper {
@@ -361,3 +381,21 @@ ul, ol, li {
 	margin-right: auto;
 	margin-top: 100px;
 }
+
+p.tit {
+    font-family: 'OTWelcomeRA';
+}
+
+p.bh_normal_txt {
+    font-family: 'OTWelcomeRA';
+}
+
+p.bul_sty {
+    font-family: 'OTWelcomeRA';
+}
+
+span {
+    font-family: 'OTWelcomeRA';
+}
+
+

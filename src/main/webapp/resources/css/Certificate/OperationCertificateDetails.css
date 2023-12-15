@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'OTWelcomeRA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 #line {
 	width: 1200px;
 }
@@ -205,7 +212,7 @@ button.ocd_btn {
 	cursor: pointer;
 	transition: 800ms ease all;
 	outline: none;
-	font-family: 'locus_sangsang';
+	font-family: 'OTWelcomeRA';
 }
 
 button:hover.ocd_btn {
@@ -247,7 +254,7 @@ button.ocd_btn1 {
 	cursor: pointer;
 	transition: 800ms ease all;
 	outline: none;
-	font-family: 'locus_sangsang';
+	font-family: 'OTWelcomeRA';
 }
 
 button:hover.ocd_btn1 {
