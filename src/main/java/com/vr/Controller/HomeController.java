@@ -1,17 +1,10 @@
 package com.vr.Controller;
 
 
-import com.vr.Model.*;
-import com.vr.Service.MemberService;
-
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
+import java.text.SimpleDateFormat;
 
 import javax.servlet.http.HttpSession;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,12 +13,21 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.vr.Model.MemberDTO;
+import com.vr.Service.MemberService;
+
 
 /**
  * Handles requests for the application home page.
  */
 @Controller
 public class HomeController {
+	
+	//현재 년도 가져오기
+	String pattern = "yyyyMMdd";
+	SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+	java.util.Date now = new java.util.Date();
+	String nowString = sdf.format(now);
 	
 	//객체 생성
 	@Autowired
@@ -44,7 +46,16 @@ public class HomeController {
 	
 	//회원가입 화면에서 회원가입 버튼 클릭시 메소드 실행
 	@RequestMapping(value = "member", method = RequestMethod.POST)
+	
 	public String qwerty(MemberDTO member) {
+		//age의 값 가져오기
+		int a = member.getAge();
+		// 현재 년도 가져오기
+		int b = Integer.parseInt(nowString);
+		//  현재년도 - age값  나이구하기
+		int c =(int) ((int)Math.floor(b-a)*0.0001);
+		//나이값 저장
+		member.setAge(c);
 		ms.join(member);
 		return "Member/Login_L";
 	}

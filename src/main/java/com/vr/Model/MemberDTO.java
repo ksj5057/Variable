@@ -7,9 +7,35 @@ public class MemberDTO {
 	private String id;
 	// 비밀번호
 	private String pw;
-	// 주민번호
+	// 차트번호
 	private String rrn;
+	// 성별
+	private String gender;
+	// 생년월일
+	private String birth;
+	// 나이
+	private int age;
 	
+	
+	
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getBirth() {
+		return birth;
+	}
+	public void setBirth(String birth) {
+		this.birth = birth;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
 	public String getMname() {
 		return mname;
 	}

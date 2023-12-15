@@ -42,11 +42,11 @@
 				<table class="line">
 					<tr>
 						<!-- 본문 -->
-						<td colspan="2" class="titlenumber">병록 번호</td>
+						<td colspan="2" class="titlenumber">차 트 번 호</td>
 						<td class="nav3"></td>
 					</tr>
 					<tr>
-						<td colspan="2" class="titlenumber">면 번호</td>
+						<td colspan="2" class="titlenumber">문 서 번 호</td>
 						<td class="nav3"></td>
 					</tr>
 				</table>
@@ -55,18 +55,14 @@
 					<tr>
 						<td id="name">성 명</td>
 						<td id="o1"></td>
-						<td id="gender">성 별</td>
-						<td id="o2"></td>
-						<td id="birth">생년월일</td>
+						<td id="birth">생 년 월 일</td>
 						<td id="o3"></td>
-						<td id="age">연 령</td>
+						<td id="age">나 이/성 별</td>
 						<td id="o4"></td>
 					</tr>
 				</table>
 				<table class="line">
 					<tr>
-						<td class="content">주 소</td>
-						<td></td>
 					</tr>
 					<tr>
 						<td class="content">진 단 명

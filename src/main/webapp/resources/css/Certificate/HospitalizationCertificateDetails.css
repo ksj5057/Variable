@@ -72,7 +72,7 @@
 }
 
 #Hospitalization {
-	width: 11%;
+	width: 10.6%;
 	font-size: 18px;
 	text-align: center;
 	background: #F6F6F6;
@@ -80,7 +80,7 @@
 }
 
 #in {
-	width: 10%;
+	width: 18%;
 	font-size: 18px;
 	text-align: center;
 }
@@ -100,13 +100,7 @@
 }
 
 #day2 {
-	width: 15%;
-	font-size: 18px;
-	text-align: center;
-}
-
-#in {
-	width: 16%;
+	width: 18%;
 	font-size: 18px;
 	text-align: center;
 }
@@ -120,7 +114,7 @@
 }
 
 #name {
-	width: 19.2%;
+	width: 17.7%;
 	font-size: 18px;
 	text-align: center;
 	background: #F6F6F6;
@@ -142,38 +136,38 @@
 }
 
 #o1 {
-	width: 9%;
+	width: 15%;
 	font-size: 18px;
 	text-align: center;
 }
 
 #o2 {
-	width: 9%;
+	width: 15%;
 	font-size: 18px;
 	text-align: center;
 }
 
 #o3 {
-	width: 15.7%;
+	width: 15%;
 	font-size: 18px;
 	text-align: center;
 }
 
 #o4 {
-	width: 19%;
+	width: 15%;
 	font-size: 18px;
 	text-align: center;
 }
 
 #birth {
-	width: 12.2%;
+	width: 15%;
 	font-size: 18px;
 	text-align: center;
 	background: #F6F6F6;
 }
 
 #age {
-	width: 12%;
+	width: 15%;
 	font-size: 18px;
 	text-align: center;
 	background: #F6F6F6;
@@ -195,6 +189,7 @@ td {
 	position: relative;
 	text-align: center;
 	top: 40px;
+	
 }
 
 #doc {

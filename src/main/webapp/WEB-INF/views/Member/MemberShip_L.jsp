@@ -5,10 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입</title>
+
 <link rel="stylesheet" href="/resources/css/MemberShip.css">
 </head>
-<script type="text/javascript"
-	src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="/../../resources/js/member/MemberShip.js"></script>
 <body>
 
@@ -21,25 +21,30 @@
 			<form action="member" method="post" onsubmit="return check_all()">
 
 				<fieldset>
+					<input type="hidden" id="gender" name="gender"> <!-- 성별 자동 -->
+					<input type="hidden" id="age" name="age"> <!-- 나이 자동 -->
+					
 					<table class="table_type2">
 						<tbody>
 							<tr>
-								<th>이름 <strong class="cor_point">*<span
-										class="skip">필수입력</span></strong></th>
+								<th>이름 <strong class="cor_point">*<span class="skip">필수입력</span></strong></th>
 
 								<td>
-									<!-- 이름 입력--> <input class="input_text" type="text"
-									name="mname" id="name"> <br>
+									<!-- 이름 입력--> 
+								<input class="input_text" type="text" name="mname" id="name" maxlength="10"> <br>
 								<span id="check_name_L"></span>
 								</td>
+								
+								
 
-								<th>주민등록번호 <strong class="cor_point">*<span
-										class="skip">필수입력</span></strong>
+								<th>주민등록번호 <strong class="cor_point">*<span class="skip">필수입력</span></strong>
 
 								</th>
 								<td>
-									<!-- 주민등록번호 입력 --> <input class="input_text" maxlength="13"
-									type="text" name="rrn" id="birth" placeholder="주민등록번호 13자리">
+									<!-- 주민등록번호 입력 --> 
+								<input class="input_text3" maxlength="6" type="tel" name="birth" id="birth1" placeholder="주민등록번호 앞 6자리">
+								<span id="empty1">- </span>
+								<input class="input_text3" maxlength="1" type="tel" id="birth2" placeholder="주민등록번호 뒷 1자리">
 									<br>
 								<label id="check_birth_L"></label> <br>
 								</td>
@@ -53,8 +58,7 @@
 								<td colspan="3">
 									<p>
 										<!--  아이디 입력 -->
-										<input class="input_text" type="text" id="id" name="id"
-											maxlength="20">
+										<input class="input_text" type="text" id="id" name="id" maxlength="20">
 									</p>
 									<ul class="add_member_ul">
 										<li class="check_id_L">아이디는 5~20자의 영어소문자,숫자만 사용가능합니다.</li>
@@ -68,8 +72,7 @@
 
 
 							<tr>
-								<th>비밀번호 <strong class="cor_point">*<span
-										class="skip">필수입력</span></strong></th>
+								<th>비밀번호 <strong class="cor_point">*<span class="skip">필수입력</span></strong></th>
 								<td colspan="3">
 									<div>
 										<input class="input_text" type="password" id="pw" name="pw"
@@ -102,24 +105,18 @@
 
 
 							<tr>
-								<th>핸드폰 번호 <strong class="cor_point">*<span
-										class="skip">필수입력</span></strong></th>
+	
+								<th>핸드폰 번호 <strong class="cor_point">*<span class="skip">필수입력</span></strong></th>
 								<td colspan="3">
 									<p>
-										<select class="input_select1" title="핸드폰 번호 앞자리 선택"
-											id="cellPhone" name="hp_no01">
-											<option value="">선택</option>
-											<option value="010">010</option>
-											<option value="011">011</option>
-											<option value="016">016</option>
-											<option value="017">017</option>
-											<option value="018">018</option>
-											<option value="019">019</option>
-										</select> <span class="empty">- </span> <input class="input_text3"
-											type="tel" maxlength="4" title="핸드폰 번호 중간자리" name="hp_no02"
-											id="number1"> <span class="empty">- </span> <input
-											class="input_text3" type="tel" maxlength="4"
-											title="핸드폰 번호 끝자리" name="hp_no03" id="number2"> <br>
+										<!-- 휴대폰 첫번쨰 입력 칸 -->
+										<input type="tel" class="input_text3"  maxlength="3" id="cellPhone" name="hp_no01">
+										 <span class="empty" id="next1">- </span> 
+										<!-- 휴대폰 두번쨰 입력 칸 -->
+										<input class="input_text3" type="tel" maxlength="4"  name="hp_no02" id="number1">
+										 <span class="empty" id="next2">- </span>
+										<!-- 휴대폰 세번쨰 입력 칸 -->
+										 <input class="input_text3" type="tel" maxlength="4"  name="hp_no03" id="number2"> <br>
 										<span id="check_number_L"></span>
 									</p>
 								</td>
