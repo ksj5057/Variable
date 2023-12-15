@@ -34,7 +34,7 @@
 
 						<!-- 로그인하면 보이게  -->
 						<c:if test="${login.id ne null}">
-							<li><a href="#">${sessionScope.login.mname}님 환영합니다 (੭˙ ˘ ˙)੭</a>
+							<li class="main_name"><a href="#" class="login_name_m">${sessionScope.login.mname}</a> 님 환영합니다 (˙ ˘ ˙) /
 							<li>
 								<!-- 관리자 아이디로 로그인했을때만 보이게 --> <c:if
 									test="${login.id.equals('admin1')}">
