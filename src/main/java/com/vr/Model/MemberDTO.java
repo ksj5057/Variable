@@ -22,6 +22,15 @@ public class MemberDTO {
 	//진료과
 	private int md;
 	
+	private String position;
+	
+	
+	public String getPosition() {
+		return position;
+	}
+	public void setPosition(String position) {
+		this.position = position;
+	}
 	public String getDl() {
 		return dl;
 	}
