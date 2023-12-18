@@ -227,3 +227,9 @@ input.bh_btn_all_login {
 	    position: relative;
 	    left: 204px;
 }
+#nomal_login{
+	width : 301.5px;
+}
+#admin_login{
+	width : 301.5px;
+}
