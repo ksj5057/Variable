@@ -5,6 +5,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="/resources/css/chartwriteform.css">
+<script src = "/resources/js/chart/chartwriteForm.js"></script>
 <meta charset="UTF-8">
 <title>차트 작성</title>
 </head>
@@ -22,17 +23,8 @@
 			<tr>
 				<th>이름 </th>
 				<td><input type="text" name="cname" id="inid" placeholder="환자 이름을 입력해주세요."></td>
-				<th>환자코드</th>
-				<td><select id="select" name="dcode">
-					<option selected disabled>환자 코드를 선택하세요.</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					</select>
-				</td>
+				<th>진료과</th>
+				<td>${chart.md}</td>
 			</tr>
 			<tr>
 				<th>주민번호</th>
