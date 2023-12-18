@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>로그인</title>
 <link rel="stylesheet" href="/resources/css/Login.css">
+<script src="/../../resources/js/member/Login.js"></script>
 </head>
 <body>
 
@@ -14,8 +15,20 @@
 
 	<form action="login" method="post">
 		<fieldset>
+		
 			<legend>회원 로그인</legend>
+			
+			
 			<div class="bh_all_login_section bh_mgb30">
+				<input type="hidden" value="1" name="login_value" id="login_if">
+				<div class="mTab eTab themeSolid" id="login_section">
+                    <ul>	
+                    			
+                         <li ><p onclick="login(1)" id="nomal_login">일반 로그인</p></li>
+                        <li><p onclick="login(2)" id="admin_login" >관리자 로그인</p></li>
+                  </ul>
+                </div>
+          
 				<div class="bh_all_login_form">
 					<div class="bh_all_login_box">
 						<p class="bh_all_login_id">

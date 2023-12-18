@@ -52,10 +52,9 @@
 
 							<tr>
 
-								<th>아이디 <strong class="cor_point">*<span
-										class="skip">필수입력</span></strong></th>
+								<th>아이디 <strong class="cor_point">*<span class="skip">필수입력</span></strong></th>
 
-								<td colspan="3">
+								<td colspan="3" id ="next4">
 									<p>
 										<!--  아이디 입력 -->
 										<input class="input_text" type="text" id="id" name="id" maxlength="20">
