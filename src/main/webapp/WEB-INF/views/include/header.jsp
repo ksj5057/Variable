@@ -20,10 +20,31 @@
 
 				<!--상단 1차메뉴 및 로고 검색-->
 				<div class="header_section_m">
-					<h1>
+
+					<div class="menu_btn_mask">
+						<button class="open_menu_btn">메뉴</button>
+
+						<ul class="bh_snb_ul" style="display: none;">
+							<li class="sds_1"><a tabindex="0" href="#">예약</a></li>
+
+							<li class="sds_2"><a tabindex="0" href="#">예약조회 및 취소</a></li>
+
+							<li class="sds_3"><a tabindex="0" href="Certificate_L">증명서/의무기록
+									발급</a></li>
+
+							<li class="sds_4"><a tabindex="0" href="#">진료비 결제</a></li>
+
+							<li class="sds_7"><a tabindex="0" href="#">처방동영상</a></li>
+
+							<li class="sds_9"><a tabindex="0" href="#">개인정보</a></li>
+						</ul>
+
+					</div>
+					<h1 class="main_header_ban">
 						<a href="/"> <img src="/resources/image/main_logo.png"
 							alt="그린대학병원" style="width: 480px; height: 120px;"></a>
 					</h1>
+
 					<ul class="header_login_m">
 
 						<!-- 로그인하면 안보이게 -->
@@ -34,7 +55,8 @@
 
 						<!-- 로그인하면 보이게  -->
 						<c:if test="${login.id ne null}">
-							<li class="main_name"><a href="#" class="login_name_m">${sessionScope.login.mname}</a> 님 환영합니다 (˙ ˘ ˙) /
+							<li class="main_name"><a href="#" class="login_name_m">${sessionScope.login.mname}</a>
+								님 환영합니다 (˙ ˘ ˙) /
 							<li>
 								<!-- 관리자 아이디로 로그인했을때만 보이게 --> <c:if
 									test="${login.id.equals('admin1')}">

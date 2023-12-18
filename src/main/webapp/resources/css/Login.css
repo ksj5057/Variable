@@ -89,7 +89,6 @@ a, a:link, a:visited {
     font-size: 14px;
     font-family: inherit;
     line-height: 40px;
-    font-family: 'OTWelcomeRA';
 }
 
 .bh_all_login_box .bh_all_login_btn_pw {
@@ -170,14 +169,6 @@ div {
 
 .bh_all_login_sns {
     font-size: 0;
-}
-
-input#userid {
-    font-family: 'OTWelcomeRA';
-}
-
-input#password {
-	 font-family: 'OTWelcomeRA';
 }
 
 input.bh_btn_all_login {
