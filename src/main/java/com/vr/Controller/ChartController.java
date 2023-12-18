@@ -81,7 +81,7 @@ public class ChartController {
 	
 	
 	// 차트 삭제 버튼
-	@RequestMapping(value = "chart/hartdelete", method = RequestMethod.GET)
+	@RequestMapping(value = "chart/chartdelete", method = RequestMethod.GET)
 	public String chartdelete(ChartDTO chart) {
 		cs.chartdelete(chart);
 		return "redirect:/chart/chartlist";
