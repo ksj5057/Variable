@@ -20,7 +20,7 @@ public class MemberDTO {
 	// 의사면허번호
 	private String dl;
 	//진료과
-	private int md;
+	private String md;
 	
 	private String position;
 	
@@ -37,10 +37,10 @@ public class MemberDTO {
 	public void setDl(String dl) {
 		this.dl = dl;
 	}
-	public int getMd() {
+	public String getMd() {
 		return md;
 	}
-	public void setMd(int md) {
+	public void setMd(String md) {
 		this.md = md;
 	}
 	

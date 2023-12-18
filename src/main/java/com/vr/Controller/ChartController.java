@@ -45,10 +45,13 @@ public class ChartController {
 	}
 	
 	//차트 작성 폼 불러오기
-	@RequestMapping(value = "chart/chartwriteForm", method = RequestMethod.GET)
-	public String chartwriteForm() {
-		return "chart/chartwriteForm";
-	}
+		@RequestMapping(value = "chart/chartwriteForm", method = RequestMethod.GET)
+		public String chartwriteForm(HttpSession session, Model model) {
+			model.addAttribute("chart", session.getAttribute("login"));
+			return "chart/chartwriteForm";
+		}
+
+	
 	
 	//차트 작성
 	@RequestMapping(value = "chart/chartwrite", method = RequestMethod.POST)
