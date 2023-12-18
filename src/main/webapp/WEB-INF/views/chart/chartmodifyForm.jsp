@@ -21,7 +21,7 @@
 		<table class="container">
 			<tr>
 				<th>이름 </th>
-				<td>
+				<td class="cm_td">
 					<input type="hidden" name="cname" id="inid" value = "${modifyform.cname}">
 					<input type="hidden" name="cno" id="inid" value = "${modifyform.cno}">
 					${modifyform.cname}</td>
