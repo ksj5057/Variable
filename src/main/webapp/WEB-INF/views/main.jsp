@@ -44,8 +44,8 @@
 								<li class="main_name"><a href="#" class="login_name_m">${sessionScope.login.mname}</a>
 									님 환영합니다 (˙ ˘ ˙) /
 									<li>
-								<!-- 관리자 아이디로 로그인했을때만 보이게 --> <c:if
-										test="${login.id.equals('admin1')}">
+								<!-- 관리자 아이디로 로그인했을때만 보이게 --> 
+								<c:if test="${login.position ne null}">
 									<li><a href="chart/chartlist">[차트관리]</a></li>
 								</c:if>							
 								<li><a href="logout">[로그아웃]</a></li>
