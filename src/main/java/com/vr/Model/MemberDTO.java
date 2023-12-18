@@ -15,9 +15,34 @@ public class MemberDTO {
 	private String birth;
 	// 나이
 	private int age;
+	// 로그인 관리
+	private int login_value;
+	// 의사면허번호
+	private String dl;
+	//진료과
+	private int md;
+	
+	public String getDl() {
+		return dl;
+	}
+	public void setDl(String dl) {
+		this.dl = dl;
+	}
+	public int getMd() {
+		return md;
+	}
+	public void setMd(int md) {
+		this.md = md;
+	}
 	
 	
 	
+	public int getLogin_value() {
+		return login_value;
+	}
+	public void setLogin_value(int login_value) {
+		this.login_value = login_value;
+	}
 	public String getGender() {
 		return gender;
 	}
@@ -60,6 +85,8 @@ public class MemberDTO {
 	public void setRrn(String rrn) {
 		this.rrn = rrn;
 	}
+	
+	
 	@Override
 	public String toString() {
 		return "MemberDTO [mname=" + mname + ", id=" + id + ", pw=" + pw + ", rrn=" + rrn + "]";
