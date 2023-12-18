@@ -31,6 +31,7 @@ input[type="submit"] {
 	left : 200px;
 	border : 1px solid #ccc;
 	border-collapse : collapse;	
+	font-family: 'OTWelcomeRA';
 }
 
 .table1{
@@ -38,9 +39,11 @@ input[type="submit"] {
 }
 /* 테이블 제일 윗줄 영역 */
 #tr1{
-	background-color: #6ed3d8;
-    border-left : 1px solid #6ed3d8;
-    border-right : 1px solid #6ed3d8;
+	background-color: #99CC99;
+    border-left : 1px solid #99CC99;
+    border-right : 1px solid #99CC99;
+    line-height : 40px;
+    color : #FAFAFA;
 }
 
 td{
