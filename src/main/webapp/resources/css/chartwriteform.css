@@ -23,11 +23,11 @@
     border: #999999 1px solid;
     height: 30px;
     margin-left: 10px;
-    font-family: 'OTWelcomeRA';
     padding-left: 10px;
     padding-top: 4px;
     padding-bottom: 8px;
     padding-right: 10px;
+    font-size: 12px;
 }
 
 .container input::placeholder {
@@ -40,11 +40,11 @@ input#inoperd {
 	border-radius: 8px;
 	border: #999999 1px solid;
 	margin-left: 10px;
-	font-family: 'OTWelcomeRA';
 	padding-left: 10px;
     padding-right: 10px;
     padding-top: 1px;
     padding-bottom: 4px;
+    font-size: 12px;
 }
 
 input#inexitd {
@@ -52,11 +52,11 @@ input#inexitd {
 	border-radius: 8px;
 	border: #999999 1px solid;
 	margin-left: 10px;
-	font-family: 'OTWelcomeRA';
 	padding-left: 10px;
     padding-right: 10px;
     padding-top: 1px;
     padding-bottom: 4px;
+    font-size: 12px;
 }
 
 input#inenterd {
@@ -64,15 +64,14 @@ input#inenterd {
 	border-radius: 8px;
 	border: #999999 1px solid;
 	margin-left: 10px;
-	font-family: 'OTWelcomeRA';
 	padding-left: 10px;
     padding-right: 10px;
     padding-top: 1px;
     padding-bottom: 4px;
+    font-size: 12px;
 }
 
 input#inid {
-	font-family: 'OTWelcomeRA';
 	font-size: 18px;
 	color: #222222;
 	width: 300px;
@@ -81,10 +80,10 @@ input#inid {
 	position: relative;
 	background: none;
 	z-index: 5;
+	font-size: 12px;
 }
 
 input#inrrn {
-	font-family: 'OTWelcomeRA';
 	font-size: 18px;
 	color: #222222;
 	width: 300px;
@@ -93,10 +92,10 @@ input#inrrn {
 	position: relative;
 	background: none;
 	z-index: 5;
+	font-size: 12px;
 }
 
 input#indis {
-	font-family: 'OTWelcomeRA';
 	font-size: 18px;
 	color: #222222;
 	width: 300px;
@@ -105,6 +104,7 @@ input#indis {
 	position: relative;
 	background: none;
 	z-index: 5;
+	font-size: 12px;
 }
 
 textarea#inoper {
