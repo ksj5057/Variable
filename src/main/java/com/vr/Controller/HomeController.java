@@ -74,14 +74,17 @@ public class HomeController {
 
 	@PostMapping("login")
 	public String login(MemberDTO member, HttpSession session, Model model) {
+		System.out.println("befor"+ member);
 		//ms.login값이 null이 아니면
 		if(ms.login(member) != null) {
+			
 		//로그인해라
 		session.setAttribute("login", ms.login(member));
 		//그리고 로그인 화면으로 이동
 		return "main";
 		//그렇지않으면
 		}else {
+			System.out.println("after" + member);
 		//로그인 하지마라
 		//로그인 화면으로 이동.
 		return "Member/Login_L";
@@ -101,4 +104,9 @@ public class HomeController {
 		return "chart/chartlist";
 	}	
 	
+	//관리자 로그인
+	@GetMapping("AdminLogin_L")
+	public String AdminLogin() {
+		return "Member/AdminLogin_L";
+	}	
 }    

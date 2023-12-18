@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
@@ -7,14 +8,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="join">
 		insert into member(id,pw,mname,gender,birth,age) values(#{id},#{pw},#{mname},#{gender},#{birth},#{age});
 	</insert>
-	
-	<select id="login" resultType="com.vr.Model.MemberDTO">
-		select *
-		from member
-		where id=#{id}
-		and pw=#{pw}
+		<select id="login" resultType="com.vr.Model.MemberDTO">
+		<choose>
+		<when test="login_value == 1">
+		select * from member where id=#{id} and pw=#{pw}
+		</when>
+		<when test="login_value == 2">
+		select * from doc where id=#{id} and pw=#{pw}
+		</when>
+		</choose>
 	</select>
-	
 </mapper>
 
     
