@@ -46,7 +46,8 @@ public class ChartController {
 	
 	//차트 작성 폼 불러오기
 	@RequestMapping(value = "chart/chartwriteForm", method = RequestMethod.GET)
-	public void chartwriteForm() {
+	public String chartwriteForm() {
+		return "chart/chartwriteForm";
 	}
 	
 	//차트 작성
@@ -77,7 +78,7 @@ public class ChartController {
 	
 	
 	// 차트 삭제 버튼
-	@RequestMapping(value = "chart/chartdelete", method = RequestMethod.GET)
+	@RequestMapping(value = "chart/hartdelete", method = RequestMethod.GET)
 	public String chartdelete(ChartDTO chart) {
 		cs.chartdelete(chart);
 		return "redirect:/chart/chartlist";
@@ -95,11 +96,19 @@ public class ChartController {
 		return "redirect:/Login_L";
 	}
 	
+	@RequestMapping(value = "chart/logout", method = RequestMethod.GET)
+	public String logout() {
+		return "redirect:/logout";
+	}
+	
 	@RequestMapping(value = "chart/MemberShip_L", method = RequestMethod.GET)
 	public String chartMembership() {
 		return "redirect:/MemberShip_L";
 	}
 	
-	
+	@RequestMapping(value = "chart/Certificate_L", method = RequestMethod.GET)
+	public String Certificate_L() {
+		return "redirect:/Certificate_L";
+	}
 } 
 	   

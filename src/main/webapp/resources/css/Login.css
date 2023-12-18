@@ -8,7 +8,9 @@
 }
 
 .bh_all_login_section.bh_mgb30 {
-    margin-top: 50px;
+    margin-top: 125px;
+    position : relative;
+    right : 350px;
 }
 
 a, a:link, a:visited {
@@ -223,5 +225,5 @@ input.bh_btn_all_login {
 }
 #login_section{
 	    position: relative;
-	    left:31.5%;
+	    left: 204px;
 }
