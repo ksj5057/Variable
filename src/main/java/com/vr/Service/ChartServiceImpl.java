@@ -17,8 +17,8 @@ public class ChartServiceImpl implements ChartService {
 	ChartMapper cm;
 
 	//chart 작성 메소드
-	public void chartwrite(MemberDTO md) {
-		cm.chartwrite(md);
+	public void chartwrite(ChartDTO chart) {
+		cm.chartwrite(chart);
 	}
 	
 	public ArrayList<ChartDTO> list(CriteriaDTO cri){
