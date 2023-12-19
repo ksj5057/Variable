@@ -20,7 +20,7 @@ public class ChartDTO {
 	// 퇴원날짜
 	private String exitd;
 	// 환자코드
-	private int dcode;
+	private String dcode;
 	
 	private String speciality;
 	
@@ -73,10 +73,10 @@ public class ChartDTO {
 		this.operation = operation;
 	}
 	
-	public int getDcode() {
+	public String getDcode() {
 		return dcode;
 	}
-	public void setDcode(int dcode) {
+	public void setDcode(String dcode) {
 		this.dcode = dcode;
 	}
 	public String getSpeciality() {

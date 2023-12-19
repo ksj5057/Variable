@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.vr.Model.MemberDTO;
@@ -85,7 +86,8 @@ public class CertificateController {
 	
 	//재증명 발급 진료 확인서
 	@GetMapping("ClinicCertificateDetails_L")
-	public String ClinicCertificateDetails_La() {
+	public String ClinicCertificateDetails_La(HttpSession session,MemberDTO md, Model model) {
+	
 		return "Certificate/ClinicCertificateDetails_L";
 	}
 }

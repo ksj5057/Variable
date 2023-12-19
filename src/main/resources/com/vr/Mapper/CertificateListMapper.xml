@@ -7,6 +7,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!-- 3개월치 진료기록 검색 -->
 	<select id="serch" resultType="int">
-  		select count(*) from chartlist where id= #{id} and firwriting BETWEEN CURRENT_DATE()-90 AND CURRENT_DATE();
+  		select count(*) from chart1 where id= #{id} and firwriting BETWEEN CURRENT_DATE()-90 AND CURRENT_DATE();
+  		</select>
+  		
+  	<select id="Cserch" resultType="com.vr.Model.MemberDTO">
+  		select * from chart1 where db=#{db};
   		</select>
 </mapper>

@@ -6,4 +6,6 @@ import com.vr.Model.MemberDTO;
 public interface CertificateListMapper {
 	
 	public int serch(MemberDTO md);
+	
+	public MemberDTO Cserch(MemberDTO md);
 }
