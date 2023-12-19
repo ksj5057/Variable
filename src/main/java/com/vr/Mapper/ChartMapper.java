@@ -8,7 +8,7 @@ import com.vr.Model.MemberDTO;
 
 public interface ChartMapper {
 	//chart 작성
-	public void chartwrite(MemberDTO md);
+	public void chartwrite(ChartDTO chart);
 	//chart 리스트
 	public ArrayList<ChartDTO> list(CriteriaDTO cri);
 	//chart 페이징
