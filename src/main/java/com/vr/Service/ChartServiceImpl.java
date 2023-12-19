@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.vr.Mapper.ChartMapper;
 import com.vr.Model.ChartDTO;
 import com.vr.Model.CriteriaDTO;
+import com.vr.Model.MemberDTO;
 
 @Service
 public class ChartServiceImpl implements ChartService {
@@ -16,8 +17,8 @@ public class ChartServiceImpl implements ChartService {
 	ChartMapper cm;
 
 	//chart 작성 메소드
-	public void chartwrite(ChartDTO chart) {
-		cm.chartwrite(chart);
+	public void chartwrite(MemberDTO md) {
+		cm.chartwrite(md);
 	}
 	
 	public ArrayList<ChartDTO> list(CriteriaDTO cri){

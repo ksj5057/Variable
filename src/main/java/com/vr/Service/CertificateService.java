@@ -6,4 +6,8 @@ import com.vr.Model.MemberDTO;
 public interface CertificateService {
 	
 	public int serch(MemberDTO md);
+
+	public MemberDTO Cserch(MemberDTO md);
+	
+
 }

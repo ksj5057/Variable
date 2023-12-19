@@ -13,10 +13,16 @@
 
 	<!-- 헤더 -->
 	<jsp:include page="../include/header.jsp"></jsp:include>
-
+	<input type='hidden' name='hc' value="(01) 진료확인서" id="hc">
 	<div class="chart_box">
 	<h1>차트 작성</h1>
-	
+			<div id="chartselet">
+			<select id="Certificate" onchange="Certificate()">
+			<option id="Clinic" value="Clinic" 		 >진료 확인서</option>
+			<option id="Discharge" value="Discharge" >입퇴원 확인서</option>
+			<option id="Operation" value="Operation" >수술 확인서</option>
+			</select>
+			</div>
 	<div class="chartwrite_box">
 	<form action="chartwrite" method="post">
 		<table class="container">
@@ -32,7 +38,7 @@
 				<th>병명</th>
 				<td><input type="text" name="disease" id="indis" placeholder="환자 병명을 입력해주세요."></td>
 			</tr>
-			<tr>
+			<tr id="va">
 				<th>입원날짜</th>
 				<td><input type="date" name="enterd" id="inenterd"></td>
 				<th>퇴원날짜</th>
@@ -53,5 +59,10 @@
 	</form>
 	</div>
 	</div>
+	<script>
+	 document.getElementById('inoperd').value = new Date().toISOString().substring(0, 10);;
+	 const cl = document.getElementById('va');
+	 cl.style.display = 'none';
+</script>
 </body>
 </html>
