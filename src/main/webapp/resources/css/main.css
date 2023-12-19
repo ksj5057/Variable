@@ -97,6 +97,23 @@ ul.bh_snb_ul {
     color: white;
 }
 
+ul.sbs__ul3 {
+    padding-left: 0px;
+}
+
+li.sbs_4 {
+    padding-bottom: 0px;
+}
+
+li.sbs_5 {
+    padding-top: 0px;
+}
+
+li.sbs_6 {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
 .maincss ol, ul {
 	list-style-type: none;
 	list-style: none;
