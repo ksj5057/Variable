@@ -8,7 +8,7 @@ import com.vr.Model.MemberDTO;
 
 public interface ChartService {
 	//chart 작성
-	public void chartwrite(MemberDTO md);
+	public void chartwrite(ChartDTO chart);
 
 	public ArrayList<ChartDTO> list(CriteriaDTO cri);
 

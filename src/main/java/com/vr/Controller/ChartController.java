@@ -1,25 +1,25 @@
 package com.vr.Controller;
 
 
-import java.io.IOException;
-import java.io.PrintWriter;
+import com.vr.Model.*;
+import com.vr.Service.ChartService;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import com.vr.Model.ChartDTO;
-import com.vr.Model.CriteriaDTO;
-import com.vr.Model.MemberDTO;
-import com.vr.Model.pageDTO;
-import com.vr.Service.ChartService;
 
 
 /**
@@ -31,6 +31,9 @@ public class ChartController {
 	@Autowired
 	ChartService cs;
 	
+	/**
+	 * Simply selects the home view to render by returning its name.
+	 */
 	//차트 리스트 불러오기
 	@RequestMapping(value = "chart/chartlist", method = RequestMethod.GET)
 	public String list(Model model, CriteriaDTO cri) {
@@ -52,10 +55,9 @@ public class ChartController {
 	
 	//차트 작성
 	@RequestMapping(value = "chart/chartwrite", method = RequestMethod.POST)
-	public String chartwrite(MemberDTO md) {
-//		md.getRrn();
-//		md.
-		cs.chartwrite(md);
+	public String chartwrite(ChartDTO chart) {
+		System.out.println(chart);
+		cs.chartwrite(chart);
 		return "redirect:/chart/chartlist";
 	}
 	
@@ -71,6 +73,7 @@ public class ChartController {
 	//	차트 수정 버튼
 	@RequestMapping(value = "chart/chartmodify", method = RequestMethod.POST)
 	public String chartmodify(ChartDTO chart, RedirectAttributes rttr) {
+		System.out.println(chart);
 		cs.chartmodify(chart);
 		rttr.addAttribute("cno", chart.getCno());
 		return "redirect:/chart/chartlist";
@@ -86,6 +89,7 @@ public class ChartController {
 	
 	@RequestMapping(value = "chart/chartdetail", method = RequestMethod.GET)
 	public String chartdetail(ChartDTO chart, Model model) {
+		System.out.println(chart);
 		cs.chartdetail(chart);
 		model.addAttribute("chartdetail", cs.chartdetail(chart));
 		return "chart/chartdetail";
@@ -110,7 +114,5 @@ public class ChartController {
 	public String Certificate_L() {
 		return "redirect:/Certificate_L";
 	}
-	
-	
 } 
 	   
