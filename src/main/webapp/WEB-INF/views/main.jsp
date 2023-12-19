@@ -55,11 +55,22 @@
 					
 					<!-- 상단메뉴바 -->
 					<div class="menu_btn_mask">
-						<button class="open_menu_btn"></button>
+						<button class="open_menu_btn"></button>						
 						<ul class="bh_snb_ul" style="display: none;">
 							<li class="sds_1"><a tabindex="0" href="#">예약</a></li>
 							<li class="sds_2"><a tabindex="0" href="#">예약조회 및 취소</a></li>
-							<li class="sds_3"><a tabindex="0" href="Certificate_L">증명서/의무기록발급</a></li>
+							<li class="sbs_ul2"><a tabindex="0" href="Certificate_L">증명서/의무기록발급</a>							
+								
+								<!-- 로그인하면 증명서발급 확인서목록 출력되게 -->
+								<c:if test="${login.id ne null}">
+								<ul class="sbs__ul3" style="display: none;">
+									<li class="sbs_4"><a href="#">진료 확인서</a></li>
+									<li class="sbs_5"><a href="#">입·퇴원 확인서</a></li>
+									<li class="sbs_6"><a href="#">수술 확인서</a></li>
+								</ul>								
+								</c:if>	
+								</li>												
+								
 							<li class="sds_4"><a tabindex="0" href="#">진료비 결제</a></li>
 							<li class="sds_7"><a tabindex="0" href="#">처방동영상</a></li>
 							<li class="sds_9"><a tabindex="0" href="#">개인정보</a></li>
