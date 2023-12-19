@@ -4,10 +4,11 @@ import java.util.ArrayList;
 
 import com.vr.Model.ChartDTO;
 import com.vr.Model.CriteriaDTO;
+import com.vr.Model.MemberDTO;
 
 public interface ChartService {
 	//chart 작성
-	public void chartwrite(ChartDTO chart);
+	public void chartwrite(MemberDTO md);
 
 	public ArrayList<ChartDTO> list(CriteriaDTO cri);
 

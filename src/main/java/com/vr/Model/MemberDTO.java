@@ -21,10 +21,60 @@ public class MemberDTO {
 	private String dl;
 	//진료과
 	private String md;
-	
+	//관리자
 	private String position;
+	//입원일
+	private String operd;
+	//차트 수정일
+	private String upwriting; 
+	//퇴원일
+	private String exitd;
+	//진단명
+	private String dn;
+	//진단내용
+	private String content;
+	//문서 번호
+	private String db;
 	
 	
+	
+	
+	public String getOperd() {
+		return operd;
+	}
+	public void setOperd(String operd) {
+		this.operd = operd;
+	}
+	public String getUpwriting() {
+		return upwriting;
+	}
+	public void setUpwriting(String upwriting) {
+		this.upwriting = upwriting;
+	}
+	public String getExitd() {
+		return exitd;
+	}
+	public void setExitd(String exitd) {
+		this.exitd = exitd;
+	}
+	public String getDn() {
+		return dn;
+	}
+	public void setDn(String dn) {
+		this.dn = dn;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public String getDb() {
+		return db;
+	}
+	public void setDb(String db) {
+		this.db = db;
+	}
 	public String getPosition() {
 		return position;
 	}

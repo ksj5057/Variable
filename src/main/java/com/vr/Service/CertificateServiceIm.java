@@ -16,4 +16,8 @@ public class CertificateServiceIm implements CertificateService {
 	public int serch(MemberDTO md) {
 		return cm.serch(md);
 	};
+	
+	public MemberDTO Cserch(MemberDTO md) {
+		return cm.Cserch(md);
+	}
 }
