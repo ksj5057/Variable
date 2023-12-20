@@ -127,9 +127,9 @@
 
 			</div>
 		</section>
-
-
-
 	</div>
+	
+	<!-- г╙ем -->
+		<jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
 </html>

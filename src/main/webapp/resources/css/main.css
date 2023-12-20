@@ -54,6 +54,18 @@ body {
     margin-top: 45px;
 }
 
+a#login_am1 {
+    color: black;
+}
+
+a#login_am2 {
+    color: black;
+}
+
+a, a:link, a:visited {
+	color: black;
+}
+
 .menu_btn_mask {
     position: absolute;
     margin-left: 20px;
@@ -68,7 +80,7 @@ body {
 }
 
 .menu_btn_mask a {
-	color: #444;
+	color: black;
     font-size: 16px;
     margin-right: 5px;
 }
@@ -147,7 +159,7 @@ a, a:link, a:visited.main_a1_m {
 	text-decoration: none;
 }
 
-.header_login_m a {
+a.header_login_m  {
 	color: #444;
     font-size: 16px;
     font-weight: 600;
@@ -517,10 +529,6 @@ input#search_btn_m {
     background-position: center 75%;
 }
 
-.main_conts_set_m {
-
-}
-
 .skip {
 	display: none;
 }
@@ -549,5 +557,77 @@ a.login_name_m {
   color : #666699;
 }
 
+.main_foot1 {
+	position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #dcd9d9;
+    padding: 0;
+    margin-top: 50px;
+    
+}
 
+.main_foot2 {
+    width: auto;
+    height: 50px;
+    text-align: center;
+    background-color: #333333;
+    color: white;
+    font-size: 20px;
+    padding-top: 27px;
+    background-image: url(/resources/image/main_call.png);
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: 42% 45%;
+    font-family: 'OTWelcomeRA';
+}
 
+.main_foot3 {
+	position: relative;
+	padding-top: 25px;
+    height: 40px;
+    padding-left: 36%;
+    font-size: 14px;
+}
+
+ul.footer_top_menu {
+    list-style: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+li.privacy {
+    float: left;
+}
+
+.footer_top_menu li {
+	float: left;
+	padding-left: 10px;
+}
+
+.main_foot3 {
+    position: relative;
+    width: auto;
+    height: 40px;
+    background-color: #424242;
+}
+
+.footer_li a {
+    color: #999999;
+}
+
+.footer_li2 a {
+    color: #999999;
+}
+
+.footer_li3 a {
+    color: #999999;
+}
+
+.footer_li4 a {
+    color: #999999;
+}
+
+.footer_li5 a {
+    color: #999999;
+}
