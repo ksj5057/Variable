@@ -68,5 +68,9 @@
 		</div>
 	</div>
 	</div>
+	
+	<!-- 푸터 -->
+	<jsp:include page="../include/footer.jsp"></jsp:include>
+	
 </body>
 </html>

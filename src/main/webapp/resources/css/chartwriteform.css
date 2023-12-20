@@ -1,17 +1,20 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'OTWelcomeRA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'OTWelcomeRA';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2')
+		format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 
 .chart_box {
 	position: relative;
-	margin-top: 100px;
+	margin-top: 150px;
 	text-align: center;
 	font-family: 'OTWelcomeRA';
+	margin-bottom: 150px;
 }
 
 .chartwrite_box input {
@@ -19,20 +22,20 @@
 }
 
 .chartwrite_box select {
-    border-radius: 8px;
-    border: #999999 1px solid;
-    height: 30px;
-    margin-left: 10px;
-    padding-left: 10px;
-    padding-top: 4px;
-    padding-bottom: 8px;
-    padding-right: 10px;
-    font-size: 12px;
+	border-radius: 8px;
+	border: #999999 1px solid;
+	height: 30px;
+	margin-left: 10px;
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 8px;
+	padding-right: 10px;
+	font-size: 12px;
 }
 
 .container input::placeholder {
-    color: #CCCCCC;
-    font-size: 15px;
+	color: #CCCCCC;
+	font-size: 15px;
 }
 
 input#inoperd {
@@ -41,10 +44,10 @@ input#inoperd {
 	border: #999999 1px solid;
 	margin-left: 10px;
 	padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 1px;
-    padding-bottom: 4px;
-    font-size: 12px;
+	padding-right: 10px;
+	padding-top: 1px;
+	padding-bottom: 4px;
+	font-size: 12px;
 }
 
 input#inexitd {
@@ -53,10 +56,10 @@ input#inexitd {
 	border: #999999 1px solid;
 	margin-left: 10px;
 	padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 1px;
-    padding-bottom: 4px;
-    font-size: 12px;
+	padding-right: 10px;
+	padding-top: 1px;
+	padding-bottom: 4px;
+	font-size: 12px;
 }
 
 input#inenterd {
@@ -65,10 +68,10 @@ input#inenterd {
 	border: #999999 1px solid;
 	margin-left: 10px;
 	padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 1px;
-    padding-bottom: 4px;
-    font-size: 12px;
+	padding-right: 10px;
+	padding-top: 1px;
+	padding-bottom: 4px;
+	font-size: 12px;
 }
 
 input#inid {
@@ -108,10 +111,10 @@ input#indis {
 }
 
 textarea#inoper {
-    border-radius: 8px;
-    border: #999999 1px solid;
-    padding: 15px;
-    font-family: 'OTWelcomeRA';
+	border-radius: 8px;
+	border: #999999 1px solid;
+	padding: 15px;
+	font-family: 'OTWelcomeRA';
 }
 
 table.container {
@@ -125,8 +128,8 @@ table.container {
 table.container th {
 	padding-left: 20px;
 	padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
 	width: 150px;
 	font-weight: bold;
 	vertical-align: top;
@@ -151,34 +154,34 @@ td.chart_memo {
 }
 
 .chart_write_btn input[type="submit"] {
-    width: 80px;
-    height: 40px;
-    border: none;
-    border-bottom: 3px solid #99CC99;
-    background-color: #F2F2F2;
+	width: 80px;
+	height: 40px;
+	border: none;
+	border-bottom: 3px solid #99CC99;
+	background-color: #F2F2F2;
 }
 
 .chart_write_btn {
-    position: absolute;
-    right: 439px;
-    margin-top: 20px;
+	position: absolute;
+	right: 439px;
+	margin-top: 20px;
 }
 
-#Certificate{
-    width: 312px;
-    border-radius: 8px;
-    border: #999999 1px solid;
-    margin-left: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 1px;
-    padding-bottom: 4px;
-    font-size: 12px;
-    height: 27px;
+#Certificate {
+	width: 312px;
+	border-radius: 8px;
+	border: #999999 1px solid;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 1px;
+	padding-bottom: 4px;
+	font-size: 12px;
+	height: 27px;
 }
-#chartselet{
+
+#chartselet {
 	position: absolute;
-    left: 59.3%;
-    top: 20px;
-}
+	left: 59.3%;
+	top: 20px;
+	margin-left: 25px;
 }

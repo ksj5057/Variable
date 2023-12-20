@@ -41,3 +41,4 @@ function zoomOut(event) {
 	event.target.style.zIndex = 0;
 };
 
+
