@@ -1,117 +1,131 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'OTWelcomeRA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'OTWelcomeRA';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2')
+		format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 
-.headline{
-	position : relative;
-	text-align : center;
-	right : 60px;
+.chartlist_box {
+	margin-top: 90px;
 }
 
-#searchform{
-	position : relative;
-	left : 200px;
-} 
+.headline {
+	font-family: 'OTWelcomeRA';
+	font-size: larger;
+}
+
+.headline h2 {
+	text-align: center;
+}
+
+.searchform_box {
+	margin-bottom: 10px;
+	margin-left: 5px;
+}
+
+#searchform {
+	position: relative;
+	left: 200px;
+}
 
 input[type="submit"] {
 	border: none;
-    padding: 5px 10px;
-    color: #fff;
-    font-weight: bold;
-    background-color: #74D36D;
+	padding: 5px 10px;
+	color: #fff;
+	font-weight: bold;
+	background-color: #74D36D;
 }
 
-#container{
-	position : relative;
-	left : 200px;
-	border : 1px solid #ccc;
-	border-collapse : collapse;	
+#container {
+	position: relative;
+	left: 200px;
+	border: 1px solid #ccc;
+	border-collapse: collapse;
 	font-family: 'OTWelcomeRA';
 }
 
-.table1{
+.table1 {
 	
 }
 /* 테이블 제일 윗줄 영역 */
-#tr1{
+#tr1 {
 	background-color: #99CC99;
-    border-left : 1px solid #99CC99;
-    border-right : 1px solid #99CC99;
-    line-height : 40px;
-    color : #FAFAFA;
+	border-left: 1px solid #99CC99;
+	border-right: 1px solid #99CC99;
+	line-height: 40px;
+	color: #FAFAFA;
 }
 
-td{
-	text-align : center;
-	height : 45px;
-/* 	border-bottom : 1px solid black; */
+td {
+	text-align: center;
+	height: 45px;
+	/* 	border-bottom : 1px solid black; */
 }
 
 /* 차트 내용에 마우스 갖다댔을 때 */
-#tr2:hover{
-	background-color : silver;
+#tr2:hover {
+	background-color: silver;
 }
 
-#writeform{
-	position : relative;
-	float : right;
-	right : 285px;
+#writeform {
+	position: relative;
+	float: right;
+	right: 285px;
 }
 
 /* 페이징 숫자, 다음칸 */
-.paging{
-	position : relative;
-	padding : 10px;
-	top : 60px;
-	left : 700px;
-	text-decoration : none;
-	font-size : 18px;
+.paging {
+	position: relative;
+	padding: 10px;
+	top: 60px;
+	left: 700px;
+	text-decoration: none;
+	font-size: 18px;
 }
 
-.paging:link, .paging:visited{
-	color : black;
+.paging:link, .paging:visited {
+	color: black;
 }
 
 /* 페이징 숫자, 다음칸 마우스 갖다댔을때 */
-.paging:hover{
-	color : #6ed3d8;
+.paging:hover {
+	color: #6ed3d8;
 }
 
-.detailc{
-	text-decoration : underline;
+.detailc {
+	text-decoration: underline;
 }
 
-.detailc:link, .detailc:visited{
-	color : black;
-	text-decoration : none;
-	
+.detailc:link, .detailc:visited {
+	color: black;
+	text-decoration: none;
 }
 
-.detailc:hover{
-	text-decoration : underline;
+.detailc:hover {
+	text-decoration: underline;
 }
 
+.chart_paging {
+	height: 100px;
+}
 
-#modify,
-#delete,
-#write {
-    border: none;
-    padding: 5px 10px;
-    color: #fff;
-    font-weight: bold;
+#modify, #delete, #write {
+	border: none;
+	padding: 5px 10px;
+	color: #fff;
+	font-weight: bold;
 }
 
 #modify {
-    background-color: #03A9F4;
+	background-color: #03A9F4;
 }
 
 #delete {
-    background-color: #E91E63;
+	background-color: #E91E63;
 }
 
 #write {
