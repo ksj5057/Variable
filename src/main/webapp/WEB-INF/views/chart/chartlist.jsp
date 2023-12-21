@@ -54,19 +54,19 @@
 			<a class="detailc" href = "chartdetail?db=${chartlist.db}">${chartlist.dn}</a></td>
 <%-- 			<td class = "td1">${chartlist.operation}</td> --%>
 			<td class = "td1">${chartlist.disease}
-			<c:choose>
-			<c:when test="${chartlist.modi == null}">
-			(수정사항 없음)
-			</c:when>
-			<c:otherwise>
-					(${chartlist.modi})
-				</c:otherwise>
-			</c:choose>
+<%-- 			<c:choose> --%>
+<%-- 			<c:when test="${chartlist.modi == null}"> --%>
+<!-- 			(수정사항 없음) -->
+<%-- 			</c:when> --%>
+<%-- 			<c:otherwise> --%>
+<%-- 					(${chartlist.modi}) --%>
+<%-- 				</c:otherwise> --%>
+<%-- 			</c:choose> --%>
 			</td> <!-- 작성일 -->
 			<td class = "td1">
 			<c:choose>
 				<c:when test = "${chartlist.hospital eq null}"><!-- 입원일 -->
-					해당없음 
+					-
 				</c:when>
 				<c:otherwise>
 					${chartlist.hospital}
@@ -76,14 +76,14 @@
 			<td class = "td1">
 			<c:choose>
 				<c:when test = "${chartlist.exitd eq null}"><!-- 퇴원일 -->
-					해당없음 
+					-
 				</c:when>
 				<c:otherwise>
 					${chartlist.exitd}
 				</c:otherwise>
 			</c:choose></td>
 			
-			<td class = "td1">${chartlist.speciality}(${chartlist.docname})</td>
+			<td class = "td1">${chartlist.speciality} <br>(${chartlist.docname})</td>
 			<td>
 			<c:choose>
 			<c:when test="${chartlist.docname eq doc.mname}">
