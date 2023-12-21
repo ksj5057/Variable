@@ -20,42 +20,33 @@
 	<form action="chartmodify" method="post">
 		<table class="container">
 			<tr>
-				<th>이름 </th>
+				<th>이름</th>
 				<td class="cm_td">
-					<input type="hidden" name="cname" id="inid" value = "${modifyform.cname}">
-					<input type="hidden" name="cno" id="inid" value = "${modifyform.cno}">
-					${modifyform.cname}</td>
-				<th>환자코드</th>
-				<td><select id="select" name="dcode">
-					<option selected disabled>${modifyform.dcode}</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					</select>
-				</td>
+					<input type="hidden" name="mname" id="inid" value = "${modifyform.mname}">
+					<input type="hidden" name="db" id="inid" value = "${modifyform.db}">
+					${modifyform.mname}</td>
+				<th>진료과</th>
+				<td>${modifyform.md}</td>
 			</tr>
 			<tr>
-				<th>주민번호</th>
-				<td><input type="hidden" name="rrn" id="inrrn" value = "${modifyform.rrn}">${modifyform.rrn}</td>
-				<th>병명</th>
-				<td><input type="text" name="disease" id="indis" value = "${modifyform.disease}"></td>
+				<th>생년월일</th>
+				<td><input type="hidden" name="birth" id="inrrn" value = "${modifyform.birth}">${modifyform.birth}</td>
+				<th>진단명</th>
+				<td><input type="text" name="dn" id="indis" value = "${modifyform.dn}"></td>
 			</tr>
 			<tr>
-				<th>입원날짜</th>
-				<td><input type="date" name="enterd" id="inenterd" value = "${modifyform.enterd}"></td>
-				<th>퇴원날짜</th>
+				<th>입원일</th>
+				<td><input type="date" name="hospital" id="inenterd" value = "${modifyform.hospital}"></td>
+				<th>퇴원일</th>
 				<td><input type="date" name="exitd" id="inexitd" value = "${modifyform.exitd}"></td>
 			</tr>
 			<tr>
-				<th>진료날짜</th>
-				<td colspan="4"><input type="date" name="operd" id="inoperd" value="${modifyform.operd}"></td>
+				<th>진료일</th>
+				<td colspan="4"><input type="hidden"id="inoperd" value="${modifyform.disease}">${modifyform.disease}</td>
 			</tr>
 			<tr>
 				<th>상태 및 소견</th>
-				<td colspan="4" class="chart_memo"><textarea cols="" name="operation" id="inoper" style="width: 798px; height: 392px;">${modifyform.operation}</textarea></td>
+				<td colspan="4" class="chart_memo"><textarea name="content" id="inoper" style="width: 798px; height: 392px;">${modifyform.content}</textarea></td>
 			</tr>
 		</table>
 		<div class="chart_modify_btn">
@@ -64,9 +55,5 @@
 	</form>
 	</div>
 	</div>
-	
-		<!-- 푸터 -->
-	<jsp:include page="../include/footer.jsp"></jsp:include>
-	
 </body>
 </html>

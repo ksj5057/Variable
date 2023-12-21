@@ -23,33 +23,63 @@ public class MemberDTO {
 	private String md;
 	//관리자
 	private String position;
-	//입원일
-	private String operd;
 	//차트 수정일
-	private String upwriting; 
+	private String modi; 
+	//입원일
+	private String hospital;
 	//퇴원일
 	private String exitd;
+	//작성일
+	private String disease; 
 	//진단명
 	private String dn;
 	//진단내용
 	private String content;
 	//문서 번호
 	private String db;
+	//확인서 번호
+	private String hc;
+	//의사 이름
+	private String docname;
+	//수술일
+	private String oper;
+	
+	//진료과 지정 값 만 보여주기
+	private String speciality;
 	
 	
 	
 	
-	public String getOperd() {
-		return operd;
+	
+	public String getSpeciality() {
+		return speciality;
 	}
-	public void setOperd(String operd) {
-		this.operd = operd;
+	public void setSpeciality(String speciality) {
+		this.speciality = speciality;
 	}
-	public String getUpwriting() {
-		return upwriting;
+	public String getDisease() {
+		return disease;
 	}
-	public void setUpwriting(String upwriting) {
-		this.upwriting = upwriting;
+	public void setDisease(String disease) {
+		this.disease = disease;
+	}
+	public String getModi() {
+		return modi;
+	}
+	public void setModi(String modi) {
+		this.modi = modi;
+	}
+	public String getDocname() {
+		return docname;
+	}
+	public void setDocname(String docname) {
+		this.docname = docname;
+	}
+	public String getHc() {
+		return hc;
+	}
+	public void setHc(String hc) {
+		this.hc = hc;
 	}
 	public String getExitd() {
 		return exitd;
@@ -94,8 +124,18 @@ public class MemberDTO {
 		this.md = md;
 	}
 	
-	
-	
+	public String getHospital() {
+		return hospital;
+	}
+	public void setHospital(String hospital) {
+		this.hospital = hospital;
+	}
+	public String getOper() {
+		return oper;
+	}
+	public void setOper(String oper) {
+		this.oper = oper;
+	}
 	public int getLogin_value() {
 		return login_value;
 	}
@@ -144,11 +184,13 @@ public class MemberDTO {
 	public void setRrn(String rrn) {
 		this.rrn = rrn;
 	}
-	
-	
 	@Override
 	public String toString() {
-		return "MemberDTO [mname=" + mname + ", id=" + id + ", pw=" + pw + ", rrn=" + rrn + "]";
+		return "MemberDTO [mname=" + mname + ", id=" + id + ", pw=" + pw + ", rrn=" + rrn + ", gender=" + gender
+				+ ", birth=" + birth + ", age=" + age + ", login_value=" + login_value + ", dl=" + dl + ", md=" + md
+				+ ", position=" + position + ", hospital=" + hospital + ", modi=" + modi + ", exitd=" + exitd + ", dn="
+				+ dn + ", content=" + content + ", db=" + db + ", hc=" + hc + ", docname=" + docname + ", oper=" + oper
+				+ "]";
 	}
 	
 	
