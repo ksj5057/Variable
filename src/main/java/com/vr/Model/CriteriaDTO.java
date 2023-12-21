@@ -5,7 +5,21 @@ public class CriteriaDTO {
 	private int amount;
 	private String keyword;
 	private String type;
+	private String rrn;
+	private String db;
 	
+	public String getDb() {
+		return db;
+	}
+	public void setDb(String db) {
+		this.db = db;
+	}
+	public String getRrn() {
+		return rrn;
+	}
+	public void setRrn(String rrn) {
+		this.rrn = rrn;
+	}
 	public CriteriaDTO() {
 		this(1,10);
 	}

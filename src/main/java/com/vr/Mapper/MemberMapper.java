@@ -11,7 +11,7 @@ public interface MemberMapper {
 	//로그인
 	public MemberDTO login(MemberDTO member);
 	
-	//차트 리스트
+		//차트 리스트
 		public ArrayList<CriteriaDTO> list(CriteriaDTO cri);
 		
 		//차트 페이징

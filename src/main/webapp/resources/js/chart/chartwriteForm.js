@@ -40,18 +40,17 @@ function Certificate(select){
 
 $(document).ready(function() {
 	$('#inid').blur(function(){
-		var name=$("input[name='mname']").val();
-		//var pwd=$("input[name='pwd']").val();
-		add({name:name});
+		var db=$("input[name='db']").val();
+		addv({db:db});
 
 	});
 
-	function add(date){
+	function addv(date){
 		console.log(date)
 
-		var name=date.name;
+		var db = date.db;
 
-		$.getJSON("/post/"+name+".json",
+		$.getJSON("/post/"+db+".json",
 				function(data){
 			console.log(data);
 			$('#inrrn').attr('value', data.birth);
