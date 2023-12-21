@@ -53,7 +53,7 @@
 			<td class = "td1"><!-- 진단명 -->
 			<a class="detailc" href = "chartdetail?db=${chartlist.db}">${chartlist.dn}</a></td>
 <%-- 			<td class = "td1">${chartlist.operation}</td> --%>
-			<td class = "td1">${chartlist.disease}
+			<td class = "td1">${chartlist.disease}<!-- 작성일 -->
 <%-- 			<c:choose> --%>
 <%-- 			<c:when test="${chartlist.modi == null}"> --%>
 <!-- 			(수정사항 없음) -->

@@ -13,4 +13,71 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   	<select id="Cserch" resultType="com.vr.Model.MemberDTO">
   		select * from chart1 where db=#{db};
   		</select>
+  	
+  	<select id="Certificateserch" resultType="int">
+  	select count(*) from chart1 where rrn =#{rrn} and db like #{db};
+  	<!-- like를 쓰기위해 %를 붙일려면 concat을 이용하자 -->
+  	</select>	
+  	
+  	<select id="Certificatelist" resultType="com.vr.Model.MemberDTO">
+  	select docname, dn, mname, db,
+  	case
+		when md = '(01) 내과' then '내과'
+		when md = '(02) 정형외과' then '정형외과'
+		when md = '(03) 이비인후과' then '이비인후과'
+		when md = '(04) 산부인과' then '산부인과'
+		when md = '(05) 피부과' then '피부과'
+		when md = '(06) 소아과' then '소아과'
+		end as 'speciality',
+        
+        (CASE
+         WHEN INSTR(DATE_FORMAT(disease, '%y-%m-%d'), 'PM') > 0
+         THEN REPLACE(DATE_FORMAT(disease, '%y-%m-%d'), 'PM', '오후')
+         ELSE REPLACE(DATE_FORMAT(disease, '%y-%m-%d'), 'AM', '오전')    
+         END)  AS disease,
+         
+         (CASE
+         WHEN INSTR(DATE_FORMAT(modi, '%y-%m-%d'), 'PM') > 0
+         THEN REPLACE(DATE_FORMAT(modi, '%y-%m-%d'), 'PM', '오후')
+         ELSE REPLACE(DATE_FORMAT(modi, '%y-%m-%d'), 'AM', '오전')    
+         END) AS modi,
+         
+         (CASE
+         WHEN INSTR(DATE_FORMAT(hospital, '%y-%m-%d' ), 'PM') > 0
+         THEN REPLACE(DATE_FORMAT(hospital, '%y-%m-%d'), 'PM', '오후')
+         ELSE REPLACE(DATE_FORMAT(hospital, '%y-%m-%d'), 'AM', '오전')    
+         END)  AS hospital,
+         
+          (CASE
+         WHEN INSTR(DATE_FORMAT(exitd, '%y-%m-%d' ), 'PM') > 0
+         THEN REPLACE(DATE_FORMAT(exitd, '%y-%m-%d'), 'PM', '오후')
+         ELSE REPLACE(DATE_FORMAT(exitd, '%y-%m-%d'), 'AM', '오전')    
+         END)  AS exitd	
+		from(
+		select @rownum:=@rownum+1 rownum, b.*
+		from chart1 b, (select @rownum:=0) as tmp
+		
+		<if test="keyword != null">
+			<choose>
+				<when test="type=='T'.toString()">
+					where mname like concat('%',#{keyword},'%')
+				</when>
+				<when test="type=='C'.toString()">
+					where db like concat('%',#{keyword},'%')
+				</when>
+				<otherwise>
+					where mname like concat('%',#{keyword},'%')
+					OR db like concat('%',#{keyword},'%')
+				</otherwise>
+
+			</choose>
+
+		</if>
+		order by disease desc
+		) as chartlist
+			<![CDATA[
+				where rrn =#{rrn} and db like #{db} and rownum > (#{pagenum}-1)*#{amount} and rownum <= #{pagenum}*#{amount}
+				]]>
+	</select>
+  	
 </mapper>

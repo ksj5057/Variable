@@ -4,11 +4,13 @@ package com.vr.Controller;
 import com.vr.Model.*;
 import com.vr.Service.ChartService;
 
+import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -31,85 +33,84 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
  */
 @Controller
 public class ChartController {
-	
+
 	@Autowired
 	ChartService cs;
-	
+
 	//현재 년도 가져오기
-		String pattern = "yyyyMMddHHmmss";
-		SimpleDateFormat sdf = new SimpleDateFormat(pattern);
-		java.util.Date now = new java.util.Date();
-		String nowString = sdf.format(now);
-	
+	String pattern = "yyyyMMddHHmmss";
+	SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+	java.util.Date now = new java.util.Date();
+	String nowString = sdf.format(now);
+
 	//차트 리스트 불러오기
 	@RequestMapping(value = "chart/chartlist", method = RequestMethod.GET)
-	public String list(Model model, CriteriaDTO cri, HttpSession session) {
-		//의사 로그인 값 가져오기
-		model.addAttribute("doc", session.getAttribute("login"));
-		model.addAttribute("list", cs.list(cri));
-		int total = cs.total(cri);
-		model.addAttribute("paging", new pageDTO(cri, total));
-		
-		
-		return "chart/chartlist";
-	}
-	
+	public String list(Model model, CriteriaDTO cri, HttpSession session,HttpServletResponse response,MemberDTO md){
+			//의사 로그인 값 가져오기
+			model.addAttribute("doc", session.getAttribute("login"));
+			//리스트 불러오기
+			model.addAttribute("list", cs.list(cri));
+			//게시물의 총 갯수
+			int total = cs.total(cri);
+			model.addAttribute("paging", new pageDTO(cri, total));
+			return "chart/chartlist";
+		}
 	//차트 작성 폼 불러오기
-		@RequestMapping(value = "chart/chartwriteForm", method = RequestMethod.GET)
-		public String mdwriteForm(HttpSession session, Model model) {
-			model.addAttribute("chart", session.getAttribute("login"));
-			return "chart/chartwriteForm";
-		}
+	@RequestMapping(value = "chart/chartwriteForm", method = RequestMethod.GET)
+	public String mdwriteForm(HttpSession session, Model model) {
+		model.addAttribute("chart", session.getAttribute("login"));
+		return "chart/chartwriteForm";
+	}
 
-	
-	
-		//차트 작성
-		@RequestMapping(value = "chart/chartwrite", method = RequestMethod.POST)
-		public String mdwrite(MemberDTO md,HttpSession session) {
-			MemberDTO mm = new MemberDTO();
-			//환자 찾기해서 찾은 정보값 세션에 저장한거 가져오기
-			mm = (MemberDTO) session.getAttribute("md");
-			
-			int i = 1;
-			String rrn =mm.getRrn();
-			String hc = md.getHc();
-			Boolean start = true;
-				while(start) {
-					String db = rrn + hc + '-' + i;
-					md.setDb(db);
-					//값이 없다
-					if(cs.Match(db) == 0) {
-						start = false;
-						
-						
-					//값이 있다.
-					}else if(cs.Match(db) == 1 ){
-						i++;
-					}
-					
-				}
-			// 문서번호 생성
-			
-			MemberDTO doc = new MemberDTO();
-			doc = (MemberDTO) session.getAttribute("login");
-			//의사이름 저장
-			md.setDocname(doc.getMname());
-			//의사면허번호 저장
-			md.setDl(doc.getDl());
-			//차트번호 저장
-			md.setRrn(mm.getRrn());
-			//성별 저장
-			md.setGender(mm.getGender());
-			//생년월일 저장
-			md.setBirth(mm.getBirth());
-			//나이 저장
-			md.setAge(mm.getAge());
-			System.out.println("login 전 " + md);
-			cs.chartwrite(md);
-			
-			return "redirect:/chart/chartlist";
+
+
+	//차트 작성
+	@RequestMapping(value = "chart/chartwrite", method = RequestMethod.POST)
+	public String mdwrite(MemberDTO md,HttpSession session) {
+		MemberDTO mm = new MemberDTO();
+		//환자 찾기해서 찾은 정보값 세션에 저장한거 가져오기
+		mm = (MemberDTO) session.getAttribute("md");
+
+		int i = 1;
+		String rrn =mm.getRrn();
+		String hc = md.getHc();
+		Boolean start = true;
+		while(start) {
+			String db = rrn + hc + '-' + i;
+			md.setDb(db);
+			//값이 없다
+			if(cs.Match(db) == 0) {
+				start = false;
+
+
+				//값이 있다.
+			}else if(cs.Match(db) == 1 ){
+				i++;
+			}
+
 		}
-	
+		// 문서번호 생성
+
+		MemberDTO doc = new MemberDTO();
+		doc = (MemberDTO) session.getAttribute("login");
+		//의사이름 저장
+		md.setDocname(doc.getMname());
+		//의사면허번호 저장
+		md.setDl(doc.getDl());
+		//차트번호 저장
+		md.setRrn(mm.getRrn());
+		//성별 저장
+		md.setGender(mm.getGender());
+		//생년월일 저장
+		md.setBirth(mm.getBirth());
+		//나이 저장
+		md.setAge(mm.getAge());
+		System.out.println("login 전 " + md);
+		cs.chartwrite(md);
+
+		return "redirect:/chart/chartlist";
+	}
+
 	//	차트 수정 폼 불러오기
 	@RequestMapping(value = "chart/chartmodifyForm", method = RequestMethod.GET)
 	public String mdmodifyForm(MemberDTO md, Model model) {
@@ -117,7 +118,7 @@ public class ChartController {
 		cs.modifyForm(md);
 		return "chart/chartmodifyForm";
 	}
-	
+
 	//	차트 수정 버튼
 	@RequestMapping(value = "chart/chartmodify", method = RequestMethod.POST)
 	public String mdmodify(MemberDTO md, RedirectAttributes rttr) {
@@ -134,15 +135,15 @@ public class ChartController {
 		rttr.addAttribute("rrn", md.getRrn());
 		return "redirect:/chart/chartlist";
 	}
-	
-	
+
+
 	// 차트 삭제 버튼
 	@RequestMapping(value = "chart/chartdelete", method = RequestMethod.GET)
 	public String mddelete(MemberDTO md) {
 		cs.chartdelete(md);
 		return "redirect:/chart/chartlist";
 	}
-	
+
 	// 차트 상세내역
 	@RequestMapping(value = "chart/chartdetail", method = RequestMethod.GET)
 	public String mddetail(MemberDTO md, Model model) {
@@ -151,34 +152,34 @@ public class ChartController {
 		model.addAttribute("chartdetail", cs.chartdetail(md));
 		return "chart/chartdetail";
 	}
-	
+
 	@RequestMapping(value = "chart/Login_L", method = RequestMethod.GET)
 	public String mdlogin() {
 		return "redirect:/Login_L";
 	}
-	
+
 	@RequestMapping(value = "chart/logout", method = RequestMethod.GET)
 	public String logout() {
 		return "redirect:/logout";
 	}
-	
+
 	@RequestMapping(value = "chart/MemberShip_L", method = RequestMethod.GET)
 	public String mdMembership() {
 		return "redirect:/MemberShip_L";
 	}
-	
+
 	@RequestMapping(value = "chart/Certificate_L", method = RequestMethod.GET)
 	public String Certificate_L() {
 		return "redirect:/Certificate_L";
 	}
-	
+
 	//ajax 환자 찾기
 	@GetMapping("/post/{name}")
 	public ResponseEntity <MemberDTO> replywrite(@PathVariable String name, HttpSession session) {
 		MemberDTO md = new MemberDTO();
 		md.setMname(name);
 		session.setAttribute("md", cs.chartserch(md));
-	    return new ResponseEntity<>(cs.chartserch(md),HttpStatus.OK);
+		return new ResponseEntity<>(cs.chartserch(md),HttpStatus.OK);
 	}
 } 
-	   
+
