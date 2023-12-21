@@ -15,9 +15,13 @@
 
 	<div class="chart_box">
 	<h1>차트 상세내역</h1>
+	<br>
+	
+	
 	
 	<div class="chartwrite_box">
 		<table class="container">
+			<caption id = "cap">작성일자 : ${chartdetail.disease}</caption>
 			<tr>
 				<th>이름 </th>
 				<td>${chartdetail.mname}</td>

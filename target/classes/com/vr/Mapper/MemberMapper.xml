@@ -38,27 +38,27 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		end as 'speciality',
         
         (CASE
-         WHEN INSTR(DATE_FORMAT(disease, '%y-%m-%d'), 'PM') > 0
-         THEN REPLACE(DATE_FORMAT(disease, '%y-%m-%d'), 'PM', '오후')
-         ELSE REPLACE(DATE_FORMAT(disease, '%y-%m-%d'), 'AM', '오전')    
+         WHEN INSTR(DATE_FORMAT(disease, '%Y-%m-%d'), 'PM') > 0
+         THEN REPLACE(DATE_FORMAT(disease, '%Y-%m-%d'), 'PM', '오후')
+         ELSE REPLACE(DATE_FORMAT(disease, '%Y-%m-%d'), 'AM', '오전')    
          END)  AS disease,
          
          (CASE
-         WHEN INSTR(DATE_FORMAT(modi, '%y-%m-%d'), 'PM') > 0
-         THEN REPLACE(DATE_FORMAT(modi, '%y-%m-%d'), 'PM', '오후')
-         ELSE REPLACE(DATE_FORMAT(modi, '%y-%m-%d'), 'AM', '오전')    
+         WHEN INSTR(DATE_FORMAT(modi, '%Y-%m-%d'), 'PM') > 0
+         THEN REPLACE(DATE_FORMAT(modi, '%Y-%m-%d'), 'PM', '오후')
+         ELSE REPLACE(DATE_FORMAT(modi, '%Y-%m-%d'), 'AM', '오전')    
          END) AS modi,
          
          (CASE
-         WHEN INSTR(DATE_FORMAT(hospital, '%y-%m-%d' ), 'PM') > 0
-         THEN REPLACE(DATE_FORMAT(hospital, '%y-%m-%d'), 'PM', '오후')
-         ELSE REPLACE(DATE_FORMAT(hospital, '%y-%m-%d'), 'AM', '오전')    
+         WHEN INSTR(DATE_FORMAT(hospital, '%Y-%m-%d' ), 'PM') > 0
+         THEN REPLACE(DATE_FORMAT(hospital, '%Y-%m-%d'), 'PM', '오후')
+         ELSE REPLACE(DATE_FORMAT(hospital, '%Y-%m-%d'), 'AM', '오전')    
          END)  AS hospital,
          
           (CASE
-         WHEN INSTR(DATE_FORMAT(exitd, '%y-%m-%d' ), 'PM') > 0
-         THEN REPLACE(DATE_FORMAT(exitd, '%y-%m-%d'), 'PM', '오후')
-         ELSE REPLACE(DATE_FORMAT(exitd, '%y-%m-%d'), 'AM', '오전')    
+         WHEN INSTR(DATE_FORMAT(exitd, '%Y-%m-%d' ), 'PM') > 0
+         THEN REPLACE(DATE_FORMAT(exitd, '%Y-%m-%d'), 'PM', '오후')
+         ELSE REPLACE(DATE_FORMAT(exitd, '%Y-%m-%d'), 'AM', '오전')    
          END)  AS exitd
 
 		from(
