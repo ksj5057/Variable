@@ -35,6 +35,10 @@
     font-size: 15px;
 }
 
+#cap {
+	text-align : right;
+}
+
 input#inoperd {
 	width: 165px;
 	border-radius: 8px;
