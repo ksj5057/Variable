@@ -20,32 +20,32 @@
 		<table class="container">
 			<tr>
 				<th>이름 </th>
-				<td>${chartdetail.cname}</td>
-				<th>환자코드</th>
-				<td>${chartdetail.dcode}</td>
+				<td>${chartdetail.mname}</td>
+				<th>진료과</th>
+				<td>${chartdetail.md}</td>
 			</tr>
 			<tr>
-				<th>주민번호</th>
-				<td>${chartdetail.rrn}</td>
-				<th>병명</th>
-				<td>${chartdetail.disease}</td>
+				<th>생년월일</th>
+				<td>${chartdetail.birth}&nbsp;&nbsp;(${chartdetail.age}/${chartdetail.gender})</td>
+				<th>진단명</th>
+				<td>${chartdetail.dn}</td>
 			</tr>
 			<tr>
 				<th>입원날짜</th>
 				<td>
 					<c:choose>
-						<c:when test = "${chartdetail.enterd eq ''}">
+						<c:when test = "${chartdetail.hospital eq null}">
 							해당없음 
 						</c:when>
 						<c:otherwise>
-							${chartdetail.enterd}
+							${chartdetail.hospital}
 						</c:otherwise>
 					</c:choose>
 				</td>
 				<th>퇴원날짜</th>
 				<td>
 					<c:choose>
-						<c:when test = "${chartdetail.exitd eq ''}">
+						<c:when test = "${chartdetail.exitd eq null}">
 							해당없음 
 						</c:when>
 						<c:otherwise>
@@ -56,11 +56,11 @@
 			</tr>
 			<tr>
 				<th>진료날짜</th>
-				<td colspan="4">${chartdetail.operd}</td>
+				<td colspan="4">${chartdetail.disease}</td>
 			</tr>
 			<tr>
 				<th>상태 및 소견</th>
-				<td colspan="4" class="chart_memo">${chartdetail.operation}</td>
+				<td colspan="4" class="chart_memo">${chartdetail.content}</td>
 			</tr>		
 		</table>
 		<div class="chart_write_btn">
@@ -68,9 +68,5 @@
 		</div>
 	</div>
 	</div>
-	
-	<!-- 푸터 -->
-	<jsp:include page="../include/footer.jsp"></jsp:include>
-	
 </body>
 </html>

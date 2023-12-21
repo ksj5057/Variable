@@ -5,18 +5,139 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.vr.Mapper.MemberMapper">
+
+	<!-- 회원가입 -->
 	<insert id="join">
-		insert into member(id,pw,mname,gender,birth,age) values(#{id},#{pw},#{mname},#{gender},#{birth},#{age});
+		insert into member(id,pw,mname,gender,birth,age)
+		values(#{id},#{pw},#{mname},#{gender},#{birth},#{age});
 	</insert>
-		<select id="login" resultType="com.vr.Model.MemberDTO">
+
+	<!-- 일반 로그인 -->
+	<select id="login" resultType="com.vr.Model.MemberDTO">
 		<choose>
-		<when test="login_value == 1">
-		select * from member where id=#{id} and pw=#{pw}
-		</when>
-		<when test="login_value == 2">
-		select * from doc where id=#{id} and pw=#{pw}
-		</when>
+			<when test="login_value == 1">
+				select * from member where id=#{id} and pw=#{pw}
+			</when>
+			<!-- 관리자 로그인 -->
+			<when test="login_value == 2">
+				select * from doc where id=#{id} and pw=#{pw}
+			</when>
 		</choose>
+	</select>
+
+	<!-- 차트 리스트 -->
+	<select id="list" resultType="com.vr.Model.MemberDTO">
+		select db, mname, birth ,md, dn, disease, hospital, exitd,age,gender,oper, modi, rrn, docname,
+		case
+		when md = '(01) 내과' then '내과'
+		when md = '(02) 정형외과' then '정형외과'
+		when md = '(03) 이비인후과' then '이비인후과'
+		when md = '(04) 산부인과' then '산부인과'
+		when md = '(05) 피부과' then '피부과'
+		when md = '(06) 소아과' then '소아과'
+		end as 'speciality'
+
+		from(
+		select @rownum:=@rownum+1 rownum, b.*
+		from chart1 b, (select @rownum:=0) as tmp
+		<if test="keyword != null">
+			<choose>
+				<when test="type=='T'.toString()">
+					where mname like concat('%',#{keyword},'%')
+				</when>
+				<when test="type=='C'.toString()">
+					where db like concat('%',#{keyword},'%')
+				</when>
+				<otherwise>
+					where mname like concat('%',#{keyword},'%')
+					OR db like concat('%',#{keyword},'%')
+				</otherwise>
+
+			</choose>
+
+		</if>
+		order by disease desc
+		) as chartlist
+			<![CDATA[
+				where rownum > (#{pagenum}-1)*#{amount} and rownum <= #{pagenum}*#{amount}
+				]]>
+	</select>
+
+	<!-- 차트게시글 갯수 구하기 -->
+	<select id="total" resultType="int">
+		select count(*) from chart1
+		<if test="keyword != null">
+
+			<choose>
+				<when test="type=='T'.toString()">
+					where mname like concat('%',#{keyword},'%')
+				</when>
+				<when test="type=='C'.toString()">
+					where db like concat('%',#{keyword},'%')
+				</when>
+				<otherwise>
+					where mname like concat('%',#{keyword},'%')
+					OR db like concat('%',#{keyword},'%')
+				</otherwise>
+
+			</choose>
+
+
+		</if>
+	</select>
+
+	<!-- 차트 수정 페이지 정보 이동 -->
+	<select id="modifyForm" resultType="com.vr.Model.MemberDTO">
+		select * from chart1 where db = #{db}
+	</select>
+
+	<!-- 차트 수정 -->
+	<update id="chartmodify">
+		update chart1 set content = #{content},
+						  modi = #{modi}, exitd = #{exitd}, dn = #{dn},
+						  hospital = #{hospital} where db = #{db};
+	</update>
+
+	<!-- 차트 삭제 -->
+	<delete id="chartdelete">
+		delete from chart1 where db = #{db}
+	</delete>
+
+	<!-- 차트 상세내용 -->
+	<select id="chartdetail" resultType="com.vr.Model.MemberDTO">
+		select * from chart1 where db = #{db};
+	</select>
+
+
+	<!-- ajax 환자 찾기 -->
+	<select id="chartserch" resultType="com.vr.Model.MemberDTO">
+		select * from member where mname= #{mname};
+	</select>
+
+	<!-- 차트 작성 -->
+	<insert id="chartwrite">
+		<choose>
+			<when test="hc == 1"> <!-- 진료확인서 -->
+				insert into chart1(hc, dn, content,
+				db,mname,docname,dl,md,rrn,gender,birth,age)
+				value(#{hc},#{dn},#{content},#{db},#{mname},#{docname},#{dl},#{md},#{rrn},#{gender},#{birth},#{age})
+			</when>
+			<when test="hc == 2"> <!-- 입퇴원확인서 입원시 -->
+				insert into chart1(hc, dn, content,
+				db,mname,docname,dl,md,rrn,gender,birth,age,hospital)
+				value(#{hc},#{dn},#{content},#{db},#{mname},#{docname},#{dl},#{md},#{rrn},#{gender},#{birth},#{age},#{hospital})
+			</when>
+			<when test="hc == 3"><!-- 수술확인서 -->
+				insert into chart1(hc, dn, content,
+				db,mname,docname,dl,md,rrn,gender,birth,age,hospital,oper)
+				value(#{hc},#{dn},#{content},#{db},#{mname},#{docname},#{dl},#{md},#{rrn},#{gender},#{birth},#{age},#{hospital},#{oper})
+			</when>
+		</choose>
+	</insert>
+
+	<select id="Match" resultType="int">
+		select count(*) from chart1 where
+		db =#{db};
 	</select>
 </mapper>
 
