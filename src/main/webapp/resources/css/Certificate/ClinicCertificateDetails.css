@@ -376,4 +376,8 @@ li {
 	left:3px;
 }
 
+.ccdl_box {
+    min-height: calc(100vh - 142px);
+    padding-top: 70px;
+}
 
