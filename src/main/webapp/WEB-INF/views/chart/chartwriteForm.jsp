@@ -67,6 +67,9 @@
 	</div>
 	</div>
 	
+	<!-- 푸터 -->
+		<jsp:include page="../include/footer.jsp"></jsp:include>
+	
 	<script>
 	 document.getElementById('inoperd').value = new Date().toISOString().substring(0, 10);;
 	 const cl = document.getElementById('va');
