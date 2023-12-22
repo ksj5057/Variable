@@ -16,10 +16,14 @@
 .headline {
 	font-family: 'OTWelcomeRA';
 	font-size: larger;
+	width : 100%;
+	
 }
 
 .headline h2 {
 	text-align: center;
+	right: 410px;
+    position: relative;
 }
 
 .searchform_box {
@@ -28,8 +32,10 @@
 }
 
 #searchform {
-	position: relative;
-	left: 200px;
+	display: inline-block;
+    position: relative;
+    left: 200px;
+    margin-bottom: 20px;
 }
 
 input[type="submit"] {
@@ -74,18 +80,10 @@ td {
 #writeform {
 	position: relative;
 	float: right;
-	right: 285px;
+	right: 186px;
 }
 
 /* 페이징 숫자, 다음칸 */
-.paging {
-	position: relative;
-	padding: 10px;
-	top: 60px;
-	left: 700px;
-	text-decoration: none;
-	font-size: 18px;
-}
 
 .paging:link, .paging:visited {
 	color: black;
@@ -136,3 +134,25 @@ td {
 	color: red;
 }
 
+.pagiging {
+	display: inline-flex;
+    list-style: none;
+    font-family: 'OTWelcomeRA';
+    margin: auto;
+    padding: 0;
+}
+
+.chartform1{
+	min-height: calc(100vh - 142px);
+}
+
+.pagi_box {
+    width: 100%;
+    float: left;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pagiging li {
+    padding: 23px;
+}

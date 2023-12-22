@@ -107,33 +107,7 @@ public class HomeController {
 		return "Member/Login_L";
 	}
 	
-//	@PostMapping("login")
-//	public String login(MemberDTO member, HttpSession session, Model model) {
-//		//ms.login값이 null이 아니면
-//		if(ms.login(member) != null) {
-//			//로그인해라
-//			String uri = request.getHeader("Referer");
-//			System.out.println("aaaaa" + uri);
-//			// 이전 uri가 null이다 -> 배포 서버에서 나타나는 오류?
-//			if (uri==null) {
-//				// null일시 이전 페이지에서 addFlashAttribute로 보내준 uri을 저장
-//				Map<String, ?> paramMap = RequestContextUtils.getInputFlashMap(request);
-//				uri = (String) paramMap.get("referer");
-//				
-//				// 이전 url 정보 담기
-//				request.getSession().setAttribute("prevPage", uri);
-//
-//			}else {
-//				// 이전 url 정보 담기
-//				request.getSession().setAttribute("prevPage", uri);
-//			}
-//		session.setAttribute("login", ms.login(member));
-//		System.out.println("after" + member);
-//		
-//		//그리고 로그인 화면으로 이동
-//		}
-//		return "main";
-//	}
+	
 	
 	// 로그아웃누르면 메인으로
 	@GetMapping("logout")
