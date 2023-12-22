@@ -15,20 +15,17 @@
 
 	<form action="login" method="post">
 		<fieldset>
-		
+
 			<legend>회원 로그인</legend>
-			
-			
+
+
 			<div class="bh_all_login_section bh_mgb30">
 				<input type="hidden" value="1" name="login_value" id="login_if">
-				<div class="mTab eTab themeSolid" id="login_section">
-                    <ul>	
-                    			
-                         <li ><p onclick="login(1)" id="nomal_login">일반 로그인</p></li>
-                        <li><p onclick="login(2)" id="admin_login">관리자 로그인</p></li>
-                  </ul>
-                </div>
-          
+			<div class="mTab eTab themeSolid" id="login_section">					
+						<p onclick="login(1)" id="nomal_login" style="">일반 로그인</p>					
+						<p onclick="login(2)" id="admin_login" style="width: 200px;">관리자 로그인</p>
+			</div>
+
 				<div class="bh_all_login_form">
 					<div class="bh_all_login_box">
 						<p class="bh_all_login_id">
@@ -43,11 +40,7 @@
 								type="password" value="" title="비밀번호"
 								class="bh_all_login_btn_pw">
 						</p>
-
-
 						<input class="bh_btn_all_login" type="submit" value="로그인">
-
-
 					</div>
 					<div class="pw_check_txt_n1 mb10 mt5" id="upcheck"
 						style="display: none;">

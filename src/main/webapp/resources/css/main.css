@@ -11,6 +11,10 @@ body {
     width: 100%;
 }
 
+body.maincss {
+    margin: 0px;
+}
+
 .body_wrapper_m {
 	position: relative;
 }
@@ -31,7 +35,7 @@ body {
 	position: relative;
 	height: 98px;
     padding: 0 20px;
-    margin: 0 auto;
+    margin: 10px auto;
     max-width: 1200px;
 }
 
@@ -153,6 +157,7 @@ li.main_name {
 .header_login_m a {
 	margin: 10px;
 	padding-top: 10px;
+	margin-right: 0px;
 }
 
 a, a:link, a:visited.main_a1_m {
@@ -612,22 +617,6 @@ li.privacy {
     background-color: #424242;
 }
 
-.footer_li a {
-    color: #999999;
-}
-
-.footer_li2 a {
-    color: #999999;
-}
-
-.footer_li3 a {
-    color: #999999;
-}
-
-.footer_li4 a {
-    color: #999999;
-}
-
-.footer_li5 a {
-    color: #999999;
+.footer_top_menu a {
+    color: silver;
 }

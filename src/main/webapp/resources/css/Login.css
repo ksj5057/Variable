@@ -1,235 +1,291 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'OTWelcomeRA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'OTWelcomeRA';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2')
+		format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 
 .bh_all_login_section.bh_mgb30 {
-    margin-top: 125px;
-    position : relative;
-    right : 350px;
+	margin-top: 125px;
+	position: relative;
+	right: 350px;
 }
 
 a, a:link, a:visited {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .bh_all_login_box .bh_btn_all_login {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 140px;
-    height: 96px;
-    border: none;
-    background: #2d58b6;
-    color: #fff;
-    text-align: center;
-    line-height: 96px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
+	position: absolute;
+	top: 18px;
+	right: 0;
+	width: 140px;
+	height: 96px;
+	border: none;
+	background: #2d58b6;
+	color: #fff;
+	text-align: center;
+	line-height: 96px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+input.bh_btn_all_login {
+	top: 0;
+	right: 0;
+	width: 140px;
+	height: 96px;
+	border: none;
+	background: #2d58b6;
+	color: #fff;
+	text-align: center;
+	line-height: 96px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.bh_all_login_section p {
+	display: inline-block;
+	text-align: center;
+	margin-bottom: 0px;
+	margin-top: 17px;
 }
 
 .bh_all_login_sns .bh_all_login_naver strong {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-weight: 600;
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-weight: 600;
 }
 
 .bh_all_login_sns .bh_all_login_apple strong {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-weight: 600;
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-weight: 600;
 }
 
 .bh_all_login_sns .bh_all_login_naver {
-    display: inline-block;
-    width: 297px;
-    height: 40px;
-    border: 1px solid #3dc600;
-    background: #269826 url(/resources/image/ico_login_naver.jpg) 0 center no-repeat;
-    color: #fff;
-    letter-spacing: -0.25px;
-    margin-right: 12px;
-    font-weight: 600;
-    border-radius: 3px;
-    padding-left: 42px;
-    font-size: 12px;
-    line-height: 40px;
-    box-sizing: border-box;
+	display: inline-block;
+	width: 297px;
+	height: 40px;
+	border: 1px solid #3dc600;
+	background: #269826 url(/resources/image/ico_login_naver.jpg) 0 center
+		no-repeat;
+	color: #fff;
+	letter-spacing: -0.25px;
+	margin-right: 12px;
+	font-weight: 600;
+	border-radius: 3px;
+	padding-left: 42px;
+	font-size: 12px;
+	line-height: 40px;
+	box-sizing: border-box;
 }
 
 .bh_all_login_sns .bh_all_login_apple {
-    display: inline-block;
-    width: 297px;
-    height: 40px;
-    border: 1px solid #000;
-    background: #000 url(/resources/image/ico_apple.png) 0 center no-repeat;
-    color: #fff;
-    letter-spacing: -0.25px;
-    font-weight: 600;
-    border-radius: 3px;
-    padding-left: 42px;
-    font-size: 12px;
-    line-height: 40px;
-    margin-right: 0;
-    box-sizing: border-box;
+	display: inline-block;
+	width: 297px;
+	height: 40px;
+	border: 1px solid #000;
+	background: #000 url(/resources/image/ico_apple.png) 0 center no-repeat;
+	color: #fff;
+	letter-spacing: -0.25px;
+	font-weight: 600;
+	border-radius: 3px;
+	padding-left: 42px;
+	font-size: 12px;
+	line-height: 40px;
+	margin-right: 0;
+	box-sizing: border-box;
 }
 
 .bh_all_login_box .bh_all_login_btn_id {
-    width: 415px;
-    height: 40px;
-    padding: 0 20px;
-    border: 1px solid #eeece2;
-    background: #fff;
-    color: #333;
-    font-size: 14px;
-    font-family: inherit;
-    line-height: 40px;
+	width: 415px;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #eeece2;
+	background: #fff;
+	color: #333;
+	font-size: 14px;
+	font-family: inherit;
+	line-height: 40px;
 }
 
 .bh_all_login_box .bh_all_login_btn_pw {
-    width: 415px;
-    height: 40px;
-    padding: 0 20px;
-    border: 1px solid #eeece2;
-    background: #fff;
-    color: #333;
-    font-size: 14px;
-    font-family: inherit;
-    line-height: 40px;
+	width: 415px;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #eeece2;
+	background: #fff;
+	color: #333;
+	font-size: 14px;
+	font-family: inherit;
+	line-height: 40px;
 }
 
 .skip {
-    font-size: 1px;
-    height: 1px;
-    line-height: 1px;
-    overflow: hidden;
-    position: absolute;
-    text-indent: 4px;
-    white-space: nowrap;
-    width: 1px;
+	font-size: 1px;
+	height: 1px;
+	line-height: 1px;
+	overflow: hidden;
+	position: absolute;
+	text-indent: 4px;
+	white-space: nowrap;
+	width: 1px;
 }
 
 .bh_all_login_box {
-    position: relative;
-    letter-spacing: -0.25px;
-    padding-right: 152px;
-    margin-bottom: 16px;
+	position: relative;
+	letter-spacing: -0.25px;
+	padding-right: 152px;
+	margin-bottom: 16px;
 }
 
 img, fieldset, iframe {
-    border: none;
+	border: none;
 }
 
 .bh_mgb30 {
-    margin-bottom: 25px;
+	margin-bottom: 25px;
 }
 
 .bh_all_login_section {
-    padding: 45px 15px;
-    border: 1px solid #dedddd;
-    background: #f5f5f5;
+	padding: 45px 15px;
+	border: 1px solid #dedddd;
+	background: #f5f5f5;
 }
 
 .bh_all_login_section {
-    padding: 30px 15px;
+	padding: 30px 15px;
 }
 
 hr, legend {
-    clear: both;
-    display: none;
-    list-style: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: none;
-    font-size: 0px;
-    line-height: 0;
-    visibility: hidden;
+	clear: both;
+	display: none;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	font-size: 0px;
+	line-height: 0;
+	visibility: hidden;
 }
 
 div {
-    display: block;
+	display: block;
 }
 
 .bh_all_login_form {
-    width: 100%;
-    margin: auto;
-    max-width: 607px;
+	width: 100%;
+	margin: auto;
+	max-width: 607px;
 }
 
 .bh_all_login_sns {
-    font-size: 0;
+	font-size: 0;
 }
 
 input.bh_btn_all_login {
 	font-family: 'OTWelcomeRA';
 }
+
 #contents {
-    margin: 0 auto;
-    padding: 0 24px 122px;
+	margin: 0 auto;
+	padding: 0 24px 122px;
 }
 
-@media (min-width: 1024px)
-#contents {
-    max-width: 396px;
+@media ( min-width : 1024px) #contents {
+	max-width
+	
+	
+	
+	
+	:
+	
+	
+	 
+	
+	
+	396
+	px
+	
+	
+	
+	
+	;
 }
 
 .mTab ul {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: -ms-flex;
-    display: flex;
-    position: relative;
-    height: 56px;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: -ms-flex;
+	display: flex;
+	position: relative;
+	height: 56px;
 }
 
 .mTab.themeSolid li {
-    position: relative;
-    border: none;
+	position: relative;
+	border: none;
 }
 
 .mTab li.selected {
-    z-index: 1;
-    border-color: #667084;
-}   
+	z-index: 1;
+	border-color: #667084;
+}
 
 .mTab.themeSolid li p {
-    display: block;
-    width: 227px;
-    color: #667084;
-    border: 1px solid #e2e5ea;
-    background: #FAFAFD;
-    height: 42px;
+	display: block;
+	width: 227px;
+	color: #667084;
+	border: 1px solid #e2e5ea;
+	background: #FAFAFD;
+	height: 42px;
 }
 
 .mTab li p {
-    display: inline-block;
-    width: 100%;
-    height: 54px;
-    line-height: 54px;
-    color: #444b59;
-    text-align: center;
-    background-color: #fafafd;
+	display: inline-block;
+	width: 100%;
+	height: 54px;
+	line-height: 54px;
+	color: #444b59;
+	text-align: center;
+	background-color: #fafafd;
 }
-#login_section{
-	    position: relative;
-	    left: 204px;
+
+#login_section {
+	position: relative;
+	text-align: center;
 }
-#nomal_login{
-	width : 301.5px;
+
+p#nomal_login {
+	border: 1px solid silver;
+	border: 1px solid silver;
+	padding: 7px;
+	background-color: white;
+	width: 280px;
+	color: #99CC99;
+	font-family: 'OTWelcomeRA';
 }
-#admin_login{
-	width : 301.5px;
+
+p#admin_login {
+	border: 1px solid silver;
+	border: 1px solid silver;
+	padding: 7px;
+	background-color: white;
+	width: 280px;
+	font-family: 'OTWelcomeRA';
 }
