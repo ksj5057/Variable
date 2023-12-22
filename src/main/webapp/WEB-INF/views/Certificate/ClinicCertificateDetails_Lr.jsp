@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,6 +39,7 @@
 		<a class = "paging" href="/ClinicCertificateDetails_L?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${paging.endpage+1}&amount=${paging.cri.amount}">▶</a>
 	</c:if>
 	</div>
+	<c:forEach items="${ser}" var="sert">
 	<div id="printimage2" class="a4">
 	<button onclick="CdownloadPdf()" class="cfd_btn">다운로드</button>
 	<button onclick="return printPage()" class="cfd_btn1">출력하기</button>	
@@ -101,7 +103,7 @@
 			</div>
 
 			<div id="doc">
-				<label>주 치 의:&nbsp;&nbsp;${sert.docname}&nbsp;&nbsp;(인)</label>
+				<label>주 치 의:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(인)</label>
 			</div>
 			
 			<div id="boss">
@@ -111,5 +113,6 @@
 			</div>
 		</div>
 	</div>
+	</c:forEach>
 </body>
 </html>
