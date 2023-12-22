@@ -7,23 +7,29 @@
 <title>증명서 상세 내역</title>
 <!-- 진룍확인서 -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/../../resources/js/Certificate/ClinicCertificateDetails.js"></script>
 <link rel="stylesheet" href="/resources/css/Certificate/ClinicCertificateDetails.css">
 <script src="/../../resources/js/print/Print.js"></script>
-<script src="/../../resources/js/certificate/ClinicCertificateDetails.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 </head>
 <body>
 	<!-- 진료내역 리스트 -->
-	<div id="list_content">
-	<ul id = "container">
-			<li><p>진료일</p> <p>진단명</p> <p>진료과(의사명)</p></li>
-		<c:forEach items="${list}" var="chartlist">
-			<li><a class="detailc" href ="ClinicCertificateDetails_Lr?db=${chartlist.db}" >${chartlist.disease}</a>${chartlist.dn}/${chartlist.docname}(${chartlist.dn})</li>
-		</c:forEach>
+	<div class="menu-wrap">
+	<ul class = "menu">
+			<li class="posi">진료일</li>	
+			<li class="posi">진단명</li>
+			<li class="posi" id="px3">진료과(의사명)</li>
 	</ul>
+		<c:forEach items="${list}" var="chartlist">
+	<ul>
+			<li><a class="posi" href ="ClinicCertificateDetails_Lr?db=${chartlist.db}" >${chartlist.disease}</a></li>
+			<li id="lines" class="posi">${chartlist.dn}</li>
+			<li class="posi" id="px3">${chartlist.md}(${chartlist.docname})</li>
+	</ul>
+		</c:forEach>
 	
 	<!-- 페이징 -->
+	<!--  이전 버튼 -->
 	<c:if test="${paging.prev}">
 		<a class = "paging" href="/ClinicCertificateDetails_L?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${paging.startpage-1}&amount=${paging.cri.amount}">◀</a>
 	</c:if>

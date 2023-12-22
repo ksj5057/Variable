@@ -1,5 +1,33 @@
 @charset "UTF-8";
 
+li {
+	display: inline-block;
+	width:200px;
+	
+}
+
+.menu-wrap {
+	border: 1px solid #ccc;
+	width: 21cm;
+	margin: auto;
+	text-align: center;
+}
+
+.menu{
+	background-color: #1AAB8A;
+}
+
+#lines{
+	border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.posi{
+	position: relative;
+    right: 30px;
+}
+
+
+
 @font-face {
     font-family: 'OTWelcomeRA';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
@@ -279,19 +307,7 @@ button:hover:before, button:hover:after.hcd_btn1 {
 	width: 100%;
 	transition: 800ms ease all;
 }
-#list_content {
-	border: 1px solid #ccc;
-	width: 21cm;
-	margin: auto;
-}
 
-li {
-	border-bottom: 1px solid #ccc;
-	list-style: none;
-	position: relative;
-    right: 20px;
+#px3{
+	left:3px;
 }
-p{
-	display:inline;
-}
-

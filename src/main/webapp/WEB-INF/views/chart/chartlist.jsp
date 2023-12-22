@@ -16,8 +16,9 @@
 	<!-- 헤더 -->
 	<jsp:include page="../include/header.jsp"></jsp:include>
 	<br>
-	
+<div class = "chartform1">
 <div class="headline"><h2>차트 리스트 (관리자 전용)</h2></div>
+<div class = "chartform2">
 <form id="searchform" action="/chart/chartlist" method="get">
 
 	<select name="type" style= "border-radius : 20px">
@@ -102,25 +103,31 @@
 	</table>
 	<br>
 	<a id = "writeform" href ="chartwriteForm"><button id ="write">차트 작성</button></a><br>
+	</div>
+	
+	
+	<div class="pagi_box">
+	<ul class = "pagiging">
 	
 	<c:if test="${paging.prev}">
-		<a class = "paging" href="/chart/chartlist?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${paging.startpage-1}&amount=${paging.cri.amount}">◀</a>
+		<li><a class = "paging" href="/chart/chartlist?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${paging.startpage-1}&amount=${paging.cri.amount}">◀</a></li>
 	</c:if>
 	
 	<!-- begin(1)이 end(10)될 동안 반복(1일 10일 될 동안 반복) -->
 	<c:forEach begin="${paging.startpage}" end="${paging.endpage}" var="num">
-	 	<a class = "paging" href="/chart/chartlist?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${num}&amount=${paging.cri.amount}">${num}</a>
+	 	<li><a class = "paging" href="/chart/chartlist?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${num}&amount=${paging.cri.amount}">${num}</a></li>
 	</c:forEach>
 	
 	<!-- next(다음)이 true이면 다음버튼 활성화 -->
 	<c:if test="${paging.next}">
-		<a class = "paging" href="/chart/chartlist?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${paging.endpage+1}&amount=${paging.cri.amount}">▶</a>
+		<li><a class = "paging" href="/chart/chartlist?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${paging.endpage+1}&amount=${paging.cri.amount}">▶</a></li>
 	</c:if>
- 	<br>
- 	<br>
- 	<br>
- 
+	</ul>
+	</div>
+	</div>
  	<!-- 푸터 -->
+ 	<div id = "footer">
 		<jsp:include page="../include/footer.jsp"></jsp:include>
+	</div>
 </body>
 </html>

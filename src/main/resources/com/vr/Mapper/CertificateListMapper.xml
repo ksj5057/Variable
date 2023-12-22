@@ -7,7 +7,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!-- 3개월치 진료기록 검색 -->
 	<select id="serch" resultType="int">
-  		select count(*) from chart1 where id= #{id} and firwriting BETWEEN CURRENT_DATE()-90 AND CURRENT_DATE();
+  		select count(*) from chart1 where rrn= #{rrn} and disease BETWEEN (CURRENT_DATE() - interval 3650 day) AND CURRENT_DATE();
   		</select>
   		
   	<select id="Cserch" resultType="com.vr.Model.MemberDTO">
@@ -20,7 +20,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   	</select>	
   	
   	<select id="Certificatelist" resultType="com.vr.Model.MemberDTO">
-  	select docname, dn, mname, db,
+  	select docname, dn, mname, db, md, 
   	case
 		when md = '(01) 내과' then '내과'
 		when md = '(02) 정형외과' then '정형외과'

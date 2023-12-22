@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'OTWelcomeRA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'OTWelcomeRA';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2')
+		format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 
 #line {
@@ -205,7 +207,7 @@ td {
 
 $
 bg: #fff ; $text: #382b22 ; $light-pink: #fff0f0 ; $pink: #ffe9e9 ; $dark-pink: #f9c4d2 
-	; $pink-border: #b18597 ; $pink-shadow: #ffe3e2 ; * {
+	 ; $pink-border: #b18597 ; $pink-shadow: #ffe3e2 ; * {
 	box-sizing: border-box;
 	&::
 	before
@@ -217,12 +219,28 @@ bg: #fff ; $text: #382b22 ; $light-pink: #fff0f0 ; $pink: #ffe9e9 ; $dark-pink: 
 	{
 	
 	
+	
+	
+	
+	
     
+	
+	
+	
+	
 	
 	box-sizing
 	:
 	
+	
+	
+	
+	
 	 
+	
+	
+	
+	
 	
 	border-box;
 }
@@ -241,16 +259,16 @@ body {
 
 button.cfd_btn {
 	background: #1AAB8A;
-    color: #fff;
-    border: none;
-    position: relative;
-    height: 40px;
-    font-size: 1em;
-    padding: 0 2em;
-    cursor: pointer;
-    transition: 800ms ease all;
-    outline: none;
-    font-family: 'OTWelcomeRA';
+	color: #fff;
+	border: none;
+	position: relative;
+	height: 40px;
+	font-size: 1em;
+	padding: 0 2em;
+	cursor: pointer;
+	transition: 800ms ease all;
+	outline: none;
+	font-family: 'OTWelcomeRA';
 }
 
 button:hover.cfd_btn {
@@ -282,22 +300,22 @@ button:hover:before, button:hover:after.cfd_btn {
 }
 
 div#printimage2 {
-    text-align: center;
-    margin-top: 20px;
+	text-align: center;
+	margin-top: 20px;
 }
 
 button.cfd_btn1 {
 	background: #1AAB8A;
-    color: #fff;
-    border: none;
-    position: relative;
-    height: 40px;
-    font-size: 1em;
-    padding: 0 2em;
-    cursor: pointer;
-    transition: 800ms ease all;
-    outline: none;
-    font-family: 'OTWelcomeRA';
+	color: #fff;
+	border: none;
+	position: relative;
+	height: 40px;
+	font-size: 1em;
+	padding: 0 2em;
+	cursor: pointer;
+	transition: 800ms ease all;
+	outline: none;
+	font-family: 'OTWelcomeRA';
 }
 
 button:hover.cfd_btn1 {
@@ -328,18 +346,34 @@ button:hover:before, button:hover:after.cfd_btn1 {
 	transition: 800ms ease all;
 }
 
-#list_content {
+li {
+	display: inline-block;
+	width:200px;
+	
+}
+
+.menu-wrap {
 	border: 1px solid #ccc;
 	width: 21cm;
 	margin: auto;
+	text-align: center;
 }
 
-li {
-	border-bottom: 1px solid #ccc;
-	list-style: none;
+.menu{
+	background-color: #1AAB8A;
+}
+
+#lines{
+	border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.posi{
 	position: relative;
-    right: 20px;
+    right: 30px;
 }
-p{
-	display:inline;
+
+#px3{
+	left:3px;
 }
+
+
