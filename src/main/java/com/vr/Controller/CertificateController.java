@@ -29,9 +29,7 @@ public class CertificateController {
 	//재증명 발급 화면으로 이동
 	@GetMapping("Certificate_L")
 	public String Certificate(MemberDTO md,HttpSession session,HttpServletResponse response) {
-
-
-		/*	//로그인 시 DB와 비교하여 가져온 세션 정보값을 가져와서 MemberDTO 타입의 login변수에 저장
+			//로그인 시 DB와 비교하여 가져온 세션 정보값을 가져와서 MemberDTO 타입의 login변수에 저장
 		MemberDTO login = (MemberDTO)session.getAttribute("login");
 
 
@@ -41,7 +39,7 @@ public class CertificateController {
 			try {
 					response.setContentType("text/html; charset=utf-8");
 					PrintWriter w = response.getWriter();
-					w.write("<script>alert('로그인 후 이용부탁드립니다'); location.href='Login_L';</script>");
+					w.write("<script>alert('비로그인일 경우 서비스가 제한 될 수있습니다.'); location.href='Serch';</script>");
 					w.flush();
 					w.close();
 			    } catch(Exception e) {
@@ -67,8 +65,9 @@ public class CertificateController {
 				return "재증명 창으로 이동"; // 리턴은 작동은 작동하지않음
 
 			//로그인 하고 진료기록이 있다면 재증명 창으로 이동
-			}else {*/
+			}else {
 		return "Certificate/Certificate_L";
+	}
 	}
 
 	//진료기록 확인 후 이동 
@@ -80,8 +79,8 @@ public class CertificateController {
 	//재증명 발급 상세내역 수술확인서
 	@GetMapping("OperationCertificateDetails_L")
 	public String OperationCertificateDetails_L(HttpSession session,MemberDTO md, Model model,HttpServletResponse response,CriteriaDTO cri) {
-			md = (MemberDTO)session.getAttribute("login");
-			if(md.getId() == null) {
+			MemberDTO login = (MemberDTO)session.getAttribute("login");
+			if(login == null) {
 				try {
 					response.setContentType("text/html; charset=utf-8");
 					PrintWriter w = response.getWriter();
@@ -115,6 +114,7 @@ public class CertificateController {
 	//재증명 리스트 선택 시 환자 정보 수술증명서에 출력
 	@GetMapping("OperationCertificateDetails_Lr")
 	public String OperationCertificateDetails_Lr(MemberDTO md, Model model,HttpSession session,CriteriaDTO cri) {
+		
 		Date day = new Date();
 		SimpleDateFormat fDay = new SimpleDateFormat("yyyy년 MM월 dd일");
 		String modi = fDay.format(day);
@@ -145,8 +145,8 @@ public class CertificateController {
 	//재증명 발급 입 퇴원 확인서
 	@GetMapping("HospitalizationCertificateDetails_L")
 	public String HospitalizationCertificateDetails_L(HttpSession session,MemberDTO md, Model model,HttpServletResponse response,CriteriaDTO cri) {
-		md = (MemberDTO)session.getAttribute("login");
-		if(md.getId() == null) {
+		MemberDTO login = (MemberDTO)session.getAttribute("login");
+		if(login == null) {
 			try {
 				response.setContentType("text/html; charset=utf-8");
 				PrintWriter w = response.getWriter();
@@ -207,8 +207,8 @@ public class CertificateController {
 	//재증명 발급 진료 확인서
 	@GetMapping("ClinicCertificateDetails_L")
 	public String ClinicCertificateDetails_La(HttpSession session,MemberDTO md, Model model,HttpServletResponse response,CriteriaDTO cri) {
-			md = (MemberDTO)session.getAttribute("login");
-		if(md.getId() == null) {
+		MemberDTO login = (MemberDTO)session.getAttribute("login");
+		if(login == null) {
 			try {
 				response.setContentType("text/html; charset=utf-8");
 				PrintWriter w = response.getWriter();

@@ -22,8 +22,8 @@
 			<div class="bh_all_login_section bh_mgb30">
 				<input type="hidden" value="1" name="login_value" id="login_if">
 			<div class="mTab eTab themeSolid" id="login_section">					
-						<p onclick="login(1)" id="nomal_login" style="">일반 로그인</p>					
-						<p onclick="login(2)" id="admin_login" style="width: 200px;">관리자 로그인</p>
+						<p onclick="login(1)" id="nomal_login" >일반 로그인</p>					
+						<p onclick="login(2)" id="admin_login" >관리자 로그인</p>
 			</div>
 
 				<div class="bh_all_login_form">
