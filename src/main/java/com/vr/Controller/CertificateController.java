@@ -1,6 +1,8 @@
 package com.vr.Controller;
 
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -77,18 +79,131 @@ public class CertificateController {
 
 	//재증명 발급 상세내역 수술확인서
 	@GetMapping("OperationCertificateDetails_L")
-	public String OperationCertificateDetails_L(HttpSession session,MemberDTO md, Model model) {
-		md.setHc("03");
+	public String OperationCertificateDetails_L(HttpSession session,MemberDTO md, Model model,HttpServletResponse response,CriteriaDTO cri) {
+			md = (MemberDTO)session.getAttribute("login");
+			if(md.getId() == null) {
+				try {
+					response.setContentType("text/html; charset=utf-8");
+					PrintWriter w = response.getWriter();
+					w.write("<script>alert('비회원으로 접속하셨습니다. 문서 찾기함으로 이동합니다'); location.href='Login_L';</script>");
+					w.flush();
+					w.close();
+				} catch(Exception e) {
+					e.printStackTrace();
+				}
+				return "로그인 창 이동";// 작동 안함
+			}else{
+				md = (MemberDTO)session.getAttribute("login");
+				md.setHc("03");
+				//진료 확인서의 문서번호
+				String a = md.getHc();
+				//로그인 한 환자의 차트번호
+				String b = md.getRrn();
+				//조합하여 문서번호의 앞자리를 만듦
+				String c = b + a;
+				cri.setDb(c+'%');
+				cri.setRrn(b);
+				md.setDb(cri.getDb());
+				model.addAttribute("list", cs.Certificatelist(cri));
+				//db에 있는 환자의 rrn값과 진료받아서 작성된 확인서의 문서번호로 몇 건있는지 int값으로 반환
+				
+				int total = cs.Certificateserch(md);
+				model.addAttribute("paging", new pageDTO(cri, total));
+		}
 		return "Certificate/OperationCertificateDetails_L";
 	}
-
+	//재증명 리스트 선택 시 환자 정보 수술증명서에 출력
+	@GetMapping("OperationCertificateDetails_Lr")
+	public String OperationCertificateDetails_Lr(MemberDTO md, Model model,HttpSession session,CriteriaDTO cri) {
+		Date day = new Date();
+		SimpleDateFormat fDay = new SimpleDateFormat("yyyy년 MM월 dd일");
+		String modi = fDay.format(day);
+		md = cs.Cserch(md);
+		md.setModi(modi);
+	model.addAttribute("sert", md); 
+	
+	md = (MemberDTO)session.getAttribute("login");
+	md.setHc("03");
+	//진료 확인서의 문서번호
+	String a = md.getHc();
+	//로그인 한 환자의 차트번호
+	String b = md.getRrn();
+	//조합하여 문서번호의 앞자리를 만듦
+	String c = b + a;
+	cri.setDb(c+'%');
+	cri.setRrn(b);
+	md.setDb(cri.getDb());
+	model.addAttribute("list", cs.Certificatelist(cri));
+	//db에 있는 환자의 rrn값과 진료받아서 작성된 확인서의 문서번호로 몇 건있는지 int값으로 반환
+	
+	int total = cs.Certificateserch(md);
+	model.addAttribute("paging", new pageDTO(cri, total));
+	return "Certificate/OperationCertificateDetails_L";
+	}
+ 
+ 
 	//재증명 발급 입 퇴원 확인서
 	@GetMapping("HospitalizationCertificateDetails_L")
-	public String HospitalizationCertificateDetails_L(HttpSession session,MemberDTO md, Model model) {
-		md.setHc("02");
+	public String HospitalizationCertificateDetails_L(HttpSession session,MemberDTO md, Model model,HttpServletResponse response,CriteriaDTO cri) {
+		md = (MemberDTO)session.getAttribute("login");
+		if(md.getId() == null) {
+			try {
+				response.setContentType("text/html; charset=utf-8");
+				PrintWriter w = response.getWriter();
+				w.write("<script>alert('비회원으로 접속하셨습니다. 문서 찾기함으로 이동합니다'); location.href='Login_L';</script>");
+				w.flush();
+				w.close();
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+			return "로그인 창 이동";// 작동 안함
+		}else{
+			md = (MemberDTO)session.getAttribute("login");
+			md.setHc("02");
+			//진료 확인서의 문서번호
+			String a = md.getHc();
+			//로그인 한 환자의 차트번호
+			String b = md.getRrn();
+			//조합하여 문서번호의 앞자리를 만듦
+			String c = b + a;
+			cri.setDb(c+'%');
+			cri.setRrn(b);
+			md.setDb(cri.getDb());
+			model.addAttribute("list", cs.Certificatelist(cri));
+			//db에 있는 환자의 rrn값과 진료받아서 작성된 확인서의 문서번호로 몇 건있는지 int값으로 반환
+			
+			int total = cs.Certificateserch(md);
+			model.addAttribute("paging", new pageDTO(cri, total));
 		return "Certificate/HospitalizationCertificateDetails_L";
+		}
 	}
-
+	
+	//재증명 리스트 선택 시 환자 정보 입퇴원증명서에 출력
+	@GetMapping("HospitalizationCertificateDetails_Lr")
+	public String HospitalizationCertificateDetails_Lr(MemberDTO md, Model model,HttpSession session,CriteriaDTO cri) {
+	model.addAttribute("sert", cs.Cserch(md));
+	
+	md = (MemberDTO)session.getAttribute("login");
+	md.setHc("02");
+	//진료 확인서의 문서번호
+	String a = md.getHc();
+	//로그인 한 환자의 차트번호
+	String b = md.getRrn();
+	//조합하여 문서번호의 앞자리를 만듦
+	String c = b + a;
+	cri.setDb(c+'%');
+	cri.setRrn(b);
+	md.setDb(cri.getDb());
+	model.addAttribute("list", cs.Certificatelist(cri));
+	//db에 있는 환자의 rrn값과 진료받아서 작성된 확인서의 문서번호로 몇 건있는지 int값으로 반환
+	
+	int total = cs.Certificateserch(md);
+	model.addAttribute("paging", new pageDTO(cri, total));
+	return "Certificate/HospitalizationCertificateDetails_L";
+	}
+	
+	
+///////////////////////////////////////////////////////////////////////////////
 	//재증명 발급 진료 확인서
 	@GetMapping("ClinicCertificateDetails_L")
 	public String ClinicCertificateDetails_La(HttpSession session,MemberDTO md, Model model,HttpServletResponse response,CriteriaDTO cri) {
@@ -115,7 +230,7 @@ public class CertificateController {
 			String c = b + a;
 			cri.setDb(c+'%');
 			cri.setRrn(b);
-			md.setDb(c+'%');
+			md.setDb(cri.getDb());
 			model.addAttribute("list", cs.Certificatelist(cri));
 			//db에 있는 환자의 rrn값과 진료받아서 작성된 확인서의 문서번호로 몇 건있는지 int값으로 반환
 			
@@ -124,12 +239,28 @@ public class CertificateController {
 
 		}return "Certificate/ClinicCertificateDetails_L";
 	}
-		@GetMapping("/post/#{db}")
-		public ResponseEntity <MemberDTO> replywrite(@PathVariable String db, HttpSession session) {
-			MemberDTO md = new MemberDTO();
-			md.setDb(db);
-			session.setAttribute("md", cs.Cserch(md));
-			return new ResponseEntity<>(cs.Cserch(md),HttpStatus.OK);
-	}
+		//재증명 리스트 선택 시 환자 정보 증명서에 출력
+		@GetMapping("ClinicCertificateDetails_Lr")
+		public String ClinicCertificateDetails_Lr(MemberDTO md, Model model,HttpSession session,CriteriaDTO cri) {
+		model.addAttribute("sert", cs.Cserch(md));
+		
+		md = (MemberDTO)session.getAttribute("login");
+		md.setHc("01");
+		//진료 확인서의 문서번호
+		String a = md.getHc();
+		//로그인 한 환자의 차트번호
+		String b = md.getRrn();
+		//조합하여 문서번호의 앞자리를 만듦
+		String c = b + a;
+		cri.setDb(c+'%');
+		cri.setRrn(b);
+		md.setDb(cri.getDb());
+		model.addAttribute("list", cs.Certificatelist(cri));
+		//db에 있는 환자의 rrn값과 진료받아서 작성된 확인서의 문서번호로 몇 건있는지 int값으로 반환
+		
+		int total = cs.Certificateserch(md);
+		model.addAttribute("paging", new pageDTO(cri, total));
+		return "Certificate/ClinicCertificateDetails_L";
+		}
 	
 }
