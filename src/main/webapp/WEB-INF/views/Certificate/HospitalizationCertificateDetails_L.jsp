@@ -13,28 +13,36 @@
 </head>
 <body>
 <div id="list_content">
-	<ul id = "container">
-			<li><p>진료일</p> <p>진단명</p> <p>진료과(의사명)</p></li>
-		<c:forEach items="${list}" var="chartlist">
-			<li><a class="detailc" href ="HospitalizationCertificateDetails_Lr?db=${chartlist.db}" >${chartlist.disease}</a>${chartlist.dn}/${chartlist.docname}(${chartlist.dn})</li>
-		</c:forEach>
+	<div class="menu-wrap">
+	<ul class = "menu">
+			<li class="posi">진료일</li>	
+			<li class="posi">진단명</li>
+			<li class="posi" id="px3">진료과(의사명)</li>
 	</ul>
+		<c:forEach items="${list}" var="chartlist">
+	<ul>
+			<li><a class="posi" href ="HospitalizationCertificateDetails_Lr?db=${chartlist.db}" >${chartlist.disease}</a></li>
+			<li id="lines" class="posi">${chartlist.dn}</li>
+			<li class="posi" id="px3">${chartlist.md}(${chartlist.docname})</li>
+	</ul>
+		</c:forEach>
 	
 	<!-- 페이징 -->
 	<c:if test="${paging.prev}">
-		<a class = "paging" href="/ClinicCertificateDetails_L?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${paging.startpage-1}&amount=${paging.cri.amount}">◀</a>
+		<a class = "paging" href="/HospitalizationCertificateDetails_L?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${paging.startpage-1}&amount=${paging.cri.amount}">◀</a>
 	</c:if>
 	
 	<!-- begin(1)이 end(10)될 동안 반복(1일 10일 될 동안 반복) -->
 	<c:forEach begin="${paging.startpage}" end="${paging.endpage}" var="num">
-	 	<a class = "paging" href="/ClinicCertificateDetails_L?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${num}&amount=${paging.cri.amount}">${num}</a>
+	 	<a class = "paging" href="/HospitalizationCertificateDetails_L?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${num}&amount=${paging.cri.amount}">${num}</a>
 	</c:forEach>
 	
 	<!-- next(다음)이 true이면 다음버튼 활성화 -->
 	<c:if test="${paging.next}">
-		<a class = "paging" href="/ClinicCertificateDetails_L?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${paging.endpage+1}&amount=${paging.cri.amount}">▶</a>
+		<a class = "paging" href="/HospitalizationCertificateDetails_L?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${paging.endpage+1}&amount=${paging.cri.amount}">▶</a>
 	</c:if>
 	</div>
+</div>
 	<div id="printimage2" class="a4">
 		<button onclick="HdownloadPdf()" class="hcd_btn">다운로드</button>
 		<button onclick="return printPage()" class="hcd_btn1">출력하기</button>
