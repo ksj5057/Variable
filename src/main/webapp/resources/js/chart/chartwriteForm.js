@@ -39,18 +39,20 @@ function Certificate(select){
 };
 
 $(document).ready(function() {
+	
 	$('#inid').blur(function(){
-		var db=$("input[name='db']").val();
-		addv({db:db});
+		var name=$("input[name='mname']").val();
+		//var pwd=$("input[name='pwd']").val();
+		add({name:name});
 
 	});
 
-	function addv(date){
+	function add(date){
 		console.log(date)
 
-		var db = date.db;
+		var name=date.name;
 
-		$.getJSON("/post/"+db+".json",
+		$.getJSON("/post/"+name+".json",
 				function(data){
 			console.log(data);
 			$('#inrrn').attr('value', data.birth);

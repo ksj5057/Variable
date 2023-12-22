@@ -279,5 +279,19 @@ button:hover:before, button:hover:after.hcd_btn1 {
 	width: 100%;
 	transition: 800ms ease all;
 }
+#list_content {
+	border: 1px solid #ccc;
+	width: 21cm;
+	margin: auto;
+}
 
+li {
+	border-bottom: 1px solid #ccc;
+	list-style: none;
+	position: relative;
+    right: 20px;
+}
+p{
+	display:inline;
+}
 
