@@ -398,4 +398,18 @@ span {
     font-family: 'OTWelcomeRA';
 }
 
-
+#serchDB{
+    height: 50px;
+    width: 500px;
+    position: relative;
+    left: 80.5%;
+    font-family: 'OTWelcomeRA';
+}
+#db_number{
+    font-size: 18px;
+    position: relative;
+    top: -11px;
+    left: -21%;
+    font-family: 'OTWelcomeRA';
+    color:#e03321;
+}

@@ -263,4 +263,14 @@ public class CertificateController {
 		return "Certificate/ClinicCertificateDetails_L";
 		}
 	
+		@GetMapping("/post/${db}")
+		public ResponseEntity <MemberDTO> replywrite(@PathVariable String db, HttpSession session) {
+			MemberDTO md = new MemberDTO();
+			md.setDb(db);
+			session.setAttribute("md", cs.Cserch(md));
+			return new ResponseEntity<>(cs.Cserch(md),HttpStatus.OK);
+
+		}
+		
+		
 }

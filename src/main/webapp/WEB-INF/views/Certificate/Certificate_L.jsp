@@ -9,6 +9,8 @@
 <meta charset="EUC-KR">
 <title>증명서 발급</title>
 <link rel="stylesheet" href="/resources/css/Certificate/Certificate.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/../../resources/js/certificate/Certificate.js"></script>
 </head>
 <body>
 
@@ -55,6 +57,10 @@
 				<li>* 진료확인서, 영수증, 세부내역서 등은 온라인증명서 신청에서 발급가능합니다.</li>
 				<li>* PDF 다운로드 시, 별도 수수료(\2,200원) 발생합니다.</li>
 			</ul>
+		</div>
+		<div id="serchDB">
+		문서번호<input type="text" name="db_num" id="db_num">
+		<p id="db_number">문서번호를 이용하여 찾을 경우 시간이 단축됩니다.</p>
 		</div>
 		<section class="subContents">
 			<div class="contBlock">
