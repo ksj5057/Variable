@@ -72,7 +72,7 @@
 		</div>
 	</div>
 	</div>
-	
+	<br><br><br>
 	<!-- 푸터 -->
 		<jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
