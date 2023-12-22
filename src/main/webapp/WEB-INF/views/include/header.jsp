@@ -27,7 +27,7 @@
 					<div class="header_manu_btn_m">
 						<h1 class="main_header_ban">
 							<a href="/"> <img src="/resources/image/main_img.png"
-								alt="그린대학병원" style="width: 288px; height: 70px;"></a>
+								alt="그린대학병원" style="height: 70px;"></a>
 						</h1>
 						<ul class="header_login_m">
 							<!-- 로그인하면 안보이게 -->

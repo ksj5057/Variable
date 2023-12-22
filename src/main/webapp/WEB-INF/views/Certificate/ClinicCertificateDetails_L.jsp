@@ -13,6 +13,11 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 </head>
 <body>
+
+<!-- 헤더 -->
+	<jsp:include page="../include/header.jsp"></jsp:include>
+
+	<div class="ccdl_box">
 	<!-- 진료내역 리스트 -->
 	<div class="menu-wrap">
 	<ul class = "menu">
@@ -117,5 +122,9 @@
 			</div>
 		</div>
 	</div>
+	</div>
+	
+	<!-- 푸터 -->
+	<jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
 </html>
