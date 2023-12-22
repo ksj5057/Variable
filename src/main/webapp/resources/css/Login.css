@@ -289,3 +289,8 @@ p#admin_login {
 	width: 280px;
 	font-family: 'OTWelcomeRA';
 }
+
+.login_content {
+	min-height: calc(100vh - 142px);
+}
+

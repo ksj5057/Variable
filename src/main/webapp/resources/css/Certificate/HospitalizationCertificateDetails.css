@@ -2,8 +2,7 @@
 
 li {
 	display: inline-block;
-	width:200px;
-	
+	width: 200px;
 }
 
 .menu-wrap {
@@ -13,26 +12,27 @@ li {
 	text-align: center;
 }
 
-.menu{
+.menu {
 	background-color: #1AAB8A;
 }
 
-#lines{
+#lines {
 	border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+	border-right: 1px solid #ccc;
 }
-.posi{
+
+.posi {
 	position: relative;
-    right: 30px;
+	right: 30px;
 }
-
-
 
 @font-face {
-    font-family: 'OTWelcomeRA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'OTWelcomeRA';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2')
+		format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 
 #line {
@@ -217,7 +217,6 @@ td {
 	position: relative;
 	text-align: center;
 	top: 40px;
-	
 }
 
 #doc {
@@ -226,16 +225,16 @@ td {
 
 button.hcd_btn {
 	background: #1AAB8A;
-    color: #fff;
-    border: none;
-    position: relative;
-    height: 40px;
-    font-size: 1em;
-    padding: 0 2em;
-    cursor: pointer;
-    transition: 800ms ease all;
-    outline: none;
-    font-family: 'OTWelcomeRA';
+	color: #fff;
+	border: none;
+	position: relative;
+	height: 40px;
+	font-size: 1em;
+	padding: 0 2em;
+	cursor: pointer;
+	transition: 800ms ease all;
+	outline: none;
+	font-family: 'OTWelcomeRA';
 }
 
 button:hover.hcd_btn {
@@ -268,16 +267,16 @@ button:hover:before, button:hover:after.hcd_btn {
 
 button.hcd_btn1 {
 	background: #1AAB8A;
-    color: #fff;
-    border: none;
-    position: relative;
-    height: 40px;
-    font-size: 1em;
-    padding: 0 2em;
-    cursor: pointer;
-    transition: 800ms ease all;
-    outline: none;
-    font-family: 'OTWelcomeRA';
+	color: #fff;
+	border: none;
+	position: relative;
+	height: 40px;
+	font-size: 1em;
+	padding: 0 2em;
+	cursor: pointer;
+	transition: 800ms ease all;
+	outline: none;
+	font-family: 'OTWelcomeRA';
 }
 
 button:hover.hcd_btn1 {
@@ -308,6 +307,11 @@ button:hover:before, button:hover:after.hcd_btn1 {
 	transition: 800ms ease all;
 }
 
-#px3{
-	left:3px;
+#px3 {
+	left: 3px;
+}
+
+.hcd_box {
+	min-height: calc(100vh - 142px);
+	padding-top: 70px;
 }

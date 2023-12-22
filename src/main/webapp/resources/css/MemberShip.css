@@ -12,6 +12,10 @@ div#container_wrapper {
     margin-top: 100px;
 }
 
+.membership_box {
+    font-family: 'OTWelcomeRA';
+}
+
 .tit_h5 {
 	font-size: 21px;
 	color: #1a1a1a;
@@ -19,11 +23,13 @@ div#container_wrapper {
 	font-weight: 600;
 	margin-bottom: 17px;
 	font-family: 'OTWelcomeRA';
+	text-align: center;
 }
 
 .table_type2 {
 	border-top: 2px solid #2c59b4;
-	width: 100%;
+	margin-left: auto;
+    margin-right: auto;
 }
 
 img, fieldset, iframe {
@@ -36,6 +42,10 @@ img, fieldset, iframe {
 	width: 100%;
 	background: #fff;
 	padding-bottom: 50px;
+}
+
+ul.add_member_ul {
+    padding-left: 0px;
 }
 
 .slick-arrow {
@@ -292,6 +302,7 @@ img, fieldset, iframe {
 	vertical-align: top;
 	display: inline-block;
 	cursor: pointer;
+	font-family: 'OTWelcomeRA';
 }
 
 .btn_center a.btn_cancel {
@@ -308,11 +319,13 @@ img, fieldset, iframe {
 	display: inline-block;
 	cursor: pointer;
 	text-decoration-line: none;
+	font-family: 'OTWelcomeRA';
 }
 
 .btn_center {
 	margin: 35px 0;
 	text-align: center;
+	font-family: 'OTWelcomeRA';
 }
 
 .cor_point {
@@ -331,3 +344,9 @@ img, fieldset, iframe {
 	background: #fff;
 	margin-top: 6px;
 }
+
+.container_wrapper {
+	min-height: calc(100vh - 142px);
+}
+
+
