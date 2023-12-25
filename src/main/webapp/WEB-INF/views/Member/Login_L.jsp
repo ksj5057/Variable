@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <link rel="stylesheet" href="/resources/css/Login.css">
 <script src="/../../resources/js/member/Login.js"></script>
 </head>
@@ -14,7 +15,7 @@
 	<jsp:include page="../include/header.jsp"></jsp:include>
 
 	<div class="login_content">
-		<form action="login" method="post">
+		<form action="login" method="post" id="llogg">
 			<fieldset>
 
 				<legend>회원 로그인</legend>
@@ -30,23 +31,19 @@
 					<div class="bh_all_login_form">
 						<div class="bh_all_login_box">
 							<p class="bh_all_login_id">
-								<label for="userid" class="skip">아이디</label> <input
-									placeholder="아이디를 입력해 주세요." id="userid" name="id" type="text"
-									title="아이디" value="" class="bh_all_login_btn_id"
-									style="ime-mode: disabled;">
+								<label for="userid" class="skip">아이디</label> 
+								<input placeholder="아이디를 입력해 주세요." id="userid" name="id" type="text" title="아이디" value="" class="bh_all_login_btn_id" style="ime-mode: disabled;">
 							</p>
 							<p class="bh_all_login_pw">
-								<label id="password" class="skip">비밀번호</label> <input
-									placeholder="비밀번호를 입력해 주세요." id="password" name="pw"
-									type="password" value="" title="비밀번호"
-									class="bh_all_login_btn_pw">
+								<label id="password" class="skip">비밀번호</label> 
+								<input placeholder="비밀번호를 입력해 주세요." id="password" name="pw" type="password" value="" title="비밀번호" class="bh_all_login_btn_pw">
 							</p>
-							<input class="bh_btn_all_login" type="submit" value="로그인">
+							<p id="Verification"></p>
+							<input class="bh_btn_all_login" type="submit" value="로그인" >
 						</div>
 						<div class="pw_check_txt_n1 mb10 mt5" id="upcheck"
 							style="display: none;">
-							<strong class="cor_point" style="text-indent: 0px"><span
-								id="pwChk">비밀번호에 대문자가 입력 되어 있습니다.</span></strong>
+							<strong class="cor_point" style="text-indent: 0px"><span id="pwChk">비밀번호에 대문자가 입력 되어 있습니다.</span></strong>
 						</div>
 						<div class="bh_all_login_sns">
 							<a
@@ -60,8 +57,7 @@
 							</strong>
 							</a> <a
 								href="javascript:popupOpenApple('https://appleid.apple.com/auth/authorize?client_id=org.snubh.snubhSnsLogin&amp;redirect_uri=https://www.snubh.org&amp;response_type=code id_token&amp;state=215152731289359034975535645765650173105&amp;scope=name email&amp;response_mode=web_message','AppleLoginPop')"
-								id="apple_lgn_button_2" class="bh_all_login_apple"
-								title="새창으로 열기"> <strong>Apple<span> </span>로그인
+								id="apple_lgn_button_2" class="bh_all_login_apple" title="새창으로 열기"> <strong>Apple<span> </span>로그인
 							</strong>
 							</a>
 

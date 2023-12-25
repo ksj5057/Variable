@@ -9,6 +9,8 @@ public interface MemberService {
 	public MemberDTO login(MemberDTO member);
 	
 	public int overlap(MemberDTO md);
+	
+	public int Verification(MemberDTO md);
 
 }
     

@@ -24,6 +24,10 @@ public class MemberServiceImpl implements MemberService {
 	public int overlap(MemberDTO md){
 		return mm.overlap(md);
 	}
+	
+	public int Verification(MemberDTO md) {
+		return mm.Verification(md);
+	}
 
 }
     

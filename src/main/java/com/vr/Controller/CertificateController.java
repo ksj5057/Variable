@@ -31,8 +31,6 @@ public class CertificateController {
 	public String Certificate(MemberDTO md,HttpSession session,HttpServletResponse response) {
 			//로그인 시 DB와 비교하여 가져온 세션 정보값을 가져와서 MemberDTO 타입의 login변수에 저장
 		MemberDTO login = (MemberDTO)session.getAttribute("login");
-
-
 		//로그인을 하지않고 재증명 이용 시 "로그인 후 이용부탁드립니다' 멘트 후 로그인창으로 이동
 		if(login == null) {
 

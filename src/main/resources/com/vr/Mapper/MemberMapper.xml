@@ -165,6 +165,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="overlap" resultType="int">
 	select count(*) from member where id =#{id};
 		</select>
+		
+		<select id="Verification" resultType="int">
+	<choose>
+			<when test="login_value == 1">
+				select count(*) from member where id=#{id} and pw=#{pw}
+			</when>
+			<!-- 관리자 로그인 -->
+			<when test="login_value == 2">
+				select count(*) from doc where id=#{id} and pw=#{pw}
+			</when>
+		</choose>
+	</select>
 </mapper>
 
     

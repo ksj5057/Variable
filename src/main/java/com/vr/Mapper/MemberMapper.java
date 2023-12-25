@@ -39,6 +39,8 @@ public interface MemberMapper {
 		public int Match(String db);
 		
 		public int overlap(MemberDTO md);
+		
+		public int Verification(MemberDTO md);
 	}
 
   
