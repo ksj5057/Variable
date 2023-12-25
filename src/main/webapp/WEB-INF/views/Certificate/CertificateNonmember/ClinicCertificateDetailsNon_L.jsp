@@ -8,47 +8,17 @@
 <!-- 진룍확인서 -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="/../../resources/js/Certificate/ClinicCertificateDetails.js"></script>
-<link rel="stylesheet" href="/resources/css/Certificate/ClinicCertificateDetails.css">
+<link rel="stylesheet" href="/resources/css/Certificate/CertificateNonmember/ClinicCertificateDetailsNon.css">
 <script src="/../../resources/js/print/Print.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 </head>
 <body>
 
 <!-- 헤더 -->
-	<jsp:include page="../include/header.jsp"></jsp:include>
+	<jsp:include page="../../include/header.jsp"></jsp:include>
 
 	<div class="ccdl_box">
 	<!-- 진료내역 리스트 -->
-	<div class="menu-wrap">
-	<ul class = "menu">
-			<li class="posi">진료일</li>	
-			<li class="posi">진단명</li>
-			<li class="posi" id="px3">진료과(의사명)</li>
-	</ul>
-		<c:forEach items="${list}" var="chartlist">
-	<ul>
-			<li><a class="posi" href ="ClinicCertificateDetails_Lr?db=${chartlist.db}" >${chartlist.disease}</a></li>
-			<li id="lines" class="posi"><a href ="ClinicCertificateDetails_Lr?db=${chartlist.db}">${chartlist.dn}</a> </li>
-			<li class="posi" id="px3"><a href ="ClinicCertificateDetails_Lr?db=${chartlist.db}">${chartlist.md}(${chartlist.docname})</a></li>
-	</ul>
-		</c:forEach>
-	
-	<!-- 페이징 -->
-	<!--  이전 버튼 -->
-	<c:if test="${paging.prev}">
-		<a class = "paging" href="/ClinicCertificateDetails_L?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${paging.startpage-1}&amount=${paging.cri.amount}">◀</a>
-	</c:if>
-	
-	<!-- begin(1)이 end(10)될 동안 반복(1일 10일 될 동안 반복) -->
-	<c:forEach begin="${paging.startpage}" end="${paging.endpage}" var="num">
-	 	<a class = "paging" href="/ClinicCertificateDetails_L?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${num}&amount=${paging.cri.amount}">${num}</a>
-	</c:forEach>
-	
-	<!-- next(다음)이 true이면 다음버튼 활성화 -->
-	<c:if test="${paging.next}">
-		<a class = "paging" href="/ClinicCertificateDetails_L?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${paging.endpage+1}&amount=${paging.cri.amount}">▶</a>
-	</c:if>
-	</div>
 	<div id="printimage2" class="a4">
 	<button onclick="CdownloadPdf()" class="cfd_btn">다운로드</button>
 	<button onclick="return printPage()" class="cfd_btn1">출력하기</button>	
@@ -125,6 +95,6 @@
 	</div>
 	
 	<!-- 푸터 -->
-	<jsp:include page="../include/footer.jsp"></jsp:include>
+	<jsp:include page="../../include/footer.jsp"></jsp:include>
 </body>
 </html>

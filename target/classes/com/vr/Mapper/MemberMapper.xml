@@ -147,14 +147,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 				value(#{hc},#{dn},#{content},#{db},#{mname},#{docname},#{dl},#{md},#{rrn},#{gender},#{birth},#{age})
 			</when>
 			<when test="hc == 2"> <!-- 입퇴원확인서 입원시 -->
-				insert into chart1(hc, dn, content,
-				db,mname,docname,dl,md,rrn,gender,birth,age,hospital)
-				value(#{hc},#{dn},#{content},#{db},#{mname},#{docname},#{dl},#{md},#{rrn},#{gender},#{birth},#{age},#{hospital})
+				insert into chart1(hc, dn, content, db, mname, docname, dl, md, rrn, gender, birth, age, hospital,exitd)
+				value(#{hc},#{dn},#{content},#{db},#{mname},#{docname},#{dl},#{md},#{rrn},#{gender},#{birth},#{age},#{hospital},#{exitd})
 			</when>
 			<when test="hc == 3"><!-- 수술확인서 -->
-				insert into chart1(hc, dn, content,
-				db,mname,docname,dl,md,rrn,gender,birth,age,hospital,oper)
-				value(#{hc},#{dn},#{content},#{db},#{mname},#{docname},#{dl},#{md},#{rrn},#{gender},#{birth},#{age},#{hospital},#{oper})
+				insert into chart1(hc, dn, content, db, mname, docname, dl, md, rrn, gender, birth, age, hospital, oper, exitd)
+				value(#{hc},#{dn},#{content},#{db},#{mname},#{docname},#{dl},#{md},#{rrn},#{gender},#{birth},#{age},#{hospital},#{oper},#{exitd})
 			</when>
 		</choose>
 	</insert>

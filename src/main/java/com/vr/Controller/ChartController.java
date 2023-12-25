@@ -86,10 +86,12 @@ public class ChartController {
 		MemberDTO mm = new MemberDTO();
 		//환자 찾기해서 찾은 정보값 세션에 저장한거 가져오기
 		mm = (MemberDTO) session.getAttribute("md");
-
 		int i = 1;
+		//차트번호 값 가져와서 변수 rrn에 저장
 		String rrn =mm.getRrn();
+		//확인서 번호 가져와서 변수 hc에 저장 
 		String hc = md.getHc();
+		// ㅇ
 		Boolean start = true;
 		while(start) {
 			String db = rrn + hc + '-' + i;
@@ -97,13 +99,10 @@ public class ChartController {
 			//값이 없다
 			if(cs.Match(db) == 0) {
 				start = false;
-
-
 				//값이 있다.
 			}else if(cs.Match(db) == 1 ){
 				i++;
 			}
-
 		}
 		// 문서번호 생성
 
@@ -121,9 +120,8 @@ public class ChartController {
 		md.setBirth(mm.getBirth());
 		//나이 저장
 		md.setAge(mm.getAge());
-		System.out.println("login 전 " + md);
 		cs.chartwrite(md);
-
+		
 		return "redirect:/chart/chartlist";
 	}
 
@@ -144,10 +142,8 @@ public class ChartController {
 		if(md.getExitd() == "") {
 			md.setExitd(null);
 		}
-		System.out.println("modi 전  "+ md);
 		md.setModi(nowString);
 		cs.chartmodify(md);
-		System.out.println("modi" + md);
 		rttr.addAttribute("rrn", md.getRrn());
 		return "redirect:/chart/chartlist";
 	}
@@ -163,7 +159,6 @@ public class ChartController {
 	// 차트 상세내역
 	@RequestMapping(value = "chart/chartdetail", method = RequestMethod.GET)
 	public String mddetail(MemberDTO md, Model model) {
-		System.out.println(md);
 		cs.chartdetail(md);
 		model.addAttribute("chartdetail", cs.chartdetail(md));
 		return "chart/chartdetail";
@@ -190,7 +185,7 @@ public class ChartController {
 	}
 
 	//ajax 환자 찾기
-	@GetMapping("/post/{name}")
+	@GetMapping("/get/{name}")
 	public ResponseEntity <MemberDTO> replywrite(@PathVariable String name, HttpSession session) {
 		MemberDTO md = new MemberDTO();
 		md.setMname(name);

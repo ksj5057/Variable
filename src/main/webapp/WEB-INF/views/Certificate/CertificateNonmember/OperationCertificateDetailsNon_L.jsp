@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
@@ -9,7 +8,7 @@
 <title>증명서 상세 내역</title>
 
 <!-- 수술확인서 -->
-<link rel="stylesheet" href="/resources/css/Certificate/OperationCertificateDetails.css">
+<link rel="stylesheet" href="/resources/css/Certificate/CertificateNonmember/OperationCertificateDetailsNon.css">
 <script src="/../../resources/js/print/Print.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
@@ -18,43 +17,11 @@
 <body>
 
 	<!-- 헤더 -->
-	<jsp:include page="../include/header.jsp"></jsp:include>
+	<jsp:include page="../../include/header.jsp"></jsp:include>
 
 
 	<div class="ocd_box">
-		<div class="menu-wrap">
-			<ul class="menu">
-				<li class="posi">진료일</li>
-				<li class="posi">진단명</li>
-				<li class="posi" id="px3">진료과(의사명)</li>
-			</ul>
-			<c:forEach items="${list}" var="chartlist">
-				<ul>
-					<li><a class="posi" href="OperationCertificateDetails_Lr?db=${chartlist.db}">${chartlist.disease}</a></li>
-					<li id="lines" class="posi"><a  href="OperationCertificateDetails_Lr?db=${chartlist.db}">${chartlist.dn}</a></li>
-					<li class="posi" id="px3"><a  href="OperationCertificateDetails_Lr?db=${chartlist.db}">${chartlist.md}(${chartlist.docname})</a></li>
-				</ul>
-			</c:forEach>
 
-			<!-- 페이징 -->
-			<c:if test="${paging.prev}">
-				<a class="paging"
-					href="/OperationCertificateDetails_L?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${paging.startpage-1}&amount=${paging.cri.amount}">◀</a>
-			</c:if>
-
-			<!-- begin(1)이 end(10)될 동안 반복(1일 10일 될 동안 반복) -->
-			<c:forEach begin="${paging.startpage}" end="${paging.endpage}"
-				var="num">
-				<a class="paging"
-					href="/OperationCertificateDetails_L?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${num}&amount=${paging.cri.amount}">${num}</a>
-			</c:forEach>
-
-			<!-- next(다음)이 true이면 다음버튼 활성화 -->
-			<c:if test="${paging.next}">
-				<a class="paging"
-					href="/OperationCertificateDetails_L?type=${paging.cri.type}&keyword=${paging.cri.keyword}&pagenum=${paging.endpage+1}&amount=${paging.cri.amount}">▶</a>
-			</c:if>
-		</div>
 		<div id="printimage2" class="a4">
 			<button onclick="CdownloadPdf()" class="ocd_btn">다운로드</button>
 			<button onclick="return printPage()" class="ocd_btn1">출력하기</button>
@@ -153,6 +120,6 @@
 	</div>
 
 	<!-- 푸터 -->
-	<jsp:include page="../include/footer.jsp"></jsp:include>
+<jsp:include page="../../include/footer.jsp"></jsp:include>
 </body>
 </html>

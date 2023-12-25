@@ -1,0 +1,383 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'OTWelcomeRA';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2')
+		format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#line {
+	width: 1200px;
+}
+
+#page {
+	width: 21cm;
+	max-height: 29.7cm;
+	padding: 1.5cm 1.5cm 2cm 1.5cm;
+	margin: 0px auto;
+	background-color: #ddd;
+	margin-top: 20px;
+}
+
+#printimage {
+	background: url(/resources/image/print.png) 0 center no-repeat;
+	width: 43px;
+	height: 35px;
+}
+
+#printimage2 {
+	position: relative;
+}
+
+.line {
+	width: 100%;
+}
+
+#main {
+	width: 1200px;
+}
+
+#title {
+	width: 75%;
+	font-size: 40px;
+	text-align: center;
+	background: #F6F6F6;
+	height: 130px;
+}
+
+.nav {
+	width: 10%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+.nav2 {
+	width: 15%;
+}
+
+.titlenumber {
+	width: 7%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+	height: 35px;
+}
+
+.nav3 {
+	width: 30%;
+}
+
+#Hospitalization {
+	width: 11%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+	height: 35px;
+}
+
+#in {
+	width: 10%;
+	font-size: 18px;
+	text-align: center;
+}
+
+#room {
+	width: 7%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+#day1 {
+	width: 9%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+#day2 {
+	width: 15%;
+	font-size: 18px;
+	text-align: center;
+}
+
+#in {
+	width: 16%;
+	font-size: 18px;
+	text-align: center;
+}
+
+.content {
+	width: 19%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+	height: 35px;
+}
+
+#name {
+	width: 17.7%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+	height: 35px;
+}
+
+#gender {
+	width: 9.2%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+#age {
+	width: 10%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+#o1 {
+	width: 15%;
+	font-size: 18px;
+	text-align: center;
+}
+
+#o2 {
+	width: 15%;
+	font-size: 18px;
+	text-align: center;
+}
+
+#o3 {
+	width: 15%;
+	font-size: 18px;
+	text-align: center;
+}
+
+#o4 {
+	width: 15%;
+	font-size: 18px;
+	text-align: center;
+}
+
+#birth {
+	width: 15%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+#age {
+	width: 15%;
+	font-size: 18px;
+	text-align: center;
+	background: #F6F6F6;
+}
+
+#insert {
+	height: 600px;
+	pxfont-size: 18px;
+	text-align: center;
+	pxfont-size: 18px;
+	background: #F6F6F6;
+}
+
+td {
+	border: 1px solid #2d58b6;
+}
+
+#boss {
+	position: relative;
+	text-align: center;
+	top: 50px;
+	margin-left: 25%;
+}
+
+#doc {
+	float: right;
+}
+
+@import
+	url('https://fonts.googleapis.com/css?family=Rubik:700&display=swap');
+
+$
+bg: #fff ; $text: #382b22 ; $light-pink: #fff0f0 ; $pink: #ffe9e9 ; $dark-pink: #f9c4d2 
+	 ; $pink-border: #b18597 ; $pink-shadow: #ffe3e2 ; * {
+	box-sizing: border-box;
+	&::
+	before
+	,
+	&
+	:
+	:
+	after
+	{
+	
+	
+	
+	
+	
+	
+    
+	
+	
+	
+	
+	
+	box-sizing
+	:
+	
+	
+	
+	
+	
+	 
+	
+	
+	
+	
+	
+	border-box;
+}
+
+}
+body {
+	font-family: 'Rubik', sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	min-height: 100vh;
+	background: $bg;
+}
+
+button.cfd_btn {
+	background: #1AAB8A;
+	color: #fff;
+	border: none;
+	position: relative;
+	height: 40px;
+	font-size: 1em;
+	padding: 0 2em;
+	cursor: pointer;
+	transition: 800ms ease all;
+	outline: none;
+	font-family: 'OTWelcomeRA';
+}
+
+button:hover.cfd_btn {
+	background: #fff;
+	color: #1AAB8A;
+}
+
+button:before, button:after.cfd_btn {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 2px;
+	width: 0;
+	background: #1AAB8A;
+	transition: 400ms ease all;
+}
+
+button:after.cfd_btn {
+	right: inherit;
+	top: inherit;
+	left: 0;
+	bottom: 0;
+}
+
+button:hover:before, button:hover:after.cfd_btn {
+	width: 100%;
+	transition: 800ms ease all;
+}
+
+div#printimage2 {
+	text-align: center;
+	margin-top: 20px;
+}
+
+button.cfd_btn1 {
+	background: #1AAB8A;
+	color: #fff;
+	border: none;
+	position: relative;
+	height: 40px;
+	font-size: 1em;
+	padding: 0 2em;
+	cursor: pointer;
+	transition: 800ms ease all;
+	outline: none;
+	font-family: 'OTWelcomeRA';
+}
+
+button:hover.cfd_btn1 {
+	background: #fff;
+	color: #1AAB8A;
+}
+
+button:before, button:after.cfd_btn1 {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 2px;
+	width: 0;
+	background: #1AAB8A;
+	transition: 400ms ease all;
+}
+
+button:after.cfd_btn1 {
+	right: inherit;
+	top: inherit;
+	left: 0;
+	bottom: 0;
+}
+
+button:hover:before, button:hover:after.cfd_btn1 {
+	width: 100%;
+	transition: 800ms ease all;
+}
+
+li {
+	display: inline-block;
+	width:200px;
+	
+}
+
+.menu-wrap {
+	border: 1px solid #ccc;
+	width: 21cm;
+	margin: auto;
+	text-align: center;
+}
+
+.menu{
+	background-color: #1AAB8A;
+}
+
+#lines{
+	border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.posi{
+	position: relative;
+    right: 30px;
+}
+
+#px3{
+	left:3px;
+}
+
+.ccdl_box {
+    min-height: calc(100vh - 142px);
+    padding-top: 70px;
+}
+

@@ -84,7 +84,7 @@ public class CertificateController {
 				try {
 					response.setContentType("text/html; charset=utf-8");
 					PrintWriter w = response.getWriter();
-					w.write("<script>alert('비회원으로 접속하셨습니다. 문서 찾기함으로 이동합니다'); location.href='Login_L';</script>");
+					w.write("<script>alert('비회원으로 접근하셨습니다. 문서번호찾기를 사용해보세요. '); location.href='Login_L';</script>");
 					w.flush();
 					w.close();
 				} catch(Exception e) {
@@ -120,7 +120,7 @@ public class CertificateController {
 		String modi = fDay.format(day);
 		md = cs.Cserch(md);
 		md.setModi(modi);
-	model.addAttribute("sert", md); 
+		model.addAttribute("sert", md); 
 	
 	md = (MemberDTO)session.getAttribute("login");
 	md.setHc("03");
@@ -263,13 +263,46 @@ public class CertificateController {
 		return "Certificate/ClinicCertificateDetails_L";
 		}
 	
-		@GetMapping("/post/${db}")
-		public ResponseEntity <MemberDTO> replywrite(@PathVariable String db, HttpSession session) {
-			MemberDTO md = new MemberDTO();
-			md.setDb(db);
-			session.setAttribute("md", cs.Cserch(md));
-			return new ResponseEntity<>(cs.Cserch(md),HttpStatus.OK);
+		@GetMapping("/post/{db}")
+		public ResponseEntity <MemberDTO> Dbesearch(@PathVariable String db, HttpSession session) {
+			MemberDTO mod = new MemberDTO();
+			mod.setDb(db);
+			session.setAttribute("md", cs.Cserch(mod));
+			return new ResponseEntity<>(cs.Cserch(mod),HttpStatus.OK);
 
+		}
+		
+		
+		//비로그인 재증명 화면 출력
+		
+		//비로그인 입퇴원 확인서
+		@GetMapping("HospitalizationCertificateDetailsNon_L")
+		public String ClinicCertificateDetailsNon_L(MemberDTO md, Model model) {
+			model.addAttribute("sert", cs.Cserch(md));
+			return "Certificate/CertificateNonmember/HospitalizationCertificateDetailsNon_L";
+		}
+		
+		//비로그인 수술 확인서
+		@GetMapping("OperationCertificateDetailsNon_L")
+		public String HospitalizationCertificateDetailsNon_L(MemberDTO md, Model model) {
+			
+			Date day = new Date();
+			SimpleDateFormat fDay = new SimpleDateFormat("yyyy년 MM월 dd일");
+			String modi = fDay.format(day);
+			md = cs.Cserch(md);
+			md.setModi(modi);
+			model.addAttribute("sert", md);
+			
+			return "Certificate/CertificateNonmember/OperationCertificateDetailsNon_L";
+			
+		}
+		
+		//비로그인 진료 확인서
+		@GetMapping("ClinicCertificateDetailsNon_L")
+		public String OperationCertificateDetailsNon_L(MemberDTO md, Model model) {
+			model.addAttribute("sert", cs.Cserch(md));
+			return "Certificate/CertificateNonmember/ClinicCertificateDetailsNon_L";
+			
 		}
 		
 		
