@@ -9,9 +9,12 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -54,13 +57,13 @@ public class HomeController {
 	
 	public String qwerty(MemberDTO member) {
 		//age의 값 가져오기
-		int a = member.getAge();
+		int age = member.getAge();
 		// 현재 년도 가져오기
-		int b = Integer.parseInt(nowString);
+		int now = Integer.parseInt(nowString);
 		//  현재년도 - age값  나이구하기
-		int c =(int) ((int)Math.floor(b-a)*0.0001);
+		int krage =(int) ((int)Math.floor(now-age)*0.0001);
 		//나이값 저장
-		member.setAge(c);
+		member.setAge(krage);
 		ms.join(member);
 		return "Member/Login_L";
 	}
@@ -127,4 +130,11 @@ public class HomeController {
 	public String AdminLogin() {
 		return "Member/AdminLogin_L";
 	}	
+	
+	@GetMapping("/get/overlap/{id}")
+	public ResponseEntity <Integer> overlap(@PathVariable String id, HttpSession session){
+		       MemberDTO md = new MemberDTO();
+				md.setId(id);
+				return new ResponseEntity<>(ms.overlap(md),HttpStatus.OK);
+			}
 }    

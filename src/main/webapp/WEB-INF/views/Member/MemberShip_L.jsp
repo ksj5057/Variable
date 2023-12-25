@@ -37,30 +37,25 @@
 									name="mname" id="name" maxlength="10"> <br> <span
 									id="check_name_L"></span>
 								</td>
-								<th>주민등록번호 <strong class="cor_point">*<span
-										class="skip">필수입력</span></strong>
+								<th>주민등록번호 <strong class="cor_point">*<span class="skip">필수입력</span></strong>
 								</th>
 								<td>
-									<!-- 주민등록번호 입력 --> <input class="input_text3" maxlength="6"
-									type="tel" name="birth" id="birth1" placeholder="주민등록번호 앞 6자리">
-									<span id="empty1">- </span> <input class="input_text3"
-									maxlength="1" type="tel" id="birth2" placeholder="주민등록번호 뒷 1자리">
+									<!-- 주민등록번호 입력 --> <input class="input_text3" maxlength="6" type="tel" name="birth" id="birth1" placeholder="주민등록번호 앞 6자리">
+									<span id="empty1">- </span> <input class="input_text3" maxlength="1" type="tel" id="birth2" placeholder="주민등록번호 뒷 1자리">
 									<br> <label id="check_birth_L"></label> <br>
 								</td>
 							</tr>
 
 							<tr>
-								<th>아이디 <strong class="cor_point">*<span
-										class="skip">필수입력</span></strong></th>
+								<th>아이디 <strong class="cor_point">*<span class="skip">필수입력</span></strong></th>
 								<td colspan="3" id="next4">
 									<p>
 										<!--  아이디 입력 -->
-										<input class="input_text" type="text" id="id" name="id"
-											maxlength="20">
+										<input class="input_text" type="text" id="id" name="id" maxlength="20" ><input type="button" value="중복확인" id="overlab"> 
 									</p>
 									<ul class="add_member_ul">
-										<li class="check_id_L">아이디는 5~20자의 영어소문자,숫자만 사용가능합니다.</li>
-										<li class="check_id_L">탈퇴 후 재가입 시 동일 아이디 사용이 불가 합니다.</li>
+										<li class="check_id_L" id="firtext">아이디는 5~20자의 영어소문자,숫자만 사용가능합니다.</li>
+										<li class="check_id_L" id="setext">탈퇴 후 재가입 시 동일 아이디 사용이 불가 합니다.</li>
 									</ul>
 								</td>
 							</tr>
@@ -133,7 +128,7 @@
 
 					<p class="btn_center">
 						<input class="btn_ok" type="submit" value="회원가입"> <a
-							class="btn_cancel" href="#">회원가입 취소</a>
+							class="btn_cancel" href="/">회원가입 취소</a>
 					</p>
 				</fieldset>
 			</form>

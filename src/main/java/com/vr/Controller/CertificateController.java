@@ -25,7 +25,7 @@ public class CertificateController {
 
 	@Autowired
 	CertificateService cs;
-
+	
 	//재증명 발급 화면으로 이동
 	@GetMapping("Certificate_L")
 	public String Certificate(MemberDTO md,HttpSession session,HttpServletResponse response) {
@@ -56,7 +56,7 @@ public class CertificateController {
 				try {
 					response.setContentType("text/html; charset=utf-8");
 					PrintWriter w = response.getWriter();
-					w.write("<script>alert('진료기록이 없습니다.'); location.href='Serch';</script>");
+					w.write("<script>alert('비로그인일 경우 서비스가 제한 될 수있습니다.'); location.href='Serch';</script>");
 					w.flush();
 					w.close();
 			    } catch(Exception e) {
@@ -84,7 +84,7 @@ public class CertificateController {
 				try {
 					response.setContentType("text/html; charset=utf-8");
 					PrintWriter w = response.getWriter();
-					w.write("<script>alert('비회원으로 접근하셨습니다. 문서번호찾기를 사용해보세요. '); location.href='Login_L';</script>");
+					w.write("<script>alert('비로그인일 경우 서비스가 제한 될 수있습니다.'); location.href='Serch';</script>");
 					w.flush();
 					w.close();
 				} catch(Exception e) {
@@ -95,13 +95,13 @@ public class CertificateController {
 				md = (MemberDTO)session.getAttribute("login");
 				md.setHc("03");
 				//진료 확인서의 문서번호
-				String a = md.getHc();
+				String hc = md.getHc();
 				//로그인 한 환자의 차트번호
-				String b = md.getRrn();
+				String rrn = md.getRrn();
 				//조합하여 문서번호의 앞자리를 만듦
-				String c = b + a;
-				cri.setDb(c+'%');
-				cri.setRrn(b);
+				String db = rrn + hc;
+				cri.setDb(db+'%');
+				cri.setRrn(rrn);
 				md.setDb(cri.getDb());
 				model.addAttribute("list", cs.Certificatelist(cri));
 				//db에 있는 환자의 rrn값과 진료받아서 작성된 확인서의 문서번호로 몇 건있는지 int값으로 반환
@@ -125,13 +125,13 @@ public class CertificateController {
 	md = (MemberDTO)session.getAttribute("login");
 	md.setHc("03");
 	//진료 확인서의 문서번호
-	String a = md.getHc();
+	String hc = md.getHc();
 	//로그인 한 환자의 차트번호
-	String b = md.getRrn();
+	String rrn = md.getRrn();
 	//조합하여 문서번호의 앞자리를 만듦
-	String c = b + a;
-	cri.setDb(c+'%');
-	cri.setRrn(b);
+	String db = rrn + hc;
+	cri.setDb(db+'%');
+	cri.setRrn(rrn);
 	md.setDb(cri.getDb());
 	model.addAttribute("list", cs.Certificatelist(cri));
 	//db에 있는 환자의 rrn값과 진료받아서 작성된 확인서의 문서번호로 몇 건있는지 int값으로 반환
@@ -161,13 +161,13 @@ public class CertificateController {
 			md = (MemberDTO)session.getAttribute("login");
 			md.setHc("02");
 			//진료 확인서의 문서번호
-			String a = md.getHc();
+			String hc = md.getHc();
 			//로그인 한 환자의 차트번호
-			String b = md.getRrn();
+			String rrn = md.getRrn();
 			//조합하여 문서번호의 앞자리를 만듦
-			String c = b + a;
-			cri.setDb(c+'%');
-			cri.setRrn(b);
+			String db = rrn + hc;
+			cri.setDb(db+'%');
+			cri.setRrn(rrn);
 			md.setDb(cri.getDb());
 			model.addAttribute("list", cs.Certificatelist(cri));
 			//db에 있는 환자의 rrn값과 진료받아서 작성된 확인서의 문서번호로 몇 건있는지 int값으로 반환
@@ -186,13 +186,13 @@ public class CertificateController {
 	md = (MemberDTO)session.getAttribute("login");
 	md.setHc("02");
 	//진료 확인서의 문서번호
-	String a = md.getHc();
+	String hc = md.getHc();
 	//로그인 한 환자의 차트번호
-	String b = md.getRrn();
+	String rrn = md.getRrn();
 	//조합하여 문서번호의 앞자리를 만듦
-	String c = b + a;
-	cri.setDb(c+'%');
-	cri.setRrn(b);
+	String db = rrn + hc;
+	cri.setDb(db+'%');
+	cri.setRrn(rrn);
 	md.setDb(cri.getDb());
 	model.addAttribute("list", cs.Certificatelist(cri));
 	//db에 있는 환자의 rrn값과 진료받아서 작성된 확인서의 문서번호로 몇 건있는지 int값으로 반환
@@ -223,13 +223,13 @@ public class CertificateController {
 			md = (MemberDTO)session.getAttribute("login");
 			md.setHc("01");
 			//진료 확인서의 문서번호
-			String a = md.getHc();
+			String hc = md.getHc();
 			//로그인 한 환자의 차트번호
-			String b = md.getRrn();
+			String rrn = md.getRrn();
 			//조합하여 문서번호의 앞자리를 만듦
-			String c = b + a;
-			cri.setDb(c+'%');
-			cri.setRrn(b);
+			String db = rrn + hc;
+			cri.setDb(db+'%');
+			cri.setRrn(rrn);
 			md.setDb(cri.getDb());
 			model.addAttribute("list", cs.Certificatelist(cri));
 			//db에 있는 환자의 rrn값과 진료받아서 작성된 확인서의 문서번호로 몇 건있는지 int값으로 반환
@@ -245,26 +245,25 @@ public class CertificateController {
 		model.addAttribute("sert", cs.Cserch(md));
 		
 		md = (MemberDTO)session.getAttribute("login");
+		//재증명의 진료 확인서 고유번호 (01)번 강제하기
 		md.setHc("01");
 		//진료 확인서의 문서번호
-		String a = md.getHc();
+		String hc = md.getHc();
 		//로그인 한 환자의 차트번호
-		String b = md.getRrn();
+		String rrn = md.getRrn();
 		//조합하여 문서번호의 앞자리를 만듦
-		String c = b + a;
-		cri.setDb(c+'%');
-		cri.setRrn(b);
+		String db = rrn + hc;
+		cri.setDb(db+'%');
+		cri.setRrn(rrn);
 		md.setDb(cri.getDb());
 		model.addAttribute("list", cs.Certificatelist(cri));
-		//db에 있는 환자의 rrn값과 진료받아서 작성된 확인서의 문서번호로 몇 건있는지 int값으로 반환
-		
 		int total = cs.Certificateserch(md);
 		model.addAttribute("paging", new pageDTO(cri, total));
 		return "Certificate/ClinicCertificateDetails_L";
 		}
 	
 		@GetMapping("/post/{db}")
-		public ResponseEntity <MemberDTO> Dbesearch(@PathVariable String db, HttpSession session) {
+		public ResponseEntity <MemberDTO> Dbsearch(@PathVariable String db, HttpSession session) {
 			MemberDTO mod = new MemberDTO();
 			mod.setDb(db);
 			session.setAttribute("md", cs.Cserch(mod));
@@ -286,6 +285,7 @@ public class CertificateController {
 		@GetMapping("OperationCertificateDetailsNon_L")
 		public String HospitalizationCertificateDetailsNon_L(MemberDTO md, Model model) {
 			
+			//발급일 당일로 조정
 			Date day = new Date();
 			SimpleDateFormat fDay = new SimpleDateFormat("yyyy년 MM월 dd일");
 			String modi = fDay.format(day);

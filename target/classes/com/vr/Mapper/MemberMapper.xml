@@ -161,6 +161,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select count(*) from chart1 where
 		db =#{db};
 	</select>
+	
+	<select id="overlap" resultType="int">
+	select count(*) from member where id =#{id};
+		</select>
 </mapper>
 
     

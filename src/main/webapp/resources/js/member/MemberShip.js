@@ -133,29 +133,55 @@ function check_birth(){
 		check_birth_L.innerHTML = "감사합니다"
 			check_birth_L.style="color:green";
 		gender.value = "M";
-		age.value= "19"+birth1;
-		return true;
+			if(birth1[0] == 0)
+			  	{
+					age.value= "20"+birth1;
+				}
+			else
+			  {
+				age.value= "19"+birth1;
+				return true;
+				}
 
 	}else if(birth == 3){		
 		check_birth_L.innerHTML = "감사합니다"
 			check_birth_L.style="color:green";
 		gender.value = "M";
-		age.value= "20"+birth1;
-		return true;
+		if(birth1[0] == 9)
+		{
+			age.value= "19"+birth1;
+			return true;
+		}
+		else
+		{	
+			age.value= "20"+birth1;
+			return true;
+		}
 
 	}else if(birth == 2){	//여자
 		check_birth_L.innerHTML = "감사합니다"
 			check_birth_L.style="color:green";
 		gender.value = "F";
-		age.value= "19"+birth1;
+		if(birth1[0] == 0){
+			age.value= "20"+birth1;
+		}else{	age.value= "19"+birth1;
 		return true;
+		}
 
 	}else if(birth == 4)	{
 		check_birth_L.innerHTML = "감사합니다"
 			check_birth_L.style="color:green";
 		gender.value = "F";
-		age.value= "20"+birth1;
-		return true;
+		if(birth1[0] == 9)
+		{
+			age.value= "19"+birth1;
+			return true;
+		}
+		else
+		{	
+			age.value= "20"+birth1;
+			return true;
+		}
 
 	}else if(birth == 6 || birth == 8){//외국인 여자
 		check_birth_L.innerHTML = "Thank you"
@@ -220,4 +246,32 @@ function check_number(){
 	}
 }
 
+// 아이디 중복 확인
+$(document).ready(function() {
+	$('#overlab').click(function(){
+		//중복 확인 버튼을 누르면 if문 안의 check_id 함수를 호출 양식에 안맞으면 false값을 양식에 맞으면 true를 반환
+		if(check_id()){
+					var id=$("input[name='id']").val();
+						overlap({id:id});
+		}
+	});
+// true가 반환 된다면 db에 접근해서 중복이 있는지 확인.
+	function overlap(date){
+		var id=date.id;
+		$.getJSON("/get/overlap/"+id+".json", function(date){
+				if(date == 1)
+			{
+				$("#firtext").html("중복입니다");
+				$("#setext").html("다시 입력해주세요");
+				$(".check_id_L").css("color", "red");
+				
+			}else if(date == 0){
+				$("#firtext").html("회원가입");
+				$("#setext").html("감사합니다.");
+				$(".check_id_L").css("color", "green");
+			}
+		})
+
+	}
+});
 

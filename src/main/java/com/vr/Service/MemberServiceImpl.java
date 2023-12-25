@@ -13,15 +13,16 @@ public class MemberServiceImpl implements MemberService {
 	MemberMapper mm;
 	
 	
-	public void join(MemberDTO member) {
-		mm.join(member);
-		
+	public void join(MemberDTO md) {
+		mm.join(md);
 	}
 	
-	public MemberDTO login(MemberDTO member){
-		return mm.login(member);
-		
-		
+	public MemberDTO login(MemberDTO md){
+		return mm.login(md);
+	}
+	
+	public int overlap(MemberDTO md){
+		return mm.overlap(md);
 	}
 
 }
