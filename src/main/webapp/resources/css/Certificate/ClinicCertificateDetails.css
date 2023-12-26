@@ -9,9 +9,9 @@
 	font-style: normal;
 }
 
-#line {
-	width: 1200px;
-}
+/* #line { */
+/* 	width: 1200px; */
+/* } */
 
 #page {
 	width: 21cm;
@@ -367,9 +367,20 @@ button:hover:before, button:hover:after.cfd_btn1 {
 	border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
 }
-.posi{
+
+.posi {
 	position: relative;
-    right: 30px;
+	right: 30px;
+	display: inline-block;
+	width: 180px;
+	text-align : center;
+}
+.posi2 {
+	position: relative;
+	display: inline-block;
+	width: 200px;
+	right: 30px;
+	text-align : center;
 }
 
 #px3{

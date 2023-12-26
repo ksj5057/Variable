@@ -30,9 +30,9 @@
 				</ul>
 				<c:forEach items="${list}" var="chartlist">
 					<ul>
-						<li><a class="posi" href="HospitalizationCertificateDetails_Lr?db=${chartlist.db}">${chartlist.disease}</a></li>
-						<li id="lines" class="posi"><a href="HospitalizationCertificateDetails_Lr?db=${chartlist.db}">${chartlist.dn}</a></li>
-						<li class="posi" id="px3"><a href="HospitalizationCertificateDetails_Lr?db=${chartlist.db}">${chartlist.md}(${chartlist.docname})</a></li>
+						<li class="posi2"><a href="HospitalizationCertificateDetails_Lr?db=${chartlist.db}">${chartlist.disease}</a></li>
+						<li id="lines" class="posi2"><a href="HospitalizationCertificateDetails_Lr?db=${chartlist.db}">${chartlist.dn}</a></li>
+						<li class="posi2" id="px3"><a href="HospitalizationCertificateDetails_Lr?db=${chartlist.db}">${chartlist.md}(${chartlist.docname})</a></li>
 					</ul>
 				</c:forEach>
 
