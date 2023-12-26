@@ -15,7 +15,6 @@
 	<jsp:include page="../include/header.jsp"></jsp:include>
 
 	<div class="login_content">
-		<form action="login" method="post" id="llogg">
 			<fieldset>
 
 				<legend>회원 로그인</legend>
@@ -39,7 +38,7 @@
 								<input placeholder="비밀번호를 입력해 주세요." id="password" name="pw" type="password" value="" title="비밀번호" class="bh_all_login_btn_pw">
 							</p>
 							<p id="Verification"></p>
-							<input class="bh_btn_all_login" type="submit" value="로그인" >
+							<input class="bh_btn_all_login" type="button" value="로그인" >
 						</div>
 						<div class="pw_check_txt_n1 mb10 mt5" id="upcheck"
 							style="display: none;">
