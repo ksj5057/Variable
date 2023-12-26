@@ -18,10 +18,7 @@
 </head>
 <body class="maincss">
 
-	<!--body_wrapper-->
-	<div class="body_wrapper_m">
-		<!--common_wrapper-->
-		<div class="common_wrapper_m">
+	
 			<!-- 헤더 -->
 			<jsp:include page="include/header.jsp"></jsp:include>
 
@@ -118,11 +115,11 @@
 					<!--/증명서/의무기록 발급-->
 				</ul>
 			</div>
-		</div>
+
 		<!-- 푸터 -->
 		<jsp:include page="include/footer.jsp"></jsp:include>
 
-	</div>
+
 
 	<!-- /main_cont end -->
 </body>

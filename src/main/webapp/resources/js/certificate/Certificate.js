@@ -16,10 +16,17 @@ $(document).ready(function(){
 				year = patient.getYear();
 				//문자로 치환
 				let syear =(year).toString(); 
+				for(y = 110; y <= syear; y++){
+ 					if(syear == y ){
+ 						syear = syear - 100;
+					}
+				}
 				// 월 (월은 0~11을 반환하기에 +1)
 				month = patient.getMonth() +1;
+				
 				//문자로 치환
 				let smonth = (month).toString();
+				
 				//month의 값이 10이하 일 경우 앞자리에 0을 한개 더 붙여주기.
 				for(j = 0; j < 10; j++){
 					if(smonth == j ){
@@ -36,7 +43,6 @@ $(document).ready(function(){
 						sday = "0"+sday;
 					}
 				}
-				
 				// yyyy-MM-dd형태를 
 				//yyMMdd형태로 변경함
 				spatient = syear + smonth + sday;
