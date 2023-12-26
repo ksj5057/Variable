@@ -48,12 +48,12 @@ $(document).ready(function() {
 	});
 
 	function add(date){
-		console.log(date)
+		console.log("이름값   " + date)
 
 		var name=date.name;
-		$.getJSON("/get/"+name+".json",
+		$.getJSON("/get/sename/"+name+".json",
 				function(data){
-			console.log(data);
+			console.log("반환값  " + data);
 			$('#inrrn').attr('value', data.birth);
 		})
 

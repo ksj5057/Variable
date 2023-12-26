@@ -37,7 +37,7 @@
 				
 			</tr>
 			<tr>
-				<th>주민번호</th>
+				<th>생년월일</th>
 				<td><input type="text" name="birth" id="inrrn" placeholder="환자 주민번호를 입력해주세요." maxlength="10"></td>
 				<th>병명</th>
 				<td><input type="text" name="dn" id="indis" placeholder="환자 병명을 입력해주세요."></td>

@@ -12,7 +12,6 @@ $(document).ready(function(){
 			$.getJSON("/post/"+db+".json", function(date){
 				//db에서 검색한 환자 생년월일을 date타입에 대입
 				let patient = new Date(date.birth);
-				console.log(date);
 				// 년도
 				year = patient.getYear();
 				//문자로 치환
@@ -20,7 +19,13 @@ $(document).ready(function(){
 				// 월 (월은 0~11을 반환하기에 +1)
 				month = patient.getMonth() +1;
 				//문자로 치환
-				let smonth = (month).toString(); 
+				let smonth = (month).toString();
+				//month의 값이 10이하 일 경우 앞자리에 0을 한개 더 붙여주기.
+				for(j = 0; j < 10; j++){
+					if(smonth == j ){
+						smonth = "0"+smonth;
+					}
+				}
 				//일
 				day = patient.getDate();
 				//문자로 치환
@@ -31,10 +36,10 @@ $(document).ready(function(){
 						sday = "0"+sday;
 					}
 				}
+				
 				// yyyy-MM-dd형태를 
 				//yyMMdd형태로 변경함
 				spatient = syear + smonth + sday;
-
 				let a = 0;
 				while(a < 3){
 					let ment = prompt("생년월일 6자리를 입력해주세요");
