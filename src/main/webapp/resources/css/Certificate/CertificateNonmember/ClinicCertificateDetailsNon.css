@@ -346,11 +346,6 @@ button:hover:before, button:hover:after.cfd_btn1 {
 	transition: 800ms ease all;
 }
 
-li {
-	display: inline-block;
-	width:200px;
-	
-}
 
 .menu-wrap {
 	border: 1px solid #ccc;
