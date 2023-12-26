@@ -87,6 +87,7 @@ public class ChartController {
 		//환자 찾기해서 찾은 정보값 세션에 저장한거 가져오기
 		mm = (MemberDTO) session.getAttribute("md");
 		int i = 1;
+		System.out.println(mm);
 		//차트번호 값 가져와서 변수 rrn에 저장
 		String rrn =mm.getRrn();
 		//확인서 번호 가져와서 변수 hc에 저장 
@@ -185,10 +186,11 @@ public class ChartController {
 	}
 
 	//ajax 환자 찾기
-	@GetMapping("/get/{name}")
+	@GetMapping("/get/sename/{name}")
 	public ResponseEntity <MemberDTO> replywrite(@PathVariable String name, HttpSession session) {
 		MemberDTO md = new MemberDTO();
 		md.setMname(name);
+		System.out.println("aaaa" + md);
 		session.setAttribute("md", cs.chartserch(md));
 		return new ResponseEntity<>(cs.chartserch(md),HttpStatus.OK);
 	}
