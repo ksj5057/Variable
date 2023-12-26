@@ -30,6 +30,7 @@ function login(signal){
 }
 //아이디 틀림 확인
 $(document).ready(function() {
+	let f = document.createElement('form');
 	let gid;
 	let gpw;
 	let lv;
@@ -59,8 +60,38 @@ $(document).ready(function() {
 		})
 	}
 	
-		function login(){
-			location.href="login?id="+gid+"&pw="+gpw+"&login_value="+lv;
+	function login(){
+		
+		let obj;
+			
+		    obj = document.createElement('input');
+		
+		
+			//<input type="hidden" name="id" value="gid";
+		    obj.setAttribute('type', 'hidden');
+		    obj.setAttribute('name', 'id');
+		    obj.setAttribute('value', gid);
+			
+			//<input type="hidden" name="pw" value="gpw";
+		    obj.setAttribute('type', 'hidden');
+		    obj.setAttribute('name', 'pw');
+		    obj.setAttribute('value', gpw);
+		
+			//<input type="hidden" name="lgoin_value" value="login_value";
+		    obj.setAttribute('type', 'hidden');
+		    obj.setAttribute('name', 'login_value');
+		    obj.setAttribute('value', login_value);
+			
+		// 포스트로 보내기
+			f.appendChild(obj);
+		
+		    f.setAttribute('method', 'post');
+		
+		    f.setAttribute('action', 'login');
+		
+		    document.body.appendChild(f);
+		
+		    f.submit();
 	}
 		
 		$('.bh_btn_all_login').click(function(){
@@ -90,7 +121,41 @@ $(document).ready(function() {
 		}
 		
 			function login(){
-				location.href="login?id="+gid+"&pw="+gpw+"&login_value="+lv;
+				
+				let obj;
+					
+				    obj = document.createElement('input');
+				
+				
+					//<input type="hidden" name="id" value="gid";
+				    obj.setAttribute('type', 'hidden');
+				    obj.setAttribute('name', 'id');
+				    obj.setAttribute('value', gid);
+					
+					//<input type="hidden" name="pw" value="gpw";
+				    obj.setAttribute('type', 'hidden');
+				    obj.setAttribute('name', 'pw');
+				    obj.setAttribute('value', gpw);
+				
+					//<input type="hidden" name="lgoin_value" value="login_value";
+				    obj.setAttribute('type', 'hidden');
+				    obj.setAttribute('name', 'login_value');
+				    obj.setAttribute('value', login_value);
+					
+				// 포스트로 보내기
+					f.appendChild(obj);
+				
+				    f.setAttribute('method', 'post');
+				
+				    f.setAttribute('action', 'login');
+				
+				    document.body.appendChild(f);
+				
+				    f.submit();
+				
+					
+				
+				
 		}
 		
 		

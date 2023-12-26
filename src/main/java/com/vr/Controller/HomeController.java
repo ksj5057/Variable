@@ -74,8 +74,6 @@ public class HomeController {
 		String uri = request.getHeader("Referer");
 		String uname = uri.substring(uri.lastIndexOf('/'), uri.length());
 
-		System.out.println("url1 = " + uri);
-		System.out.println("uri = " + uname);
 		session.setAttribute("prevPage", uname);
 		    return "Member/Login_L";
 	}
@@ -86,12 +84,8 @@ public class HomeController {
 		return "Member/MemberShip_L";
 	}
 
-	@GetMapping("login")
+	@PostMapping("login")
 	public String login(MemberDTO member, HttpSession session, Model model, HttpServletRequest request) {
-		member.setId(request.getParameter("id"));
-		member.setPw(request.getParameter("pw"));
-		int lv = Integer.parseInt((request.getParameter("login_value")));
-		member.setLogin_value(lv);
 		System.out.println("yami" + member);
 		if(ms.login(member) != null) {
 			//로그인성공하면 login폼 이전 url 들고와
@@ -124,13 +118,4 @@ public class HomeController {
 			}
 	
 	
-	@GetMapping("/post/Verification/{id}/{pw}/{login_value}")
-	public ResponseEntity <Integer> Verification(@PathVariable String id, @PathVariable String pw,@PathVariable int login_value,  HttpSession session){
-		       MemberDTO md = new MemberDTO();
-		       md.setId(id);
-				md.setPw(pw);
-				md.setLogin_value(login_value);
-				System.out.println(md);
-				return new ResponseEntity<>(ms.Verification(md),HttpStatus.OK);
-			}
 }    
