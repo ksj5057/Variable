@@ -86,9 +86,13 @@ public class HomeController {
 		return "Member/MemberShip_L";
 	}
 
-	@PostMapping("login")
+	@GetMapping("login")
 	public String login(MemberDTO member, HttpSession session, Model model, HttpServletRequest request) {
-		//ms.login값이 null이 아니면
+		member.setId(request.getParameter("id"));
+		member.setPw(request.getParameter("pw"));
+		int lv = Integer.parseInt((request.getParameter("login_value")));
+		member.setLogin_value(lv);
+		System.out.println("yami" + member);
 		if(ms.login(member) != null) {
 			//로그인성공하면 login폼 이전 url 들고와
 			String lastu = (String)session.getAttribute("prevPage");
