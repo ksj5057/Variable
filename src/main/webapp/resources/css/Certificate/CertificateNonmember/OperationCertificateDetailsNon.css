@@ -1,5 +1,31 @@
 @charset "UTF-8";
 
+li {
+	display: inline-block;
+	width: 200px;
+}
+
+.menu-wrap {
+	border: 1px solid #ccc;
+	width: 21cm;
+	margin: auto;
+	text-align: center;
+}
+
+.menu {
+	background-color: #1AAB8A;
+}
+
+#lines {
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+
+.posi {
+	position: relative;
+	right: 30px;
+}
+
 @font-face {
 	font-family: 'OTWelcomeRA';
 	src:
@@ -30,6 +56,8 @@
 
 #printimage2 {
 	position: relative;
+	text-align: center;
+	margin-top: 20px;
 }
 
 .line {
@@ -72,7 +100,7 @@
 }
 
 #Hospitalization {
-	width: 11%;
+	width: 10.6%;
 	font-size: 18px;
 	text-align: center;
 	background: #F6F6F6;
@@ -80,7 +108,7 @@
 }
 
 #in {
-	width: 10%;
+	width: 18%;
 	font-size: 18px;
 	text-align: center;
 }
@@ -100,13 +128,7 @@
 }
 
 #day2 {
-	width: 15%;
-	font-size: 18px;
-	text-align: center;
-}
-
-#in {
-	width: 16%;
+	width: 18%;
 	font-size: 18px;
 	text-align: center;
 }
@@ -180,7 +202,7 @@
 }
 
 #insert {
-	height: 600px;
+	height: 500px;
 	pxfont-size: 18px;
 	text-align: center;
 	pxfont-size: 18px;
@@ -194,7 +216,7 @@ td {
 #boss {
 	position: relative;
 	text-align: center;
-	top: 50px;
+	top: 40px;
 	margin-left: 25%;
 }
 
@@ -202,62 +224,7 @@ td {
 	float: right;
 }
 
-@import
-	url('https://fonts.googleapis.com/css?family=Rubik:700&display=swap');
-
-$
-bg: #fff ; $text: #382b22 ; $light-pink: #fff0f0 ; $pink: #ffe9e9 ; $dark-pink: #f9c4d2 
-	 ; $pink-border: #b18597 ; $pink-shadow: #ffe3e2 ; * {
-	box-sizing: border-box;
-	&::
-	before
-	,
-	&
-	:
-	:
-	after
-	{
-	
-	
-	
-	
-	
-	
-    
-	
-	
-	
-	
-	
-	box-sizing
-	:
-	
-	
-	
-	
-	
-	 
-	
-	
-	
-	
-	
-	border-box;
-}
-
-}
-body {
-	font-family: 'Rubik', sans-serif;
-	font-size: 1rem;
-	line-height: 1.5;
-	align-items: center;
-	justify-content: center;
-	margin: 0;
-	min-height: 100vh;
-	background: $bg;
-}
-
-button.cfd_btn {
+button.ocd_btn {
 	background: #1AAB8A;
 	color: #fff;
 	border: none;
@@ -271,12 +238,12 @@ button.cfd_btn {
 	font-family: 'OTWelcomeRA';
 }
 
-button:hover.cfd_btn {
+button:hover.ocd_btn {
 	background: #fff;
 	color: #1AAB8A;
 }
 
-button:before, button:after.cfd_btn {
+button:before, button:after.ocd_btn {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -287,24 +254,19 @@ button:before, button:after.cfd_btn {
 	transition: 400ms ease all;
 }
 
-button:after.cfd_btn {
+button:after.ocd_btn {
 	right: inherit;
 	top: inherit;
 	left: 0;
 	bottom: 0;
 }
 
-button:hover:before, button:hover:after.cfd_btn {
+button:hover:before, button:hover:after.ocd_btn {
 	width: 100%;
 	transition: 800ms ease all;
 }
 
-div#printimage2 {
-	text-align: center;
-	margin-top: 20px;
-}
-
-button.cfd_btn1 {
+button.ocd_btn1 {
 	background: #1AAB8A;
 	color: #fff;
 	border: none;
@@ -318,12 +280,12 @@ button.cfd_btn1 {
 	font-family: 'OTWelcomeRA';
 }
 
-button:hover.cfd_btn1 {
+button:hover.ocd_btn1 {
 	background: #fff;
 	color: #1AAB8A;
 }
 
-button:before, button:after.cfd_btn1 {
+button:before, button:after.ocd_btn1 {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -334,50 +296,27 @@ button:before, button:after.cfd_btn1 {
 	transition: 400ms ease all;
 }
 
-button:after.cfd_btn1 {
+button:after.ocd_btn1 {
 	right: inherit;
 	top: inherit;
 	left: 0;
 	bottom: 0;
 }
 
-button:hover:before, button:hover:after.cfd_btn1 {
+button:hover:before, button:hover:after.ocd_btn1 {
 	width: 100%;
 	transition: 800ms ease all;
 }
 
-.menu li {
-	display: inline-block;
-	width:200px;
-	
+.ment {
+	width: 500px;
 }
 
-.menu-wrap {
-	border: 1px solid #ccc;
-	width: 21cm;
-	margin: auto;
-	text-align: center;
+#px3 {
+	left: 3px;
 }
 
-.menu{
-	background-color: #1AAB8A;
+.ocd_box {
+	min-height: calc(100vh - 142px);
+	padding-top: 70px;
 }
-
-#lines{
-	border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-}
-.posi{
-	position: relative;
-    right: 30px;
-}
-
-#px3{
-	left:3px;
-}
-
-.ccdl_box {
-    min-height: calc(100vh - 142px);
-    padding-top: 70px;
-}
-

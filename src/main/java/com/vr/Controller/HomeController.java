@@ -9,9 +9,12 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -54,13 +57,13 @@ public class HomeController {
 	
 	public String qwerty(MemberDTO member) {
 		//age의 값 가져오기
-		int a = member.getAge();
+		int age = member.getAge();
 		// 현재 년도 가져오기
-		int b = Integer.parseInt(nowString);
+		int now = Integer.parseInt(nowString);
 		//  현재년도 - age값  나이구하기
-		int c =(int) ((int)Math.floor(b-a)*0.0001);
+		int krage =(int) ((int)Math.floor(now-age)*0.0001);
 		//나이값 저장
-		member.setAge(c);
+		member.setAge(krage);
 		ms.join(member);
 		return "Member/Login_L";
 	}
@@ -90,24 +93,16 @@ public class HomeController {
 			//로그인성공하면 login폼 이전 url 들고와
 			String lastu = (String)session.getAttribute("prevPage");
 			session.setAttribute("login", ms.login(member));
-			System.out.println("after" + member);
-			System.out.println("Lastu = " + lastu);
 			if(lastu.equals("/")) {
-				System.out.println("aaaaa");
 				return "main";
 			}else if(lastu.contains("Certificate")) {
-				System.out.println("bbbbb");
 				return "Certificate" + lastu;
 			}else if(lastu.contains("chart")) {
-				System.out.println("ccccc");
 				return "redirect:/chart" + lastu;
 			}
 		}
-		System.out.println("ddddd");
 		return "Member/Login_L";
 	}
-	
-	
 	
 	// 로그아웃누르면 메인으로
 	@GetMapping("logout")
@@ -116,15 +111,22 @@ public class HomeController {
 		return "redirect:/";
 	}
 	
-	// 관리자전용 클릭시 차트리스트 실행	
-	@GetMapping("chartlist")
-	public String chartlist(MemberDTO member) {
-		return "chart/chartlist";
-	}	
+	//회원가입 시 아이디 중복 확인
+	@GetMapping("/get/overlap/{id}")
+	public ResponseEntity <Integer> overlap(@PathVariable String id, HttpSession session){
+		       MemberDTO md = new MemberDTO();
+				md.setId(id);
+				return new ResponseEntity<>(ms.overlap(md),HttpStatus.OK);
+			}
 	
-	//관리자 로그인
-	@GetMapping("AdminLogin_L")
-	public String AdminLogin() {
-		return "Member/AdminLogin_L";
-	}	
+	
+	@GetMapping("/post/Verification/{id}/{pw}/{login_value}")
+	public ResponseEntity <Integer> Verification(@PathVariable String id, @PathVariable String pw,@PathVariable int login_value,  HttpSession session){
+		       MemberDTO md = new MemberDTO();
+		       md.setId(id);
+				md.setPw(pw);
+				md.setLogin_value(login_value);
+				System.out.println(md);
+				return new ResponseEntity<>(ms.Verification(md),HttpStatus.OK);
+			}
 }    
