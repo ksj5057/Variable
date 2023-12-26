@@ -42,7 +42,7 @@
 									님 환영합니다 (˙ ˘ ˙) /
 								<li>
 									<!-- 관리자 아이디로 로그인했을때만 보이게 --> <c:if
-										test="${login.position ne null}">
+										test="${login.position eq 'Manager'}">
 										<li><a href="chart/chartlist">[차트관리]</a></li>
 									</c:if>
 								<li><a href="logout">[로그아웃]</a></li>
