@@ -7,6 +7,10 @@ public interface MemberService {
 	void join(MemberDTO member);
 	//로그인
 	public MemberDTO login(MemberDTO member);
+	
+	public int overlap(MemberDTO md);
+	
+	public int Verification(MemberDTO md);
 
 }
     

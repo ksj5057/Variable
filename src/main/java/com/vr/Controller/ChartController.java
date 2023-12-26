@@ -10,7 +10,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
@@ -46,34 +45,32 @@ public class ChartController {
 
 	//차트 리스트 불러오기
 	@RequestMapping(value = "chart/chartlist", method = RequestMethod.GET)
-	public String list(Model model, CriteriaDTO cri, HttpSession session,HttpServletResponse response, MemberDTO md){
-			//의사 로그인 값 가져오기
-			model.addAttribute("doc", session.getAttribute("login"));
-			//리스트 불러오기
-			model.addAttribute("list", cs.list(cri));
-			//게시물의 총 갯수
-			int total = cs.total(cri);
-			model.addAttribute("paging", new pageDTO(cri, total));
-			
-			//로그인 시 DB와 비교하여 가져온 세션 정보값을 가져와서 MemberDTO 타입의 login변수에 저장
-
-
-			//로그인을 하지않고 재증명 이용 시 "로그인 후 이용부탁드립니다' 멘트 후 로그인창으로 이동
-			if(md.getPosition() != "Manager") {
-
-				try {
-						response.setContentType("text/html; charset=utf-8");
-						PrintWriter w = response.getWriter();
-						w.write("<script>alert('관리자 아이디로 로그인 해주세요'); location.href='Login_L';</script>");
-						w.flush();
-						w.close();
-				    } catch(Exception e) {
-						e.printStackTrace();
-				    }
-				    	return "로그인 창 이동";
-				 //로그인 하였으나 진료기록이 없다면 진료기록이 없다고 멘트 후 재증명 창으로 이동
-				}return "chart/chartlist";
-		}
+	   public String list(Model model, CriteriaDTO cri, HttpSession session,HttpServletResponse response, MemberDTO md){
+				
+	         //세션  로그인 값을 가져와서 manage에 저장 
+			 MemberDTO manage = (MemberDTO)session.getAttribute("login");
+			 //세션  로그인 값을 가져와서 모델 doc에 저장해서 화면에 뿌림
+	         model.addAttribute("doc", session.getAttribute("login"));
+	         //세션  로그인 값을 가져와서 모델 list에 저장해서 화면에 뿌림
+	         model.addAttribute("list", cs.list(cri));
+	         //게시물의 총 갯수
+	         int total = cs.total(cri);
+	         model.addAttribute("paging", new pageDTO(cri, total));
+	         //로그인을 하지않고 재증명 이용 시 "로그인 후 이용부탁드립니다' 멘트 후 로그인창으로 이동
+	         if(!manage.getPosition().equals("Manager")) {
+	            try {
+	                  response.setContentType("text/html; charset=utf-8");
+	                  PrintWriter w = response.getWriter();
+	                  w.write("<script>alert('관리자 아이디로 로그인 해주세요'); location.href='Login_L';</script>");
+	                  w.flush();
+	                  w.close();
+	                } catch(Exception e) {
+	                  e.printStackTrace();
+	                }
+	                   return "로그인 창 이동";
+	             //로그인 하였으나 진료기록이 없다면 진료기록이 없다고 멘트 후 재증명 창으로 이동
+	            }return "chart/chartlist";
+	      }
 	//차트 작성 폼 불러오기
 	@RequestMapping(value = "chart/chartwriteForm", method = RequestMethod.GET)
 	public String mdwriteForm(HttpSession session, Model model) {
@@ -89,10 +86,12 @@ public class ChartController {
 		MemberDTO mm = new MemberDTO();
 		//환자 찾기해서 찾은 정보값 세션에 저장한거 가져오기
 		mm = (MemberDTO) session.getAttribute("md");
-
 		int i = 1;
+		//차트번호 값 가져와서 변수 rrn에 저장
 		String rrn =mm.getRrn();
+		//확인서 번호 가져와서 변수 hc에 저장 
 		String hc = md.getHc();
+		// ㅇ
 		Boolean start = true;
 		while(start) {
 			String db = rrn + hc + '-' + i;
@@ -100,13 +99,10 @@ public class ChartController {
 			//값이 없다
 			if(cs.Match(db) == 0) {
 				start = false;
-
-
 				//값이 있다.
 			}else if(cs.Match(db) == 1 ){
 				i++;
 			}
-
 		}
 		// 문서번호 생성
 
@@ -124,9 +120,8 @@ public class ChartController {
 		md.setBirth(mm.getBirth());
 		//나이 저장
 		md.setAge(mm.getAge());
-		System.out.println("login 전 " + md);
 		cs.chartwrite(md);
-
+		
 		return "redirect:/chart/chartlist";
 	}
 
@@ -147,10 +142,8 @@ public class ChartController {
 		if(md.getExitd() == "") {
 			md.setExitd(null);
 		}
-		System.out.println("modi 전  "+ md);
 		md.setModi(nowString);
 		cs.chartmodify(md);
-		System.out.println("modi" + md);
 		rttr.addAttribute("rrn", md.getRrn());
 		return "redirect:/chart/chartlist";
 	}
@@ -166,7 +159,6 @@ public class ChartController {
 	// 차트 상세내역
 	@RequestMapping(value = "chart/chartdetail", method = RequestMethod.GET)
 	public String mddetail(MemberDTO md, Model model) {
-		System.out.println(md);
 		cs.chartdetail(md);
 		model.addAttribute("chartdetail", cs.chartdetail(md));
 		return "chart/chartdetail";
@@ -193,58 +185,12 @@ public class ChartController {
 	}
 
 	//ajax 환자 찾기
-	@GetMapping("/post/{name}")
+	@GetMapping("/get/{name}")
 	public ResponseEntity <MemberDTO> replywrite(@PathVariable String name, HttpSession session) {
 		MemberDTO md = new MemberDTO();
 		md.setMname(name);
 		session.setAttribute("md", cs.chartserch(md));
 		return new ResponseEntity<>(cs.chartserch(md),HttpStatus.OK);
 	}
-	
-	// 관리자 외 차트리스트 접근제한
-	//재증명 발급 화면으로 이동
-//	@GetMapping("Certificate_L")
-//	public String Certificate(MemberDTO md,HttpSession session,HttpServletResponse response) {
-
-
-			/*	//로그인 시 DB와 비교하여 가져온 세션 정보값을 가져와서 MemberDTO 타입의 login변수에 저장
-			MemberDTO login = (MemberDTO)session.getAttribute("login");
-
-
-			//로그인을 하지않고 재증명 이용 시 "로그인 후 이용부탁드립니다' 멘트 후 로그인창으로 이동
-			if(login == null) {
-
-				try {
-						response.setContentType("text/html; charset=utf-8");
-						PrintWriter w = response.getWriter();
-						w.write("<script>alert('로그인 후 이용부탁드립니다'); location.href='Login_L';</script>");
-						w.flush();
-						w.close();
-				    } catch(Exception e) {
-						e.printStackTrace();
-				    }
-				    	return "로그인 창 이동"; //리턴은 작동하지않음.
-
-				 //로그인을 하고 재증명 이용 시 DB에 있는 차트리스트에서 사용자 아이디와 10년치 날짜로 조회 있다면 건 수를 반환 함.
-
-				 //로그인 하였으나 진료기록이 없다면 진료기록이 없다고 멘트 후 재증명 창으로 이동
-				}
-			else if(cs.serch(login) == 0 ) {
-
-					try {
-						response.setContentType("text/html; charset=utf-8");
-						PrintWriter w = response.getWriter();
-						w.write("<script>alert('진료기록이 없습니다.'); location.href='Serch';</script>");
-						w.flush();
-						w.close();
-				    } catch(Exception e) {
-						e.printStackTrace();
-				    }
-					return "재증명 창으로 이동"; // 리턴은 작동은 작동하지않음
-
-				//로그인 하고 진료기록이 있다면 재증명 창으로 이동
-				}else {*/
-//			return "Certificate/Certificate_L";
-//		}
 } 
 

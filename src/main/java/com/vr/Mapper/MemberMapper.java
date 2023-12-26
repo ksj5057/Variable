@@ -37,6 +37,10 @@ public interface MemberMapper {
 		
 		//차트 문서번호 서치
 		public int Match(String db);
+		
+		public int overlap(MemberDTO md);
+		
+		public int Verification(MemberDTO md);
 	}
 
   

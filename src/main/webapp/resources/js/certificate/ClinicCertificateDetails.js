@@ -2,7 +2,7 @@
 $(document).ready(function() {
 	
 	$('#db_move').click(function(){
-		var db=$("input[name='mname']").val();
+		var name=$("input[name='mname']").val();
 		//var pwd=$("input[name='pwd']").val();
 		add({name:name});
 

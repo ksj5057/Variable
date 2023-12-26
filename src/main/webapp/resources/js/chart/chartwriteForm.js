@@ -51,8 +51,7 @@ $(document).ready(function() {
 		console.log(date)
 
 		var name=date.name;
-
-		$.getJSON("/post/"+name+".json",
+		$.getJSON("/get/"+name+".json",
 				function(data){
 			console.log(data);
 			$('#inrrn').attr('value', data.birth);

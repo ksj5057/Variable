@@ -331,7 +331,6 @@ a, a:link, a:visited {
 .tit_h5 {
 	font-size: 21px;
 	color: #1a1a1a;
-	background: url(/front/images/member/bg_bar.gif) no-repeat 0 0;
 	padding-top: 10px;
 	font-weight: 600;
 	margin-bottom: 17px;
@@ -398,4 +397,18 @@ span {
     font-family: 'OTWelcomeRA';
 }
 
-
+#serchDB{
+    height: 50px;
+    width: 500px;
+    position: relative;
+    left: 80.5%;
+    font-family: 'OTWelcomeRA';
+}
+#db_number{
+    font-size: 18px;
+    position: relative;
+    top: -11px;
+    left: -21%;
+    font-family: 'OTWelcomeRA';
+    color:#e03321;
+}
