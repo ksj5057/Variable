@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-li {
-	display: inline-block;
-	width: 200px;
-}
 
 .menu-wrap {
 	border: 1px solid #ccc;
@@ -24,6 +20,16 @@ li {
 .posi {
 	position: relative;
 	right: 30px;
+	display: inline-block;
+	width: 180px;
+	text-align : center;
+}
+.posi2 {
+	position: relative;
+	display: inline-block;
+	width: 200px;
+	right: 30px;
+	text-align : center;
 }
 
 @font-face {
@@ -35,9 +41,9 @@ li {
 	font-style: normal;
 }
 
-#line {
-	width: 1200px;
-}
+/* #line { */
+/* 	width: 1200px; */
+/* } */
 
 #page {
 	width: 21cm;
