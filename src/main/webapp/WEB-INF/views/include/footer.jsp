@@ -30,6 +30,14 @@
 			</ul>
 		</div>
 	</div>
-	
+
+	<!-- 
+	https://ddd120.tistory.com/4
+
+	content 영역
+	min-height : calc(100vh - footer height 값))
+	padding-top : header의 height 값
+	 -->
+
 </body>
 </html>
