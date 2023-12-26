@@ -16,7 +16,7 @@ $(document).ready(function(){
 				year = patient.getYear();
 				//문자로 치환
 				let syear =(year).toString(); 
-				for(y = 110; y <= syear; y++){
+				for(y = 101; y <= syear; y++){
  					if(syear == y ){
  						syear = syear - 100;
 					}

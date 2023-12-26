@@ -38,10 +38,14 @@ $(document).ready(function() {
 
 });
 
-
-
 function check_all(){
-	if(check_name() && check_birth() && check_id() && check_pw() && check_pwtopw() && check_email() && check_number()){
+	console.log(check_name());
+	console.log(check_birth());
+	console.log(check_pw());
+	console.log(check_pwtopw());
+	console.log(check_email());
+	console.log(check_number());
+	if(check_name() && check_birth()&& check_pw() && check_pwtopw() && check_email() && check_number()){
 
 		return true;
 	}else{
@@ -134,10 +138,21 @@ function check_birth(){
 			check_birth_L.style="color:green";
 		gender.value = "M";
 			if(birth1[0] == 0)
-			  	{
+				{
 					age.value= "20"+birth1;
+					return true;
 				}
-			else
+			
+			else if(birth1[0] == 1)
+		  	{
+				age.value= "20"+birth1;
+				return true;
+			}
+			else if(birth1[0] == 2)
+		  	{
+				age.value= "20"+birth1;
+				return true;
+			}else
 			  {
 				age.value= "19"+birth1;
 				return true;
@@ -148,6 +163,15 @@ function check_birth(){
 			check_birth_L.style="color:green";
 		gender.value = "M";
 		if(birth1[0] == 9)
+		{
+			age.value= "19"+birth1;
+			return true;
+		}else if(birth1[0] == 8)
+		{
+			age.value= "19"+birth1;
+			return true;
+		}
+		else if(birth1[0] == 7)
 		{
 			age.value= "19"+birth1;
 			return true;
@@ -162,17 +186,42 @@ function check_birth(){
 		check_birth_L.innerHTML = "감사합니다"
 			check_birth_L.style="color:green";
 		gender.value = "F";
-		if(birth1[0] == 0){
+		if(birth1[0] == 0)
+		{
 			age.value= "20"+birth1;
-		}else{	age.value= "19"+birth1;
+			return true;
+		}
+	
+	else if(birth1[0] == 1)
+  	{
+		age.value= "20"+birth1;
+		return true;
+	}
+	else if(birth1[0] == 2)
+  	{
+		age.value= "20"+birth1;
+		return true;
+	}else
+	  {
+		age.value= "19"+birth1;
 		return true;
 		}
+
 
 	}else if(birth == 4)	{
 		check_birth_L.innerHTML = "감사합니다"
 			check_birth_L.style="color:green";
 		gender.value = "F";
 		if(birth1[0] == 9)
+		{
+			age.value= "19"+birth1;
+			return true;
+		}else if(birth1[0] == 8)
+		{
+			age.value= "19"+birth1;
+			return true;
+		}
+		else if(birth1[0] == 7)
 		{
 			age.value= "19"+birth1;
 			return true;
