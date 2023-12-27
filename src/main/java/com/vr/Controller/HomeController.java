@@ -90,15 +90,15 @@ public class HomeController {
 			//로그인성공하면 login폼 이전 url 들고와
 			String lastu = (String)session.getAttribute("prevPage");
 			session.setAttribute("login", ms.login(member));
-			if(lastu.equals("/")) {
+			/*if(lastu.equals("/")) {
 				return "main";
-			}else if(lastu.contains("Certificate")) {
+			}else*/ if(lastu.contains("Certificate")) {
 				return "Certificate" + lastu;
 			}else if(lastu.contains("chart")) {
 				return "redirect:/chart" + lastu;
 			}
 		}
-		return "Member/Login_L";
+		return "main";
 	}
 
 	// 로그아웃누르면 메인으로
