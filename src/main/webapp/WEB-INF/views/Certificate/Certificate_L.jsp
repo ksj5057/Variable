@@ -57,6 +57,13 @@
 				<li>* PDF 다운로드 시, 별도 수수료(\2,200원) 발생합니다.</li>
 			</ul>
 		</div>
+		<div>
+		
+		이름<input type="text" name="p_num" id="p_num">
+		생년월일<input type="text" name="p_num" id="p_num"><Br>
+		<input type="date" name="p_num" id="p_num">부터
+		<input type="date" name="p_num" id="p_num">까지
+		</div>
 		<div id="serchDB">
 		문서번호<input type="text" name="db_num" id="db_num">
 		<p id="db_number">문서번호를 이용하여 찾을 경우 시간이 단축됩니다.</p>
