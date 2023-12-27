@@ -83,13 +83,14 @@ $(document).ready(function() {
 					$("#userid").focus()
 					return false;
 				}else{
-					//만약 date 값이 0 초과면 함수 login()을 호출
+					// date 값이 0 초과면 함수 login()을 호출
 					login();
 				}
 			})
 		}
 			// 호출되서 실행 되면
 			function login(){
+				
 					//인풋태그를 만들어서 obj1~3에 저장
 				  let obj1 = document.createElement('input');
 				  let obj2 = document.createElement('input');
