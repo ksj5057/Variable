@@ -30,6 +30,7 @@ function login(signal){
 }
 //아이디 틀림 확인
 $(document).ready(function() {
+	let f = document.createElement('form');
 	let gid;
 	let gpw;
 	let lv;
@@ -59,9 +60,7 @@ $(document).ready(function() {
 		})
 	}
 	
-		function login(){
-			location.href="login?id="+gid+"&pw="+gpw+"&login_value="+lv;
-	}
+	
 		
 		$('.bh_btn_all_login').click(function(){
 			
@@ -84,13 +83,53 @@ $(document).ready(function() {
 					$("#userid").focus()
 					return false;
 				}else{
+					// date 값이 0 초과면 함수 login()을 호출
 					login();
 				}
 			})
 		}
-		
+			// 호출되서 실행 되면
 			function login(){
-				location.href="login?id="+gid+"&pw="+gpw+"&login_value="+lv;
+				
+					//인풋태그를 만들어서 obj1~3에 저장
+				  let obj1 = document.createElement('input');
+				  let obj2 = document.createElement('input');
+				  let obj3 = document.createElement('input');
+				
+					//obj1의 input 타입을 히든으로 만들고 name값과 value값을 저장
+					//1 <input type="hidden" name="id" value="gid">
+				    obj1.setAttribute('type', 'hidden');
+				    obj1.setAttribute('name', 'id');
+				    obj1.setAttribute('value', gid);
+				
+					//obj2의 input 타입을 히든으로 만들고 name값과 value값을 저장
+					//2 <input type="hidden" name="pw" value="gpw">
+				    obj2.setAttribute('type', 'hidden');
+				    obj2.setAttribute('name', 'pw');
+				    obj2.setAttribute('value', gpw);
+				
+					//obj3의 input 타입을 히든으로 만들고 name값과 value값을 저장
+					//3 <input type="hidden" name="lgoin_value" value="login_value">
+				    obj3.setAttribute('type', 'hidden');
+				    obj3.setAttribute('name', 'login_value');
+				    obj3.setAttribute('value', login_value);
+				
+					//href 메소드 get을 post로 바꿈
+					f.appendChild(obj1);
+					f.appendChild(obj2);
+					f.appendChild(obj3);
+				
+				    f.setAttribute('method', 'post');
+				
+				    f.setAttribute('action', 'login');
+				
+				    document.body.appendChild(f);
+				
+				    f.submit();
+				
+					
+				
+				
 		}
 		
 		

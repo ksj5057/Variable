@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.vr.Model.CriteriaDTO;
 import com.vr.Model.MemberDTO;
@@ -45,16 +46,14 @@ public class CertificateController {
 			    }
 			    	return "로그인 창 이동"; //리턴은 작동하지않음.
 
-			 //로그인을 하고 재증명 이용 시 DB에 있는 차트리스트에서 사용자 아이디와 10년치 날짜로 조회 있다면 건 수를 반환 함.
 
-			 //로그인 하였으나 진료기록이 없다면 진료기록이 없다고 멘트 후 재증명 창으로 이동
 			}
-		else if(cs.serch(login) == 0 ) {
+		else if(cs.serch(login) == 0 ) { //진료기록이 없으면 없다고 멘트 함
 
 				try {
 					response.setContentType("text/html; charset=utf-8");
 					PrintWriter w = response.getWriter();
-					w.write("<script>alert('비로그인일 경우 서비스가 제한 될 수있습니다.'); location.href='Serch';</script>");
+					w.write("<script>alert('진료기록이 없습니다.'); location.href='Serch';</script>");
 					w.flush();
 					w.close();
 			    } catch(Exception e) {
@@ -82,7 +81,7 @@ public class CertificateController {
 				try {
 					response.setContentType("text/html; charset=utf-8");
 					PrintWriter w = response.getWriter();
-					w.write("<script>alert('비로그인일 경우 서비스가 제한 될 수있습니다.'); location.href='Serch';</script>");
+					w.write("<script>alert('비로그인으로 접근하셨습니다, 문서찾기를 이용해주세요'); location.href='Serch';</script>");
 					w.flush();
 					w.close();
 				} catch(Exception e) {
@@ -148,7 +147,7 @@ public class CertificateController {
 			try {
 				response.setContentType("text/html; charset=utf-8");
 				PrintWriter w = response.getWriter();
-				w.write("<script>alert('비회원으로 접속하셨습니다. 문서 찾기함으로 이동합니다'); location.href='Login_L';</script>");
+				w.write("<script>alert('비로그인으로 접근하셨습니다, 문서찾기를 이용해주세요'); location.href='Serch';</script>");
 				w.flush();
 				w.close();
 			} catch(Exception e) {
@@ -210,7 +209,7 @@ public class CertificateController {
 			try {
 				response.setContentType("text/html; charset=utf-8");
 				PrintWriter w = response.getWriter();
-				w.write("<script>alert('비회원으로 접속하셨습니다. 문서 찾기함으로 이동합니다'); location.href='Login_L';</script>");
+				w.write("<script>alert('비로그인으로 접근하셨습니다, 문서찾기를 이용해주세요'); location.href='Serch';</script>");
 				w.flush();
 				w.close();
 			} catch(Exception e) {
@@ -302,6 +301,15 @@ public class CertificateController {
 			return "Certificate/CertificateNonmember/ClinicCertificateDetailsNon_L";
 			
 		}
+		
+//		//이메일 인증 
+//		@GetMapping("/user/mailCheck")
+//		@ResponseBody
+//		public String mailCheck(String email) {
+//			System.out.println("이메일 인증 요청이 들어옴!");
+//			System.out.println("이메일 인증 이메일 : " + email);
+//			return email;
+//		}
 		
 		
 }
