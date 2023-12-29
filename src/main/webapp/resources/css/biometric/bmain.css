@@ -2,12 +2,66 @@
 
 .room {
 	display: inline-block;
-	margin: 0px 70px;
+	margin: 0px 80px;
+	position: relative;
+	top: 15cm;
 }
 
 #child {
 	width: 1200px;
-    margin: auto;
-    position: relative;
-    left: 20px;
+	margin: auto;
+	position: relative;
+	left: 20px;
+	height: 800px
+}
+
+#child_main {
+	position: relative;
+	top: 50px;
+	border-top: 1px solid black;
+	padding-top: 25px;
+	font-size: 35px;
+}
+
+.room_text {
+	font-size: 40px;
+	color: #FAD778;
+}
+
+body {
+	list-style: none;
+	font-family: 'OTWelcomeRA';
+}
+
+.room_image {
+	border-radius: 200px;
+	width: 350px;
+	height: 350px;
+	position: absolute;
+	top: -400px;
+	left: -75px;
+}
+
+#poptext1, #poptext2, #poptext3 {
+	padding: 15px 20px;
+	background-color: #444444;
+	border-radius: 5px;
+	color: #ffffff;
+	display: none;
+	position: absolute;
+	width: 250px;
+	left:-22%;
+	top:-80%;
+}
+
+#woring_image{
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    left: 114px;
+    background-color: white;
+}
+#woring_text{
+color: red;	
 }
