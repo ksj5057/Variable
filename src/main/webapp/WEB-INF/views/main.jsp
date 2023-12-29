@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
@@ -7,10 +6,8 @@
 <!-- 외부 main.css 연결 -->
 <link rel="stylesheet" href="/resources/css/main.css" />
 <!-- 외부 main.js 연결 -->
-<script type="text/javascript"
-	src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
-<script type="text/javascript"
-	src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="/resources/js/main/main.js"></script>
 <meta charset="UTF-8">
@@ -86,10 +83,10 @@
 
 					<!--진료비결제-->
 					<li class="main_li_6" onmouseenter="zoomIn(event)"
-						onmouseleave="zoomOut(event)"><a href="#">
+						onmouseleave="zoomOut(event)"><a href="bmain">
 							<dl>
-								<dt>진료비 결제</dt>
-								<dd>온라인으로 진료비 결제진행</dd>
+								<dt>소아과 병동</dt>
+								<dd>실시간 소아과 병동 확인</dd>
 							</dl>
 					</a></li>
 					<!--/진료비결제-->
