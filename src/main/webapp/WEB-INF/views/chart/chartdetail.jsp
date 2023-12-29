@@ -6,7 +6,7 @@
 <head>
 <link rel="stylesheet" href="/resources/css/chartdetail.css">
 <meta charset="UTF-8">
-<title>차트 작성</title>
+<title>차트 상세내역</title>
 </head>
 <body>
 
