@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.babyr{
+	margin-top : 75px
+}
+
+.roomn{
+    text-align : center;
+}
+
+.incubator{
+	float : left;
+	margin-left : 163px;
+}
+
+.babylist{
+	display : inline-flex;
+	list-style : none;
+}
+
+.bname{
+	text-align : center;
+}
+
+.baby1{
+	padding-right : 300px;
+}

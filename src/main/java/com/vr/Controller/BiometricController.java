@@ -33,9 +33,9 @@ public class BiometricController {
 	}
 
 	//소아과 아이들 상세보기 페이지로 이동
-	@GetMapping("babydtailed")
+	@GetMapping("babydetail")
 	public String babydtailed() {
-		return "biometric/room/detailed/babydtailed";
+		return "biometric/room/detail/babydetail";
 	}
 
 }
