@@ -190,7 +190,6 @@ public class ChartController {
 	public ResponseEntity <MemberDTO> replywrite(@PathVariable String name, HttpSession session) {
 		MemberDTO md = new MemberDTO();
 		md.setMname(name);
-		System.out.println("aaaa" + md);
 		session.setAttribute("md", cs.chartserch(md));
 		return new ResponseEntity<>(cs.chartserch(md),HttpStatus.OK);
 	}
