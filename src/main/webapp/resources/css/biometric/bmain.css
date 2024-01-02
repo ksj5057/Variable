@@ -12,7 +12,7 @@
 	margin: auto;
 	position: relative;
 	left: 20px;
-	height: 800px
+	min-height: calc(100vh - 142px);
 }
 
 #child_main {
@@ -50,18 +50,19 @@ body {
 	display: none;
 	position: absolute;
 	width: 250px;
-	left:-22%;
-	top:-80%;
+	left: -22%;
+	top: -80%;
 }
 
-#woring_image{
-    width: 30px;
-    height: 20px;
-    position: absolute;
-    top: 10px;
-    left: 114px;
-    background-color: white;
+#woring_image {
+	width: 30px;
+	height: 20px;
+	position: absolute;
+	top: 10px;
+	left: 114px;
+	background-color: white;
 }
-#woring_text{
-color: red;	
+
+#woring_text {
+	color: red;
 }

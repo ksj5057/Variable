@@ -126,36 +126,36 @@ $(document).ready(function() {
 		    document.body.appendChild(f);
 
 		    f.submit();
-
+	
 
 
 
 	}
-
-	var url = "www.naver.com"; 
-	 
-	function openId(){ 
-		 
-		    var option = 'scrollbars=no, left=400, top=200, width=440, height=550'; 
-		 
-		    var name = '아이디 찾기'; 
-		 
-		    // option 변수를 사용하지 않고 직접 옵션을 넣어줘도 된다.
-		    window.open(url, name, option); 
-	} 
-}
-
-var url = '열고 싶은 주소'; 
- 
-function openPw(){ 
-	 
-	    var option = 'scrollbars=no, left=400, top=200, width=440, height=550'; 
-	 
-	    var name = '아이디 찾기'; 
-	 
-	    // option 변수를 사용하지 않고 직접 옵션을 넣어줘도 된다.
-	    window.open(url, name, option); 
-} 
+//
+//	var url = "www.naver.com"; 
+//	 
+//	function openId(){ 
+//		 
+//		    var option = 'scrollbars=no, left=400, top=200, width=440, height=550'; 
+//		 
+//		    var name = '아이디 찾기'; 
+//		 
+//		    // option 변수를 사용하지 않고 직접 옵션을 넣어줘도 된다.
+//		    window.open(url, name, option); 
+//	} 
+//}
+//
+//var url = '열고 싶은 주소'; 
+// 
+//function openPw(){ 
+//	 
+//	    var option = 'scrollbars=no, left=400, top=200, width=440, height=550'; 
+//	 
+//	    var name = '아이디 찾기'; 
+//	 
+//	    // option 변수를 사용하지 않고 직접 옵션을 넣어줘도 된다.
+//	    window.open(url, name, option); 
+//} 
 
 
 

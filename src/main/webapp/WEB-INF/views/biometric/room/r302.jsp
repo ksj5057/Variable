@@ -47,7 +47,8 @@
 
 
 
-		
+		<!--푸터  -->
+<jsp:include page="../../include/footer.jsp"></jsp:include>
 
 </body>
 </html>

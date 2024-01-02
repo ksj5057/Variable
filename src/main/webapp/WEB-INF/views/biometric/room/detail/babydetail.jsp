@@ -49,46 +49,49 @@
 			<!-- 현재 날짜 -->
 			<div>${now}<br>
 				<c:forEach var="ss" begin="1" end="23">
-					<table id="Clinic_time">
+					<table class="Clinic_time">
 						<tr>
 							<td>${ss}시</td>
 						</tr>
 					</table>
 				</c:forEach>
-				<table border="1">
+				<table class="temperatura">
 					<tr>
 					<td>
-					30도
+					40℃
 					</td>
 					</tr>
 					<tr>
 					<td>
-					30도
+					39℃
 					</td>
 					</tr><tr>
 					<td>
-					30도
+					38℃
 					</td>
 					</tr><tr>
 					<td>
-					30도
+					37℃
 					</td>
 					</tr><tr>
 					<td>
-					30도
+					36℃
 					</td>
 					</tr><tr>
 					<td>
-					30도
+					35℃
 					</td>
 					</tr><tr>
 					<td>
-					도
+					34℃
 					</td>
 					</tr>
 					</table>
 			</div>
 		</div>
 	</div>
+	
+	<!--푸터  -->
+<jsp:include page="../../../include/footer.jsp"></jsp:include>
 </body>
 </html>
