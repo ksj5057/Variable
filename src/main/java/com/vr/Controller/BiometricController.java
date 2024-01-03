@@ -11,10 +11,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class BiometricController {
 
-	String pattern = "MM월 dd일";
-	SimpleDateFormat sdf = new SimpleDateFormat(pattern);
-	java.util.Date now = new java.util.Date();
-	String nowString = sdf.format(now);
+	//월일 표시
+	String md = "MM월 dd일";
+	SimpleDateFormat monthd = new SimpleDateFormat(md);
+	java.util.Date dd = new java.util.Date();
+	String Motnhday = monthd.format(dd);
+	
+	//시간 계산
+	String hm = "HH시 mm분";
+	SimpleDateFormat hourm = new SimpleDateFormat(hm);
+	java.util.Date ff = new java.util.Date();
+	String Hourmin = hourm.format(ff);
 	
 	//소아과병동 홈페이로 접속.
 	@GetMapping("bmain")
@@ -44,10 +51,10 @@ public class BiometricController {
 	@GetMapping("babydetail")
 	public String babydtailed(Model model) {
 		//현재 날짜
-		model.addAttribute("now", nowString);
+		model.addAttribute("now", Motnhday);
+		model.addAttribute("non", Hourmin);
 		//시간
-		int time = 01;
-		model.addAttribute("time", time);
+	
 		return "biometric/room/detail/babydetail";
 	}
 
