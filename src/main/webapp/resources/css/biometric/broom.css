@@ -9,11 +9,14 @@
 
 .roomn{
     text-align : center;
+    font-size : 50px;
 }
 
 .incubator{
 	float : left;
-	margin-left : 163px;
+	margin-left : 420px;
+	margin-top : 20px;
+	border : 2px solid black
 }
 
 .babylist{
@@ -26,6 +29,9 @@
 }
 
 .baby1{
-	padding-right : 300px;
+	padding : 50px;
 }
 
+#lababy{
+	margin-right : 40px;
+}
