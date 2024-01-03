@@ -98,7 +98,7 @@ public class HomeController {
 				return "redirect:/chart" + lastu;
 			}
 		}
-		return "main";
+		return "redirect:/";
 	}
 
 	// 로그아웃누르면 메인으로
