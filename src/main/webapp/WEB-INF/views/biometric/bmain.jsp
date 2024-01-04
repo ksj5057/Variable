@@ -105,26 +105,8 @@
 								readonly></label>
 						</div>
 				</tr>
-
-
 			</table>
 		</div>
-
-		<div id="upload">
-			<form action="/uplodeFile.do" method="post"
-				encType="multipart/form-data">
-				<div>파일업로드</div>
-				<div>
-				<!-- 메이븐으로 input type에 'file'을 추가 -->
-					<input type="file" name="uploadFile">
-				</div>
-				<button type="submit">파일업로드</button>
-			</form>
-		</div>
-
-
-
-
 	</div>
 
 
