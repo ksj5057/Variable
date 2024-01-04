@@ -12,6 +12,7 @@ public class BiometricServiceImpl implements BiometricService {
 	@Autowired
 	BiometricMapper bm;
 	
+	//아이 등록
 	public void babyjoin(BiometricDTO bio) {
 		bm.babyjoin(bio);
 	}
