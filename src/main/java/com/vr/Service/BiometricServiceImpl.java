@@ -16,5 +16,9 @@ public class BiometricServiceImpl implements BiometricService {
 	public void babyinsert(BiometricDTO bd) {
 		bm.babyinsert(bd);
 	}
+	
+	public void babydetail(BiometricDTO bd) {
+		bm.babydetail(bd);
+	}
 
 }
