@@ -68,12 +68,15 @@ public class BiometricController {
 	
 	//아이 등록
 	//회원가입 화면에서 회원가입 버튼 클릭시 메소드 실행
-	@RequestMapping(value = "babyjoin", method = RequestMethod.POST)
-
+	@RequestMapping(value = "babyjoin", method = RequestMethod.GET)
 	public String babyjoin(BiometricDTO bio) {
 		bs.babyjoin(bio);
 		return "biometric/bmain";
 		}
 	
-
+	//소아과병동 홈페이로 접속.
+		@GetMapping("babyinsertform")
+		public String babyinsertform() {
+			return "biometric/babyinsertform";
+		}
 }
