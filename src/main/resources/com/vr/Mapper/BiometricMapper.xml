@@ -9,4 +9,5 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		values(#{bname},#{bage},#{bgender},#{mname},#{fname},#{mnumber},#{fnumber},#{bimage});
 	</insert>
 
+	
 </mapper>
