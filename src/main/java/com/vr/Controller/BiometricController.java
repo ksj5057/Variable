@@ -68,7 +68,7 @@ public class BiometricController {
 	
 	//아이 등록
 	//회원가입 화면에서 회원가입 버튼 클릭시 메소드 실행
-	@RequestMapping(value = "member", method = RequestMethod.POST)
+	@RequestMapping(value = "babyjoin", method = RequestMethod.POST)
 
 	public String babyjoin(BiometricDTO bio) {
 		bs.babyjoin(bio);

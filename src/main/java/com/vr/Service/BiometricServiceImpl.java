@@ -7,7 +7,7 @@ import com.vr.Mapper.BiometricMapper;
 import com.vr.Model.BiometricDTO;
 
 @Service
-public class BiometricServiceImpl {
+public class BiometricServiceImpl implements BiometricService {
 
 	@Autowired
 	BiometricMapper bm;
