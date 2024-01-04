@@ -66,13 +66,12 @@ public class BiometricController {
 
 	//소아과 아이들 상세보기 페이지로 이동
 	@GetMapping("babydetail")
-	public String babydtailed(Model model) {
+	public String babydetail(Model model, BiometricDTO bd) {
 		//현재 날짜
-		model.addAttribute("now", Motnhday);
-		model.addAttribute("non", Hourmin);
-		//시간
-	
+		bs.babydetail(bd);
+		model.addAttribute("babydetail", bs.babydetail(bd));
 		return "biometric/room/detail/babydetail";
+		
 	}
 	
 	//아이 등록
