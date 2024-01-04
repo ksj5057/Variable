@@ -4,9 +4,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">    
 
 <mapper namespace="com.vr.Mapper.BiometricMapper">
-<!-- 	<insert id = babyjoin"> -->
-<!-- 		insert into bt(bname, bage, bgender, mname, fname, mnumber, fnumber, bimage)  -->
-<!-- 		values(#{cname},#{rrn},#{disease},#{operation},#{operd},#{enterd},#{exitd},#{dcode}); -->
-<!-- 	</insert> -->
+	<insert id = "babyinsert">
+		insert into bt(bname, bage, bgender, mname, fname, mnumber, fnumber, bimage) 
+		values(#{bname},#{bage},#{bgender},#{mname},#{fname},#{mnumber},#{fnumber},#{bimage});
+	</insert>
 
 </mapper>
