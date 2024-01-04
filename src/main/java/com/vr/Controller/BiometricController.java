@@ -7,10 +7,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.vr.Model.BiometricDTO;
+import com.vr.Service.BiometricService;
 
 @Controller
 public class BiometricController {
-
+	
+	@Autowired
+	BiometricService bs;
+	
 	//월일 표시
 	String md = "MM월 dd일";
 	SimpleDateFormat monthd = new SimpleDateFormat(md);
@@ -57,5 +65,15 @@ public class BiometricController {
 	
 		return "biometric/room/detail/babydetail";
 	}
+	
+	//아이 등록
+	//회원가입 화면에서 회원가입 버튼 클릭시 메소드 실행
+	@RequestMapping(value = "member", method = RequestMethod.POST)
+
+	public String babyjoin(BiometricDTO bio) {
+		bs.babyjoin(bio);
+		return "biometric/bmain";
+		}
+	
 
 }
