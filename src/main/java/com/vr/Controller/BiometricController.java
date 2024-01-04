@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.vr.Model.BiometricDTO;
+import com.vr.Model.MemberDTO;
 import com.vr.Model.fileVO;
 import com.vr.Service.BiometricService;
 import com.vr.Service.fileServiece;
@@ -76,11 +77,15 @@ public class BiometricController {
 	
 	//아이 등록
 	//회원가입 화면에서 회원가입 버튼 클릭시 메소드 실행
-	@RequestMapping(value = "babyjoin", method = RequestMethod.GET)
-	public String babyjoin(BiometricDTO bio) {
-		bs.babyjoin(bio);
+	@RequestMapping(value = "babyinsert", method = RequestMethod.GET)
+	public String babyinsert(BiometricDTO bd) {
+		bs.babyinsert(bd);
 		return "biometric/bmain";
 		}
+	
+	//회원가입 화면에서 회원가입 버튼 클릭시 메소드 실행
+	
+
 	
 	//소아과병동 홈페이로 접속.
 		@GetMapping("babyinsertform")
@@ -119,6 +124,8 @@ public class BiometricController {
 			return ""; //특정 jsp페이지로 지정해도되나 나는 따로 지정을 안하여 controller가 실행한뒤 404에러페이지가 나온다
 	    
 		}
+		
+		
 
 		@RequestMapping(value = "test", method = RequestMethod.GET)
 		public String btest() {
