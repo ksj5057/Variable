@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>소아과병동 | 302호</title>
-<link rel="stylesheet" href="../resources/css/biometric/broom.css" />
+<link rel="stylesheet" href="../resources/css/biometric/broom302.css" />
 </head>
 <body>
 

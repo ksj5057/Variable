@@ -2,6 +2,10 @@
 
 #room_body{
  min-height: calc(100vh - 142px);
+ background-image : url("../../../resources/image/sol.jpg");
+ background-repeat : no-repeat;
+ background-size : 100%;
+ background-position : center
 }
 .babyr{
 	margin-top : 75px

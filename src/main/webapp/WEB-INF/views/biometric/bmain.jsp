@@ -82,9 +82,9 @@
 		<!--  이미지에 303호실 링크 걸기 -->
 		<a href="r303" class="room_text">
 		<!--  이미지에 새싹반(303호실)-->
-		<img src="../../resources/image/biometric/새싹반.png" class="room_image" id="room_pop3">
+		<img src="../../resources/image/biometric/꽃잎반.png" class="room_image" id="room_pop3">
 		</a>
-		<div id="poptext3">클릭 하면 새싹반으로 들어갈수있어요!</div>
+		<div id="poptext3">클릭 하면 꽃잎반으로 들어갈수있어요!</div>
 		
 		<a href="r303" class="room_text">303호</a>
 		<c:if test=""><!-- 경고문이 뜨는 조건 -->

@@ -66,9 +66,9 @@
 					<!-- 차트 데이터 -->
 					<script>
 						var arr = [20];
-						ctx.textAlign = "center";
-						ctx.textBaseline = "middle";
-						ctx.direction = "rtl";
+// 						ctx.textAlign = "center";
+// 						ctx.textBaseline = "middle";
+// 						ctx.direction = "rtl";
 						new Chart(
 								document.getElementById("line-chart"),
 								{
