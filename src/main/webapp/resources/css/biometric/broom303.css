@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+#room_body{
+ min-height: calc(100vh - 142px);
+ background-image : url("../../../resources/image/flower.jpg");
+ background-repeat : no-repeat;
+ background-size : 100%;
+ background-position : center
+}
+.babyr{
+	margin-top : 75px
+}
+
+.roomn{
+    text-align : center;
+    font-size : 50px;
+}
+
+.incubator{
+	float : left;
+	margin-left : 420px;
+	margin-top : 20px;
+}
+
+.babylist{
+	display : inline-flex;
+	list-style : none;
+}
+
+.bname{
+	text-align : center;
+}
+
+.baby1{
+	padding : 50px;
+}
+
+#lababy{
+	margin-right : 40px;
+}

@@ -2,6 +2,10 @@
 
 #room_body{
  min-height: calc(100vh - 142px);
+ background-image : url("../../../resources/image/sol.jpg");
+ background-repeat : no-repeat;
+ background-size : 100%;
+ background-position : center
 }
 .babyr{
 	margin-top : 75px
@@ -9,11 +13,13 @@
 
 .roomn{
     text-align : center;
+    font-size : 50px;
 }
 
 .incubator{
 	float : left;
-	margin-left : 163px;
+	margin-left : 420px;
+	margin-top : 20px;
 }
 
 .babylist{
@@ -26,6 +32,9 @@
 }
 
 .baby1{
-	padding-right : 300px;
+	padding : 50px;
 }
 
+#lababy{
+	margin-right : 40px;
+}
