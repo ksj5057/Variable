@@ -1,5 +1,33 @@
 @charset "UTF-8";
 
+.room_3031, .room_3032, .room_3033{
+	display: inline-block;
+}
+
+.room_3031 {
+    position: relative;
+    left: -121px;
+}
+.room_3032 {
+    position: relative;
+    left: -8px;
+}
+
+.room_3033 {
+    position: relative;
+   left: 104px;
+}
+
+.discharge{
+    position: relative;
+    left: 642px;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    top: 55px;
+}
+
 #room_body{
  min-height: calc(100vh - 142px);
  background-image : url("../../../resources/image/flower.jpg");
