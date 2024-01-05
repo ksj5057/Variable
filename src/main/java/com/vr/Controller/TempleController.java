@@ -1,24 +1,26 @@
 package com.vr.Controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.vr.Model.TempleDAO;
 import com.vr.Model.TempleDTO;
+import com.vr.Service.TempleService;
 
+@Controller
 public class TempleController {
 
-	@RequestMapping(value = "/basic/m3.action", method = { RequestMethod.GET })
-	@ResponseBody 
-	public TempleDTO m3(HttpServletRequest req, HttpServletResponse resp, HttpSession session, String seq, TempleDTO td) {
-
-		TempleDTO dto = td.getTemp(seq);
-	    return dto; 
+	@Autowired
+	TempleService ts;
+	
+	@RequestMapping(value = "test", method = RequestMethod.GET)
+	public String temple(TempleDTO td, Model model) {
+		// select 값을 tmps에 저장
+		model.addAttribute("temple", ts.temp_s(td));
+		return "biometric/test";
 	}
+
 	
 }

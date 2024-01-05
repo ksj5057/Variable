@@ -1,37 +1,32 @@
 package com.vr.Model;
 
-import java.math.BigInteger;
-
-
 public class TempleDTO {
-	// 온도값	
-	private String temp;
+
 	// 측정날짜
-	private BigInteger today;
+	private String today;
+	// 측정온도
+	private String temp;
 	
 	
+	public String getToday() {
+		return today;
+	}
+	public void setToday(String today) {
+		this.today = today;
+	}
 	public String getTemp() {
 		return temp;
 	}
 	public void setTemp(String temp) {
 		this.temp = temp;
 	}
-	public BigInteger getToday() {
-		return today;
-	}
-	public void setToday(BigInteger today) {
-		this.today = today;
-	}
 	
 	@Override
 	public String toString() {
-		return "TempleDTO [temp=" + temp + ", today=" + today + ", getTemp()=" + getTemp() + ", getToday()="
-				+ getToday() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
+		return "TempleDTO [today=" + today + ", temp=" + temp + ", getToday()=" + getToday() + ", getTemp()="
+				+ getTemp() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
 				+ super.toString() + "]";
 	}
-	public TempleDTO getTemp(String seq) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 	
 }
