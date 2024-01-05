@@ -14,14 +14,19 @@ $(document).ready(function(){
 		$(".setting_icon").toggle();
 		
 	})
-	//아이콘을 누르면 체크표시 이미지로 변경 되고
-	//체크 된 아이콘의 이미지가 아이사진 옆에 뜨게함
 	$("#icon_1").click(function(){
+		//마이너스 이미지를 누르면 체크 이미지로 변경
 		$("#icon_1").attr("src", "../resources/image/biometric/check.png")
+		//확인 절차로 다시 마이너스 이미지를 아이 사진 옆에 출력
 		$("#check_icon1").css("display", "block");
+		// 플러스 이미지는 안보이게 하기
 		$("#check_icon2").css("display", "none");
+		//플러스 이미지를 누르면 체크 이미지로 변경
 		$("#icon_2").attr("src", "../resources/image/biometric/plus.png")
+			
+			//확인 절차 마이너스 이미지를 클릭 시 
 			$('#check_icon1').click(function(){
+				// romm_302_1의 정보를 안보이게 함
 				$("#room_302_1").css("display", "none");
 			})
 	})

@@ -42,14 +42,13 @@
 			<a href = "babydetail">
 				<img src = "../resources/image/biobaby/sosuke.jpg" width = "225px" height = "300px">
 			</a>
-				<dl>
-					<dt class = "bname"><a href = "babydetail" >소숙해</a></dt>
-					<dd>현재 체온 : ℃</dd>
-					<dd>체온이 높습니다</dd>
-				</dl>
-		</li>
 	</ul> 
-
+			<div id="tem_ment1">
+					<div class = "bname"><a href = "babydetail" >소숙해</a></div>
+					<div>현재 체온 : ℃</div>
+					<div>체온이 높습니다</div>
+					<div>체온이 낮습니다</div>
+			</div>
 	<ul class = "babylist">
 		<li>
 			<div class="setting_icon">
@@ -67,15 +66,13 @@
 		<a href="babydetail">
 			<img src="../resources/image/biobaby/anya.jpg" width="225px" height="300px">
 		</a>
-			<dl>
-				<dt class="bname">
-					<a href="babydetail">안이야</a>
-				</dt>
-				<dd>현재 체온 : ℃</dd>
-				<dd>체온이 낮습니다</dd>
-			</dl>
-		</li>
 	</ul>
+		<div id="tem_ment2">
+					<div class = "bname"><a href = "babydetail" >소숙해</a></div>
+					<div>현재 체온 : ℃</div>
+					<div>체온이 높습니다</div>
+					<div>체온이 낮습니다</div>
+			</div>
 	
 	<ul class = "babylist">
 		<li>
@@ -94,13 +91,14 @@
 			<a href = "babydetail">
 				<img src = "../resources/image/biobaby/rlcjf.jpg" width = "225px" height = "300px">
 			</a>
-			<dl>
-				<dt class = "bname"><a href = "babydetail" >이기철</a></dt>
-				<dd>현재 체온 : ℃</dd>
-				<dd>정상체온입니다</dd>
-			</dl>
-		</li>
 	</ul>
+		<div id="tem_ment3">
+					<div class = "bname"><a href = "babydetail" >소숙해</a></div>
+					<div>현재 체온 : ℃</div>
+					<div>체온이 높습니다</div>
+					<div>체온이 낮습니다</div>
+			</div>
+	
 </div>
 </div>
 
