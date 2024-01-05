@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +12,13 @@
 <jsp:include page="../../include/header.jsp"></jsp:include>
 <div id="room_body">
 <div class = "babyr"><h1 class = "roomn">303호</h1></div>
-		
+<div class="room_3031"><input type="button" value="입원" class="discharge"></div>
+<div class="room_3031"><input type="button" value="퇴원" class="discharge"></div>
+<div class="room_3032"><input type="button" value="입원" class="discharge"></div>
+<div class="room_3032"><input type="button" value="퇴원" class="discharge"></div>
+<div class="room_3033"><input type="button" value="입원" class="discharge"></div>
+<div class="room_3033"><input type="button" value="퇴원" class="discharge"></div>
+
 <div class = "incubator">
 	<ul class = "babylist">
 		<li class = "baby1">
