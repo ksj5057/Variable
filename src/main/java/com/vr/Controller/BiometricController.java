@@ -68,7 +68,7 @@ public class BiometricController {
 	@GetMapping("babydetail")
 	public String babydetail(Model model, BiometricDTO bd) {
 		//현재 날짜
-		bs.babydetail(bd);
+		//bs.babydetail(bd);
 		//model.addAttribute("babydetail", bs.babydetail(bd));
 		return "biometric/room/detail/babydetail";
 		
