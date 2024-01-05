@@ -16,7 +16,7 @@
 <div class = "incubator">
 	<ul class = "babylist">
 		<li class = "baby1">
-		<a href = "babydetail"><img src = "../resources/image/bossbaby.jpg" width = "225px" height = "300px"></a>
+		<a href = "babydetail"><img src = "../resources/image/biobaby/bossbaby.jpg" width = "225px" height = "300px"></a>
 			<dl>
 				<dt class = "bname"><a href = "babydetail">이보배</a></dt>
 				<dd>현재 체온 : ℃</dd>
@@ -24,7 +24,7 @@
 			</dl>
 		</li>
 		<li class = "baby1">
-		<a href = "babydetail"><img src = "../resources/image/incredible.jpg" width = "225px" height = "300px"></a>
+		<a href = "babydetail"><img src = "../resources/image/biobaby/incredible.jpg" width = "225px" height = "300px"></a>
 			<dl>
 				<dt class = "bname"><a href = "babydetail">김잭잭</a></dt>
 				<dd>현재 체온 : ℃</dd>
@@ -32,7 +32,7 @@
 			</dl>
 		</li>
 		<li class = "baby1" id = "lababy">
-		<a href = "babydetail"><img src = "../resources/image/himawari.jpg" width = "225px" height = "300px"></a>
+		<a href = "babydetail"><img src = "../resources/image/biobaby/himawari.jpg" width = "225px" height = "300px"></a>
 			<dl>
 				<dt class = "bname"><a href = "babydetail">신짱아</a></dt>
 				<dd>현재 체온 : ℃</dd>

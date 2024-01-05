@@ -14,107 +14,122 @@
 <body>
 	<!-- 헤더 -->
 			<jsp:include page="../include/header.jsp"></jsp:include>
-			
-			
-			
-			
-		<div id="child">
-		
+
+
+
+
+	<div id="child">
+
 		<div id="child_body">
-		<h1 id="child_main">그린대학교병원 소아과병동(3F)</h1>
-		
-		
-		
-		
-		<!--  301호 or 실내온도 div -->
-		<table>
-		<tr>
-		<td>
-		<div class="room">
-		<a href="r301" class="room_text" >
-		<!-- 이미지 솔잎반(301호실) -->
-		
-		<img src="../../resources/image/biometric/솔잎반.png" class="room_image" id="room_pop1">
-		</a>
-		<div id="poptext1">클릭 하면 솔잎반으로 들어갈수있어요!</div>
-		
-		<a href="r301" class="room_text" >301호</a>
-		<c:if test="${id = null }">
-		<div id="woring">
-		<!-- 경고 이미지 -->
-		<img src="../../resources/image/biometric/경고.png" id="woring_image"/>
+			<h1 id="child_main">그린대학교병원 소아과병동(3F)</h1>
+
+
+
+
+			<!--  301호 or 실내온도 div -->
+			<table>
+				<tr>
+					<td>
+						<div class="room">
+							<a href="r301" class="room_text"> <!-- 이미지 솔잎반(301호실) --> <img
+								src="../../resources/image/biometric/솔잎반.png" class="room_image"
+								id="room_pop1">
+							</a>
+							<div id="poptext1">클릭 하면 솔잎반으로 들어갈수있어요!</div>
+
+							<a href="r301" class="room_text">301호</a>
+							<c:if test="${id = null }">
+								<div id="woring">
+									<!-- 경고 이미지 -->
+									<img src="../../resources/image/biometric/경고.png"
+										id="woring_image" />
+								</div>
+								<!--  경고 문구  -->
+								<div id="woring_text">이상이 있습니다. 확인해주세요</div>
+							</c:if>
+							<br> <label>실내온도: <input type="text" value="24.5℃"
+								readonly></label>
+						</div>
+					</td>
+
+
+					<td>
+						<!--  302호 or 실내온도 div -->
+						<div class="room">
+							<!--  이미지에 302호실 링크 걸기 -->
+							<a href="r302" class="room_text"> <!-- 이미지 풀잎반(302호실) --> <img
+								src="../../resources/image/biometric/풀잎반.png" class="room_image"
+								id="room_pop2">
+							</a>
+							<div id="poptext2">클릭 하면 풀잎반으로 들어갈수있어요!</div>
+
+							<a href="r302" class="room_text">302호</a>
+							<c:if test="${id = null }">
+								<!-- 경고문이 뜨는 조건 -->
+								<div id="woring">
+									<!-- 경고 이미지 -->
+									<img src="../../resources/image/biometric/경고.png"
+										id="woring_image" />
+								</div>
+								<!--  경고 문구  -->
+								<div id="woring_text">이상이 있습니다. 확인해주세요</div>
+							</c:if>
+							<br> <label>실내온도: <input type="text" value="26.5℃"
+								readonly></label>
+						</div>
+					</td>
+
+
+					<td>
+						<!--  303호 or 실내온도 div -->
+						<div class="room">
+							<!--  이미지에 303호실 링크 걸기 -->
+							<a href="r303" class="room_text"> <!--  이미지에 새싹반(303호실)--> <img
+								src="../../resources/image/biometric/꽃잎반.png" class="room_image"
+								id="room_pop3">
+							</a>
+							<div id="poptext3">클릭 하면 꽃잎반으로 들어갈수있어요!</div>
+
+							<a href="r303" class="room_text">303호</a>
+							<c:if test="">
+								<!-- 경고문이 뜨는 조건 -->
+								<div id="woring">
+									<!-- 경고 이미지 -->
+									<img src="../../resources/image/biometric/경고.png"
+										id="woring_image" />
+								</div>
+								<!--  경고 문구  -->
+								<div id="woring_text">이상이 있습니다. 확인해주세요</div>
+							</c:if>
+							<br> <label>실내온도: <input type="text" value="25℃"
+								readonly></label>
+						</div>
+				</tr>
+
+
+			</table>
 		</div>
-		<!--  경고 문구  -->
-		<div id="woring_text">이상이 있습니다. 확인해주세요</div>
-				</c:if><br>
-		<label>실내온도: <input type="text" value="24.5℃" readonly ></label>
+
+		<div id="upload">
+			<form action="/uplodeFile.do" method="post"
+				encType="multipart/form-data">
+				<div>파일업로드</div>
+				<div>
+				<!-- 메이븐으로 input type에 'file'을 추가 -->
+					<input type="file" name="uploadFile">
+				</div>
+				<button type="submit">파일업로드</button>
+			</form>
 		</div>
-		</td>
-		
-		
-		<td>
-		<!--  302호 or 실내온도 div -->
-		<div class="room">
-		<!--  이미지에 302호실 링크 걸기 -->
-		<a href="r302" class="room_text" >
-		<!-- 이미지 풀잎반(302호실) -->
-		<img src="../../resources/image/biometric/풀잎반.png" class="room_image" id="room_pop2">
-		</a>
-		<div id="poptext2">클릭 하면 풀잎반으로 들어갈수있어요!</div>
-		
-		<a href="r302" class="room_text">302호</a>
-		<c:if test="${id = null }"> <!-- 경고문이 뜨는 조건 -->
-		<div id="woring">
-		<!-- 경고 이미지 -->
-		<img src="../../resources/image/biometric/경고.png" id="woring_image"/>
-		</div>
-		<!--  경고 문구  -->
-		<div id="woring_text">이상이 있습니다. 확인해주세요</div>
-				</c:if><br>
-		<label>실내온도: <input type="text" value="26.5℃" readonly ></label>
-		</div>	
-		</td>
-		
-		
-		<td>
-		<!--  303호 or 실내온도 div -->
-		<div class="room">
-		<!--  이미지에 303호실 링크 걸기 -->
-		<a href="r303" class="room_text">
-		<!--  이미지에 새싹반(303호실)-->
-		<img src="../../resources/image/biometric/꽃잎반.png" class="room_image" id="room_pop3">
-		</a>
-		<div id="poptext3">클릭 하면 꽃잎반으로 들어갈수있어요!</div>
-		
-		<a href="r303" class="room_text">303호</a>
-		<c:if test=""><!-- 경고문이 뜨는 조건 -->
-		<div id="woring">
-		<!-- 경고 이미지 -->
-		<img src="../../resources/image/biometric/경고.png" id="woring_image"/>
-		</div>
-		<!--  경고 문구  -->
-		<div id="woring_text">이상이 있습니다. 확인해주세요</div>
-				</c:if><br>
-		<label>실내온도: <input type="text" value="25℃" readonly ></label>
-		</div>
-		</tr>
-		
-		
-		</table>
-		</div>
-		
-		
-		
-		
-		
-		
-		
-		
-		</div>
-		
-		
-		
-		<!-- 푸터 -->
+
+
+
+
+	</div>
+
+
+
+	<!-- 푸터 -->
 		<jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
 </html>
