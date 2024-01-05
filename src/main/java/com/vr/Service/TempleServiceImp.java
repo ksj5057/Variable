@@ -1,5 +1,7 @@
 package com.vr.Service;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +12,10 @@ import com.vr.Model.TempleDTO;
 public class TempleServiceImp implements TempleService {
 
 	@Autowired
-	TempleMapper tm;	
+	TempleMapper tm;
 	
-	public void temp_select(TempleDTO tmpdto) {
-		tm.temp_select(tmpdto);
-		
+	public ArrayList<TempleDTO> temp_s(TempleDTO td) {
+		return tm.temp_s(td);
 	}
+
 }

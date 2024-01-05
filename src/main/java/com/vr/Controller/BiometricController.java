@@ -125,8 +125,5 @@ public class BiometricController {
 		
 		
 
-		@RequestMapping(value = "test", method = RequestMethod.GET)
-		public String btest() {
-			return "biometric/test";
-			}
+
 }
