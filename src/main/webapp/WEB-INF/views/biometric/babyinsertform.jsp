@@ -4,59 +4,59 @@
 <html>
 <head>
 <link rel="stylesheet" href="/resources/css/biometric/babyinsertform.css" />
+
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-<form action ="babyinsert" method ="get">
-<table class = "babyinfo">
-	<tr>
-		<th>아이 이름</th> 
-		<td><input type = "text" name = "bname"></td>
-	</tr>
-	<tr>
-		<th>아이 나이</th>
-		<td><input type = "text" name = "bage"> 세 </td>
-	</tr>
-	<tr>
-		<th>아이 성별</th>
-		<td>
-			남<input type = "radio" name = "bgender" value = "남">
-	 		여<input type = "radio" name = "bgender" value = "여">
-	 	</td> 
-	 </tr>
-	<tr>
-		<th>보호자 이름</th>
-		<td><input type = "text" name = "mname"></td> 
-	</tr>
-	<tr>
-		<th>보호자 번호</th>
-		<td><input type = "text" name = "mnumber"></td> 
-	</tr>
-	<tr>
-		<th>보호자2 이름</th>
-		<td><input type = "text" name = "fname"></td> 
-	</tr>
-	<tr>
-		<th>보호자2 번호</th>
-		<td><input type = "text" name = "fnumber"></td>
-	</tr>
-	<tr>
-		<th>아이 사진</th>
-		<td>
-			<div id="upload">
-				<div>파일업로드</div>
-				<div>
+
+	<!-- 헤더 -->
+	<jsp:include page="../include/header.jsp"></jsp:include>
+<div class = "bbbox">
+<div class="wrapper">
+  <div class="container">
+    <h1>아이 정보 등록</h1>
+    
+    <form class = "form" action ="babyinsert" method ="get">
+      <div class = "bname"><input class ="text" type="text" placeholder="아이이름" name = "bname"></div>
+      <div class="upload">
+			<div>아이 사진</div>
+			<div>
 				<!-- 메이븐으로 input type에 'file'을 추가 -->
-					<input type="file" name="bimage">
-				</div>
-			
+				<input type="file" name="bimage">
 			</div>
-		</td>
-	</tr>
-</table>
-<br>
-<input type = "submit" value = "등록">
-</form>
+			
+	  </div>
+	  <div class = "bname"><input class ="text" type="text" placeholder="아이나이" name = "bage"></div>
+   	  <div class = "dradio">
+   	  	남<input class = "radio" type = "radio" name = "bgender" value = "남">
+		여<input class = "radio" type = "radio" name = "bgender" value = "여">
+	  </div>
+      <input class ="text" type="text" placeholder="보호자 이름" name = "mname">
+      <input class ="text"type="text" placeholder="보호자 휴대번호" name = "mnumber">
+      <input class ="text"type="text" placeholder="보호자2 이름" name = "fname">
+      <input class ="text"type="text" placeholder="보호자2 휴대번호" name = "fnumber">
+      
+      <button type="submit" id="login-button">등록 완료</button>
+    </form>
+  </div>
+  
+  <ul class="bg-bubbles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+</div>
+
+<!-- 푸터 -->
+		<div><jsp:include page="../include/footer.jsp"></jsp:include></div>
 </body>
 </html>

@@ -43,7 +43,7 @@
 
 					<!--예약현황조회-->
 					<li class="main_li_2" onmouseenter="zoomIn(event)"
-						onmouseleave="zoomOut(event)"><a href="#">
+						onmouseleave="zoomOut(event)"><a href="test2">
 							<dl>
 								<dt>예약현황조회</dt>
 								<dd>진료예약현황을 조회</dd>
