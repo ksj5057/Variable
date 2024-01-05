@@ -1,14 +1,74 @@
 @charset "UTF-8";
 
+#setting_set{
+	padding: 15px 20px;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    position: absolute;
+    width: 50px;
+    left: -31.8%;
+    top: 70%;
+    font-family: 'OTWelcomeRA';
+}
+
+#check_icon1, #check_icon2{
+	position: absolute;
+    left: 23.7%;
+    top: 33%;
+}
+
+#check_icon3, #check_icon4{
+	position: absolute;
+    left: 41.9%;
+    top: 33%;
+}
+
+#check_icon5, #check_icon6{
+	position: absolute;
+    left: 60%;
+    top: 33%;
+}
+
+.setting_icon{
+	width:100px;
+	position: relative;
+    top: -50px;
+    left: 95px;
+    display: none;
+}
+
+.icon , .icon2{
+	height: 40px;
+}
+
+#check_icon1, #check_icon2, #check_icon3, #check_icon4, #check_icon5, #check_icon6{
+	display: none;
+}
+#setting_ment{
+	position: absolute;
+    width: 50px;
+    left: 81.2%;
+    top: 25%;
+}
+
+#setting {
+    position: relative;
+    left: -15%;
+}
+
 #room_body{
+ margin: 0 auto;
  min-height: calc(100vh - 142px);
  background-image : url("../../../resources/image/grass.jpg");
  background-repeat : no-repeat;
  background-size : 100%;
  background-position : center
 }
+
 .babyr{
-	margin-top : 75px
+	margin-top : 75px;
+	margin-bottom : 75px;
 }
 
 .roomn{
@@ -17,22 +77,32 @@
 }
 
 .incubator{
-	float : left;
-	margin-left : 420px;
-	margin-top : 20px;
+	margin: 0 auto;
+    width: 1200px;
+    height: 100vh;
 }
 
+.babylist li:nth-child(1){
+	width: 83px;
+	display: inline-block;
+	float: left;
+}
 .babylist{
-	display : inline-flex;
+	display : inline-block;
 	list-style : none;
+	float: left;
 }
 
 .bname{
-	text-align : center;
+	text-align: left;
+    margin-left: 40px;
+
 }
 
 .baby1{
-	padding : 50px;
+	display: inline-block;
+    position: relative;
+    left: 5%;
 }
 
 #lababy{
