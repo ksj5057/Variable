@@ -69,7 +69,7 @@ public class BiometricController {
 	public String babydetail(Model model, BiometricDTO bd) {
 		//현재 날짜
 		bs.babydetail(bd);
-		model.addAttribute("babydetail", bs.babydetail(bd));
+		//model.addAttribute("babydetail", bs.babydetail(bd));
 		return "biometric/room/detail/babydetail";
 		
 	}
