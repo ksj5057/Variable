@@ -19,18 +19,26 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.vr.Model.BiometricDTO;
+import com.vr.Model.TempleDTO;
 import com.vr.Model.fileVO;
 import com.vr.Service.BiometricService;
+import com.vr.Service.TempleService;
 import com.vr.Service.fileServiece;
 
 @Controller
 public class BiometricController {
 	
+	//아기등록 서비스 객체
 	@Autowired
 	BiometricService bs;
 	
+	//파일 업로드 서비스 객체
 	@Autowired
 	fileServiece fv;
+	
+	//온도, 날짜 서비스 객체
+	@Autowired
+	TempleService ts;
 	
 	//월일 표시
 	String md = "MM월 dd일";
@@ -138,11 +146,11 @@ public class BiometricController {
 			bd.setBno(bno);
 			return new ResponseEntity<>(bs.baby_room_in(bd),HttpStatus.OK);
 		}
-//		@GetMapping("/post/chart/time")
-//		public ResponseEntity<?> tem(HttpSession session){
-//			
-//			return new ResponseEntity<>(,HttpStatus.OK);
-//		}
+		@GetMapping("/post/chart/time")
+		public ResponseEntity<?> tem(HttpSession session, TempleDTO td){
+			System.out.println("연결 중.....");
+			return new ResponseEntity<>(ts.temp_s(td),HttpStatus.OK);
+		}
 		
 
 
