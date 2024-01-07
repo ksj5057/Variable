@@ -1,20 +1,51 @@
 @charset "UTF-8";
 
+img{cursor: pointer}
+.cursor_test {cursor: pointer}
+
+
+#insert_baby_table1 {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    min-height: 290px;
+    display: none;
+}
+
+#insert_baby_table2{
+position: absolute;
+    top: 30%;
+    left: 43%;
+    min-height: 290px;
+    display: none;
+}
+#insert_baby_table3{
+position: absolute;
+    top: 30%;
+    left: 61%;
+    min-height: 290px;
+    display: none;
+}
+
+#insert_baby_name1, #insert_baby_bno1,#insert_baby_name2, #insert_baby_bno2,#insert_baby_name3, #insert_baby_bno3{
+	width: 45px;
+}
+
 #tem_ment1, #tem_ment2, #tem_ment3 {
 	position: absolute;
 	top: 66%;
 }
 
 #tem_ment1 {
-	left: 24%;
+left: 27.5%
 }
 
 #tem_ment2 {
-	left: 43%;
+	left: 46%;
 }
 
 #tem_ment3 {
-	left: 61%;
+	left: 64%;
 }
 
 #setting_set {
