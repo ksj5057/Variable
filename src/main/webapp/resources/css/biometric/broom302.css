@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 #icon_1, #icon_2 {
     position: absolute;
     top: -31%;
@@ -66,6 +67,7 @@ position: absolute;
 
 #insert_baby_name1, #insert_baby_bno1,#insert_baby_name2, #insert_baby_bno2,#insert_baby_name3, #insert_baby_bno3{
 	width: 100px;
+	border: none;
 }
 
 #tem_ment{

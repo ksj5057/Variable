@@ -114,11 +114,11 @@ public class BiometricController {
 					
 					//아기 정보값을 검색하여 나온 값을 vv에 저장
 						if(count == 1) {
-							//중복이면 0을 반환
+							//중복이면 0을 반환하면 js에서 등록실패 문구 출력
 							return new ResponseEntity<>(0,HttpStatus.OK);
 						}
 						else
-						{
+						{// 그외에는 db에 값을 입력.
 							BiometricDTO vv = bs.baby_room_sel(bd);
 						return new ResponseEntity<>(bs.baby_room_in(vv),HttpStatus.OK);
 						}
