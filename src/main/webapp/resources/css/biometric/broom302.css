@@ -1,110 +1,151 @@
 @charset "UTF-8";
 
-#setting_set{
-	padding: 15px 20px;
-    background-color: white;
-    border-radius: 5px;
-    color: black;
+img{cursor: pointer}
+.cursor_test {cursor: pointer}
+
+
+#insert_baby_table1 {
     position: absolute;
-    width: 50px;
-    left: -31.8%;
-    top: 70%;
-    font-family: 'OTWelcomeRA';
-}
-
-#check_icon1, #check_icon2{
-	position: absolute;
-    left: 23.7%;
-    top: 33%;
-}
-
-#check_icon3, #check_icon4{
-	position: absolute;
-    left: 41.9%;
-    top: 33%;
-}
-
-#check_icon5, #check_icon6{
-	position: absolute;
-    left: 60%;
-    top: 33%;
-}
-
-.setting_icon{
-	width:100px;
-	position: relative;
-    top: -50px;
-    left: 95px;
+    top: 30%;
+    left: 25%;
+    min-height: 290px;
     display: none;
 }
 
-.icon , .icon2{
+#insert_baby_table2{
+position: absolute;
+    top: 30%;
+    left: 43%;
+    min-height: 290px;
+    display: none;
+}
+#insert_baby_table3{
+position: absolute;
+    top: 30%;
+    left: 61%;
+    min-height: 290px;
+    display: none;
+}
+
+#insert_baby_name1, #insert_baby_bno1,#insert_baby_name2, #insert_baby_bno2,#insert_baby_name3, #insert_baby_bno3{
+	width: 45px;
+}
+
+#tem_ment1, #tem_ment2, #tem_ment3 {
+	position: absolute;
+	top: 66%;
+}
+
+#tem_ment1 {
+left: 27.5%
+}
+
+#tem_ment2 {
+	left: 46%;
+}
+
+#tem_ment3 {
+	left: 64%;
+}
+
+#setting_set {
+	padding: 15px 20px;
+	background-color: white;
+	border-radius: 5px;
+	color: black;
+	position: absolute;
+	width: 50px;
+	left: -31.8%;
+	top: 70%;
+	font-family: 'OTWelcomeRA';
+}
+
+#check_icon1, #check_icon2, #check_icon3, #check_icon4, #check_icon5, #check_icon6 {
+	position: absolute;
+	left: 3.7%;
+    top: 0;
+}
+
+.setting_icon {
+	width: 100px;
+	position: relative;
+	top: -50px;
+	left: 10px;
+	display: none;
+}
+
+.icon, .icon2 {
 	height: 40px;
 }
 
-#check_icon1, #check_icon2, #check_icon3, #check_icon4, #check_icon5, #check_icon6{
+#check_icon1, #check_icon2, #check_icon3, #check_icon4, #check_icon5,
+	#check_icon6 {
 	display: none;
 }
-#setting_ment{
+
+#setting_ment {
 	position: absolute;
-    width: 50px;
-    left: 81.2%;
-    top: 25%;
+	width: 50px;
+	left: 81.2%;
+	top: 25%;
 }
 
 #setting {
-    position: relative;
-    left: -15%;
+	position: relative;
+	left: -15%;
 }
 
-#room_body{
- margin: 0 auto;
- min-height: calc(100vh - 142px);
- background-image : url("../../../resources/image/grass.jpg");
- background-repeat : no-repeat;
- background-size : 100%;
- background-position : center
-}
-
-.babyr{
-	margin-top : 75px;
-	margin-bottom : 75px;
-}
-
-.roomn{
-    text-align : center;
-    font-size : 50px;
-}
-
-.incubator{
+#room_body {
 	margin: 0 auto;
-    width: 1200px;
-    height: 100vh;
+	min-height: calc(100vh - 142px);
+	background-image: url("../../../resources/image/grass.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center
 }
 
-.babylist li:nth-child(1){
-	width: 83px;
+.babyr {
+	margin-top: 75px;
+	margin-bottom: 75px;
+}
+
+.roomn {
+	text-align: center;
+	font-size: 50px;
+}
+
+.incubator {
+	margin: 0 auto;
+	width: 1200px;
+	height: 100vh;
+}
+
+.babylist li:nth-child(1) {
+	width: 0px;
 	display: inline-block;
 	float: left;
 }
-.babylist{
-	display : inline-block;
-	list-style : none;
-	float: left;
-}
 
-.bname{
-	text-align: left;
-    margin-left: 40px;
-
-}
-
-.baby1{
-	display: inline-block;
+.babylist {
+    display: inline-block;
+    list-style: none;
+    margin: 0px 35px;
+    left: 5px;
     position: relative;
-    left: 5%;
+    left: 40px;
 }
 
-#lababy{
-	margin-right : 40px;
+.bname {
+	text-align: left;
+	margin-left: 40px;
+}
+
+.baby1 {
+	display: inline-block;
+	position: relative;
+	left: 5%;
+}
+
+#lababy {
+	margin-right: 40px;
 }

@@ -8,6 +8,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		insert into bt(bname, bage, bgender, mname, fname, mnumber, fnumber, bimage) 
 		values(#{bname},#{bage},#{bgender},#{mname},#{fname},#{mnumber},#{fnumber},#{bimage});
 	</insert>
-
+	
+	<select id="babylist" resultType="com.vr.Model.BiometricDTO">
+		select * from bb;
+	</select>
+	
+	<insert id="baby_room_in">
+	insert into room302(bname, bno) value(#{bname},#{bno});
+	</insert>
 	
 </mapper>

@@ -1,6 +1,9 @@
 package com.vr.Service;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.vr.Mapper.BiometricMapper;
@@ -19,6 +22,14 @@ public class BiometricServiceImpl implements BiometricService {
 	
 	public void babydetail(BiometricDTO bd) {
 		bm.babydetail(bd);
+	}
+	
+	public ArrayList<BiometricDTO> babylist(BiometricDTO bd){
+		return bm.babylist(bd);
+	}
+	
+	public int baby_room_in(BiometricDTO bd){
+		return bm.baby_room_in(bd);
 	}
 
 }

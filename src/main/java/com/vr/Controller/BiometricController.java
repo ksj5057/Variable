@@ -3,30 +3,42 @@ package com.vr.Controller;
 import java.io.File;
 import java.text.SimpleDateFormat;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.vr.Model.BiometricDTO;
-import com.vr.Model.MemberDTO;
+import com.vr.Model.TempleDTO;
 import com.vr.Model.fileVO;
 import com.vr.Service.BiometricService;
+import com.vr.Service.TempleService;
 import com.vr.Service.fileServiece;
 
 @Controller
 public class BiometricController {
 	
+	//아기등록 서비스 객체
 	@Autowired
 	BiometricService bs;
 	
+	//파일 업로드 서비스 객체
 	@Autowired
 	fileServiece fv;
+	
+	//온도, 날짜 서비스 객체
+	@Autowired
+	TempleService ts;
 	
 	//월일 표시
 	String md = "MM월 dd일";
@@ -54,7 +66,10 @@ public class BiometricController {
 
 	//소아과 302호실 페이지로 접속
 	@GetMapping("r302")
-	public String r302() {
+	public String r302(BiometricDTO bd, Model model) {
+		//아기 리스트
+		model.addAttribute("list", bs.babylist(bd));
+		//리스트 들어 갈 때 302호 db에서 데이터 값을 가져오기.
 		return "biometric/room/r302";
 	}
 
@@ -92,7 +107,7 @@ public class BiometricController {
 		}
 		
 		
-		
+		//파일 업로드
 		@PostMapping("/uplodeFile.do")
 		public String uplodeFile(@ModelAttribute("vo") fileVO vo)throws Exception {
 		   //@ModelAttribute는 VO를 객체화 시켜서 jsp로 넘겨줌 
@@ -123,6 +138,19 @@ public class BiometricController {
 	    
 		}
 		
+		//호실 퇴원 입원.
+		@GetMapping("/get/baby/cat/{bname}/{bno}")
+		public ResponseEntity<Integer> baby(@PathVariable String bname, @PathVariable int bno,  HttpSession session){
+			BiometricDTO bd = new BiometricDTO();
+			bd.setBname(bname);
+			bd.setBno(bno);
+			return new ResponseEntity<>(bs.baby_room_in(bd),HttpStatus.OK);
+		}
+		@GetMapping("/post/chart/time")
+		public ResponseEntity<?> tem(HttpSession session, TempleDTO td){
+			System.out.println("연결 중.....");
+			return new ResponseEntity<>(ts.temp_s(td),HttpStatus.OK);
+		}
 		
 
 

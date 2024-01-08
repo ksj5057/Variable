@@ -65,25 +65,25 @@
 					
 					<!-- 차트 데이터 -->
 					<script>
-						var arr = [20];
-// 						ctx.textAlign = "center";
-// 						ctx.textBaseline = "middle";
-// 						ctx.direction = "rtl";
+					//y축에 시간을 담고
+					var y;
+					//x축에 온도를 담는다
+					var x;
+					
+					
 						new Chart(
 								document.getElementById("line-chart"),
 								{
 									//그래프의 형식
 									type : 'line',
-									//그래프의 기준값
+									//그래프의 기준값   y축
 									data : {
-										labels : ["온도/시간", 00, 01, 02, 03, 04, 05, 06,
-												07, 08, 09, 10, 11, 12, 13, 14,
-												15, 16, 17, 18, 19, 20, 21, 22,
-												23 ],
+										labels : [1,2,3,4,5  ],
 
-										//데이터 값
+										//데이터 값 x축
 										datasets : [ {
-											data : [ "온도", arr[0], arr[1], arr[2], arr[3] ],
+											
+											data : [  ],
 											//데이터의 이름.
 											label : "Temperature",
 											borderColor : "#3e95cd",
