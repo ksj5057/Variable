@@ -3,8 +3,9 @@
 	height: 100%;
 }
 
-#detail_body {
-	min-height: calc(100vh - 142px);
+#baby_info{
+	position : relative;
+	left : 100px;
 }
 
 #detail_img {
@@ -16,9 +17,16 @@
 	left: -300px;
 }
 
+#baby_table{
+	position : relative;
+	left : 100px;
+}
+
 #table_rig {
 	position: relative;
-	top: -200px;
+	bottom : 150px;
+	float : right;
+	right : 600px;
 }
 
 #Measurement {

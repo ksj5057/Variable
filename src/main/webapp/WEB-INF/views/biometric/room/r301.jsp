@@ -16,7 +16,7 @@
 <div class = "incubator">
 	<ul class = "babylist">
 		<li class = "baby1">
-		<a href = "babydetail"><img src = "../resources/image/biobaby/bossbaby.jpg" width = "225px" height = "300px"></a>
+		<a href = "babydetail?bno=2"><img src = "../resources/image/biobaby/bossbaby.jpg" width = "225px" height = "300px"></a>
 			<dl>
 				<dt class = "bname"><a href = "babydetail">이보배</a></dt>
 				<dd>현재 체온 : ℃</dd>
