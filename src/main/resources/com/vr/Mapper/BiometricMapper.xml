@@ -31,4 +31,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from bt302;
 	</select>
 	
+	<delete id="baby_room_del">
+	delete from bt302 where bno=#{bno};
+	</delete>
+	
+	<select id="baby_room_Overlapping" resultType="int">
+	select count(*) from bt302 where bname= #{bname} and bno= #{bno} 
+	</select>
+	
 </mapper>

@@ -17,100 +17,56 @@
 <div id="room_body">
 
 <div class = "babyr"><h1 class = "roomn">302호</h1></div>
-		
 <div class = "incubator">
 	<div id="setting_ment"> 
 		<div id="setting_set">
 		설정
 		</div>
+		 
+		 <!-- 셋팅 아이콘 -->
 		<img src = "../resources/image/biometric/setting.jpg" id="setting"><input type="hidden" value="0" id="pointer">
 	</div>
-	<c:forEach items="${bt302}" var="baby" begin="0" end="0">
-	<ul class = "babylist">
-		<li>
-			<div class="setting_icon">
+	<div class="setting_icon" id="setting_icon1">
 				<img src = "../resources/image/biometric/minus.png" class="icon" id="icon_1">
+				<c:if test="${bt302[0].bname == null}">
 				<img src = "../resources/image/biometric/plus.png" class="icon" id="icon_2">
+				
+				</c:if>
+				<img src = "../resources/image/biometric/minus.png" class="icon" id="icon_3">
+				<c:if test="${bt302[1].bname == null}">
+				<img src = "../resources/image/biometric/plus.png" class="icon" id="icon_4">
+				</c:if>
+				<img src = "../resources/image/biometric/minus.png" class="icon" id="icon_5">
+				
+				<c:if test="${bt302[2].bname == null}">
+				<img src = "../resources/image/biometric/plus.png" class="icon" id="icon_6">
+				</c:if>
 			</div>
 			
-			<!-- 플러스 이미지 -->
-			<div class="check_posi1">
-				<img src = "../resources/image/biometric/minus.png" class="icon2" id="check_icon1">
-			</div>
 			
-			<!-- 마이너스 이미지 -->
-			<div class="check_posi1">
-				<img src = "../resources/image/biometric/plus.png" class="icon2" id="check_icon2">
-			</div>
-		</li>
-		<li class = "baby1" id="room_302_1">
+			<div id="aaaa">
+			<c:forEach items="${bt302}" var="baby" begin="0" end="2" varStatus="a">
+			
+			<div id="bbbb">
 			<a href = "babydetail?bno=${baby.bno}" class="baby_image">
 			<!-- 아기 이미지  -->
-				<img src = "../resources/image/biobaby/${baby.bimage}" width = "225px" height = "300px" id="baby_1">
+				<img src = "../resources/image/biobaby/${baby.bimage}" width = "225px" height = "300px" id="baby_${a.index}">
 			</a>
-	</ul> 
-			<div id="tem_ment1">
-					<div class = "bname"><a href = "babydetail" >${baby.bname}</a></div>
+			<div id="tem_ment">
+					<div class = "bname" id="check_baby_id${a.index}" ><a href = "babydetail?bno=${baby.bno}" >${baby.bname} </a></div>
+					<input type="hidden" value="${baby.bno}" id = "baby_bno${a.index}">
 					<div>현재 체온 : ℃</div>
 					<div>체온이 높습니다</div>
 					<div>체온이 낮습니다</div>
 			</div>
-			</c:forEach>
-			<c:forEach items="${bt302}" var="b1" begin="1" end="1">
-	<ul class = "babylist">
-		<li>
-			<div class="setting_icon">
-				<img src = "../resources/image/biometric/minus.png" class="icon" id="icon_3">
-				<img src = "../resources/image/biometric/plus.png" class="icon" id="icon_4">
 			</div>
-			<div class="check_posi2">
-				<img src = "../resources/image/biometric/minus.png" class="icon2" id="check_icon3">
-			</div>
-			<div class="check_posi2">
-				<img src = "../resources/image/biometric/plus.png" class="icon2" id="check_icon4">
-			</div>
-		</li>
-		<li class="baby1" id="room_302_2">
-		<a href="babydetail" class="baby_image">
-			<img src="../resources/image/biobaby/anya.jpg" width="225px" height="300px" id="baby_2">
-		</a>
-	</ul>
-		<div id="tem_ment2">
-					<div class = "bname"><a href = "babydetail" ></a></div>
-					<div>현재 체온 : ℃</div>
-					<div>체온이 높습니다</div>
-					<div>체온이 낮습니다</div>
-			</div>
-	</c:forEach>
-	<c:forEach items="${bt302}" var="b1" begin="2" end="2">
-	<ul class = "babylist">
-		<li>
-			<div class="setting_icon" >
-				<img src = "../resources/image/biometric/minus.png" class="icon" id="icon_5">
-				<img src = "../resources/image/biometric/plus.png" class="icon" id="icon_6">
-			</div>
-			<div class="check_posi3">
-				<img src = "../resources/image/biometric/minus.png" class="icon2" id="check_icon5">
-			</div>
-			<div class="check_posi3">
-				<img src = "../resources/image/biometric/plus.png" class="icon2" id="check_icon6">
-			</div>
-		</li>
-		<li class = "baby1" id="room_302_3">
-			<a href = "babydetail" class="baby_image">
-				<img src = "../resources/image/biobaby/rlcjf.jpg" width = "225px" height = "300px" id="baby_3">
-			</a>
-	</ul>
-		<div id="tem_ment3">
-					<div class = "bname"><a href = "babydetail" ></a></div>
-					<div>현재 체온 : ℃</div>
-					<div>체온이 높습니다</div>
-					<div>체온이 낮습니다</div>
-			</div>
-			</c:forEach>
-	
+</c:forEach>
+	</div>
 </div>
 </div>
+
+
+
 		<!-- 아기 등록 창-->
 		<div id="insert_baby_table1">
 			<table border="1">
@@ -133,12 +89,12 @@
 				<tr>
 				<td>
 					<c:forEach items="${list}" var="baby_in">
-					<div id="baby_name" class="cursor_test" onclick="insert1('${baby_in.bname}', '${baby_in.bno} ')">${baby_in.bname}</div>
+					<div id="baby_name" class="cursor_test" onclick="insert1('${baby_in.bname}', '${baby_in.bno}')">${baby_in.bname}</div>
 					</c:forEach>
 				</td>
 				<td>
 					<c:forEach items="${list}" var="baby_in">
-					<div id="baby_bno" class="cursor_test" onclick="insert1('${baby_in.bname}', '${baby_in.bno} ')">${baby_in.bno}</div>
+					<div id="baby_bno" class="cursor_test" onclick="insert1('${baby_in.bname}', '${baby_in.bno}')">${baby_in.bno}</div>
 					</c:forEach>
 				</td>
 				</tr>

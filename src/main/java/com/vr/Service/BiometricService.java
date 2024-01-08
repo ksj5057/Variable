@@ -19,5 +19,10 @@ public interface BiometricService {
 	public BiometricDTO baby_room_sel(BiometricDTO bd);
 	
 	public ArrayList<BiometricDTO> bt302(BiometricDTO bd);
+	
+	public int baby_room_del(BiometricDTO bd);
+	
+	//중복 검사
+	public int baby_room_Overlapping(BiometricDTO bd);
 
 }
