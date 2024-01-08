@@ -16,6 +16,10 @@ public interface BiometricMapper {
 	
 	public int baby_room_in(BiometricDTO bd);
 
-
+	//아기 등록 전 셀렉트하여 값 가져오기
+	public BiometricDTO baby_room_sel(BiometricDTO bd);
+	
+	//302호 list
+	public ArrayList<BiometricDTO> bt302(BiometricDTO bd);
 
 }

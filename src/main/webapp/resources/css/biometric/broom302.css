@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+#view_list{
+	text-align: center;
+}
+
+#in1,#in2, #in3{
+	    width: 199px;
+}
+
 img{cursor: pointer}
 .cursor_test {cursor: pointer}
 
@@ -28,7 +36,7 @@ position: absolute;
 }
 
 #insert_baby_name1, #insert_baby_bno1,#insert_baby_name2, #insert_baby_bno2,#insert_baby_name3, #insert_baby_bno3{
-	width: 45px;
+	width: 100px;
 }
 
 #tem_ment1, #tem_ment2, #tem_ment3 {

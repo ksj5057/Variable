@@ -4,21 +4,31 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">    
 
 <mapper namespace="com.vr.Mapper.BiometricMapper">
+
 	<insert id = "babyinsert">
 		insert into bt(bname, bage, bgender, mname, fname, mnumber, fnumber, bimage) 
 		values(#{bname},#{bage},#{bgender},#{mname},#{fname},#{mnumber},#{fnumber},#{bimage});
 	</insert>
 	
-	<select id="babydetail" resultType="com.vr.Model.BiometricDTO">
-		select * from bt where bno = #{bno};
-	</select>
-	
 	<select id="babylist" resultType="com.vr.Model.BiometricDTO">
 		select * from bt;
 	</select>
 	
+	<select id="babydetail" resultType="com.vr.Model.BiometricDTO">
+		select * from bt where bno = #{bno};
+	</select>
+	
+	<select id="baby_room_sel" resultType="com.vr.Model.BiometricDTO">
+		select * from bt where bname =#{bname} and bno = #{bno}
+	</select>
+	
 	<insert id="baby_room_in">
-	insert into room302(bname, bno) value(#{bname},#{bno});
+		insert into bt302(bno, bname, bage, bgender, mname, fname, mnumber, fnumber, bimage) 
+		values(#{bno},#{bname},#{bage},#{bgender},#{mname},#{fname},#{mnumber},#{fnumber},#{bimage});
 	</insert>
+	
+	<select id="bt302" resultType="com.vr.Model.BiometricDTO">
+		select * from bt302;
+	</select>
 	
 </mapper>
