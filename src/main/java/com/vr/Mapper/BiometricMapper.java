@@ -10,7 +10,7 @@ public interface BiometricMapper {
 	//아이 등록
 	public void babyinsert(BiometricDTO bd);
 
-	public void babydetail(BiometricDTO bd);
+	public BiometricDTO babydetail(BiometricDTO bd);
 	
 	public ArrayList<BiometricDTO> babylist(BiometricDTO bd);
 	

@@ -28,7 +28,7 @@
 			<div id="dd">
 				<table id="baby_table">
 					<tr>
-						<td><img src="../../resources/image/bossbaby.jpg"
+						<td><img src="../../resources/image/biobaby/${babydetail.bimage}"
 							id="detail_img" /></td>
 					</tr>
 
@@ -36,10 +36,10 @@
 				<div id="table_rig">
 					<table border="1" id="detail_table">
 						<tr>
-							<td>${'name'}아기</td>
+							<td>${babydetail.bname}</td>
 						</tr>
 						<tr>
-							<td>부모님 연락처 <span>${'010-8888-8888'}</span>
+							<td>부모님 연락처 <span>${babydetail.mnumber}</span>
 							</td>
 						</tr>
 						<tr>

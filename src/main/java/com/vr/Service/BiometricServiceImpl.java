@@ -20,8 +20,8 @@ public class BiometricServiceImpl implements BiometricService {
 		bm.babyinsert(bd);
 	}
 	
-	public void babydetail(BiometricDTO bd) {
-		bm.babydetail(bd);
+	public BiometricDTO babydetail(BiometricDTO bd) {
+		return bm.babydetail(bd);
 	}
 	
 	public ArrayList<BiometricDTO> babylist(BiometricDTO bd){
