@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	
+	// 입원 에이젝스
 	$('#in1').click(function(){
 		var bname=$('#insert_baby_name1').val();
 		var bno=$('#insert_baby_bno1').val();
@@ -22,6 +23,7 @@ $(document).ready(function() {
 						}
 					else{
 						alert("등록 되었습니다.")
+						location.href="r302"
 					}
 		})
 
@@ -49,6 +51,7 @@ $(document).ready(function() {
 						}
 					else{
 						alert("등록 되었습니다.")
+						location.href="r302"
 					}
 		})
 
@@ -77,8 +80,10 @@ $(document).ready(function() {
 						}
 					else{
 						alert("등록 되었습니다.")
+						location.href="r302"
 					}
 		})
 
 	}
+	
 });
