@@ -11,7 +11,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 	
 	<select id="babylist" resultType="com.vr.Model.BiometricDTO">
-		select * from bt;
+		select * from bt302;
 	</select>
 	
 	<select id="babydetail" resultType="com.vr.Model.BiometricDTO">
@@ -22,19 +22,23 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from bt where bname =#{bname} and bno = #{bno}
 	</select>
 	
+	<!--  302호 입원 -->
 	<insert id="baby_room_in">
 		insert into bt302(bno, bname, bage, bgender, mname, fname, mnumber, fnumber, bimage) 
 		values(#{bno},#{bname},#{bage},#{bgender},#{mname},#{fname},#{mnumber},#{fnumber},#{bimage});
 	</insert>
 	
+	<!--  등록되어있지 않은 리스트 -->
 	<select id="bt302" resultType="com.vr.Model.BiometricDTO">
-		select * from bt302;
+		SELECT * FROM bt WHERE bt.bname NOT IN(select bname from bt302);
 	</select>
 	
+	<!--  퇴원 -->
 	<delete id="baby_room_del">
 	delete from bt302 where bno=#{bno};
 	</delete>
 	
+	<!--  중복 등록 확인 -->
 	<select id="baby_room_Overlapping" resultType="int">
 	select count(*) from bt302 where bname= #{bname} and bno= #{bno} 
 	</select>

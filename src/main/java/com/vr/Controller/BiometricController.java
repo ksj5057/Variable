@@ -59,10 +59,11 @@ public class BiometricController {
 	//소아과 302호실 페이지로 접속
 	@GetMapping("r302")
 	public String r302(BiometricDTO bd, Model model) {
-		//bt db에 등록되어있는 아기 리스트 가져오기.
-		model.addAttribute("list", bs.babylist(bd));
+		//bt302db에 등록되어있는 아기 리스트 가져오기.
+		BiometricDTO list = new BiometricDTO();
+		model.addAttribute("list", bs.babylist(list));
 		
-		//bt 302 db의 아기 리스트 가져오기(3명 제한)
+		//bt 302 db 등록되어 있지 않은 아기 리스트 가져오기
 		model.addAttribute("bt302", bs.bt302(bd));
 		
 		return "biometric/room/r302";
