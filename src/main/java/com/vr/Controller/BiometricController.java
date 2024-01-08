@@ -32,10 +32,6 @@ public class BiometricController {
 	@Autowired
 	BiometricService bs;
 	
-	//파일 업로드 서비스 객체
-	@Autowired
-	fileServiece fv;
-	
 	//온도, 날짜 서비스 객체
 	@Autowired
 	TempleService ts;
@@ -67,15 +63,19 @@ public class BiometricController {
 	//소아과 302호실 페이지로 접속
 	@GetMapping("r302")
 	public String r302(BiometricDTO bd, Model model) {
-		//아기 리스트
+		//bt db에 등록되어있는 아기 리스트 가져오기.
 		model.addAttribute("list", bs.babylist(bd));
-		//리스트 들어 갈 때 302호 db에서 데이터 값을 가져오기.
+		
+		//bt 302 db의 아기 리스트 가져오기(3명 제한)
+		model.addAttribute("bt302", bs.bt302(bd));
+		
 		return "biometric/room/r302";
 	}
 
-	//소아과 302호실 페이지로 접속
+	//소아과 303호실 페이지로 접속
 	@GetMapping("r303")
-	public String r303() {
+	public String r303(BiometricDTO bd, Model model) {
+		
 		return "biometric/room/r303";
 	}
 
@@ -98,55 +98,27 @@ public class BiometricController {
 	
 	//회원가입 화면에서 회원가입 버튼 클릭시 메소드 실행
 	
-
-	
 	//소아과병동 홈페이로 접속.
 		@GetMapping("babyinsertform")
 		public String babyinsertform() {
 			return "biometric/babyinsertform";
 		}
 		
-		
-		//파일 업로드
-		@PostMapping("/uplodeFile.do")
-		public String uplodeFile(@ModelAttribute("vo") fileVO vo)throws Exception {
-		   //@ModelAttribute는 VO를 객체화 시켜서 jsp로 넘겨줌 
-	       //이때 괄호안에 text는 jsp에서 값을 부르는 별명이라고 생각하면 됨
-	       //여기서는 VO를 객체로 만들어 줘야해서 @ModelAttribute 지정함
-	        
-			String fileName = null;
-			MultipartFile file = vo.getUploadFile();//위에 fileVO객체를 통해 MultipartFile 기능을 쓸수 있게 내용을 담아줌
-			if (!file.isEmpty()) { //file객체가 비어있지 않다면
-	        
-			String originalFileName = file.getOriginalFilename(); //파일의 실제 이름
-
-			
-			//String ext =FilenameUtils.getExtension(originalFileName); //파일의 확장자
-			//UUID uuid = UUID.randomUUID(); //파일의 새로운 닉네임 같은거....
-			fileName = originalFileName; //랜덤값+파일의 실제 이름+파일의 확장자 이렇게 붙여서 파일명을 새롭게 만들고 
-	        							//DB에 담아주는게 좋으나 나는 간단하게 작성을 위하여 파일명만 지정
-			
-			file.transferTo(new File("C:\\upload\\"+fileName)); //new File 객체를 통해 file객체를 만들고
-	        							//"c:\\upload\\"지정해준 경로에 파일새로만들기
-			}
-			
-			vo.setFileName(fileName); //지정해준 파일명을 vo에 담아줌
-			fv.saveFile(vo); // 담아준 vo를 비지니스로직에 태워보냄
-			
-			
-			return ""; //특정 jsp페이지로 지정해도되나 나는 따로 지정을 안하여 controller가 실행한뒤 404에러페이지가 나온다
-	    
-		}
-		
 		//호실 퇴원 입원.
-		@GetMapping("/get/baby/cat/{bname}/{bno}")
-		public ResponseEntity<Integer> baby(@PathVariable String bname, @PathVariable int bno,  HttpSession session){
-			BiometricDTO bd = new BiometricDTO();
-			bd.setBname(bname);
-			bd.setBno(bno);
-			return new ResponseEntity<>(bs.baby_room_in(bd),HttpStatus.OK);
-		}
-		@GetMapping("/post/chart/time")
+				@GetMapping("/get/baby/cat/{bname}/{bno}")
+				public ResponseEntity<Integer> baby(@PathVariable String bname, @PathVariable int bno,  HttpSession session){
+					BiometricDTO bd = new BiometricDTO();
+					// bd에 이름을 저장
+					bd.setBname(bname);
+					// bd에 차트번호를 저장
+					bd.setBno(bno);
+					//아기 정보값을 검색하여 나온 값을 vv에 저장
+					BiometricDTO vv = bs.baby_room_sel(bd);
+					//vv의 값으로 bt302 db에 저장하고 리턴받기.
+					return new ResponseEntity<>(bs.baby_room_in(vv),HttpStatus.OK);
+				}
+		
+					@GetMapping("/post/chart/time")
 		public ResponseEntity<?> tem(HttpSession session, TempleDTO td){
 			System.out.println("연결 중.....");
 			return new ResponseEntity<>(ts.temp_s(td),HttpStatus.OK);

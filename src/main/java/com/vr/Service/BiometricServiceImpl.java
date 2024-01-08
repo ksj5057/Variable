@@ -31,5 +31,14 @@ public class BiometricServiceImpl implements BiometricService {
 	public int baby_room_in(BiometricDTO bd){
 		return bm.baby_room_in(bd);
 	}
+	
+	//아기 등록 전 셀렉트하여 값 가져오기
+		public BiometricDTO baby_room_sel(BiometricDTO bd) {
+			return bm.baby_room_sel(bd);
+		}
+		
+		public ArrayList<BiometricDTO> bt302(BiometricDTO bd){
+			return bm.bt302(bd);
+		}		
 
 }

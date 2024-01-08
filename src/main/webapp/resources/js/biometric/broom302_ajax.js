@@ -1,8 +1,8 @@
 $(document).ready(function() {
 	
 	$('#in1').click(function(){
-		var bname=$("input[name='bname']").val();
-		var bno=$("input[name='bno']").val();
+		var bname=$('#insert_baby_name1').val();
+		var bno=$('#insert_baby_bno1').val();
 		add({bname:bname, bno:bno});
 
 	});
@@ -28,8 +28,8 @@ $(document).ready(function() {
 	}
 	
 	$('#in2').click(function(){
-		var bname=$("input[name='bname']").val();
-		var bno=$("input[name='bno']").val();
+		var bname=$('#insert_baby_name2').val();
+		var bno=$('#insert_baby_bno2').val();
 		add({bname:bname, bno:bno});
 
 	});
@@ -55,8 +55,9 @@ $(document).ready(function() {
 	}
 	
 	$('#in3').click(function(){
-		var bname=$("input[name='bname']").val();
-		var bno=$("input[name='bno']").val();
+		var bname=$('#insert_baby_name3').val();
+		console.log(bname);
+		var bno=$('#insert_baby_bno3').val();
 		add({bname:bname, bno:bno});
 
 	});

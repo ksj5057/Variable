@@ -16,6 +16,8 @@ public interface BiometricService {
 	
 	public int baby_room_in(BiometricDTO bd);
 	
+	public BiometricDTO baby_room_sel(BiometricDTO bd);
 	
+	public ArrayList<BiometricDTO> bt302(BiometricDTO bd);
 
 }
