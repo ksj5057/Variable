@@ -17,5 +17,8 @@ public class TempleServiceImp implements TempleService {
 	public ArrayList<TempleDTO> temp_s(TempleDTO td) {
 		return tm.temp_s(td);
 	}
-
+	
+//	public TempleDTO r301b(TempleDTO td) {
+//		return r301b(td);
+//	}
 }

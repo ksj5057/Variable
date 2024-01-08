@@ -82,8 +82,8 @@ public class BiometricController {
 	//소아과 아이들 상세보기 페이지로 이동
 	@RequestMapping(value = "babydetail", method = RequestMethod.GET)
 		public String babydetail(Model model, BiometricDTO bd) {
-//		bs.babydetail(bd);
-//		model.addAttribute("babydetail", bs.babydetail(bd));
+		bs.babydetail(bd);
+		model.addAttribute("babydetail", bs.babydetail(bd));
 		return "biometric/room/detail/babydetail";
 		
 	}

@@ -9,8 +9,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		values(#{bname},#{bage},#{bgender},#{mname},#{fname},#{mnumber},#{fnumber},#{bimage});
 	</insert>
 	
+	<select id="babydetail" resultType="com.vr.Model.BiometricDTO">
+		select * from bt where bno = #{bno};
+	</select>
+	
 	<select id="babylist" resultType="com.vr.Model.BiometricDTO">
-		select * from bb;
+		select * from bt;
 	</select>
 	
 	<insert id="baby_room_in">
