@@ -26,33 +26,39 @@
 	<div class="baby_main">
 		<div id="detail_body">
 			<div id="dd">
-				<table id="baby_table">
-					<tr>
-						<td><img src="../../resources/image/biobaby/${babydetail.bimage}"
-							id="detail_img" /></td>
-					</tr>
-
-				</table>
-				<div id="table_rig">
-					<table border="1" id="detail_table">
+				<div id = baby_info> 
+					<table id="baby_table">
 						<tr>
-							<td>${babydetail.bname}</td>
+							<td><img src="../../resources/image/biobaby/${babydetail.bimage}"
+								id="detail_img" /></td>
 						</tr>
-						<tr>
-							<td>부모님 연락처 <span>${babydetail.mnumber}</span>
-							</td>
-						</tr>
-						<tr>
-							<td>입원일 :</td>
-						</tr>
+	
 					</table>
-
+					<div id="table_rig">
+						<table border="1" id="detail_table">
+							<tr>
+								<td>환자 이름 : ${babydetail.bname}</td>
+							</tr>
+							<tr>
+								<td>보호자 이름 : ${babydetail.mname}</td>
+							</tr>
+							<tr>
+								<td>보호자 번호 : ${babydetail.mnumber}</td>
+							</tr>
+							<tr>
+								<td>보호자2 이름 : ${babydetail.fname}</td>
+							</tr>
+							<tr>
+								<td>보호자2 번호 : ${babydetail.fnumber}</td>
+							</tr>
+						</table>
+					</div>
 					<!-- 진료 내역 -->
-					<table border="1" id="baby_Clinic">
-						<tr>
-							<td>진료 내역:</td>
-						</tr>
-					</table>
+<!-- 					<table border="1" id="baby_Clinic"> -->
+<!-- 						<tr> -->
+<!-- 							<td>진료 내역:</td> -->
+<!-- 						</tr> -->
+<!-- 					</table> -->
 				</div>
 
 				<div id="Measurement">
