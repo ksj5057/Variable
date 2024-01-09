@@ -125,15 +125,15 @@ $(document).ready(function(){
 			
 	//플러스 이미지를 누르면 아기 등록 테이블 생성.
 	$("#icon_2").click(function(){
-		$("#insert_baby_table1").css("display", "block");
+		$("#insert_baby_table0").css("display", "block");
 	})
 	//플러스 이미지를 누르면 아기 등록 테이블 생성.
 	$("#icon_4").click(function(){
-		$("#insert_baby_table2").css("display", "block");
+		$("#insert_baby_table1").css("display", "block");
 	})
 	//플러스 이미지를 누르면 아기 등록 테이블 생성.
 	$("#icon_6").click(function(){
-		$("#insert_baby_table3").css("display", "block");
+		$("#insert_baby_table2").css("display", "block");
 	})
 	
 
@@ -161,7 +161,18 @@ $(document).ready(function(){
 });
 	
 //아기등록 테이블에  있는 리스트의  이름을 누르면 값을 받아와서 입력함.
+function insert0(name , bno){
+	console.log(name, bno);
+	//리스트 input 값 안에 name을 넣기
+	 $("#insert_baby_name0").val(name);
+	//리스트 input 값 안에 bno을 넣기
+	 $("#insert_baby_bno0").val(bno);
+	
+	
+}
+//아기등록 테이블에  있는 리스트의  이름을 누르면 값을 받아와서 입력함.
 function insert1(name , bno){
+	console.log(name , bno);
 	//리스트 input 값 안에 name을 넣기
 	 $("#insert_baby_name1").val(name);
 	//리스트 input 값 안에 bno을 넣기
@@ -171,18 +182,10 @@ function insert1(name , bno){
 }
 //아기등록 테이블에  있는 리스트의  이름을 누르면 값을 받아와서 입력함.
 function insert2(name , bno){
+	console.log(name , bno);
 	//리스트 input 값 안에 name을 넣기
 	 $("#insert_baby_name2").val(name);
 	//리스트 input 값 안에 bno을 넣기
 	 $("#insert_baby_bno2").val(bno);
-	
-	
-}
-//아기등록 테이블에  있는 리스트의  이름을 누르면 값을 받아와서 입력함.
-function insert3(name , bno){
-	//리스트 input 값 안에 name을 넣기
-	 $("#insert_baby_name3").val(name);
-	//리스트 input 값 안에 bno을 넣기
-	 $("#insert_baby_bno3").val(bno);
 	
 }

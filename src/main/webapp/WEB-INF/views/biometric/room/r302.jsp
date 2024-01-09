@@ -27,25 +27,28 @@
 		<img src = "../resources/image/biometric/setting.jpg" id="setting"><input type="hidden" value="0" id="pointer">
 	</div>
 	<div class="setting_icon" id="setting_icon1">
+			
+				<!--  플러스 마이너스 아이콘 배너 -->
 				<img src = "../resources/image/biometric/minus.png" class="icon" id="icon_1">
-				<c:if test="${bt302[0].bname == null}">
+				<c:if test="${list[0].bname == null}">
 				<img src = "../resources/image/biometric/plus.png" class="icon" id="icon_2">
 				
 				</c:if>
 				<img src = "../resources/image/biometric/minus.png" class="icon" id="icon_3">
-				<c:if test="${bt302[1].bname == null}">
+				<c:if test="${list[1].bname == null}">
 				<img src = "../resources/image/biometric/plus.png" class="icon" id="icon_4">
 				</c:if>
 				<img src = "../resources/image/biometric/minus.png" class="icon" id="icon_5">
 				
-				<c:if test="${bt302[2].bname == null}">
+				<c:if test="${list[2].bname == null}">
 				<img src = "../resources/image/biometric/plus.png" class="icon" id="icon_6">
 				</c:if>
 			</div>
 			
 			
 			<div id="aaaa">
-			<c:forEach items="${bt302}" var="baby" begin="0" end="2" varStatus="a">
+			<!--  302호 db에 등록된 정보값 가져와서 테이블로 출력 -->
+			<c:forEach items="${list}" var="baby" begin="0" end="2" varStatus="a">
 			
 			<div id="bbbb">
 			<a href = "babydetail?bno=${baby.bno}" class="baby_image">
@@ -65,114 +68,54 @@
 </div>
 </div>
 
-
-
 		<!-- 아기 등록 창-->
-		<div id="insert_baby_table1">
+		<!-- 아기 등록 리스트의 창 302호에 등록되어있지 않은 아이만 보임. -->
+		<c:forEach begin="0" end="2"  varStatus="c">
+		<div id="insert_baby_table${c.index}">
 			<table border="1">
 				<tr>
-				<td>이&emsp;&emsp;&emsp;름</td> <td><input type="text" name="bname" id="insert_baby_name1" maxlength="10"  readonly ></td>
+					<td>이&emsp;&emsp;&emsp;름</td> 
+					<td><input type="text" name="bname" id="insert_baby_name${c.index}" maxlength="10"  readonly ></td>
+				</tr>
+				
+				<tr>
+					<td>차 트 번 호</td>
+					<td> <input type="text" name="bno" id="insert_baby_bno${c.index}" maxlength="10" readonly ></td>
+				</tr>
+			
+				<tr>
+					<td colspan="2">
+					<input type="button" value="등   록" id="in${c.index}"></td>
+				<tr>
+				</tr>
+		
+				<tr>
+					<td colspan="2" id="view_list">리&emsp;스&emsp;트</td>
 				</tr>
 				<tr>
-				<td>차 트 번 호</td><td> <input type="text" name="bno" id="insert_baby_bno1" maxlength="10" readonly ></td>
+				
+					<td >이&emsp;&emsp;&emsp;름</td><td>차 트 번 호</td>
 				</tr>
+				
 				<tr>
-				<td colspan="2"><input type="button" value="등   록" id="in1"></td>
-				<tr>
-				</tr>
-				<tr>
-				<td colspan="2" id="view_list">리&emsp;스&emsp;트</td>
-				</tr>
-				<tr>
-				<td >이&emsp;&emsp;&emsp;름</td><td>차 트 번 호</td>
-				</tr>
-				<tr>
-				<td>
-					<c:forEach items="${list}" var="baby_in">
-					<div id="baby_name" class="cursor_test" onclick="insert1('${baby_in.bname}', '${baby_in.bno}')">${baby_in.bname}</div>
+					<td>
+					<!--  아기 등록 테이블 아이디(bname) -->
+					<c:forEach items="${bt302}" var ="baby" >
+					<div id="baby_name" class="cursor_test" onclick="insert${c.index}('${baby.bname}', '${baby.bno}')">${baby.bname}</div>
 					</c:forEach>
-				</td>
-				<td>
-					<c:forEach items="${list}" var="baby_in">
-					<div id="baby_bno" class="cursor_test" onclick="insert1('${baby_in.bname}', '${baby_in.bno}')">${baby_in.bno}</div>
-					</c:forEach>
-				</td>
+					</td>
+					<td>
+					<!--  아기 등록 테이블 차트번호(bno)-->
+					<c:forEach items="${bt302}" var ="baby" >
+					<div id="baby_bno" class="cursor_test" onclick="insert${c.index}('${baby.bname}','${baby.bno}')">${baby.bno}</div>
+						</c:forEach>
+					</td>
 				</tr>
 			</table>
 		
 		
 		</div>
-		
-		<div id="insert_baby_table2">
-			<table border="1">
-				<tr>
-				<td>이&emsp;&emsp;&emsp;름</td> <td><input type="text"  name="bname"  id="insert_baby_name2" maxlength="10"  readonly ></td>
-				</tr>
-				<tr>
-				<td>차 트 번 호</td><td> <input type="text" name="bno" id="insert_baby_bno2" maxlength="10" readonly ></td>
-				</tr>
-				<tr>
-				<td colspan="2"><input type="button" value="등   록" id="in2"></td>
-				<tr>
-				</tr>
-				<tr>
-				<td colspan="2" id="view_list">리&emsp;스&emsp;트</td>
-				</tr>
-				<tr>
-				<td >이&emsp;&emsp;&emsp;름</td><td>차 트 번 호</td>
-				</tr>
-				<tr>
-				<td>
-					<c:forEach items="${list}" var="baby_in">
-					<div id="baby_name" class="cursor_test" onclick="insert2('${baby_in.bname}', '${baby_in.bno} ')">${baby_in.bname}</div>
-					</c:forEach>
-				</td>
-				<td>
-					<c:forEach items="${list}" var="baby_in">
-					<div id="baby_bno" class="cursor_test" onclick="insert2('${baby_in.bname}', '${baby_in.bno} ')">${baby_in.bno}</div>
-					</c:forEach>
-				</td>
-				</tr>
-			</table>
-		
-		
-		</div>
-		
-		<div id="insert_baby_table3">
-			<table border="1">
-				<tr>
-				<td>이&emsp;&emsp;&emsp;름</td> <td><input type="text" name="bname"  id="insert_baby_name3" maxlength="10"  readonly ></td>
-				</tr>
-				<tr>
-				<td>차 트 번 호</td><td> <input type="text" name="bno" id="insert_baby_bno3" maxlength="10" readonly ></td>
-				</tr>
-				<tr>
-				<td colspan="2"><input type="button" value="등   록" id="in3"></td>
-				<tr>
-				</tr>
-				<tr>
-				<td colspan="2" id="view_list">리&emsp;스&emsp;트</td>
-				</tr>
-				<tr>
-				<td >이&emsp;&emsp;&emsp;름</td><td>차 트 번 호</td>
-				</tr>
-				<tr>
-				<td>
-					<c:forEach items="${list}" var="baby_in">
-					<div id="baby_name" class="cursor_test" onclick="insert3('${baby_in.bname}', '${baby_in.bno} ')">${baby_in.bname}</div>
-					</c:forEach>
-				</td>
-				<td>
-					<c:forEach items="${list}" var="baby_in">
-					<div id="baby_bno" class="cursor_test" onclick="insert3('${baby_in.bname}', '${baby_in.bno} ')">${baby_in.bno}</div>
-					</c:forEach>
-				</td>
-				</tr>
-			</table>
-		
-		
-		</div>
-	
+		</c:forEach>
 		<!--푸터  -->
 <jsp:include page="../../include/footer.jsp"></jsp:include>
 
