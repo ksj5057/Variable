@@ -11,9 +11,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		values(#{bname},#{bage},#{bgender},#{mname},#{fname},#{mnumber},#{fnumber},#{bimage});
 	</insert>
 	
-	<!-- 302호 아이 리스트 -->
-	<select id="babylist" resultType="com.vr.Model.BiometricDTO">
+	<!-- 호실 아이 리스트 -->
+	<select id="babylist1" resultType="com.vr.Model.BiometricDTO">
+		select * from bt301 order by bdate asc;
+	</select>
+	
+	<select id="babylist2" resultType="com.vr.Model.BiometricDTO">
 		select * from bt302 order by bdate asc;
+	</select>
+	
+	<select id="babylist3" resultType="com.vr.Model.BiometricDTO">
+		select * from bt303 order by bdate asc;
 	</select>
 	
 	<!-- 아이 상세보기 페이지 -->
@@ -32,9 +40,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		values(#{bno},#{bname},#{bage},#{bgender},#{mname},#{fname},#{mnumber},#{fnumber},#{bimage});
 	</insert>
 	
-	<!--  등록되어있지 않은 리스트 -->
+	<!--  아기 등록창 -->
+	<select id="bt301" resultType="com.vr.Model.BiometricDTO">
+		SELECT * FROM bt where bt.bname not in (SELECT bname FROM bt302 union SELECT bname FROM bt301 union select bname from bt303);
+	</select>
+	
 	<select id="bt302" resultType="com.vr.Model.BiometricDTO">
-		SELECT * FROM bt WHERE bt.bname NOT IN(select bname from bt302);
+		SELECT * FROM bt where bt.bname not in (SELECT bname FROM bt302 union SELECT bname FROM bt301 union select bname from bt303);
+	</select>
+	
+	<select id="bt303" resultType="com.vr.Model.BiometricDTO">
+		SELECT * FROM bt where bt.bname not in (SELECT bname FROM bt302 union SELECT bname FROM bt301 union select bname from bt303);
 	</select>
 	
 	<!--  퇴원 -->
