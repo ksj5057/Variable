@@ -1,52 +1,37 @@
-/*
- * 실시간 온도 체쿠
- */
-
-/*$(function(){
-
-	var intervalId = setInterval(function() {
-		  console.log("Hello, World!");
-		}, 1000);
-	
-	setTimeout(function() {clearInterval(intervalId)}, 5000);
-});*/
-
-/*var intervalId = setInterval(function(){ 
-		$.getJSON("/test.action", function(date){}
-	}, 1000);
+let today = Array(24); //날짜
+let temp = Array(24);    //온도
+let i=0;				
+$(document).ready(function test(){
 		
-		setTimeout(function() {
-			  clearInterval(intervalId);
-			  console.log("반복 끝");
-			}, 5000);
-*/
+	$.getJSON("/post/chart/time.json", function (data){
+		
+		
+		today[i] = data[0].today;
+		console.log(today)
+		temp[i] = data[0].temp;
+		console.log(temp)
+		i++;
 
-$(function(){		
-	
-	var intervalId = setInterval(function(){ 
-	$.getJSON("/test.action", function(data){
-		console.log(data[0].temp);
-		console.log(data[0].today);
-	}, 10000);
-	
-	setTimeout(function() {
-		  clearInterval(intervalId);
-		  console.log("반복 끝");
-		}, 5000);
-	});
-	
-/*	new Chart(document.getElementById("line-chart"), {
+			//chart(data);
+	})
+
+		
+	new Chart(document.getElementById("line-chart"), {
 		  type: 'line',
 		  data: {
 		    // X축
-			labels: ["온도", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"],
+			labels: [today[0]],
 		    datasets: [{
-		    	// DB데이터
-		        data: [data[0].temp],
-		        label: "응애1",
-		        borderColor: "#3e95cd",
+		    	// DB데이터 y 축 그래프 기준 온도
+		        data: [24, 25, 26, 27, 28, 29, 30, 31,32,33,34,35,36,37,38,39,40],
 		        fill: false
 		      }, 
+		      { 
+		          data: [" ", temp[0]],
+		          label: "김륵싼",
+		          borderColor: "#8e5ea2",
+		          fill: false
+		        }
 		    ]
 		  },
 		  options: {
@@ -55,6 +40,10 @@ $(function(){
 		      text: '실시간 온도 그래프'
 		    }
 		  }
-		});*/
-	});
-});
+		});
+
+	setInterval(test, 20000);
+
+})
+
+
