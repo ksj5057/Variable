@@ -59,10 +59,11 @@ public class BiometricController {
 	//소아과 302호실 페이지로 접속
 	@GetMapping("r302")
 	public String r302(BiometricDTO bd, Model model) {
-		//bt db에 등록되어있는 아기 리스트 가져오기.
-		model.addAttribute("list", bs.babylist(bd));
+		//bt302db에 등록되어있는 아기 리스트 가져오기.
+		BiometricDTO list = new BiometricDTO();
+		model.addAttribute("list", bs.babylist(list));
 		
-		//bt 302 db의 아기 리스트 가져오기(3명 제한)
+		//bt 302 db 등록되어 있지 않은 아기 리스트 가져오기
 		model.addAttribute("bt302", bs.bt302(bd));
 		
 		return "biometric/room/r302";
@@ -114,11 +115,11 @@ public class BiometricController {
 					
 					//아기 정보값을 검색하여 나온 값을 vv에 저장
 						if(count == 1) {
-							//중복이면 0을 반환
+							//중복이면 0을 반환하면 js에서 등록실패 문구 출력
 							return new ResponseEntity<>(0,HttpStatus.OK);
 						}
 						else
-						{
+						{// 그외에는 db에 값을 입력.
 							BiometricDTO vv = bs.baby_room_sel(bd);
 						return new ResponseEntity<>(bs.baby_room_in(vv),HttpStatus.OK);
 						}

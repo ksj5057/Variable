@@ -35,21 +35,21 @@
 	
 					</table>
 					<div id="table_rig">
-						<table border="1" id="detail_table">
+						<table border="1" id="detail_table" >
 							<tr>
-								<td>환자 이름 : ${babydetail.bname}</td>
+								<td>환자 이름</td><td width = "150px" style = "text-align : center">${babydetail.bname}</td>
 							</tr>
 							<tr>
-								<td>보호자 이름 : ${babydetail.mname}</td>
+								<td>보호자 이름</td><td style = "text-align : center">${babydetail.mname}</td>
 							</tr>
 							<tr>
-								<td>보호자 번호 : ${babydetail.mnumber}</td>
+								<td>보호자 번호</td><td style = "text-align : center">${babydetail.mnumber}</td>
 							</tr>
 							<tr>
-								<td>보호자2 이름 : ${babydetail.fname}</td>
+								<td>보호자2 이름</td><td style = "text-align : center">${babydetail.fname}</td>
 							</tr>
 							<tr>
-								<td>보호자2 번호 : ${babydetail.fnumber}</td>
+								<td>보호자2 번호 </td><td style = "text-align : center">${babydetail.fnumber}</td>
 							</tr>
 						</table>
 					</div>
