@@ -115,8 +115,8 @@ public class BiometricController {
 		}
 		
 		//호실 입원.
-				@GetMapping("/get/baby/cat/{bname}/{bno}")
-				public ResponseEntity<Integer> baby(@PathVariable String bname, @PathVariable int bno,  HttpSession session, HttpServletResponse response){
+				@GetMapping("/get/baby/cat/{bname}/{bno}/{bt}")
+				public ResponseEntity<Integer> baby(@PathVariable String bname, @PathVariable int bno, @PathVariable String bt,  HttpSession session, HttpServletResponse response){
 					BiometricDTO bd = new BiometricDTO();
 					// bd에 이름을 저장
 					bd.setBname(bname);
@@ -131,13 +131,31 @@ public class BiometricController {
 							//중복이면 0을 반환하면 js에서 등록실패 문구 출력
 							return new ResponseEntity<>(0,HttpStatus.OK);
 						}
-						else
-						{// 그외에는 db에 값을 입력.
+							else if(bt == "bt301"){
+						// 그외에는 db에 값을 입력.
+							
+							//bt에 있는 아기 정보 모두 가져오고 vv에 저장
 							BiometricDTO vv = bs.baby_room_sel(bd);
-						return new ResponseEntity<>(bs.baby_room_in(vv),HttpStatus.OK);
-						}
 						
-					//vv의 값으로 bt302 db에 저장하고 리턴받기.
+							return new ResponseEntity<>(bs.baby_room_in1(vv),HttpStatus.OK);
+						}else if(bt == "bt302"){
+						// 그외에는 db에 값을 입력.
+							
+							//bt에 있는 아기 정보 모두 가져오고 vv에 저장
+							BiometricDTO vv = bs.baby_room_sel(bd);
+						
+							return new ResponseEntity<>(bs.baby_room_in2(vv),HttpStatus.OK);
+						}else if(bt == "bt303"){
+						// 그외에는 db에 값을 입력.
+							
+							//bt에 있는 아기 정보 모두 가져오고 vv에 저장
+							BiometricDTO vv = bs.baby_room_sel(bd);
+						
+							return new ResponseEntity<>(bs.baby_room_in3(vv),HttpStatus.OK);
+						
+						}
+						//작동 안함
+						return new ResponseEntity<>(bs.baby_room_in3(bd),HttpStatus.OK);
 				}
 		
 		@GetMapping("/post/chart/time")
