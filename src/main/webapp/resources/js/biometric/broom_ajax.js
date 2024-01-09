@@ -1,10 +1,12 @@
 $(document).ready(function() {
 	
+	//302호 입원 
 	// 입원 에이젝스
 	$('#in0').click(function(){
 		var bname=$('#insert_baby_name0').val();
 		var bno=$('#insert_baby_bno0').val();
-		add({bname:bname, bno:bno});
+		var bt=$('#bt302').val();
+		add({bname:bname, bno:bno bt:bt});
 
 	});
 
@@ -13,8 +15,9 @@ $(document).ready(function() {
 
 		var bname=date.bname;
 		var bno=date.bno;
+		var bt=date.bt;
 
-		$.getJSON("/get/baby/cat/"+bname+"/"+bno+".json",
+		$.getJSON("/get/baby/cat/"+bname+"/"+bno+"/"+bt+".json",
 				function(data){
 			console.log(data);
 			

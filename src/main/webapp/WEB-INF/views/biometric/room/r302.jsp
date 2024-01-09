@@ -70,6 +70,7 @@
 
 		<!-- 아기 등록 창-->
 		<!-- 아기 등록 리스트의 창 302호에 등록되어있지 않은 아이만 보임. -->
+		<input type="hidden" value="bt302" id ="bt302">
 		<c:forEach begin="0" end="2"  varStatus="c">
 		<div id="insert_baby_table${c.index}">
 			<table border="1">
