@@ -73,7 +73,6 @@ img{cursor: pointer}
 #tem_ment{
 	position: relative;
 	top: 66%;
-	left: 27.5%
 }
 
 #setting_set {
@@ -149,8 +148,8 @@ img{cursor: pointer}
 }
 
 .bname {
-	text-align: left;
-	margin-left: 40px;
+	text-align: center;
+	font-weight: 1000;
 }
 
 .baby1 {

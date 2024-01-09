@@ -21,7 +21,11 @@ public interface BiometricService {
 	public ArrayList<BiometricDTO> babylist3(BiometricDTO bd);
 	
 	//입원
-	public int baby_room_in(BiometricDTO bd);
+	public int baby_room1_in(BiometricDTO bd);
+	
+	public int baby_room2_in(BiometricDTO bd);
+	
+	public int baby_room3_in(BiometricDTO bd);
 	
 	//아기 입원 테이블 리스트 중에 값 확인
 	public BiometricDTO baby_room_sel(BiometricDTO bd);
@@ -34,7 +38,11 @@ public interface BiometricService {
 	public ArrayList<BiometricDTO> bt303(BiometricDTO bd);
 	
 	//퇴원
-	public int baby_room_del(BiometricDTO bd);
+	public int baby_room_del1(BiometricDTO bd);
+	
+	public int baby_room_del2(BiometricDTO bd);
+	
+	public int baby_room_del3(BiometricDTO bd);
 	
 	//중복 검사
 	public int baby_room_Overlapping(BiometricDTO bd);

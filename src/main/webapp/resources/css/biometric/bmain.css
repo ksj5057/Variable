@@ -15,6 +15,25 @@
 	min-height: calc(100vh - 142px);
 }
 
+#main_button{
+	position: relative;
+    right: 8px;
+    bottom: 50px;
+}
+
+#new_child{
+	position : relative;
+	display : inline-block;
+	top: 75px;
+    left: 200px;
+}
+
+#new_child button{
+	background-color : #53D7A5;
+	border : 2px solid #53D7A5;
+	color : white;
+}
+
 #child_main {
 	position: relative;
 	top: 50px;

@@ -142,12 +142,12 @@ $(document).ready(function(){
 
 			var bbno = bno;
 
-			$.getJSON("/post/baby/del/db/"+bbno+".json", function(data){
+			$.getJSON("/post/baby/del1/db/"+bbno+".json", function(data){
 							console.log(data);
 				
 						if(data == '1' ){
 							alert("삭제 되었습니다.")
-							location.href="r302"
+							location.href="r301"
 							}
 						else{
 							alert("등록되어있지 않은 정보입니다.")
