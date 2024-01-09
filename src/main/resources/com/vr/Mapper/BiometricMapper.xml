@@ -5,19 +5,23 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.vr.Mapper.BiometricMapper">
 
+	<!--아이 등록 -->
 	<insert id = "babyinsert">
 		insert into bt(bname, bage, bgender, mname, fname, mnumber, fnumber, bimage) 
 		values(#{bname},#{bage},#{bgender},#{mname},#{fname},#{mnumber},#{fnumber},#{bimage});
 	</insert>
 	
+	<!-- 302호 아이 리스트 -->
 	<select id="babylist" resultType="com.vr.Model.BiometricDTO">
-		select * from bt302;
+		select * from bt302 order by bdate asc;
 	</select>
 	
+	<!-- 아이 상세보기 페이지 -->
 	<select id="babydetail" resultType="com.vr.Model.BiometricDTO">
 		select * from bt where bno = #{bno};
 	</select>
 	
+	<!-- 필요한거 -->
 	<select id="baby_room_sel" resultType="com.vr.Model.BiometricDTO">
 		select * from bt where bname =#{bname} and bno = #{bno}
 	</select>
