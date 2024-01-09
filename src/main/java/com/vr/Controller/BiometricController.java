@@ -50,9 +50,16 @@ public class BiometricController {
 		return "biometric/bmain";
 	}
 
-	//소아과 301호실 페이지로 접속
+	//소아과 302호실 페이지로 접속
 	@GetMapping("r301")
-	public String r301() {
+	public String r301(BiometricDTO bd, Model model) {
+		//bt302db에 등록되어있는 아기 리스트 가져오기.
+		BiometricDTO list = new BiometricDTO();
+		model.addAttribute("list", bs.babylist1(list));
+		
+		//bt 302 db 등록되어 있지 않은 아기 리스트 가져오기
+		model.addAttribute("bt301", bs.bt301(bd));
+		
 		return "biometric/room/r301";
 	}
 
@@ -61,7 +68,7 @@ public class BiometricController {
 	public String r302(BiometricDTO bd, Model model) {
 		//bt302db에 등록되어있는 아기 리스트 가져오기.
 		BiometricDTO list = new BiometricDTO();
-		model.addAttribute("list", bs.babylist(list));
+		model.addAttribute("list", bs.babylist2(list));
 		
 		//bt 302 db 등록되어 있지 않은 아기 리스트 가져오기
 		model.addAttribute("bt302", bs.bt302(bd));
@@ -72,6 +79,12 @@ public class BiometricController {
 	//소아과 303호실 페이지로 접속
 	@GetMapping("r303")
 	public String r303(BiometricDTO bd, Model model) {
+		//bt302db에 등록되어있는 아기 리스트 가져오기.
+		BiometricDTO list = new BiometricDTO();
+		model.addAttribute("list", bs.babylist3(list));
+		
+		//bt 302 db 등록되어 있지 않은 아기 리스트 가져오기
+		model.addAttribute("bt303", bs.bt303(bd));
 		
 		return "biometric/room/r303";
 	}

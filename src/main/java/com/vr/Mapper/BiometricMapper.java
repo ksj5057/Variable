@@ -12,15 +12,24 @@ public interface BiometricMapper {
 
 	public BiometricDTO babydetail(BiometricDTO bd);
 	
-	public ArrayList<BiometricDTO> babylist(BiometricDTO bd);
+	//호실 화면
+	public ArrayList<BiometricDTO> babylist1(BiometricDTO bd);
+	
+	public ArrayList<BiometricDTO> babylist2(BiometricDTO bd);
+	
+	public ArrayList<BiometricDTO> babylist3(BiometricDTO bd);
 	
 	public int baby_room_in(BiometricDTO bd);
 
 	//아기 등록 전 셀렉트하여 값 가져오기
 	public BiometricDTO baby_room_sel(BiometricDTO bd);
 	
-	//302호 list
+	//아기 등록 창
+	public ArrayList<BiometricDTO> bt301(BiometricDTO bd);
+	
 	public ArrayList<BiometricDTO> bt302(BiometricDTO bd);
+	
+	public ArrayList<BiometricDTO> bt303(BiometricDTO bd);
 	
 	public int baby_room_del(BiometricDTO bd);
 

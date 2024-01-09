@@ -5,10 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>소아과병동 | 302호</title>
-<link rel="stylesheet" href="../resources/css/biometric/broom302.css" />
+<link rel="stylesheet" href="../resources/css/biometric/broom.css" />
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script type="text/javascript" src="../../../resources/js/biometric/broom302_ajax.js"></script>
-<script type="text/javascript" src="../../../resources/js/biometric/broom302.js"></script>
+<script type="text/javascript" src="../../../resources/js/biometric/broom_ajax.js"></script>
+<script type="text/javascript" src="../../../resources/js/biometric/broom.js"></script>
 
 </head>
 <body>
