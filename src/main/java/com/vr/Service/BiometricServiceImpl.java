@@ -36,8 +36,16 @@ public class BiometricServiceImpl implements BiometricService {
 		return bm.babylist3(bd);
 	}
 
-	public int baby_room_in(BiometricDTO bd){
-		return bm.baby_room_in(bd);
+	public int baby_room1_in(BiometricDTO bd){
+		return bm.baby_room1_in(bd);
+	}
+	
+	public int baby_room2_in(BiometricDTO bd){
+		return bm.baby_room2_in(bd);
+	}
+	
+	public int baby_room3_in(BiometricDTO bd){
+		return bm.baby_room3_in(bd);
 	}
 
 	//아기 등록 전 셀렉트하여 값 가져오기
@@ -60,8 +68,16 @@ public class BiometricServiceImpl implements BiometricService {
 		return bm.bt303(bd);
 	}
 	
-	public int baby_room_del(BiometricDTO bd) {
-		return bm.baby_room_del(bd);
+	public int baby_room_del1(BiometricDTO bd) {
+		return bm.baby_room_del1(bd);
+	}
+	
+	public int baby_room_del2(BiometricDTO bd) {
+		return bm.baby_room_del2(bd);
+	}
+	
+	public int baby_room_del3(BiometricDTO bd) {
+		return bm.baby_room_del3(bd);
 	}
 
 	public int baby_room_Overlapping(BiometricDTO bd) {

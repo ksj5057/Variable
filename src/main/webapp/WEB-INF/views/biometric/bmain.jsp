@@ -22,12 +22,13 @@
 
 		<div id="child_body">
 			<h1 id="child_main">그린대학교병원 소아과병동(3F)</h1>
+			
 
 
 
 
 			<!--  301호 or 실내온도 div -->
-			<table>
+			<table id = "main_button">
 				<tr>
 					<td>
 						<div class="room">
@@ -79,8 +80,9 @@
 						</div>
 					</td>
 
-
+					
 					<td>
+					<a href = "babyinsertform" id = new_child><button>신규 환자 등록</button></a> <br>
 						<!--  303호 or 실내온도 div -->
 						<div class="room">
 							<!--  이미지에 303호실 링크 걸기 -->

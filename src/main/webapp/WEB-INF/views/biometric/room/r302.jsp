@@ -7,8 +7,8 @@
 <title>소아과병동 | 302호</title>
 <link rel="stylesheet" href="../resources/css/biometric/broom.css" />
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script type="text/javascript" src="../../../resources/js/biometric/broom_ajax.js"></script>
-<script type="text/javascript" src="../../../resources/js/biometric/broom.js"></script>
+<script type="text/javascript" src="../../../resources/js/biometric/broom_ajax302.js"></script>
+<script type="text/javascript" src="../../../resources/js/biometric/broom302.js"></script>
 
 </head>
 <body>
@@ -70,7 +70,7 @@
 
 		<!-- 아기 등록 창-->
 		<!-- 아기 등록 리스트의 창 302호에 등록되어있지 않은 아이만 보임. -->
-		<input type="hidden" value="bt302" id ="bt302">
+		<input type="hidden" value="bt302" id ="bt">
 		<c:forEach begin="0" end="2"  varStatus="c">
 		<div id="insert_baby_table${c.index}">
 			<table border="1">

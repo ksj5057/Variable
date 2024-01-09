@@ -34,9 +34,21 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from bt where bname =#{bname} and bno = #{bno}
 	</select>
 	
+	<!--  301호 입원 -->
+	<insert id="baby_room1_in">
+		insert into bt301(bno, bname, bage, bgender, mname, fname, mnumber, fnumber, bimage) 
+		values(#{bno},#{bname},#{bage},#{bgender},#{mname},#{fname},#{mnumber},#{fnumber},#{bimage});
+	</insert>
+	
 	<!--  302호 입원 -->
-	<insert id="baby_room_in">
+	<insert id="baby_room2_in">
 		insert into bt302(bno, bname, bage, bgender, mname, fname, mnumber, fnumber, bimage) 
+		values(#{bno},#{bname},#{bage},#{bgender},#{mname},#{fname},#{mnumber},#{fnumber},#{bimage});
+	</insert>
+	
+	<!--  303호 입원 -->
+	<insert id="baby_room3_in">
+		insert into bt303(bno, bname, bage, bgender, mname, fname, mnumber, fnumber, bimage) 
 		values(#{bno},#{bname},#{bage},#{bgender},#{mname},#{fname},#{mnumber},#{fnumber},#{bimage});
 	</insert>
 	
@@ -54,8 +66,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<!--  퇴원 -->
-	<delete id="baby_room_del">
+	<delete id="baby_room_del1">
+	delete from bt301 where bno=#{bno};
+	</delete>
+	
+	<delete id="baby_room_del2">
 	delete from bt302 where bno=#{bno};
+	</delete>
+	
+	<delete id="baby_room_del3">
+	delete from bt303 where bno=#{bno};
 	</delete>
 	
 	<!--  중복 등록 확인 -->
