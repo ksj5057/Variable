@@ -49,9 +49,9 @@
 								<!--  경고 문구  -->
 								<div id="woring_text">이상이 있습니다. 확인해주세요</div>
 							</c:if>
-							<br> <label>실내온도: <input type="text" value="24.5℃"
+							<br> <label>실내온도: <input type="text" value="25℃"
 								readonly></label><br>
-								<label>설정온도</label>
+									<label>설정온도: <input type="text" value="${indoor.set_bt301}" readonly></label>
 						</div>
 					</td>
 
@@ -77,9 +77,9 @@
 								<!--  경고 문구  -->
 								<div id="woring_text">이상이 있습니다. 확인해주세요</div>
 							</c:if>
-							<br> <label>실내온도: <input type="text" value="26.5℃"
+						<br> <label>실내온도: <input type="text" value="25℃"
 								readonly></label><br>
-								<label>설정온도</label>
+									<label>설정온도: <input type="text" value="${indoor.set_bt302}" readonly></label>
 						</div>
 					</td>
 
@@ -106,9 +106,10 @@
 								<!--  경고 문구  -->
 								<div id="woring_text">이상이 있습니다. 확인해주세요</div>
 							</c:if>
-							<br> <label>실내온도: <input type="text" value="25℃"
-								readonly></label><br>
-									<label>설정온도: <input type="text" value="${indoor.set_bt303}" readonly></label>
+							 <div>
+							 <label>실내온도: <input type="text" value="25℃" readonly></label><br>
+						    	<label>설정온도: <input type="text" value="${indoor.set_bt303}" readonly></label>
+							</div>
 						</div>
 				</tr>
 			</table>
