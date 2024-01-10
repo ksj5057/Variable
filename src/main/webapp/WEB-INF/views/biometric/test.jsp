@@ -27,7 +27,7 @@
 	<li>${temple.temp}</li>
 	</ul>
 	</c:forEach> --%>
-<canvas id="line-chart" width="300" height="250"></canvas>
+<canvas id="mycanvas" width="300" height="250"></canvas>
 	
 
 </body>
