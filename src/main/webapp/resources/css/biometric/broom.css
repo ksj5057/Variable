@@ -51,21 +51,21 @@ img{cursor: pointer}
 }
 
 #insert_baby_table1{
-position: absolute;
-  top: 32.1%;
-        left: 43.6%;
+	position: absolute;
+	top: 32.1%;
+    left: 43.6%;
     min-height: 290px;
     display: none;
 }
 #insert_baby_table2{
-position: absolute;
- top: 32.1%;;
+	position: absolute;
+	top: 32.1%;;
     left: 64.7%;
     min-height: 290px;
     display: none;
 }
 
-#insert_baby_name1, #insert_baby_bno1,#insert_baby_name2, #insert_baby_bno2,#insert_baby_name3, #insert_baby_bno3{
+#insert_baby_name0, #insert_baby_bno0,#insert_baby_name1, #insert_baby_bno1,#insert_baby_name2, #insert_baby_bno2{
 	width: 100px;
 	border: none;
 }
@@ -73,7 +73,6 @@ position: absolute;
 #tem_ment{
 	position: relative;
 	top: 66%;
-	left: 27.5%
 }
 
 #setting_set {
@@ -149,8 +148,8 @@ position: absolute;
 }
 
 .bname {
-	text-align: left;
-	margin-left: 40px;
+	text-align: center;
+	font-weight: 1000;
 }
 
 .baby1 {

@@ -50,9 +50,16 @@ public class BiometricController {
 		return "biometric/bmain";
 	}
 
-	//소아과 301호실 페이지로 접속
+	//소아과 302호실 페이지로 접속
 	@GetMapping("r301")
-	public String r301() {
+	public String r301(BiometricDTO bd, Model model) {
+		//bt302db에 등록되어있는 아기 리스트 가져오기.
+		BiometricDTO list = new BiometricDTO();
+		model.addAttribute("list", bs.babylist1(list));
+		
+		//bt 302 db 등록되어 있지 않은 아기 리스트 가져오기
+		model.addAttribute("bt301", bs.bt301(bd));
+		
 		return "biometric/room/r301";
 	}
 
@@ -61,7 +68,7 @@ public class BiometricController {
 	public String r302(BiometricDTO bd, Model model) {
 		//bt302db에 등록되어있는 아기 리스트 가져오기.
 		BiometricDTO list = new BiometricDTO();
-		model.addAttribute("list", bs.babylist(list));
+		model.addAttribute("list", bs.babylist2(list));
 		
 		//bt 302 db 등록되어 있지 않은 아기 리스트 가져오기
 		model.addAttribute("bt302", bs.bt302(bd));
@@ -72,6 +79,12 @@ public class BiometricController {
 	//소아과 303호실 페이지로 접속
 	@GetMapping("r303")
 	public String r303(BiometricDTO bd, Model model) {
+		//bt302db에 등록되어있는 아기 리스트 가져오기.
+		BiometricDTO list = new BiometricDTO();
+		model.addAttribute("list", bs.babylist3(list));
+		
+		//bt 302 db 등록되어 있지 않은 아기 리스트 가져오기
+		model.addAttribute("bt303", bs.bt303(bd));
 		
 		return "biometric/room/r303";
 	}
@@ -102,8 +115,9 @@ public class BiometricController {
 		}
 		
 		//호실 입원.
-				@GetMapping("/get/baby/cat/{bname}/{bno}")
-				public ResponseEntity<Integer> baby(@PathVariable String bname, @PathVariable int bno,  HttpSession session, HttpServletResponse response){
+				@GetMapping("/get/baby/cat/{bname}/{bno}/{bt}")
+				public ResponseEntity<Integer> baby(@PathVariable String bname, @PathVariable int bno, @PathVariable String bt,  HttpSession session, HttpServletResponse response){
+					System.out.println("asdfasdf");
 					BiometricDTO bd = new BiometricDTO();
 					// bd에 이름을 저장
 					bd.setBname(bname);
@@ -118,13 +132,31 @@ public class BiometricController {
 							//중복이면 0을 반환하면 js에서 등록실패 문구 출력
 							return new ResponseEntity<>(0,HttpStatus.OK);
 						}
-						else
-						{// 그외에는 db에 값을 입력.
+							else if(bt.equals("bt301")){
+						// 그외에는 db에 값을 입력.
+							
+							//bt에 있는 아기 정보 모두 가져오고 vv에 저장
 							BiometricDTO vv = bs.baby_room_sel(bd);
-						return new ResponseEntity<>(bs.baby_room_in(vv),HttpStatus.OK);
-						}
 						
-					//vv의 값으로 bt302 db에 저장하고 리턴받기.
+							return new ResponseEntity<>(bs.baby_room1_in(vv),HttpStatus.OK);
+						}else if(bt.equals("bt302")){
+						// 그외에는 db에 값을 입력.
+							
+							//bt에 있는 아기 정보 모두 가져오고 vv에 저장
+							BiometricDTO vv = bs.baby_room_sel(bd);
+						
+							return new ResponseEntity<>(bs.baby_room2_in(vv),HttpStatus.OK);
+						}else if(bt.equals("bt303")){
+						// 그외에는 db에 값을 입력.
+							
+							//bt에 있는 아기 정보 모두 가져오고 vv에 저장
+							BiometricDTO vv = bs.baby_room_sel(bd);
+						
+							return new ResponseEntity<>(bs.baby_room3_in(vv),HttpStatus.OK);
+						
+						}
+						//작동 안함
+						return new ResponseEntity<>(bs.baby_room3_in(bd),HttpStatus.OK);
 				}
 		
 		@GetMapping("/post/chart/time")
@@ -134,13 +166,29 @@ public class BiometricController {
 		}
 					
 		//호실 퇴원 함수 ajax
-		@GetMapping("/post/baby/del/db/{bbno}")
-		public ResponseEntity<?> del(@PathVariable int bbno,  HttpSession session, BiometricDTO bd){
+		@GetMapping("/post/baby/del1/db/{bbno}")
+		public ResponseEntity<?> del1(@PathVariable int bbno,  HttpSession session, BiometricDTO bd){
 			//bno값을 저장
 			bd.setBno(bbno);
 			//저장된 bno오 값으로 db에서 삭제 후 리턴 리턴값은 = int ( 1 or 0 );
-			return new ResponseEntity<>(bs.baby_room_del(bd),HttpStatus.OK);
+			return new ResponseEntity<>(bs.baby_room_del1(bd),HttpStatus.OK);
 		}
+		//호실 퇴원 함수 ajax
+		@GetMapping("/post/baby/del2/db/{bbno}")
+		public ResponseEntity<?> del2(@PathVariable int bbno,  HttpSession session, BiometricDTO bd){
+			//bno값을 저장
+			bd.setBno(bbno);
+			//저장된 bno오 값으로 db에서 삭제 후 리턴 리턴값은 = int ( 1 or 0 );
+			return new ResponseEntity<>(bs.baby_room_del2(bd),HttpStatus.OK);
+		}
+		//호실 퇴원 함수 ajax
+		@GetMapping("/post/baby/del3/db/{bbno}")
+		public ResponseEntity<?> del3(@PathVariable int bbno,  HttpSession session, BiometricDTO bd){
+			//bno값을 저장
+			bd.setBno(bbno);
+			//저장된 bno오 값으로 db에서 삭제 후 리턴 리턴값은 = int ( 1 or 0 );
+			return new ResponseEntity<>(bs.baby_room_del3(bd),HttpStatus.OK);
+				}
 		
 
 
