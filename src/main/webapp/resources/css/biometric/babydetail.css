@@ -18,6 +18,12 @@
 	left: -300px;
 }
 
+
+.detail_s{
+	width : 150px;
+	text-align : center;
+}
+
 #baby_table{
 	position : relative;
 	left : 100px;
