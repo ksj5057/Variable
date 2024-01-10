@@ -1,13 +1,19 @@
 @charset "UTF-8";
 
-input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
-	-webkit-appearance: inner-spin-button;    
-    opacity: 1;
+.val{
+	position: relative;
+    top: 6px;
+}
+.imageup, .imagedown{
+	height: 20px;
+	cursor: pointer
 }
 
 #temperature_control{
 position: relative;
-    top: -50px;}
+    top: -50px;
+    left:90%;
+    }
 
 .room {
 	display: inline-block;
