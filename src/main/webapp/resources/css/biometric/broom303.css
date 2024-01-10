@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+
+#icon_1, #icon_2 {
+    position: absolute;
+    top: -31%;
+    left: 71px;
+}
+
+#icon_3,#icon_4 {
+    position: absolute;
+    top: -31%;
+    left: 470px;
+}
+
+#icon_5,#icon_6 {
+    position: absolute;
+    top: -31%;
+    left: 869px;
+}
+
+#aaaa{
+	position: relative;
+    left: 7%;
+}
+
+#bbbb{
+	display: inline-block;
+	margin-right: 14%;
+}
+
+
+#view_list{
+	text-align: center;
+}
+
+img{
+	cursor: pointer
+}
+
+.cursor_test {
+	cursor: pointer
+}
+
+
+.insert_baby_console{
+	width : 210px;
+	height : 280px;
+	border-collapse : collapse;
+	
+}
+
+#insert_baby_table0 {
+    position: absolute;
+ 	top: 33%;
+    left: 22.6%;
+    min-height: 290px;
+    display: none;
+}
+
+#insert_baby_table1{
+	position: absolute;
+	top: 33%;
+    left: 43.6%;
+    min-height: 290px;
+    display: none;
+}
+#insert_baby_table2{
+	position: absolute;
+	top: 33%;
+    left: 64.7%;
+    min-height: 290px;
+    display: none;
+}
+
+#insert_baby_name0, #insert_baby_bno0,#insert_baby_name1, #insert_baby_bno1,#insert_baby_name2, #insert_baby_bno2{
+	width: 100px;
+	border: none;
+}
+
+.insert_baby_nn{
+	border-collapse: collapse;
+}
+
+.insert_f{
+	background-color : #dcd9d963;
+}
+
+#insert_f_n{
+	background-color : #dcd9d963;
+}
+
+.insert_f_nn :hover{
+	background-color : #dcd9d963;
+}
+
+#t_caption{
+	position : relative;
+	top : 310px;
+	left : 78px;
+}
+
+#tem_ment{
+	position: relative;
+	top: 66%;
+}
+
+#setting_set {
+	padding: 15px 20px;
+	background-color: white;
+	border-radius: 5px;
+	color: black;
+	position: absolute;
+	width: 50px;
+	left: -31.8%;
+	top: 70%;
+	font-family: 'OTWelcomeRA';
+}
+
+.setting_icon {
+    width: 0px;
+    position: relative;
+   top: -4.5%;
+    left: 10px;
+    display: none;
+}
+
+#setting_ment {
+	position: absolute;
+	width: 50px;
+	left: 81.2%;
+	top: 25%;
+}
+
+#setting {
+	position: relative;
+	left: -15%;
+}
+
+#room_body {
+	margin: 0 auto;
+	min-height: calc(100vh - 142px);
+	background-image : url("../../../resources/image/flower.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center
+}
+
+.babyr {
+	margin-top: 75px;
+	margin-bottom: 75px;
+}
+
+.roomn {
+	text-align: center;
+	font-size: 50px;
+}
+
+.incubator {
+	margin: 0 auto;
+	width: 1200px;
+	height: 100vh;
+}
+
+.babylist li:nth-child(1) {
+	width: 0px;
+	display: inline-block;
+	float: left;
+}
+
+.babylist {
+    display: inline-block;
+    list-style: none;
+    margin: 0px 35px;
+    left: 5px;
+    position: relative;
+    left: 40px;
+}
+
+.bname {
+	text-align: center;
+	font-weight: 1000;
+}
+
+.baby1 {
+	display: inline-block;
+	position: relative;
+	left: 5%;
+}
+
+#lababy {
+	margin-right: 40px;
+}

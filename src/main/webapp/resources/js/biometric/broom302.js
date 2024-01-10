@@ -125,15 +125,15 @@ $(document).ready(function(){
 			
 	//플러스 이미지를 누르면 아기 등록 테이블 생성.
 	$("#icon_2").click(function(){
-		$("#insert_baby_table0").css("display", "block");
+		$("#insert_baby_table0").toggle();
 	})
 	//플러스 이미지를 누르면 아기 등록 테이블 생성.
 	$("#icon_4").click(function(){
-		$("#insert_baby_table1").css("display", "block");
+		$("#insert_baby_table1").toggle();
 	})
 	//플러스 이미지를 누르면 아기 등록 테이블 생성.
 	$("#icon_6").click(function(){
-		$("#insert_baby_table2").css("display", "block");
+		$("#insert_baby_table2").toggle();
 	})
 	
 
