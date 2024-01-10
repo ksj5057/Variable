@@ -34,17 +34,25 @@
 	text-align: center;
 }
 
-#in0,#in1, #in2{
-	    width: 199px;
+img{
+	cursor: pointer
 }
 
-img{cursor: pointer}
-.cursor_test {cursor: pointer}
+.cursor_test {
+	cursor: pointer
+}
 
+
+.insert_baby_console{
+	width : 210px;
+	height : 280px;
+	border-collapse : collapse;
+	
+}
 
 #insert_baby_table0 {
     position: absolute;
- 	top: 32.1%;
+ 	top: 33%;
     left: 22.6%;
     min-height: 290px;
     display: none;
@@ -52,14 +60,14 @@ img{cursor: pointer}
 
 #insert_baby_table1{
 	position: absolute;
-	top: 32.1%;
+	top: 33%;
     left: 43.6%;
     min-height: 290px;
     display: none;
 }
 #insert_baby_table2{
 	position: absolute;
-	top: 32.1%;;
+	top: 33%;
     left: 64.7%;
     min-height: 290px;
     display: none;
@@ -68,6 +76,28 @@ img{cursor: pointer}
 #insert_baby_name0, #insert_baby_bno0,#insert_baby_name1, #insert_baby_bno1,#insert_baby_name2, #insert_baby_bno2{
 	width: 100px;
 	border: none;
+}
+
+.insert_baby_nn{
+	border-collapse: collapse;
+}
+
+.insert_f{
+	background-color : #dcd9d963;
+}
+
+#insert_f_n{
+	background-color : #dcd9d963;
+}
+
+.insert_f_nn :hover{
+	background-color : #dcd9d963;
+}
+
+#t_caption{
+	position : relative;
+	top : 310px;
+	left : 78px;
 }
 
 #tem_ment{

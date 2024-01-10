@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="../resources/css/biometric/bmain.css" />
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../resources/js/biometric/bmain.js"></script>
+<script type="text/javascript" src="../resources/js/biometric/bmain_tem.js"></script>
 <title>그린대학교병원 | 소아과병동</title>
 </head>
 <body>
@@ -49,7 +50,8 @@
 								<div id="woring_text">이상이 있습니다. 확인해주세요</div>
 							</c:if>
 							<br> <label>실내온도: <input type="text" value="24.5℃"
-								readonly></label>
+								readonly></label><br>
+								<label>설정온도</label>
 						</div>
 					</td>
 
@@ -76,13 +78,14 @@
 								<div id="woring_text">이상이 있습니다. 확인해주세요</div>
 							</c:if>
 							<br> <label>실내온도: <input type="text" value="26.5℃"
-								readonly></label>
+								readonly></label><br>
+								<label>설정온도</label>
 						</div>
 					</td>
 
 					
 					<td>
-					<a href = "babyinsertform" id = new_child><button>신규 환자 등록</button></a> <br>
+					<div id = new_child><button onclick="openPopup()">신규 환자 등록</button></div>
 						<!--  303호 or 실내온도 div -->
 						<div class="room">
 							<!--  이미지에 303호실 링크 걸기 -->
@@ -104,11 +107,32 @@
 								<div id="woring_text">이상이 있습니다. 확인해주세요</div>
 							</c:if>
 							<br> <label>실내온도: <input type="text" value="25℃"
-								readonly></label>
+								readonly></label><br>
+									<label>설정온도: <input type="text" value="${indoor.set_bt303}" readonly></label>
 						</div>
 				</tr>
 			</table>
 		</div>
+			<div id="temperature_control">
+					<div>실내온도 일괄 조절</div>
+						<div>일괄 온도:
+										<input type="number" min="18" max="30" id="batches_tem" value="" > 
+								       	<label><input type="button" value="설정"onclick="tem(4)"></label>
+						</div>
+					
+					<div>실내온도 세부 조절</div>
+						<div>301호 온도 조절:<input type="number" min="18" max="30" id="bt301_tem" value="${indoor.now_bt301}" readonly> 
+										     <label><input type="button" value="설정" id="in301" onclick="tem(1)"></label>
+						 </div>
+						 
+						<div>302호 온도 조절:<input type="number" min="18" max="30" id="bt302_tem" value="${indoor.now_bt302}" readonly> 
+											 <label><input type="button" value="설정" id="in302" onclick="tem(2)"></label>
+						 </div>
+						 
+						<div>303호 온도 조절:<input type="number" min="18" max="30" id="bt303_tem" value="${indoor.now_bt303}" readonly> 
+											 <label><input type="button" value="설정" id="in303" onclick="tem(3)"></label>
+						 </div>
+					</div>
 	</div>
 
 

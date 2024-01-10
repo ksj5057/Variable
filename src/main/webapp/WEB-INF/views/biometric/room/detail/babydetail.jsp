@@ -37,19 +37,24 @@
 					<div id="table_rig">
 						<table border="1" id="detail_table" >
 							<tr>
-								<td>환자 이름</td><td width = "150px" style = "text-align : center">${babydetail.bname}</td>
+								<td class = "detail_f">환자 이름</td>
+								<td class = "detail_s">${babydetail.bname}</td>
 							</tr>
 							<tr>
-								<td>보호자 이름</td><td style = "text-align : center">${babydetail.mname}</td>
+								<td class = "detail_f">보호자 이름</td>
+								<td class = "detail_s">${babydetail.mname}</td>
 							</tr>
 							<tr>
-								<td>보호자 번호</td><td style = "text-align : center">${babydetail.mnumber}</td>
+								<td class = "detail_f">보호자 번호</td>
+								<td class = "detail_s">${babydetail.mnumber}</td>
 							</tr>
 							<tr>
-								<td>보호자2 이름</td><td style = "text-align : center">${babydetail.fname}</td>
+								<td class = "detail_f">보호자2 이름</td>
+								<td class = "detail_s">${babydetail.fname}</td>
 							</tr>
 							<tr>
-								<td>보호자2 번호 </td><td style = "text-align : center">${babydetail.fnumber}</td>
+								<td class = "detail_f">보호자2 번호 </td>
+								<td class = "detail_s">${babydetail.fnumber}</td>
 							</tr>
 						</table>
 					</div>
