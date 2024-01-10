@@ -24,9 +24,6 @@ import com.vr.Model.MemberDTO;
 import com.vr.Service.MemberService;
 
 
-/**
- * Handles requests for the application home page.
- */
 @Controller
 public class HomeController {
 

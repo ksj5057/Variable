@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.vr.Mapper.TemperatureMapper">
+
+		
+		<!-- 일괄 온도 조절 -->
+		<update id="batches_tem">
+		update ti set set_bt301 =#{tem}, set_bt302=#{tem}, set_bt303=#{tem};
+		</update>
+		
+		<!-- 세부 조절 301호 -->
+		<update id="bt301_tem">
+		update ti set set_bt301 =#{tem};
+		</update>
+		
+		<!--  세부 조절 302호 -->
+		<update id="bt302_tem">
+		update ti set set_bt302 =#{tem};
+		</update>
+		
+		<!--  세부 조절 303호 -->
+		<update id="bt303_tem">
+		update ti set set_bt303 =#{tem};
+		</update>
+		
+		<!-- 실내온도 값 가져오기 -->
+		<select id="Indoortemperature" resultType="com.vr.Model.TemperatureDTO">		
+		select * from ti;
+		</select>
+
+</mapper>
+
+    
