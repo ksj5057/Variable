@@ -1,8 +1,5 @@
 package com.vr.Controller;
 
-import java.io.PrintWriter;
-import java.text.SimpleDateFormat;
-
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
@@ -17,8 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.vr.Model.BiometricDTO;
+import com.vr.Model.TemperatureDTO;
 import com.vr.Model.TempleDTO;
 import com.vr.Service.BiometricService;
+import com.vr.Service.TemperatureServiece;
 import com.vr.Service.TempleService;
 
 @Controller
@@ -32,21 +31,14 @@ public class BiometricController {
 	@Autowired
 	TempleService ts;
 	
-	//월일 표시
-	String md = "MM월 dd일";
-	SimpleDateFormat monthd = new SimpleDateFormat(md);
-	java.util.Date dd = new java.util.Date();
-	String Motnhday = monthd.format(dd);
-	
-	//시간 계산
-	String hm = "HH시 mm분";
-	SimpleDateFormat hourm = new SimpleDateFormat(hm);
-	java.util.Date ff = new java.util.Date();
-	String Hourmin = hourm.format(ff);
+	//실내 온도
+	TemperatureServiece tis;
 	
 	//소아과병동 홈페이로 접속.
 	@GetMapping("bmain")
-	public String biometricMain() {
+	public String biometricMain(TemperatureDTO td, Model model) {
+		//실내 온도 값 가져오기
+		//model.addAttribute("indoor", tis.Indoortemperature());
 		return "biometric/bmain";
 	}
 
