@@ -10,11 +10,10 @@
 </head>
 <body>
 
-	<!-- 헤더 -->
-	<jsp:include page="../include/header.jsp"></jsp:include>
 <div class = "bbbox">
 <div class="wrapper">
   <div class="container">
+  		<input class="button" type="button" value="닫기" onclick="closePopup()">
     <h1>아이 정보 등록</h1>
     
     <form class = "form" action ="babyinsert" method ="get">
@@ -40,23 +39,14 @@
       <button type="submit" id="login-button">등록 완료</button>
     </form>
   </div>
-  
-  <ul class="bg-bubbles">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
 </div>
 </div>
+<script>
 
-<!-- 푸터 -->
-		<div><jsp:include page="../include/footer.jsp"></jsp:include></div>
+function closePopup(){ 
+	//닫기 누르면 팝업 꺼짐
+	window.close();
+}
+</script>
 </body>
 </html>

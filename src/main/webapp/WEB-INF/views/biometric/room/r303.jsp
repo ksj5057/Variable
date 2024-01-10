@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>소아과병동 | 303호</title>
-<link rel="stylesheet" href="../resources/css/biometric/broom.css" />
+<link rel="stylesheet" href="../resources/css/biometric/broom303.css" />
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../../../resources/js/biometric/broom_ajax303.js"></script>
 <script type="text/javascript" src="../../../resources/js/biometric/broom303.js"></script>
