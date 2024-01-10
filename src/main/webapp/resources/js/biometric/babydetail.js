@@ -18,10 +18,10 @@ $(document).ready(function(){
 	    }]
 	  },
 	  options: {
-	    responsive: true,
+		  responsive: false,
 	    title: {
 	      display: true,
-	      text: "Chart.js - Dynamically Update Chart Via Ajax Requests",
+	      text: "실시간 온도",
 	    },
 	    legend: {
 	      display: false
@@ -60,6 +60,6 @@ $(document).ready(function(){
 	};
 
 	// get new data every 3 seconds
-	setInterval(getData, 60000);
+	setInterval(getData, 62000);
 
 });

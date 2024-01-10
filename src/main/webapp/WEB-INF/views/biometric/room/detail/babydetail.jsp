@@ -20,65 +20,62 @@
 </head>
 <body>
 	<!-- 헤더 -->
-	<div>
+	<div class="footer_box">
 		<jsp:include page="../../../include/header.jsp"></jsp:include>
 	</div>
+	
 	<!-- 이미지 넣기 -->
-	<div class="baby_main">
-		<div id="detail_body">
-			<div id="dd">
-				<div id=baby_info>
-					<table id="baby_table">
-						<tr>
-							<td><img
-								src="../../resources/image/biobaby/${babydetail.bimage}"
-								id="detail_img" /></td>
-						</tr>
-
-					</table>
-					<div id="table_rig">
-						<table border="1" id="detail_table">
-							<tr>
-								<td class="detail_f">환자 이름</td>
-								<td class="detail_s">${babydetail.bname}</td>
-							</tr>
-							<tr>
-								<td class="detail_f">보호자 이름</td>
-								<td class="detail_s">${babydetail.mname}</td>
-							</tr>
-							<tr>
-								<td class="detail_f">보호자 번호</td>
-								<td class="detail_s">${babydetail.mnumber}</td>
-							</tr>
-							<tr>
-								<td class="detail_f">보호자2 이름</td>
-								<td class="detail_s">${babydetail.fname}</td>
-							</tr>
-							<tr>
-								<td class="detail_f">보호자2 번호</td>
-								<td class="detail_s">${babydetail.fnumber}</td>
-							</tr>
-						</table>
-					</div>
-					<!-- 진료 내역 -->
-					<!-- <table border="1" id="baby_Clinic"> -->
-					<!-- <tr> -->
-					<!-- <td>진료 내역:</td> -->
-					<!-- </tr> -->
-					<!-- </table> -->
-				</div>
-
-				<!-- 실시간 온도 그래프 -->
-				<div>
-				<canvas id="mycanvas" width="300" height="250"></canvas>
-				</div>
-
-			</div>
+	<div class="detail_main">
+	
+	<div class="img_table">
+			<img src="../../resources/image/
+			biobaby/${babydetail.bimage}" id="detail_img" />
+	</div>	
+	
+		<div class="detail_table">
+			<table border="1" id="detail_table">
+			<caption id = "dcap">${babydetail.bgender}아&nbsp;/&nbsp;${babydetail.bage}세</caption>
+				<tr>
+					<th class="detail_f">환자 이름</th>
+					<td class="detail_s">${babydetail.bname}</td>
+				</tr>
+				<tr>
+					<th class="detail_f">보호자 이름</th>
+					<td class="detail_s">${babydetail.mname}</td>
+				</tr>
+				
+				<tr>
+					<th class="detail_f">보호자 번호</th>
+					<td class="detail_s">${babydetail.mnumber}</td>
+				</tr>
+				<tr>
+					<th class="detail_f">보호자2 이름</th>
+					<td class="detail_s">${babydetail.fname}</td>
+				</tr>
+				<tr>
+					<th class="detail_f">보호자2 번호</th>
+					<td class="detail_s">${babydetail.fnumber}</td>
+				</tr>
+			</table>
 		</div>
+		<!-- 진료 내역 -->
+		<!-- <table border="1" id="baby_Clinic"> -->
+		<!-- <tr> -->
+		<!-- <td>진료 내역:</td> -->
+		<!-- </tr> -->
+		<!-- </table> -->
+
+
+		<!-- 실시간 온도 그래프 -->
+		<div>
+			<canvas id="mycanvas" width="800" height="300"></canvas>
+		</div>
+
+
 	</div>
 
 	<!--푸터  -->
-	<div id="footer">
+	<div class="foot_bb">
 		<jsp:include page="../../../include/footer.jsp"></jsp:include>
 	</div>
 </body>

@@ -140,7 +140,7 @@ img{
 #room_body {
 	margin: 0 auto;
 	min-height: calc(100vh - 142px);
-	background-image: url("../../../resources/image/grass.jpg");
+	background-image : url("../../../resources/image/grass.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: center
