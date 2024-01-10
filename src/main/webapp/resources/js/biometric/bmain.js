@@ -1,4 +1,3 @@
-var url = 'babyinsertform'; 
 $(document).ready(function(){
 
 	//이미지에 마우스를 올리면 글 띄우기
@@ -33,11 +32,16 @@ $(document).ready(function(){
 
 //아기 등록창 팝업
 function openPopup(){ 
+	
+		var url = 'babyinsertform'; 
 
-	    var option = 'scrollbars=no, left=400, top=200, width=440, height=550'; 
+	    var option = 'width=600, height=520, top=50, left=550, scrollbars=no, resizeable=no'; 
 	 
 	    var name = 'myPopup'; 
 	 
 	    // option 변수를 사용하지 않고 직접 옵션을 넣어줘도 된다.
 	    window.open(url, name, option); 
+	
+	
 } 
+

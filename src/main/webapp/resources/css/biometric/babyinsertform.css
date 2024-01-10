@@ -1,6 +1,18 @@
 @charset "UTF-8";
+body{
+	  width: 600px;
+    height: 240px;
+}
 
-@charset "UTF-8";
+html {
+    width: 600px;
+    height: 240px;
+}
+
+.bbbox {
+    width: 470px;
+    height: 240px;
+}
 
 @font-face {
   font-family: 'Source Sans Pro';
@@ -19,6 +31,7 @@
   margin: 0;
   padding: 0;
   font-weight: 300;
+  
 }
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -51,20 +64,14 @@ body :-ms-input-placeholder {
   color: white;
   font-weight: 300;
 }
-
-.bbbox{
-	  min-height : calc(100vh - 142px);
-  padding-top : 50px;
-}
 .wrapper {
   background: #50a3a2;
   background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
 
   top: 25%;
   left: 0;
-  width: 100%;
-  height: 700px;
-  margin-top: -200px;
+  width: 600px;
+  height: 530px;
   overflow: hidden;
 }
 .wrapper.form-success .container h1 {
@@ -110,6 +117,25 @@ form {
 form input.radio{
 	width : 50px;
 }
+.button{
+	 -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: #53e3a6;
+  border-radius: 3px;
+  width: 250px;
+  cursor: pointer;
+  font-size: 18px;
+  transition-duration: 0.25s;
+  position: relative;
+    width: 90px;
+    left: 230px;
+    top: -60px;
+}
 
 form input.text {
  -webkit-appearance: none;
@@ -122,12 +148,12 @@ form input.text {
   border-radius: 3px;
   padding: 10px 30px;
   margin: 10px;
-/*   display: block; */
   text-align: center;
   font-size: 18px;
   color: white;
   transition-duration: 0.25s;
   font-weight: 300;
+ 
 }
 form input.text:hover {
   background-color: rgba(255, 255, 255, 0.4);
@@ -151,6 +177,7 @@ form button {
   cursor: pointer;
   font-size: 18px;
   transition-duration: 0.25s;
+  
 }
 form button:hover {
   background-color: #f5f7f9;
