@@ -6,14 +6,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.vr.Mapper.TempleMapper">
 
-<!-- 현재시간 기준으로 5분전 데이터 중 오름차순 조회 -->
+<!-- 현재시간 기준 1분전 상위 데이터 1건 조회 -->
 <select id="temp_s" resultType="com.vr.Model.TempleDTO"> 
 select temp,
           (CASE
-         WHEN INSTR(DATE_FORMAT(today, '%y-%m-%d %h:%i'), 'PM') > 0
-         THEN REPLACE(DATE_FORMAT(today, '%y-%m-%d %h:%i'), 'PM', '오후')
-         ELSE REPLACE(DATE_FORMAT(today, '%y-%m-%d %h:%i'), 'AM', '오전')    
-         END) AS today2
+         WHEN INSTR(DATE_FORMAT(today, '%m-%d %h:%i'), 'PM') > 0
+         THEN REPLACE(DATE_FORMAT(today, '%m-%d %h:%i'), 'PM', '오후')
+         ELSE REPLACE(DATE_FORMAT(today, '%m-%d %h:%i'), 'AM', '오전')    
+         END) AS today
 from bb_test where today > (now() - interval 1 minute)
 order by today asc limit 1; </select>
 
