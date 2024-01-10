@@ -73,46 +73,48 @@
 		<input type="hidden" value="bt303" id ="bt">
 		<c:forEach begin="0" end="2"  varStatus="c">
 		<div id="insert_baby_table${c.index}">
-			<table border="1">
+			<table class = "insert_baby_console" border = "1">
 				<tr>
-					<td>이&emsp;&emsp;&emsp;름</td> 
+					<td class = "insert_f">이&emsp;&emsp;&emsp;름</td> 
 					<td><input type="text" name="bname" id="insert_baby_name${c.index}" maxlength="10"  readonly ></td>
 				</tr>
 				
 				<tr>
-					<td>차 트 번 호</td>
+					<td class = "insert_f">차 트 번 호</td>
 					<td> <input type="text" name="bno" id="insert_baby_bno${c.index}" maxlength="10" readonly ></td>
 				</tr>
 			
-				<tr>
-					<td colspan="2">
-					<input type="button" value="등   록" id="in${c.index}"></td>
-				<tr>
-				</tr>
+<!-- 				<tr> -->
+<!-- 					<td colspan="2"> -->
+<%-- 					<input type="button" value="등   록" id="in${c.index}"></td> --%>
+<!-- 				<tr> -->
+<!-- 				</tr> -->
 		
 				<tr>
 					<td colspan="2" id="view_list">리&emsp;스&emsp;트</td>
 				</tr>
 				<tr>
 				
-					<td >이&emsp;&emsp;&emsp;름</td><td>차 트 번 호</td>
+					<td class = "insert_f">이&emsp;&emsp;&emsp;름</td><td>차 트 번 호</td>
 				</tr>
-				
-				<tr>
-					<td>
-					<!--  아기 등록 테이블 아이디(bname) -->
-					<c:forEach items="${bt303}" var ="baby" >
-					<div id="baby_name" class="cursor_test" onclick="insert${c.index}('${baby.bname}', '${baby.bno}')">${baby.bname}</div>
-					</c:forEach>
+				<c:forEach items="${bt303}" var ="baby" >
+				<tr class = "insert_baby_nn">
+					<td id = "insert_f_n" class = "insert_f_nn">
+						<!--  아기 등록 테이블 아이디(bname) -->
+						<div id="baby_name" class="cursor_test" onclick="insert${c.index}('${baby.bname}', '${baby.bno}')">${baby.bname}</div>
 					</td>
-					<td>
-					<!--  아기 등록 테이블 차트번호(bno)-->
-					<c:forEach items="${bt303}" var ="baby" >
-					<div id="baby_bno" class="cursor_test" onclick="insert${c.index}('${baby.bname}','${baby.bno}')">${baby.bno}</div>
-						</c:forEach>
+					<td class = "insert_f_nn">
+						<!--  아기 등록 테이블 차트번호(bno)-->
+						<div id="baby_bno" class="cursor_test" onclick="insert${c.index}('${baby.bname}','${baby.bno}')">${baby.bno}</div>
 					</td>
+					
 				</tr>
+				</c:forEach>
+				<caption id = "t_caption">
+					<input type="button" value="등   록" id="in${c.index}">
+				</caption>
 			</table>
+						
 		
 		
 		</div>
