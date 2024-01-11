@@ -32,13 +32,14 @@ public class BiometricController {
 	TempleService ts;
 	
 	//실내 온도
+	@Autowired
 	TemperatureServiece tis;
 	
 	//소아과병동 홈페이로 접속.
 	@GetMapping("bmain")
 	public String biometricMain(TemperatureDTO td, Model model) {
 		//실내 온도 값 가져오기
-		//model.addAttribute("indoor", tis.Indoortemperature());
+		model.addAttribute("indoor", tis.Indoortemperature());
 		return "biometric/bmain";
 	}
 

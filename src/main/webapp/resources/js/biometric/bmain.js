@@ -1,4 +1,10 @@
 $(document).ready(function(){
+	
+	//up 이미지
+	$(".imageup").attr("src", "../../resources/image/biometric/up.png")
+	
+	//down 이미지
+	$(".imagedown").attr("src", "../../resources/image/biometric/down.png")
 
 	//이미지에 마우스를 올리면 글 띄우기
 	$("#room_pop1").mouseover(function(){
@@ -44,4 +50,29 @@ function openPopup(){ 
 	
 	
 } 
+
+function plus(up){
+	alert(up)
+	let val;
+
+	if(up == 1){
+		val = document.getElementById("bt301_tem").value;
+		console.log(val);
+		val++
+		if(val == 31){
+			alert("최대온도는 30도 까지입니다.")
+		}else{
+			val = document.getElementById("bt301_tem").value;
+		}
+		 
+		val = val;
+	}
+
+}
+
+
+function minus(down){
+	alert(down)
+}
+
 
