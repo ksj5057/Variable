@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+.ti_input{
+    width: 240px	
+}
 .val{
 	position: relative;
     top: 6px;
@@ -10,9 +13,10 @@
 }
 
 #temperature_control{
-position: relative;
-    top: -50px;
-    left:90%;
+position: fixed;
+    top: auto;
+    left: 90%;
+    width: 110px
     }
 
 .room {
