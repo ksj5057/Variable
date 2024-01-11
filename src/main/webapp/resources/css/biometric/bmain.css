@@ -21,6 +21,7 @@
 	margin: 0px 80px;
 	position: relative;
 	top: 15cm;
+	text-align: center;
 }
 
 #child {
@@ -69,7 +70,7 @@ body {
 	width: 350px;
 	height: 350px;
 	position: absolute;
-	top: -400px;
+	top: -450px;
 	left: -75px;
 }
 
@@ -86,14 +87,94 @@ body {
 }
 
 #woring_image {
-	width: 30px;
-	height: 20px;
-	position: absolute;
-	top: 10px;
-	left: 114px;
-	background-color: white;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    left: 170px;
+    background-color: white;
 }
 
 #woring_text {
 	color: red;
+}
+
+input#batches_tem {
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    height: 28px;
+    line-height: normal;
+    color: rgb(40, 40, 40);
+    display: inline-block;
+    width: 62px;
+    box-sizing: border-box;
+    user-select: auto;
+    font-size: 16px;
+    padding: 0px 6px 0px 18px;
+    text-align: center;
+}
+
+input#bt301_tem {
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    height: 28px;
+    line-height: normal;
+    color: rgb(40, 40, 40);
+    display: inline-block;
+    width: 62px;
+    box-sizing: border-box;
+    user-select: auto;
+    font-size: 16px;
+    padding: 0px 6px 0px 18px;
+    text-align: center;
+}
+
+input#bt302_tem {
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    height: 28px;
+    line-height: normal;
+    color: rgb(40, 40, 40);
+    display: inline-block;
+    width: 62px;
+    box-sizing: border-box;
+    user-select: auto;
+    font-size: 16px;
+    padding: 0px 6px 0px 18px;
+    text-align: center;
+}
+
+input#bt303_tem {
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    height: 28px;
+    line-height: normal;
+    color: rgb(40, 40, 40);
+    display: inline-block;
+    width: 62px;
+    box-sizing: border-box;
+    user-select: auto;
+    font-size: 16px;
+    padding: 0px 6px 0px 18px;
+    text-align: center;
+}
+
+input[type="button"] {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 2px 16px;
+    margin-top: 5px;
+    width: 100px;
+    height: 32px;
+    min-width: 60px;
+    min-height: 32px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(79, 84, 92);
+    transition: background-color 0.17s ease 0s, color 0.17s ease 0s;
 }
