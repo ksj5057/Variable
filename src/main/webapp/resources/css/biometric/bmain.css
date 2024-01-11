@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-.ti_input{
-    width: 240px	
-}
 .val{
 	position: relative;
     top: 6px;
@@ -13,11 +10,11 @@
 }
 
 #temperature_control{
-position: fixed;
+    position: fixed;
     top: auto;
     left: 90%;
-    width: 110px
-    }
+    width: 106px;
+}
 
 .room {
 	display: inline-block;
@@ -40,17 +37,13 @@ position: fixed;
     bottom: 50px;
 }
 
-#new_child{
-	position : relative;
-	display : inline-block;
-	top: 75px;
-    left: 200px;
-}
-
 #new_child button{
-	background-color : #53D7A5;
-	border : 2px solid #53D7A5;
-	color : white;
+    width: 105px;
+    background-color: #53D7A5;
+    border: 2px solid #53D7A5;
+    color: white;
+    height: 50px;
+    border-radius: 10px;
 }
 
 #child_main {

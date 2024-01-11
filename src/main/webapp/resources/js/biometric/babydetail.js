@@ -14,7 +14,7 @@ $(document).ready(function(){
 	      data: [],
 	      borderWidth: 1,
 	      borderColor:'#00c0ef',
-	      label: 'liveCount',
+	      label: "실시간 온도",
 	    }]
 	  },
 	  options: {
@@ -50,16 +50,19 @@ $(document).ready(function(){
 	      // add new label and data point to chart's underlying data structures
 	      myChart.data.labels.push(data[0].today);
 	      myChart.data.datasets[0].data.push(data[0].temp);
+
 	      console.log(data[0].temp);
 	      console.log(data[0].today);
+	     
 	      
 	      // re-render the chart
 	      myChart.update();
+
 	    }
 	  });
 	};
 
 	// get new data every 3 seconds
-	setInterval(getData, 62000);
+	setInterval(getData, 10000);
 
 });
