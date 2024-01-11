@@ -49,9 +49,10 @@
 								<!--  경고 문구  -->
 								<div id="woring_text">이상이 있습니다. 확인해주세요</div>
 							</c:if>
-							<br> <label>실내온도: <input type="text" value="25℃"
-								readonly></label><br>
-									<label>설정온도: <input type="text" value="${indoor.set_bt301}℃" readonly></label>
+							<div id="bt301_ti" class="ti_input">
+								 <label>실내온도: <input type="text" value="25℃" readonly></label><br>
+								 <label>설정온도: <input type="text" value="${indoor.set_bt301}℃" readonly></label>
+							</div>
 						</div>
 					</td>
 
@@ -77,9 +78,10 @@
 								<!--  경고 문구  -->
 								<div id="woring_text">이상이 있습니다. 확인해주세요</div>
 							</c:if>
-						<br> <label>실내온도: <input type="text" value="25℃"
-								readonly></label><br>
+								<div id="bt302_ti" class="ti_input">
+									 <label>실내온도: <input type="text" value="25℃" readonly></label><br>
 									<label>설정온도: <input type="text" value="${indoor.set_bt302}℃" readonly></label>
+								</div>
 						</div>
 					</td>
 
@@ -106,7 +108,7 @@
 								<!--  경고 문구  -->
 								<div id="woring_text">이상이 있습니다. 확인해주세요</div>
 							</c:if>
-							 <div>
+							 <div id="bt303_ti" class="ti_input">
 							 <label>실내온도: <input type="text" value="25℃" readonly></label><br>
 						    	<label>설정온도: <input type="text" value="${indoor.set_bt303}℃" readonly></label>
 							</div>
@@ -115,28 +117,27 @@
 			</table>
 		</div>
 			<div id="temperature_control">
-					<div>실내온도 일괄 조절</div>
-						<div>일괄 온도:
-										<input type="number" min="18" max="30" id="batches_tem" value="18" readonly> 
-								       	<label class="val" ><img class="imageup" onclick="plus(4)"><img class="imagedown" onclick="minus(4)"></label>
-								       	<input type="button" value="설정"onclick="tem(4)">
+						<div >일괄 온도:
+										<input type="number" min="18" max="30" id="batches_tem" value="22" readonly> 
+								       	<label class="val" ><img class="imageup" onclick="plus(4)" id="up4"><img class="imagedown" onclick="minus(4)" id="down4"></label>
+								       	<input type="button" value="설정"onclick="tem(4)" style="width: 105px;">
 						</div>
 					
-					<div>실내온도 세부 조절</div>
-						<div>301호 온도 조절:<input type="number" min="18" max="30" id="bt301_tem" value="${indoor.set_bt301}" readonly> 
-										     <label class="val"><img class="imageup"onclick="plus(1)"><img class="imagedown"onclick="minus(1)"></label>
-										     <input type="button" value="설정" id="in301" onclick="tem(1)">
+						<div style="padding-top: 20px;">301호 온도 조절:<input type="number" min="18" max="30" id="bt301_tem" value="${indoor.set_bt301}" readonly> 
+										     <label class="val"><img class="imageup"onclick="plus(1)" id="up1"><img class="imagedown"onclick="minus(1)" id="down1"></label>
+										     <input type="button" value="설정" id="in301" onclick="tem(1)" style="width: 105px;">
 						 </div>
 						 
-						<div>302호 온도 조절:<input type="number" min="18" max="30" id="bt302_tem" value="${indoor.set_bt302}" readonly> 
-											 <label class="val"><img class="imageup"onclick="plus(2)"><img class="imagedown"onclick="minus(2)"></label>
-											 <input type="button" value="설정" id="in302" onclick="tem(2)">
+						<div style="padding-top: 20px;">302호 온도 조절:<input type="number" min="18" max="30" id="bt302_tem" value="${indoor.set_bt302}" readonly> 
+											 <label class="val"><img class="imageup"onclick="plus(2)" id="up2"><img class="imagedown"onclick="minus(2)" id="down2"></label>
+											 <input type="button" value="설정" id="in302" onclick="tem(2)" style="width: 105px;">
 						 </div>
 						 
-						<div>303호 온도 조절:<input type="number" min="18" max="30" id="bt303_tem" value="${indoor.set_bt303}" readonly> 
-											 <label class="val"><img class="imageup"onclick="plus(3)"><img class="imagedown"onclick="minus(3)"></label>
-											 <input type="button" value="설정" id="in303" onclick="tem(3)">
+						<div style="padding-top: 20px;">303호 온도 조절:<input type="number" min="18" max="30" id="bt303_tem" value="${indoor.set_bt303}" readonly> 
+											 <label class="val"><img class="imageup"onclick="plus(3)" id="up3"><img class="imagedown"onclick="minus(3)" id="down3"></label>
+											 <input type="button" value="설정" id="in303" onclick="tem(3)" style="width: 105px;">
 						 </div>
+						 
 					</div>
 	</div>
 
