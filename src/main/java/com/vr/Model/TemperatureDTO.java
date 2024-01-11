@@ -2,14 +2,21 @@ package com.vr.Model;
 
 public class TemperatureDTO{
 	
-	//온도
+	//호실
 	private int bt;
+	//온도
 	private int tem;
+	//301호 현재 온도
 	private int now_bt301;
+	//302호 현재 온도
 	private int now_bt302;
+	//303호 현재 온도
 	private int now_bt303;
+	//301호 설정 온도
 	private int set_bt301;
+	//302호 설정 온도
 	private int set_bt302;
+	//303호 설정 온도
 	private int set_bt303;
 	
 	

@@ -51,7 +51,7 @@
 							</c:if>
 							<br> <label>실내온도: <input type="text" value="25℃"
 								readonly></label><br>
-									<label>설정온도: <input type="text" value="${indoor.set_bt301}" readonly></label>
+									<label>설정온도: <input type="text" value="${indoor.set_bt301}℃" readonly></label>
 						</div>
 					</td>
 
@@ -79,7 +79,7 @@
 							</c:if>
 						<br> <label>실내온도: <input type="text" value="25℃"
 								readonly></label><br>
-									<label>설정온도: <input type="text" value="${indoor.set_bt302}" readonly></label>
+									<label>설정온도: <input type="text" value="${indoor.set_bt302}℃" readonly></label>
 						</div>
 					</td>
 
@@ -108,7 +108,7 @@
 							</c:if>
 							 <div>
 							 <label>실내온도: <input type="text" value="25℃" readonly></label><br>
-						    	<label>설정온도: <input type="text" value="${indoor.set_bt303}" readonly></label>
+						    	<label>설정온도: <input type="text" value="${indoor.set_bt303}℃" readonly></label>
 							</div>
 						</div>
 				</tr>
@@ -117,21 +117,25 @@
 			<div id="temperature_control">
 					<div>실내온도 일괄 조절</div>
 						<div>일괄 온도:
-										<input type="number" min="18" max="30" id="batches_tem" value="" > 
-								       	<label><input type="button" value="설정"onclick="tem(4)"></label>
+										<input type="number" min="18" max="30" id="batches_tem" value="18" readonly> 
+								       	<label class="val" ><img class="imageup" onclick="plus(4)"><img class="imagedown" onclick="minus(4)"></label>
+								       	<input type="button" value="설정"onclick="tem(4)">
 						</div>
 					
 					<div>실내온도 세부 조절</div>
-						<div>301호 온도 조절:<input type="number" min="18" max="30" id="bt301_tem" value="${indoor.now_bt301}" readonly> 
-										     <label><input type="button" value="설정" id="in301" onclick="tem(1)"></label>
+						<div>301호 온도 조절:<input type="number" min="18" max="30" id="bt301_tem" value="${indoor.set_bt301}" readonly> 
+										     <label class="val"><img class="imageup"onclick="plus(1)"><img class="imagedown"onclick="minus(1)"></label>
+										     <input type="button" value="설정" id="in301" onclick="tem(1)">
 						 </div>
 						 
-						<div>302호 온도 조절:<input type="number" min="18" max="30" id="bt302_tem" value="${indoor.now_bt302}" readonly> 
-											 <label><input type="button" value="설정" id="in302" onclick="tem(2)"></label>
+						<div>302호 온도 조절:<input type="number" min="18" max="30" id="bt302_tem" value="${indoor.set_bt302}" readonly> 
+											 <label class="val"><img class="imageup"onclick="plus(2)"><img class="imagedown"onclick="minus(2)"></label>
+											 <input type="button" value="설정" id="in302" onclick="tem(2)">
 						 </div>
 						 
-						<div>303호 온도 조절:<input type="number" min="18" max="30" id="bt303_tem" value="${indoor.now_bt303}" readonly> 
-											 <label><input type="button" value="설정" id="in303" onclick="tem(3)"></label>
+						<div>303호 온도 조절:<input type="number" min="18" max="30" id="bt303_tem" value="${indoor.set_bt303}" readonly> 
+											 <label class="val"><img class="imageup"onclick="plus(3)"><img class="imagedown"onclick="minus(3)"></label>
+											 <input type="button" value="설정" id="in303" onclick="tem(3)">
 						 </div>
 					</div>
 	</div>
