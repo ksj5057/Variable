@@ -33,6 +33,7 @@
 				<tr>
 					<td>
 						<div class="room">
+						
 							<a href="r301" class="room_text"> <!-- 이미지 솔잎반(301호실) --> <img
 								src="../../resources/image/biometric/솔잎반.png" class="room_image"
 								id="room_pop1">
@@ -50,8 +51,8 @@
 								<div id="woring_text">이상이 있습니다. 확인해주세요</div>
 							</c:if>
 							<div id="bt301_ti" class="ti_input">
-								 <label>실내온도: <input type="text" value="25℃" readonly></label><br>
-								 <label>설정온도: <input type="text" value="${indoor.set_bt301}℃" readonly></label>
+								 <label>실내온도: <input type="text" value="25℃" readonly style="width: 40px;"></label><br>
+								 <label>설정온도: <input type="text" value="${indoor.set_bt301}℃" readonly style="width: 40px;"></label>
 							</div>
 						</div>
 					</td>
@@ -79,15 +80,14 @@
 								<div id="woring_text">이상이 있습니다. 확인해주세요</div>
 							</c:if>
 								<div id="bt302_ti" class="ti_input">
-									 <label>실내온도: <input type="text" value="25℃" readonly></label><br>
-									<label>설정온도: <input type="text" value="${indoor.set_bt302}℃" readonly></label>
+									 <label>실내온도: <input type="text" value="25℃" readonly style="width: 40px;"></label><br>
+									<label>설정온도: <input type="text" value="${indoor.set_bt302}℃" readonly style="width: 40px;"></label>
 								</div>
 						</div>
 					</td>
 
 					
 					<td>
-					<div id = new_child><button onclick="openPopup()">신규 환자 등록</button></div>
 						<!--  303호 or 실내온도 div -->
 						<div class="room">
 							<!--  이미지에 303호실 링크 걸기 -->
@@ -109,31 +109,32 @@
 								<div id="woring_text">이상이 있습니다. 확인해주세요</div>
 							</c:if>
 							 <div id="bt303_ti" class="ti_input">
-							 <label>실내온도: <input type="text" value="25℃" readonly></label><br>
-						    	<label>설정온도: <input type="text" value="${indoor.set_bt303}℃" readonly></label>
+							 <label>실내온도: <input type="text" value="25℃" readonly style="width: 40px;"></label><br>
+						    	<label>설정온도: <input type="text" value="${indoor.set_bt303}℃" readonly style="width: 40px;"></label>
 							</div>
 						</div>
 				</tr>
 			</table>
 		</div>
 			<div id="temperature_control">
-						<div >일괄 온도:
-										<input type="number" min="18" max="30" id="batches_tem" value="22" readonly> 
+			<div id = new_child><button onclick="openPopup()">신규 환자 등록</button></div>
+						<div style="padding-top: 40px;"><label id="tem_name">일괄 온도</label>
+										<input type="number" min="18" max="30" id="batches_tem" value="24" readonly style="text-align: center;"> 
 								       	<label class="val" ><img class="imageup" onclick="plus(4)" id="up4"><img class="imagedown" onclick="minus(4)" id="down4"></label>
 								       	<input type="button" value="설정"onclick="tem(4)" style="width: 105px;">
 						</div>
 					
-						<div style="padding-top: 20px;">301호 온도 조절:<input type="number" min="18" max="30" id="bt301_tem" value="${indoor.set_bt301}" readonly> 
+						<div style="padding-top: 20px;">301호 온도 조절 <input type="number" min="18" max="30" id="bt301_tem" value="${indoor.set_bt301}" readonly style="text-align: center;"> 
 										     <label class="val"><img class="imageup"onclick="plus(1)" id="up1"><img class="imagedown"onclick="minus(1)" id="down1"></label>
 										     <input type="button" value="설정" id="in301" onclick="tem(1)" style="width: 105px;">
 						 </div>
 						 
-						<div style="padding-top: 20px;">302호 온도 조절:<input type="number" min="18" max="30" id="bt302_tem" value="${indoor.set_bt302}" readonly> 
+						<div style="padding-top: 20px;">302호 온도 조절 <input type="number" min="18" max="30" id="bt302_tem" value="${indoor.set_bt302}" readonly style="text-align: center;"> 
 											 <label class="val"><img class="imageup"onclick="plus(2)" id="up2"><img class="imagedown"onclick="minus(2)" id="down2"></label>
 											 <input type="button" value="설정" id="in302" onclick="tem(2)" style="width: 105px;">
 						 </div>
 						 
-						<div style="padding-top: 20px;">303호 온도 조절:<input type="number" min="18" max="30" id="bt303_tem" value="${indoor.set_bt303}" readonly> 
+						<div style="padding-top: 20px;">303호 온도 조절 <input type="number" min="18" max="30" id="bt303_tem" value="${indoor.set_bt303}" readonly style="text-align: center;"> 
 											 <label class="val"><img class="imageup"onclick="plus(3)" id="up3"><img class="imagedown"onclick="minus(3)" id="down3"></label>
 											 <input type="button" value="설정" id="in303" onclick="tem(3)" style="width: 105px;">
 						 </div>
