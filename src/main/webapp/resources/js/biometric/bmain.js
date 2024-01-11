@@ -1,4 +1,5 @@
-$(document).ready(function(){
+$(function(){
+	
 	
 	//up 이미지
 	$(".imageup").attr("src", "../../resources/image/biometric/up.png")
@@ -33,7 +34,14 @@ $(document).ready(function(){
 		$("#poptext3").css("display", "none");
 	})
 
-
+	$(".imageup").click(function(){
+		
+		
+	})
+	
+	
+	
+	
 })
 
 //아기 등록창 팝업
@@ -52,22 +60,7 @@ function openPopup(){ 
 } 
 
 function plus(up){
-	alert(up)
-	let val;
-
-	if(up == 1){
-		val = document.getElementById("bt301_tem").value;
-		console.log(val);
-		val++
-		if(val == 31){
-			alert("최대온도는 30도 까지입니다.")
-		}else{
-			val = document.getElementById("bt301_tem").value;
-		}
-		 
-		val = val;
-	}
-
+ alert(up)
 }
 
 
