@@ -63,6 +63,6 @@ $(document).ready(function(){
 	};
 
 	// get new data every 3 seconds
-	setInterval(getData, 10000);
+	setInterval(getData, 5000);
 
 });

@@ -29,7 +29,7 @@ public class TempleController {
 		return "biometric/test";
 	}
 
-	@RequestMapping(value = "/test.action.", method = RequestMethod.GET)
+	@RequestMapping(value = "/test.action", method = RequestMethod.GET)
 	public ResponseEntity<?> temple1(TempleDTO td, Model model, HttpSession session) {
 
 		return new ResponseEntity<>(ts.temp_s(td), HttpStatus.OK);
