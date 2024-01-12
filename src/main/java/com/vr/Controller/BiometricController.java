@@ -37,10 +37,15 @@ public class BiometricController {
 	
 	//소아과병동 홈페이로 접속.
 	@GetMapping("bmain")
-	public String biometricMain(TemperatureDTO td, Model model) {
+	public String biometricMain(TempleDTO td, Model model,BiometricDTO bd) {
 		//각 호실 온도 값 갱신.
-		String a = bs.renewal();
-		System.out.println(a);
+		TempleDTO setd = bs.renewal();
+		model.addAttribute("bt301_b1", setd.getTemp());
+		//가져온 값을 
+		td.setBno(1);
+		td.setTemp(setd.getTemp());
+		td.setToday(setd.getToday());
+		bs.renewal_insert(td); 
 		//각 호실의 온도 이상 확인해서 값 가져오기
 		
 		
@@ -51,8 +56,11 @@ public class BiometricController {
 
 	//소아과 302호실 페이지로 접속
 	@GetMapping("r301")
-	public String r301(BiometricDTO bd, Model model) {
+	public String r301(BiometricDTO bd, Model model,TempleDTO td) {
 		//bt302db에 등록되어있는 아기 리스트 가져오기.
+		td.setBno(1);
+		ts.bt301_1(td);
+		model.addAttribute("bt301_1", ts.bt301_1(td));
 		BiometricDTO list = new BiometricDTO();
 		model.addAttribute("list", bs.babylist1(list));
 		
@@ -65,6 +73,7 @@ public class BiometricController {
 	//소아과 302호실 페이지로 접속
 	@GetMapping("r302")
 	public String r302(BiometricDTO bd, Model model) {
+		
 		//bt302db에 등록되어있는 아기 리스트 가져오기.
 		BiometricDTO list = new BiometricDTO();
 		model.addAttribute("list", bs.babylist2(list));
@@ -173,6 +182,10 @@ public class BiometricController {
 			return new ResponseEntity<>(bs.baby_room_del1(bd),HttpStatus.OK);
 		}
 		
+		@GetMapping("hf")
+		public String ment1() {
+			return "biometric/hf";
+		}
 
 
 }

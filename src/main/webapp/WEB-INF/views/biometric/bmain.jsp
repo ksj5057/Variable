@@ -169,7 +169,22 @@
 
 		</div>
 	</div>
-
+		<c:choose>
+		<c:when test="${bt301_b1 lt '35'}">
+		<script>
+		let url = "hf"
+		
+		window.open(url);
+		</script>
+		</c:when>
+		
+		<c:when test="${bt301_b1 gt '37'}">
+		<script>
+		windwo.open();
+		</script>
+		</c:when>
+		</c:choose>
+		
 
 
 	<!-- 푸터 -->
