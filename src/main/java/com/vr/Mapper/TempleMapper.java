@@ -8,6 +8,6 @@ public interface TempleMapper {
 	
 	public ArrayList<TempleDTO> temp_s(TempleDTO td);
 	
-//	public TempleDTO r301b(TempleDTO td);
+	public String bt301();
 
 }

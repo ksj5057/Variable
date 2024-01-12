@@ -17,4 +17,7 @@ select temp,
 from bb_test where today > (now() - interval 1 minute)
 order by today asc limit 1; </select>
 
+
+<select id="bt301" resultType="String"> 
+select temp from bb_test order by today desc limit 1; </select>
 </mapper>
