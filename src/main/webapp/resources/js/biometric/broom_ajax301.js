@@ -97,13 +97,68 @@ $(document).ready(function() {
 		    url: '/test/action/bt301',
 		    dataType: 'json',
 		    type: 'get',
-		    async : false,
+		    async : false, 
 		    success: function(data) {
 		    	console.log(data);
-		    	//현재 체온 39.1
-		    	$("#bt0").html(data);
-		    	$("#bt1").html(data);
-		    	$("#bt2").html(data);
+		    	
+		    	if(data  > 37.5){
+		    		$("#bt0").html(data);
+		    		$("#bt0").css("color", "red");
+		    		$("#bt1").html(data);
+		    		$("#bt1").css("color", "red");
+		    		$("#bt2").html(data);
+		    		$("#bt2").css("color", "red");
+		    	}
+		    	//발열
+		    	else if(data > 38){
+		    		$("#bt0").html(data);
+		    		$("#bt0").css("color", "red");
+		    		$("#bt1").html(data);
+		    		$("#bt1").css("color", "red");
+		    		$("#bt2").html(data);
+		    		$("#bt2").css("color", "red");
+		    	}
+		    	//고열
+		    	else if(data > 39 ){
+		    		$("#bt0").html(data);
+		    		$("#bt0").css("color", "red");
+		    		$("#bt1").html(data);
+		    		$("#bt1").css("color", "red");
+		    		$("#bt2").html(data);
+		    		$("#bt2").css("color", "red");
+		    		
+		    	}
+		    	//저체온증
+		    	else if(data < 28){
+		    		$("#bt0").html(data);
+		    		$("#bt0").css("color", "#120a8f");
+		    		$("#bt1").html(data);
+		    		$("#bt1").css("color", "#120a8f");
+		    		$("#bt2").html(data);
+		    		$("#bt2").css("color", "#120a8f");
+		    	}else if(data < 32.1){
+		    		$("#bt0").css("color", "#0f52ba");
+		    		$("#bt0").html(data);
+		    		$("#bt1").css("color", "#0f52ba");
+		    		$("#bt1").html(data);
+		    		$("#bt2").css("color", "#0f52ba");
+		    		$("#bt2").html(data);
+		    	}else if(data < 35){
+		    		$("#bt0").css("color", "#0073cf");
+		    		$("#bt0").html(data);
+		    		$("#bt1").css("color", "#0073cf");
+		    		$("#bt1").html(data);
+		    		$("#bt2").css("color", "#0073cf");
+		    		$("#bt2").html(data);
+		    	}else if(data < 36){
+		    		$("#bt0").css("color", "#87ceeb");
+		    		$("#bt0").html(data);
+		    		$("#bt1").css("color", "#87ceeb");
+		    		$("#bt1").html(data);
+		    		$("#bt2").css("color", "#87ceeb");
+		    		$("#bt2").html(data);
+		    	}
+		    	
 		    	//미열
 		    	if(data  > 37.5){
 		    		$("#bh0").html("미열");
@@ -137,32 +192,32 @@ $(document).ready(function() {
 		    	//저체온증
 		    	else if(data < 28){
 		    		$("#bh0").html("저체온 중도");
-		    		$("#bh0").css("color", "blue");
+		    		$("#bh0").css("color", "#120a8f");
 		    		$("#bh1").html("저체온 중도");
-		    		$("#bh1").css("color", "blue");
+		    		$("#bh1").css("color", "#120a8f");
 		    		$("#bh2").html("저체온 중도");
-		    		$("#bh2").css("color", "blue");
+		    		$("#bh2").css("color", "#120a8f");
 		    	}else if(data < 32.1){
 		    		$("#bh0").html("저체온 중증도");
-		    		$("#bh0").css("color", "blue");
+		    		$("#bh0").css("color", "#0f52ba");
 		    		$("#bh1").html("저체온 중증도");
-		    		$("#bh1").css("color", "blue");
+		    		$("#bh1").css("color", "#0f52ba");
 		    		$("#bh2").html("저체온 중증도");
-		    		$("#bh2").css("color", "blue");
+		    		$("#bh2").css("color", "#0f52ba");
 		    	}else if(data < 35){
 		    		$("#bh0").html("저체온 경도");
-		    		$("#bh0").css("color", "blue");
+		    		$("#bh0").css("color", "#0073cf");
 		    		$("#bh1").html("저체온 경도");
-		    		$("#bh1").css("color", "blue");
+		    		$("#bh1").css("color", "#0073cf");
 		    		$("#bh2").html("저체온 경도");
-		    		$("#bh2").css("color", "blue");
+		    		$("#bh2").css("color", "#0073cf");
 		    	}else if(data < 36){
 		    		$("#bh0").html("저체온 주의");
-		    		$("#bh0").css("color", "blue");
+		    		$("#bh0").css("color", "#87ceeb");
 		    		$("#bh1").html("저체온 주의");
-		    		$("#bh1").css("color", "blue");
+		    		$("#bh1").css("color", "#87ceeb");
 		    		$("#bh2").html("저체온 주의");
-		    		$("#bh2").css("color", "blue");
+		    		$("#bh2").css("color", "#87ceeb");
 		    	}
 		    	
 		    	//기계이상

@@ -43,4 +43,7 @@ public interface BiometricMapper {
 
 	//중복 검사
 	public int baby_room_Overlapping(BiometricDTO bd);
+	
+	//각 호실 갱신
+	public String renewal();
 }

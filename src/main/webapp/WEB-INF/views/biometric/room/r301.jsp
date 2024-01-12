@@ -67,11 +67,11 @@
 						</a>
 						<div id="tem_ment">
 							<div class="bname" id="check_baby_id${a.index}">
-								<a href="babydetail?bno=${baby.bno}">${baby.bname} </a>
+								<a href="babydetail?bno=${baby.bno}" style="font-size: 20px;">${baby.bname} </a>
 							</div>
 							<input type="hidden" value="${baby.bno}" id="baby_bno${a.index}">
-						<!-- 현재 체온 --><div>현재 체온  : <label id="bt${a.index}"></label>℃</div>
-						<!-- 체열에 따른 경고 --><div id="bh${a.index}"></div>
+						<!-- 현재 체온 --><div style="font-size: 20px;">현재 체온  : <label id="bt${a.index}"></label>℃</div>
+						<!-- 체열에 따른 경고 --><div id="bh${a.index}" style="font-size: 15px;"></div>
 							
 						</div>
 					</div>

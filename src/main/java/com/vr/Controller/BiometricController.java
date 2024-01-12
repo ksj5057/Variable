@@ -38,6 +38,12 @@ public class BiometricController {
 	//소아과병동 홈페이로 접속.
 	@GetMapping("bmain")
 	public String biometricMain(TemperatureDTO td, Model model) {
+		//각 호실 온도 값 갱신.
+		String a = bs.renewal();
+		System.out.println(a);
+		//각 호실의 온도 이상 확인해서 값 가져오기
+		
+		
 		//실내 온도 값 가져오기
 		model.addAttribute("indoor", tis.Indoortemperature());
 		return "biometric/bmain";

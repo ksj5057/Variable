@@ -4,6 +4,11 @@
 /* font-family: 'Gothic A1', sans-serif; */
 
 
+body{
+	list-style: none;
+    font-family: 'OTWelcomeRA';
+}
+
 #icon_1, #icon_2 {
     position: absolute;
     top: -60%;

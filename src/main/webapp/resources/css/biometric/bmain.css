@@ -1,19 +1,33 @@
 @charset "UTF-8";
 
-.val{
+.val {
 	position: relative;
-    top: 6px;
+	top: 6px;
 }
-.imageup, .imagedown{
+#woring_text1{
+    position: absolute;
+    width: 185px;
+    left: 0px;
+    top: 74px;
+    }
+
+#woring_text2 {
+    position: absolute;
+    width: 185px;
+    left: -35px;
+    top: 95px;
+    }    
+    
+.imageup, .imagedown {
 	height: 20px;
 	cursor: pointer
 }
 
-#temperature_control{
-    position: fixed;
-    top: auto;
-    left: 90%;
-    width: 106px;
+#temperature_control {
+	position: fixed;
+	top: auto;
+	left: 90%;
+	width: 106px;
 }
 
 .room {
@@ -32,19 +46,19 @@
 	min-height: calc(100vh - 142px);
 }
 
-#main_button{
+#main_button {
 	position: relative;
-    right: 8px;
-    bottom: 50px;
+	right: 8px;
+	bottom: 50px;
 }
 
-#new_child button{
-    width: 105px;
-    background-color: #53D7A5;
-    border: 2px solid #53D7A5;
-    color: white;
-    height: 50px;
-    border-radius: 10px;
+#new_child button {
+	width: 105px;
+	background-color: #53D7A5;
+	border: 2px solid #53D7A5;
+	color: white;
+	height: 50px;
+	border-radius: 10px;
 }
 
 #child_main {
@@ -87,12 +101,12 @@ body {
 }
 
 #woring_image {
-    width: 30px;
-    height: 20px;
-    position: absolute;
-    top: 10px;
-    left: 170px;
-    background-color: white;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: -1px;
+	left: 170px;
+	background-color: white;
 }
 
 #woring_text {
@@ -100,81 +114,81 @@ body {
 }
 
 input#batches_tem {
-    border: 3px solid rgb(0, 0, 0);
-    border-radius: 5px;
-    height: 28px;
-    line-height: normal;
-    color: rgb(40, 40, 40);
-    display: inline-block;
-    width: 62px;
-    box-sizing: border-box;
-    user-select: auto;
-    font-size: 16px;
-    padding: 0px 6px 0px 18px;
-    text-align: center;
+	border: 3px solid rgb(0, 0, 0);
+	border-radius: 5px;
+	height: 28px;
+	line-height: normal;
+	color: rgb(40, 40, 40);
+	display: inline-block;
+	width: 62px;
+	box-sizing: border-box;
+	user-select: auto;
+	font-size: 16px;
+	padding: 0px 6px 0px 18px;
+	text-align: center;
 }
 
 input#bt301_tem {
-    border: 3px solid rgb(0, 0, 0);
-    border-radius: 5px;
-    height: 28px;
-    line-height: normal;
-    color: rgb(40, 40, 40);
-    display: inline-block;
-    width: 62px;
-    box-sizing: border-box;
-    user-select: auto;
-    font-size: 16px;
-    padding: 0px 6px 0px 18px;
-    text-align: center;
+	border: 3px solid rgb(0, 0, 0);
+	border-radius: 5px;
+	height: 28px;
+	line-height: normal;
+	color: rgb(40, 40, 40);
+	display: inline-block;
+	width: 62px;
+	box-sizing: border-box;
+	user-select: auto;
+	font-size: 16px;
+	padding: 0px 6px 0px 18px;
+	text-align: center;
 }
 
 input#bt302_tem {
-    border: 3px solid rgb(0, 0, 0);
-    border-radius: 5px;
-    height: 28px;
-    line-height: normal;
-    color: rgb(40, 40, 40);
-    display: inline-block;
-    width: 62px;
-    box-sizing: border-box;
-    user-select: auto;
-    font-size: 16px;
-    padding: 0px 6px 0px 18px;
-    text-align: center;
+	border: 3px solid rgb(0, 0, 0);
+	border-radius: 5px;
+	height: 28px;
+	line-height: normal;
+	color: rgb(40, 40, 40);
+	display: inline-block;
+	width: 62px;
+	box-sizing: border-box;
+	user-select: auto;
+	font-size: 16px;
+	padding: 0px 6px 0px 18px;
+	text-align: center;
 }
 
 input#bt303_tem {
-    border: 3px solid rgb(0, 0, 0);
-    border-radius: 5px;
-    height: 28px;
-    line-height: normal;
-    color: rgb(40, 40, 40);
-    display: inline-block;
-    width: 62px;
-    box-sizing: border-box;
-    user-select: auto;
-    font-size: 16px;
-    padding: 0px 6px 0px 18px;
-    text-align: center;
+	border: 3px solid rgb(0, 0, 0);
+	border-radius: 5px;
+	height: 28px;
+	line-height: normal;
+	color: rgb(40, 40, 40);
+	display: inline-block;
+	width: 62px;
+	box-sizing: border-box;
+	user-select: auto;
+	font-size: 16px;
+	padding: 0px 6px 0px 18px;
+	text-align: center;
 }
 
 input[type="button"] {
-    display: inline-block;
-    outline: none;
-    cursor: pointer;
-    border-radius: 3px;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 16px;
-    padding: 2px 16px;
-    margin-top: 5px;
-    width: 100px;
-    height: 32px;
-    min-width: 60px;
-    min-height: 32px;
-    border: none;
-    color: rgb(255, 255, 255);
-    background-color: rgb(79, 84, 92);
-    transition: background-color 0.17s ease 0s, color 0.17s ease 0s;
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	border-radius: 3px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 16px;
+	padding: 2px 16px;
+	margin-top: 5px;
+	width: 100px;
+	height: 32px;
+	min-width: 60px;
+	min-height: 32px;
+	border: none;
+	color: rgb(255, 255, 255);
+	background-color: rgb(79, 84, 92);
+	transition: background-color 0.17s ease 0s, color 0.17s ease 0s;
 }
