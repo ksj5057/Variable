@@ -84,5 +84,8 @@ public class BiometricServiceImpl implements BiometricService {
 		return bm.baby_room_Overlapping(bd);
 	}
 	
+	public String renewal() {
+			return bm.renewal();
+	}
 	
 }

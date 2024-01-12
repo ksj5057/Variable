@@ -47,6 +47,7 @@ public interface BiometricService {
 	//중복 검사
 	public int baby_room_Overlapping(BiometricDTO bd);
 
-	
+	//호실 갱신
+	public String renewal();
 
 }
