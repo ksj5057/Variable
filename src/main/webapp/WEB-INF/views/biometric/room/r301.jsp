@@ -70,9 +70,9 @@
 								<a href="babydetail?bno=${baby.bno}">${baby.bname} </a>
 							</div>
 							<input type="hidden" value="${baby.bno}" id="baby_bno${a.index}">
-							<div>현재 체온 : ℃</div>
-							<div>체온이 높습니다</div>
-							<div>체온이 낮습니다</div>
+						<!-- 현재 체온 --><div>현재 체온  : <label id="bt${a.index}"></label>℃</div>
+						<!-- 체열에 따른 경고 --><div id="bh${a.index}"></div>
+							
 						</div>
 					</div>
 				</c:forEach>

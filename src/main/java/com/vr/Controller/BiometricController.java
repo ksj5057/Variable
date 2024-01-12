@@ -96,7 +96,7 @@ public class BiometricController {
 	@RequestMapping(value = "babyinsert", method = RequestMethod.GET)
 	public String babyinsert(BiometricDTO bd) {
 		bs.babyinsert(bd);
-		return "biometric/bmain";
+		return "biometric/close";
 		}
 	
 	//회원가입 화면에서 회원가입 버튼 클릭시 메소드 실행
@@ -166,22 +166,6 @@ public class BiometricController {
 			//저장된 bno오 값으로 db에서 삭제 후 리턴 리턴값은 = int ( 1 or 0 );
 			return new ResponseEntity<>(bs.baby_room_del1(bd),HttpStatus.OK);
 		}
-		//호실 퇴원 함수 ajax
-		@GetMapping("/post/baby/del2/db/{bbno}")
-		public ResponseEntity<?> del2(@PathVariable int bbno,  HttpSession session, BiometricDTO bd){
-			//bno값을 저장
-			bd.setBno(bbno);
-			//저장된 bno오 값으로 db에서 삭제 후 리턴 리턴값은 = int ( 1 or 0 );
-			return new ResponseEntity<>(bs.baby_room_del2(bd),HttpStatus.OK);
-		}
-		//호실 퇴원 함수 ajax
-		@GetMapping("/post/baby/del3/db/{bbno}")
-		public ResponseEntity<?> del3(@PathVariable int bbno,  HttpSession session, BiometricDTO bd){
-			//bno값을 저장
-			bd.setBno(bbno);
-			//저장된 bno오 값으로 db에서 삭제 후 리턴 리턴값은 = int ( 1 or 0 );
-			return new ResponseEntity<>(bs.baby_room_del3(bd),HttpStatus.OK);
-				}
 		
 
 
