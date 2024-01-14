@@ -54,7 +54,7 @@ public class BiometricController {
 		return "biometric/bmain";
 	}
 
-	//소아과 302호실 페이지로 접속
+	//소아과 301호실 페이지로 접속
 	@GetMapping("r301")
 	public String r301(BiometricDTO bd, Model model,TempleDTO td) {
 		//bt302db에 등록되어있는 아기 리스트 가져오기.
@@ -125,7 +125,6 @@ public class BiometricController {
 		//호실 입원.
 				@GetMapping("/get/baby/cat/{bname}/{bno}/{bt}")
 				public ResponseEntity<Integer> baby(@PathVariable String bname, @PathVariable int bno, @PathVariable String bt,  HttpSession session, HttpServletResponse response){
-					System.out.println("asdfasdf");
 					BiometricDTO bd = new BiometricDTO();
 					// bd에 이름을 저장
 					bd.setBname(bname);
@@ -181,11 +180,18 @@ public class BiometricController {
 			//저장된 bno오 값으로 db에서 삭제 후 리턴 리턴값은 = int ( 1 or 0 );
 			return new ResponseEntity<>(bs.baby_room_del1(bd),HttpStatus.OK);
 		}
-		
+		//고열 경고창
 		@GetMapping("hf")
-		public String ment1() {
+		public String ment1(Model model) {
+			model.addAttribute("301", "301호");
 			return "biometric/hf";
 		}
-
+		//저열 경고창
+		@GetMapping("lf")
+		public String ment2(Model model) {
+			String ment = "301호 온도가 낮습니다 확인해주세요";
+			model.addAttribute("ment", ment);
+			return "biometric/lf";
+		}
 
 }
