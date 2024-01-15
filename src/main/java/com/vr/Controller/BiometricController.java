@@ -130,7 +130,6 @@ public class BiometricController {
 		}
 		//입원 아기가 3명이면
 	}else if(count == 3 ) {
-		System.out.println("3");
 		//그 아기의 온도에 이상이 있는지 확인
 		if(bt1_tem > 38 || bt1_tem < 36) {
 			//차트번호 가지고 와서 dto에 값 저장
@@ -161,7 +160,6 @@ public class BiometricController {
 		
 		if(bt1_tem > 38) {
 			Warningh++; //1상승
-			System.out.println("a");
 		}else if(bt1_tem < 36) {
 			Warningl++; // 1상승
 		}if(bt2_tem > 38) {
@@ -175,9 +173,8 @@ public class BiometricController {
 		}
 		
 	}
-		
-		model.addAttribute("woringl", Warningl);
-		model.addAttribute("woringh", Warningh);
+		model.addAttribute("Warningl", Warningl);
+		model.addAttribute("Warningh", Warningh);
 		//값을 ti_301 db에 저장 및 갱신
 		bs.renewal_insert(bt1);
 		bs.renewal_insert(bt2);
@@ -304,7 +301,6 @@ public class BiometricController {
 		
 		@GetMapping("/post/chart/time")
 		public ResponseEntity<?> tem(HttpSession session, TempleDTO td){
-			System.out.println("연결 중.....");
 			return new ResponseEntity<>(ts.temp_s(td),HttpStatus.OK);
 		}
 					
