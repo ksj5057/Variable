@@ -30,20 +30,29 @@
 
 				<div id="poptext1">클릭 하면 솔잎반으로 들어갈수있어요!</div>
 
-				<a href="r301" class="room_text">301호</a>
-
-				<div id="woring">
-					<!-- 경고 이미지 -->
-					<img src="../../resources/image/biometric/경고.png" id="woring_image" />
-				</div>
 				<!--  경고 문구  -->
-				<div id="woring_text">이상이 있습니다. 확인해주세요</div>
-
+				<div id="tem_input_ment">
+				<div class="woring_box">
+				<a href="r301" class="room_text">301호</a>
+				</div>
+				<c:choose>
+				<c:when test="${indoor.now_bt301 lt 21}">
+				<!-- 경고 이미지 -->
+					<img src="../../resources/image/biometric/경고.png" id="woring_image" />
+				<label id="woring_text1" style="color: blue;">실내온도가 낮아지고 있습니다.</label>
+				<label id="woring_text2" style="color: blue;">온도를 조절하세요.</label>
+				</c:when>
+				<c:when test="${indoor.now_bt301 gt 25}">
+				<!-- 경고 이미지 -->
+					<img src="../../resources/image/biometric/경고.png" id="woring_image" />
+				<label id="woring_text1" style="color: red;">실내온도가 높아지고 있습니다.</label>
+				<label id="woring_text2" style="color: red;">온도를 조절하세요.</label>
+				</c:when>
+				</c:choose>
 				<div id="bt301_ti" class="ti_input">
-					<label>실내온도: <input type="text" value="25℃" readonly
-						style="width: 40px;"></label> <label>설정온도: <input
-						type="text" value="${indoor.set_bt301}℃" readonly
-						style="width: 40px;"></label>
+					<label>실내온도: <input type="text" value="${indoor.now_bt301}℃" readonly style="width: 40px;"></label>
+					 <label>설정온도: <input type="text" value="${indoor.set_bt301}℃" readonly style="width: 40px;"></label>
+				</div>
 				</div>
 			</div>
 
@@ -56,22 +65,29 @@
 				</a>
 
 				<div id="poptext2">클릭 하면 풀잎반으로 들어갈수있어요!</div>
-
+				<!--  경고 문구  -->
+				<div id="tem_input_ment">
+				<div class="woring_box">
 				<a href="r302" class="room_text">302호</a>
-
-				<!-- 경고문이 뜨는 조건 -->
-				<div id="woring">
+				</div>
+				<c:choose>
+				<c:when test="${indoor.now_bt302 lt 21}"> <!-- 저열< -->
 					<!-- 경고 이미지 -->
 					<img src="../../resources/image/biometric/경고.png" id="woring_image" />
+				<label id="woring_text1" style="color: blue;">실내온도가 낮아지고 있습니다.</label>
+				<label id="woring_text2" style="color: blue;">온도를 조절하세요.</label>
+				</c:when>
+				<c:when test="${indoor.now_bt302 gt 25}">
+					<!-- 경고 이미지 -->
+					<img src="../../resources/image/biometric/경고.png" id="woring_image" />
+				<label id="woring_text2" style="color: red;">실내온도가 높아지고 있습니다.</label>
+				<label id="woring_text2" style="color: red;">온도를 조절하세요.</label>	
+				</c:when>
+				</c:choose>
+				<div id="bt301_ti" class="ti_input">
+					<label>실내온도: <input type="text" value="${indoor.now_bt302}℃" readonly style="width: 40px;"></label>
+					 <label>설정온도: <input type="text" value="${indoor.set_bt302}℃" readonly style="width: 40px;"></label>
 				</div>
-				<!--  경고 문구  -->
-				<div id="woring_text">이상이 있습니다. 확인해주세요</div>
-
-				<div id="bt302_ti" class="ti_input">
-					<label>실내온도: <input type="text" value="25℃" readonly
-						style="width: 40px;"></label> <label>설정온도: <input
-						type="text" value="${indoor.set_bt302}℃" readonly
-						style="width: 40px;"></label>
 				</div>
 			</div>
 
@@ -84,22 +100,30 @@
 				</a>
 
 				<div id="poptext3">클릭 하면 꽃잎반으로 들어갈수있어요!</div>
-
+				<!--  경고 문구  -->
+			<div id="tem_input_ment">
+				<div class="wroing_box">
 				<a href="r303" class="room_text">303호</a>
-
-				<!-- 경고문이 뜨는 조건 -->
-				<div id="woring">
+				</div>
+				<c:choose>
+				<c:when test="${indoor.now_bt303 lt 21}">
+				
 					<!-- 경고 이미지 -->
 					<img src="../../resources/image/biometric/경고.png" id="woring_image" />
+				<label id="woring_text1" style="color: blue;">실내온도가 낮아지고 있습니다.</label>
+				<label id="woring_text2" style="color: blue;">온도를 조절하세요.</label>
+				</c:when>
+				<c:when test="${indoor.now_bt303 gt 25}">
+					<!-- 경고 이미지 -->
+					<img src="../../resources/image/biometric/경고.png" id="woring_image" />
+				<label id="woring_text1" style="color: red;">실내온도가 높아지고 있습니다.</label>
+				<label id="woring_text2" style="color: red;">온도를 조절하세요.</label>
+				</c:when>
+				</c:choose>
+				<div id="bt301_ti" class="ti_input">
+					<label>실내온도: <input type="text" value="${indoor.now_bt303}℃" readonly style="width: 40px;"></label>
+					 <label>설정온도: <input type="text" value="${indoor.set_bt303}℃" readonly style="width: 40px;"></label>
 				</div>
-				<!--  경고 문구  -->
-				<div id="woring_text">이상이 있습니다. 확인해주세요</div>
-
-				<div id="bt303_ti" class="ti_input">
-					<label>실내온도: <input type="text" value="25℃" readonly
-						style="width: 40px;"></label> <label>설정온도: <input
-						type="text" value="${indoor.set_bt303}℃" readonly
-						style="width: 40px;"></label>
 				</div>
 			</div>
 
@@ -147,6 +171,62 @@
 		</div>
 	</div>
 
+	<div>
+		<img src="../../resources/image/biometric/hf_woring1.png" class="h_f" id="h_f1"/> 
+		<img src="../../resources/image/biometric/hf_woring2.png"  class="h_f" id="h_f1"/> 
+		<img src="../../resources/image/biometric/hf_woring3.png"  class="h_f" id="h_f1"/>
+	</div>
+	<div>
+		<img src="../../resources/image/biometric/lf_woring1.png" class="l_f" id="l_f1"/> 
+		<img src="../../resources/image/biometric/lf_woring2.png"  class="l_f" id="l_f1"/>
+		 <img src="../../resources/image/biometric/lf_woring3.png"  class="l_f" id="l_f1"/>
+	</div>
+
+	<div>
+		<img src="../../resources/image/biometric/hf_woring1.png"  class="h_f" id="h_f2"/> 
+		<img src="../../resources/image/biometric/hf_woring2.png"  class="h_f" id="h_f2"/> 
+		<img src="../../resources/image/biometric/hf_woring3.png"  class="h_f" id="h_f2"/>
+	</div>
+	<div>
+		<img src="../../resources/image/biometric/lf_woring1.png"  class="l_f" id="l_f2"/>
+		<img src="../../resources/image/biometric/lf_woring2.png"  class="l_f " id="l_f2"/>
+		 <img src="../../resources/image/biometric/lf_woring3.png"  class="l_f" id="l_f2"/>
+	</div>
+
+	<div>
+		<img src="../../resources/image/biometric/hf_woring1.png"  class="h_f" id="h_f3"/> 
+		<img src="../../resources/image/biometric/hf_woring2.png"  class="h_f" id="h_f3"/> 
+		<img src="../../resources/image/biometric/hf_woring3.png"  class="h_f" id="h_f3"/>
+	</div>
+	<div>
+		<img src="../../resources/image/biometric/lf_woring1.png"  class="l_f" id="l_f3"/>
+		<img src="../../resources/image/biometric/lf_woring2.png"  class="l_f" id="l_f3"/>
+		 <img src="../../resources/image/biometric/lf_woring3.png"  class="l_f" id="l_f3"/>
+	</div>
+	<c:choose>
+		<c:when test="${bt301_b1 lt '35' }">
+		<script>
+			//저열
+			let url = "lf"
+			let option = 'width=300, height=20, top=20, left=200, scrollbars=no, resizeable=no';
+			letname = 'myPopup';
+
+			window.open(url, name, option);
+		</script>
+		</c:when>
+		
+		
+		<c:when test="${bt301_b1 gt '37'}">
+		<script>
+		//고열
+		     let url = "lf"
+			 let option = 'width=300, height=20, top=20, left=750, scrollbars=no, resizeable=no,'; 
+			 letname = 'myPopup'; 
+		window.open(url, name, option);
+		</script>
+		</c:when>
+		</c:choose>
+		
 
 
 	<!-- 푸터 -->

@@ -37,16 +37,30 @@ public class BiometricController {
 	
 	//소아과병동 홈페이로 접속.
 	@GetMapping("bmain")
-	public String biometricMain(TemperatureDTO td, Model model) {
+	public String biometricMain(TempleDTO td, Model model,BiometricDTO bd) {
+		//각 호실 온도 값 갱신.
+		TempleDTO setd = bs.renewal();
+		model.addAttribute("bt301_b1", setd.getTemp());
+		//가져온 값을 
+		td.setBno(1);
+		td.setTemp(setd.getTemp());
+		td.setToday(setd.getToday());
+		bs.renewal_insert(td); 
+		//각 호실의 온도 이상 확인해서 값 가져오기
+		
+		
 		//실내 온도 값 가져오기
 		model.addAttribute("indoor", tis.Indoortemperature());
 		return "biometric/bmain";
 	}
 
-	//소아과 302호실 페이지로 접속
+	//소아과 301호실 페이지로 접속
 	@GetMapping("r301")
-	public String r301(BiometricDTO bd, Model model) {
+	public String r301(BiometricDTO bd, Model model,TempleDTO td) {
 		//bt302db에 등록되어있는 아기 리스트 가져오기.
+		td.setBno(1);
+		ts.bt301_1(td);
+		model.addAttribute("bt301_1", ts.bt301_1(td));
 		BiometricDTO list = new BiometricDTO();
 		model.addAttribute("list", bs.babylist1(list));
 		
@@ -59,6 +73,7 @@ public class BiometricController {
 	//소아과 302호실 페이지로 접속
 	@GetMapping("r302")
 	public String r302(BiometricDTO bd, Model model) {
+		
 		//bt302db에 등록되어있는 아기 리스트 가져오기.
 		BiometricDTO list = new BiometricDTO();
 		model.addAttribute("list", bs.babylist2(list));
@@ -110,7 +125,6 @@ public class BiometricController {
 		//호실 입원.
 				@GetMapping("/get/baby/cat/{bname}/{bno}/{bt}")
 				public ResponseEntity<Integer> baby(@PathVariable String bname, @PathVariable int bno, @PathVariable String bt,  HttpSession session, HttpServletResponse response){
-					System.out.println("asdfasdf");
 					BiometricDTO bd = new BiometricDTO();
 					// bd에 이름을 저장
 					bd.setBname(bname);
@@ -166,7 +180,18 @@ public class BiometricController {
 			//저장된 bno오 값으로 db에서 삭제 후 리턴 리턴값은 = int ( 1 or 0 );
 			return new ResponseEntity<>(bs.baby_room_del1(bd),HttpStatus.OK);
 		}
-		
-
+		//고열 경고창
+		@GetMapping("hf")
+		public String ment1(Model model) {
+			model.addAttribute("301", "301호");
+			return "biometric/hf";
+		}
+		//저열 경고창
+		@GetMapping("lf")
+		public String ment2(Model model) {
+			String ment = "301호 온도가 낮습니다 확인해주세요";
+			model.addAttribute("ment", ment);
+			return "biometric/lf";
+		}
 
 }

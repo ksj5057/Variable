@@ -6,18 +6,25 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.vr.Mapper.TempleMapper">
 
-<!-- 현재시간 기준 1분전 상위 데이터 1건 조회 -->
-<select id="temp_s" resultType="com.vr.Model.TempleDTO"> 
-select temp,
-          (CASE
-         WHEN INSTR(DATE_FORMAT(today, '%m-%d %h:%i'), 'PM') > 0
-         THEN REPLACE(DATE_FORMAT(today, '%m-%d %h:%i'), 'PM', '오후')
-         ELSE REPLACE(DATE_FORMAT(today, '%m-%d %h:%i'), 'AM', '오전')    
-         END) AS today
-from bb_test where today > (now() - interval 1 minute)
-order by today asc limit 1; </select>
+	<!-- 현재시간 기준 1분전 상위 데이터 1건 조회 -->
+	<select id="temp_s" resultType="com.vr.Model.TempleDTO">
+		select temp,
+		(CASE
+		WHEN INSTR(DATE_FORMAT(today, '%m-%d %h:%i'), 'PM') > 0
+		THEN REPLACE(DATE_FORMAT(today, '%m-%d %h:%i'), 'PM', '오후')
+		ELSE REPLACE(DATE_FORMAT(today, '%m-%d %h:%i'), 'AM', '오전')
+		END) AS today
+		from bb_test where today > (now() - interval 1 minute)
+		order by today asc limit 1; </select>
 
 
-<select id="bt301" resultType="String"> 
-select temp from bb_test order by today desc limit 1; </select>
+	<select id="bt301" resultType="String">
+		select temp from bb_test order by today desc limit 1;
+	</select>
+	
+	
+	<select id="bt301_1" resultType="String">
+
+		select temp from ti_301 where bno = #{bno} order by today desc limit 1;
+	</select>
 </mapper>

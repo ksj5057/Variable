@@ -3,11 +3,11 @@ package com.vr.Service;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.vr.Mapper.BiometricMapper;
 import com.vr.Model.BiometricDTO;
+import com.vr.Model.TempleDTO;
 
 @Service
 public class BiometricServiceImpl implements BiometricService {
@@ -84,5 +84,11 @@ public class BiometricServiceImpl implements BiometricService {
 		return bm.baby_room_Overlapping(bd);
 	}
 	
+	public TempleDTO renewal() {
+			return bm.renewal();
+	}
+	public void renewal_insert(TempleDTO td) {
+		  bm.renewal_insert(td);
+	}
 	
 }

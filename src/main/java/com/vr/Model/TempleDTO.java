@@ -7,7 +7,15 @@ public class TempleDTO {
 	// 측정온도
 	private String temp;
 	
+	private int bno;
 	
+	
+	public int getBno() {
+		return bno;
+	}
+	public void setBno(int bno) {
+		this.bno = bno;
+	}
 	public String getToday() {
 		return today;
 	}

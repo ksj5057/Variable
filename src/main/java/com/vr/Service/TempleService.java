@@ -10,4 +10,6 @@ public interface TempleService {
 
 	public String bt301();
 	
+	public String bt301_1(TempleDTO td);
+	
 }
