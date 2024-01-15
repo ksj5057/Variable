@@ -1,5 +1,7 @@
 package com.vr.Controller;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
@@ -14,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.vr.Model.BiometricDTO;
-import com.vr.Model.TemperatureDTO;
 import com.vr.Model.TempleDTO;
 import com.vr.Service.BiometricService;
 import com.vr.Service.TemperatureServiece;
@@ -37,15 +38,154 @@ public class BiometricController {
 	
 	//소아과병동 홈페이로 접속.
 	@GetMapping("bmain")
-	public String biometricMain(TempleDTO td, Model model,BiometricDTO bd) {
-		//각 호실 온도 값 갱신.
-		TempleDTO setd = bs.renewal();
-		model.addAttribute("bt301_b1", setd.getTemp());
-		//가져온 값을 
-		td.setBno(1);
-		td.setTemp(setd.getTemp());
-		td.setToday(setd.getToday());
-		bs.renewal_insert(td); 
+	public String biometricMain(TempleDTO td, Model model,BiometricDTO bd, HttpSession session) {
+		int woringh = 0;
+		int woringl = 0;
+		
+		// 각 호실 실내온도 값 갱신.
+		bs.renewal_insert(td);
+		
+		//301호실 입원 명 수 확인
+		int count = bs.renewal_count();
+		//명 수 만큼 값 가져오기
+		ArrayList<TempleDTO> bt301 = bs.renewal(count);
+		//온도 저장 변수
+		double bt1_tem = 0;
+		double bt2_tem = 0;
+		double bt3_tem = 0;
+		
+		//
+		TempleDTO bt1 = null;
+		TempleDTO bt2 = null;
+		TempleDTO bt3 = null;
+		
+		// 301호 아기들 배열을 풀어서 TempleDTO 타입으로 하나씩 저장
+		// ArrayList<TempleDTO> bt301 0번 인덱스 
+		if(count == 1) {
+			//301호의 아기가 1명이면 1명분의 인덱스 값을 가져와서 bt1에 저장
+			bt1 = bt301.get(0);
+			//bt의 온도값을 실수인 bt1_tem에 저장
+			bt1_tem = Double.parseDouble (bt1.getTemp());
+		}else if(count == 2) {
+			//301호의 아기가 2명이면
+			bt1 = bt301.get(0);
+			bt2 = bt301.get(1);
+			
+			bt1_tem = Double.parseDouble (bt1.getTemp());
+			bt2_tem = Double.parseDouble (bt2.getTemp());
+		}else if(count == 3) {
+			//301호의 아기가 3명이면
+			bt1 = bt301.get(0);
+			bt2 = bt301.get(1);
+			bt3 = bt301.get(2);
+			
+			bt1_tem = Double.parseDouble (bt1.getTemp());
+			bt2_tem = Double.parseDouble (bt2.getTemp());
+			bt3_tem = Double.parseDouble (bt3.getTemp());
+		}
+		//입원 아기가 1명이면
+		if(count == 1) {
+				//그 아기의 온도에 이상이 있는지 확인
+		if(bt1_tem > 38 || bt1_tem < 36) {
+			
+			//차트번호 가지고 와서 dto에 값 저장
+			BiometricDTO bd1 = new BiometricDTO();
+			bd1.setBno(bt1.getBno());
+			//bno 값으로 이름을 찾고 세션에 저장
+			session.setAttribute("name1", bs.renewal_name(bd1));
+			model.addAttribute("bt1", bs.renewal_name(bd1));
+			if(bt1_tem > 38) {
+				woringh++;
+			}else if(bt1_tem < 36) {
+				woringl++;
+			}
+		}//입원 아기가 2명이면
+		}else if(count == 2) {
+			//그 아기의 온도에 이상이 있는지 확인
+		if(bt1_tem > 38 || bt1_tem < 36) {
+			//차트번호 가지고 와서 dto에 값 저장
+			BiometricDTO bd1 = new BiometricDTO();
+			bd1.setBno(bt1.getBno());
+			//bno 값으로 이름을 찾고 세션에 저장
+			session.setAttribute("name1", bs.renewal_name(bd1));
+			model.addAttribute("bt1", bs.renewal_name(bd1));
+		}
+		
+		if(bt2_tem > 38 || bt2_tem < 36) {
+			//차트번호 가지고 와서 dto에 값 저장
+			BiometricDTO bd2 = new BiometricDTO();
+			bd2.setBno(bt2.getBno());
+			//bno 값으로 이름을 찾고 저장하기.
+			session.setAttribute("name2", bs.renewal_name(bd2));
+			model.addAttribute("bt2", bs.renewal_name(bd2));
+		}
+		if(bt1_tem > 38) {
+			woringh ++;
+		}else if(bt1_tem < 36) {
+			woringl ++;
+		}if(bt2_tem > 38) {
+			woringh++;
+		}else if(bt2_tem < 36) {
+			woringl++;
+		}
+		//입원 아기가 3명이면
+	}else if(count == 3 ) {
+		System.out.println("3");
+		//그 아기의 온도에 이상이 있는지 확인
+		if(bt1_tem > 38 || bt1_tem < 36) {
+			//차트번호 가지고 와서 dto에 값 저장
+			BiometricDTO bd1 = new BiometricDTO();
+			bd1.setBno(bt1.getBno());
+			//bno 값으로 이름을 찾고 세션에 저장
+			session.setAttribute("name1", bs.renewal_name(bd1));
+			model.addAttribute("bt1", bs.renewal_name(bd1));
+		}
+		
+		if(bt2_tem > 38 || bt2_tem < 36) {
+			//차트번호 가지고 와서 dto에 값 저장
+			BiometricDTO bd2 = new BiometricDTO();
+			bd2.setBno(bt2.getBno());
+			//bno 값으로 이름을 찾고 저장하기.
+			session.setAttribute("name2", bs.renewal_name(bd2));
+			model.addAttribute("bt2", bs.renewal_name(bd2));
+		}
+		if(bt3_tem > 38 || bt3_tem < 36) {
+			//차트번호 가지고 와서 dto에 값 저장
+			BiometricDTO bd3 = new BiometricDTO();
+			bd3.setBno(bt3.getBno());
+			//bno 값으로 이름을 찾고 세션에 저장
+			session.setAttribute("name3", bs.renewal_name(bd3));
+			model.addAttribute("bt3", bs.renewal_name(bd3));
+			
+		}
+		
+		if(bt1_tem > 38) {
+			woringh++; //1상승
+			System.out.println("a");
+		}else if(bt1_tem < 36) {
+			woringl++; // 1상승
+			System.out.println(woringl);
+		}if(bt2_tem > 38) {
+			woringh++;
+		}else if(bt2_tem < 36) {
+			
+			woringl++;
+			System.out.println(woringl);
+		}if(bt3_tem > 38) {
+			woringh++;
+		}else if(bt3_tem < 36) {
+			woringl++;
+			System.out.println(woringl);
+		}
+		
+	}
+		
+		model.addAttribute("woringl", woringl);
+		model.addAttribute("woringh", woringh);
+		//값을 ti_301 db에 저장 및 갱신
+		bs.renewal_insert(bt1);
+		bs.renewal_insert(bt2);
+		bs.renewal_insert(bt3);
 		//각 호실의 온도 이상 확인해서 값 가져오기
 		
 		
@@ -180,18 +320,14 @@ public class BiometricController {
 			//저장된 bno오 값으로 db에서 삭제 후 리턴 리턴값은 = int ( 1 or 0 );
 			return new ResponseEntity<>(bs.baby_room_del1(bd),HttpStatus.OK);
 		}
-		//고열 경고창
-		@GetMapping("hf")
-		public String ment1(Model model) {
-			model.addAttribute("301", "301호");
-			return "biometric/hf";
-		}
-		//저열 경고창
-		@GetMapping("lf")
-		public String ment2(Model model) {
-			String ment = "301호 온도가 낮습니다 확인해주세요";
-			model.addAttribute("ment", ment);
-			return "biometric/lf";
+	
+		//경고창
+		@GetMapping("Woring")
+		public String Woring(Model model, HttpSession session) {
+			model.addAttribute("bt301_1", session.getAttribute("name1"));
+			model.addAttribute("bt301_2", session.getAttribute("name2"));
+			model.addAttribute("bt301_3", session.getAttribute("name3"));
+			return "biometric/Woring";
 		}
 
 }

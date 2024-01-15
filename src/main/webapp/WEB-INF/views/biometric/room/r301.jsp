@@ -14,7 +14,6 @@
 	src="../../../resources/js/biometric/broom301.js"></script>
 </head>
 <body>
-
 	<jsp:include page="../../include/header.jsp"></jsp:include>
 	<div id="room_body">
 
@@ -72,7 +71,6 @@
 							<input type="hidden" value="${baby.bno}" id="baby_bno${a.index}">
 						<!-- 현재 체온 --><div style="font-size: 20px;">현재 체온  : <label id="bt${a.index}">${bt301_1}</label>℃</div>
 						<!-- 체열에 따른 경고 --><div id="bh${a.index}" style="font-size: 15px;"></div>
-							
 						</div>
 					</div>
 				</c:forEach>
