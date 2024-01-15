@@ -1,12 +1,29 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
-/* font-family: 'Gothic A1', sans-serif; */
-
+@font-face {
+    font-family: 'KimjungchulMyungjo-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
 
 body{
 	list-style: none;
     font-family: 'OTWelcomeRA';
+}
+
+div {
+    font-family: 'KimjungchulMyungjo-Bold';
+}
+
+input#insert_baby_name2 {
+    font-family: 'KimjungchulMyungjo-Bold';
+    font-size: 16px;
+}
+
+input#insert_baby_bno2 {
+    font-family: 'KimjungchulMyungjo-Bold';
+    font-size: 16px;
 }
 
 #icon_1, #icon_2 {
@@ -53,7 +70,6 @@ img{
 	width : 210px;
 	height : 280px;
 	border-collapse : collapse;
-	font-family: 'Gothic A1', sans-serif;
 }
 
 #insert_baby_table0 {
@@ -116,7 +132,7 @@ img{
 	width: 50px;
 	left: -31.8%;
 	top: 70%;
-	font-family: 'OTWelcomeRA';
+    font-family: 'KimjungchulMyungjo-Bold';
 }
 
 .setting_icon {
@@ -154,8 +170,9 @@ img{
 }
 
 .roomn {
-	text-align: center;
-	font-size: 50px;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'KimjungchulMyungjo-Bold';
 }
 
 .incubator {
@@ -182,6 +199,7 @@ img{
 .bname {
 	text-align: center;
 	font-weight: 1000;
+	font-family: 'KimjungchulMyungjo-Bold';
 }
 
 .baby1 {
@@ -224,6 +242,7 @@ th#insert_f_n {
 #veiwlistcolor {
     background-color: #FFB291;
     color: black;
+    font-size: 20px;
 }
 
 td#baby_bno {
@@ -233,6 +252,8 @@ td#baby_bno {
 
 table.insert_baby_console {
     margin-top: 15px;
+    font-family: 'KimjungchulMyungjo-Bold';
+    font-size: 20px;
 }
 
 th#insert_f_n {
