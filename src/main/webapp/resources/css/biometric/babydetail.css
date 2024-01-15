@@ -1,54 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
 
-html body {
-	height: 100%;
+@font-face {
+    font-family: 'KimjungchulMyungjo-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
 }
 
-#dcap {
-	text-align: right;
-	padding-bottom: 10px;
-    padding-right: 10px;
-}
-
-body {
-	display: flex;
-	flex-direction: column;
-}
-
-.detail_main {
-	position: relative;
-	margin-top: 100px;
-	padding-left: 17%;
-	flex: 1;
-}
-
-#detail_img {
-	width: 400px;
-	height: 400px;
-	border-radius: 200px;
-	margin-top: 70px;
-}
-
-.detail_table {
-    font-family: 'Gothic A1', sans-serif;
+.titel_text {
+    padding-top: 10px;
+    text-align: center;
+    font-family: 'KimjungchulMyungjo-Bold';
 }
 
 .img_table {
-	display: inline-block;
-	float: left;
+    float: left;
+    position: relative;
+    left: 500px;
+    top: 40px;
 }
 
-table#detail_table {
-	margin-left: 550px
+img#detail_img {
+    border-radius: 100%;
+    border: 1px solid;
+    height: 300px;
+    width: 400px;
+    border-radius: 30px;
 }
 
+.detail_table {
+    float: left;
+    left: 630px;
+    top: 90px;
+    position: relative;
+}
+
+.canvas_box {
+    clear: left;
+    padding-top: 30px;
+}
+
+/* 그래프 */
 canvas#mycanvas {
-	margin-left: 500px;
+	margin-left: 420px;
 	margin-top: 60px;
+	
 }
 
 /* 푸터 고정 */
 .detail_main {
+	margin-top: 50px;
 	min-height: calc(100vh - 142px);
 }
 
@@ -59,7 +60,8 @@ table#detail_table {
  	box-shadow: 0 0 10px rgba(0,0,0,.2);
     border-collapse: collapse;
     border-radius: 5px;
-    overflow: hidden;
+    overflow: hidden; 
+    font-family: 'KimjungchulMyungjo-Bold';  
 }
 
 th {
@@ -77,4 +79,10 @@ th, td {
 td {
     border-bottom: 1px solid rgba(0,0,0,.1);
     background: #fff;
+    width: 130px;
+}
+
+caption#dcap {
+    margin-left: 220px;
+    margin-bottom: 10px;
 }
