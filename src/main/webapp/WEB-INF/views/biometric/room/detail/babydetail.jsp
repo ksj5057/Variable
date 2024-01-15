@@ -27,6 +27,10 @@
 	<!-- 이미지 넣기 -->
 	<div class="detail_main">
 	
+	<div class="titel_text">
+	<h1>애기 상세정보</h1>
+	</div>	
+	
 	<div class="img_table">
 			<img src="../../resources/image/
 			biobaby/${babydetail.bimage}" id="detail_img" />
@@ -67,8 +71,8 @@
 
 
 		<!-- 실시간 온도 그래프 -->
-		<div>
-			<canvas id="mycanvas" width="800" height="300"></canvas>
+		<div class="canvas_box">
+			<canvas id="mycanvas" width="1000" height="300"></canvas>
 		</div>
 
 
