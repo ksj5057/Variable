@@ -83,9 +83,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	select count(*) from bt302 where bname= #{bname} and bno= #{bno} 
 	</select>
 	
-	<select id="renewal" resultType="String">
+	<select id="renewal" resultType="com.vr.Model.TempleDTO">
 	select temp,today from bb_test order by today desc limit 1;
 	</select>
+	
+	<insert id="renewal_insert">
+		insert into ti_301(bno, today, temp) value(#{bno},#{today},#{temp});
+	</insert>
 	
 	
 	

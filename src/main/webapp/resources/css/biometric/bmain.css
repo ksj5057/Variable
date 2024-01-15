@@ -1,23 +1,64 @@
 @charset "UTF-8";
 
+#h_f1 {
+	left: 29%;
+	display: none;
+}
+
+#h_f2 {
+	left: 47%;
+	display: none;
+}
+
+#h_f3 {
+	left: 65%;
+	display: none;
+}
+
+#l_f1 {
+	left: 31%;
+	display: none;
+}
+
+#l_f2 {
+	left: 49%;
+	display: none;
+}
+
+#l_f3 {
+	left: 67%;
+	display: none;
+}
+
+.h_f {
+	position: absolute;
+	top: 65%;
+}
+
+.l_f {
+	position: absolute;
+	top: 65%;
+}
+
 .val {
 	position: relative;
 	top: 6px;
 }
-#woring_text1{
-    position: absolute;
-    width: 185px;
-    left: 0px;
-    top: 74px;
-    }
+
+#woring_text1 {
+	position: absolute;
+	width: 185px;
+	left: 0px;
+	top: 74px;
+}
 
 #woring_text2 {
-    position: absolute;
-    width: 185px;
-    left: -35px;
-    top: 95px;
-    }    
-    
+	position: absolute;
+	width: 185px;
+	left: -35px;
+	top: 95px;
+}
+
 .imageup, .imagedown {
 	height: 20px;
 	cursor: pointer

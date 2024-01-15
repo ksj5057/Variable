@@ -2,9 +2,8 @@ package com.vr.Mapper;
 
 import java.util.ArrayList;
 
-import org.springframework.http.ResponseEntity;
-
 import com.vr.Model.BiometricDTO;
+import com.vr.Model.TempleDTO;
 
 public interface BiometricMapper {
 	//아이 등록
@@ -45,5 +44,8 @@ public interface BiometricMapper {
 	public int baby_room_Overlapping(BiometricDTO bd);
 	
 	//각 호실 갱신
-	public String renewal();
+	public TempleDTO renewal();
+	
+	//갱신 값을 백업
+	public void renewal_insert(TempleDTO td);
 }

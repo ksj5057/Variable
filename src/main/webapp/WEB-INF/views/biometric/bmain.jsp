@@ -71,7 +71,7 @@
 				<a href="r302" class="room_text">302호</a>
 				</div>
 				<c:choose>
-				<c:when test="${indoor.now_bt302 lt 21}">
+				<c:when test="${indoor.now_bt302 lt 21}"> <!-- 저열< -->
 					<!-- 경고 이미지 -->
 					<img src="../../resources/image/biometric/경고.png" id="woring_image" />
 				<label id="woring_text1" style="color: blue;">실내온도가 낮아지고 있습니다.</label>
@@ -107,6 +107,7 @@
 				</div>
 				<c:choose>
 				<c:when test="${indoor.now_bt303 lt 21}">
+				
 					<!-- 경고 이미지 -->
 					<img src="../../resources/image/biometric/경고.png" id="woring_image" />
 				<label id="woring_text1" style="color: blue;">실내온도가 낮아지고 있습니다.</label>
@@ -170,6 +171,62 @@
 		</div>
 	</div>
 
+	<div>
+		<img src="../../resources/image/biometric/hf_woring1.png" class="h_f" id="h_f1"/> 
+		<img src="../../resources/image/biometric/hf_woring2.png"  class="h_f" id="h_f1"/> 
+		<img src="../../resources/image/biometric/hf_woring3.png"  class="h_f" id="h_f1"/>
+	</div>
+	<div>
+		<img src="../../resources/image/biometric/lf_woring1.png" class="l_f" id="l_f1"/> 
+		<img src="../../resources/image/biometric/lf_woring2.png"  class="l_f" id="l_f1"/>
+		 <img src="../../resources/image/biometric/lf_woring3.png"  class="l_f" id="l_f1"/>
+	</div>
+
+	<div>
+		<img src="../../resources/image/biometric/hf_woring1.png"  class="h_f" id="h_f2"/> 
+		<img src="../../resources/image/biometric/hf_woring2.png"  class="h_f" id="h_f2"/> 
+		<img src="../../resources/image/biometric/hf_woring3.png"  class="h_f" id="h_f2"/>
+	</div>
+	<div>
+		<img src="../../resources/image/biometric/lf_woring1.png"  class="l_f" id="l_f2"/>
+		<img src="../../resources/image/biometric/lf_woring2.png"  class="l_f " id="l_f2"/>
+		 <img src="../../resources/image/biometric/lf_woring3.png"  class="l_f" id="l_f2"/>
+	</div>
+
+	<div>
+		<img src="../../resources/image/biometric/hf_woring1.png"  class="h_f" id="h_f3"/> 
+		<img src="../../resources/image/biometric/hf_woring2.png"  class="h_f" id="h_f3"/> 
+		<img src="../../resources/image/biometric/hf_woring3.png"  class="h_f" id="h_f3"/>
+	</div>
+	<div>
+		<img src="../../resources/image/biometric/lf_woring1.png"  class="l_f" id="l_f3"/>
+		<img src="../../resources/image/biometric/lf_woring2.png"  class="l_f" id="l_f3"/>
+		 <img src="../../resources/image/biometric/lf_woring3.png"  class="l_f" id="l_f3"/>
+	</div>
+	<c:choose>
+		<c:when test="${bt301_b1 lt '35' }">
+		<script>
+			//저열
+			let url = "lf"
+			let option = 'width=300, height=20, top=20, left=200, scrollbars=no, resizeable=no';
+			letname = 'myPopup';
+
+			window.open(url, name, option);
+		</script>
+		</c:when>
+		
+		
+		<c:when test="${bt301_b1 gt '37'}">
+		<script>
+		//고열
+		     let url = "lf"
+			 let option = 'width=300, height=20, top=20, left=750, scrollbars=no, resizeable=no,'; 
+			 letname = 'myPopup'; 
+		window.open(url, name, option);
+		</script>
+		</c:when>
+		</c:choose>
+		
 
 
 	<!-- 푸터 -->

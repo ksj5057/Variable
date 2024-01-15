@@ -21,4 +21,9 @@ public class TempleServiceImp implements TempleService {
 	public String bt301() {
 		return tm.bt301();
 	}
+	
+	public String bt301_1(TempleDTO td) {
+		return tm.bt301_1(td);
+	}
+	
 }

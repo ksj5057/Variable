@@ -9,5 +9,7 @@ public interface TempleMapper {
 	public ArrayList<TempleDTO> temp_s(TempleDTO td);
 	
 	public String bt301();
+	
+	public String bt301_1(TempleDTO td);
 
 }
