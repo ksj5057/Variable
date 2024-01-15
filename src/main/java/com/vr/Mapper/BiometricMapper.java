@@ -44,8 +44,12 @@ public interface BiometricMapper {
 	public int baby_room_Overlapping(BiometricDTO bd);
 	
 	//각 호실 갱신
-	public TempleDTO renewal();
+	public ArrayList<TempleDTO> renewal(int count);
 	
 	//갱신 값을 백업
 	public void renewal_insert(TempleDTO td);
+	
+	public String renewal_name(BiometricDTO bd);
+	
+	public int renewal_count();
 }

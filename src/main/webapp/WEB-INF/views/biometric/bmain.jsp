@@ -170,18 +170,34 @@
 
 		</div>
 	</div>
-
-	<div>
+<div>
+	<c:choose>
+	<c:when test="${Warningh == 1}"> 
 		<img src="../../resources/image/biometric/hf_woring1.png" class="h_f" id="h_f1"/> 
+	</c:when>
+	<c:when test=" ${Warningh == 2}"> 
 		<img src="../../resources/image/biometric/hf_woring2.png"  class="h_f" id="h_f1"/> 
+		</c:when>
+	<c:when test="${Warningh == 3}"> 
 		<img src="../../resources/image/biometric/hf_woring3.png"  class="h_f" id="h_f1"/>
-	</div>
-	<div>
+	</c:when>
+	</c:choose>
+		</div>
+		<div id="301_room_lf_woring">
+		<c:choose>
+	<c:when test="${Warningl == 1}"> 
 		<img src="../../resources/image/biometric/lf_woring1.png" class="l_f" id="l_f1"/> 
+		</c:when>
+		
+	<c:when test="${Warningl == 2}"> 
 		<img src="../../resources/image/biometric/lf_woring2.png"  class="l_f" id="l_f1"/>
+		
+		</c:when>
+	<c:when test="${Warningl == 3}"> 
 		 <img src="../../resources/image/biometric/lf_woring3.png"  class="l_f" id="l_f1"/>
+		 </c:when>
+	</c:choose>
 	</div>
-
 	<div>
 		<img src="../../resources/image/biometric/hf_woring1.png"  class="h_f" id="h_f2"/> 
 		<img src="../../resources/image/biometric/hf_woring2.png"  class="h_f" id="h_f2"/> 
@@ -203,26 +219,16 @@
 		<img src="../../resources/image/biometric/lf_woring2.png"  class="l_f" id="l_f3"/>
 		 <img src="../../resources/image/biometric/lf_woring3.png"  class="l_f" id="l_f3"/>
 	</div>
+				<!--  38도 보다 크거나 36도 보다 작거나 -->
 	<c:choose>
-		<c:when test="${bt301_b1 lt '35' }">
+		<c:when test="${bt1 == bt1 or bt2 == bt2 or bt3 == bt3}">
 		<script>
 			//저열
-			let url = "lf"
-			let option = 'width=300, height=20, top=20, left=200, scrollbars=no, resizeable=no';
+			let url = "Warning"
+			let option = 'width=600, height=20, top=20, left=200, scrollbars=no, resizeable=no';
 			letname = 'myPopup';
 
 			window.open(url, name, option);
-		</script>
-		</c:when>
-		
-		
-		<c:when test="${bt301_b1 gt '37'}">
-		<script>
-		//고열
-		     let url = "lf"
-			 let option = 'width=300, height=20, top=20, left=750, scrollbars=no, resizeable=no,'; 
-			 letname = 'myPopup'; 
-		window.open(url, name, option);
 		</script>
 		</c:when>
 		</c:choose>
