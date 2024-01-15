@@ -172,28 +172,28 @@
 	</div>
 <div>
 	<c:choose>
-	<c:when test="${woringh == 1}"> 
+	<c:when test="${Warningh == 1}"> 
 		<img src="../../resources/image/biometric/hf_woring1.png" class="h_f" id="h_f1"/> 
 	</c:when>
-	<c:when test=" ${woringh == 2}"> 
+	<c:when test=" ${Warningh == 2}"> 
 		<img src="../../resources/image/biometric/hf_woring2.png"  class="h_f" id="h_f1"/> 
 		</c:when>
-	<c:when test="${woringh == 3}"> 
+	<c:when test="${Warningh == 3}"> 
 		<img src="../../resources/image/biometric/hf_woring3.png"  class="h_f" id="h_f1"/>
 	</c:when>
 	</c:choose>
 		</div>
 		<div id="301_room_lf_woring">
 		<c:choose>
-	<c:when test="${woringl == 1}"> 
+	<c:when test="${Warningl == 1}"> 
 		<img src="../../resources/image/biometric/lf_woring1.png" class="l_f" id="l_f1"/> 
 		</c:when>
 		
-	<c:when test="${woringl == 2}"> 
+	<c:when test="${Warningl == 2}"> 
 		<img src="../../resources/image/biometric/lf_woring2.png"  class="l_f" id="l_f1"/>
 		
 		</c:when>
-	<c:when test="${woringl == 3}"> 
+	<c:when test="${Warningl == 3}"> 
 		 <img src="../../resources/image/biometric/lf_woring3.png"  class="l_f" id="l_f1"/>
 		 </c:when>
 	</c:choose>
@@ -224,7 +224,7 @@
 		<c:when test="${bt1 == bt1 or bt2 == bt2 or bt3 == bt3}">
 		<script>
 			//저열
-			let url = "Woring"
+			let url = "Warning"
 			let option = 'width=600, height=20, top=20, left=200, scrollbars=no, resizeable=no';
 			letname = 'myPopup';
 

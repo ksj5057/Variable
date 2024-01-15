@@ -39,8 +39,8 @@ public class BiometricController {
 	//소아과병동 홈페이로 접속.
 	@GetMapping("bmain")
 	public String biometricMain(TempleDTO td, Model model,BiometricDTO bd, HttpSession session) {
-		int woringh = 0;
-		int woringl = 0;
+		int Warningh = 0;
+		int Warningl = 0;
 		
 		// 각 호실 실내온도 값 갱신.
 		bs.renewal_insert(td);
@@ -95,9 +95,9 @@ public class BiometricController {
 			session.setAttribute("name1", bs.renewal_name(bd1));
 			model.addAttribute("bt1", bs.renewal_name(bd1));
 			if(bt1_tem > 38) {
-				woringh++;
+				Warningh++;
 			}else if(bt1_tem < 36) {
-				woringl++;
+				Warningl++;
 			}
 		}//입원 아기가 2명이면
 		}else if(count == 2) {
@@ -120,13 +120,13 @@ public class BiometricController {
 			model.addAttribute("bt2", bs.renewal_name(bd2));
 		}
 		if(bt1_tem > 38) {
-			woringh ++;
+			Warningh ++;
 		}else if(bt1_tem < 36) {
-			woringl ++;
+			Warningl ++;
 		}if(bt2_tem > 38) {
-			woringh++;
+			Warningh++;
 		}else if(bt2_tem < 36) {
-			woringl++;
+			Warningl++;
 		}
 		//입원 아기가 3명이면
 	}else if(count == 3 ) {
@@ -160,28 +160,24 @@ public class BiometricController {
 		}
 		
 		if(bt1_tem > 38) {
-			woringh++; //1상승
+			Warningh++; //1상승
 			System.out.println("a");
 		}else if(bt1_tem < 36) {
-			woringl++; // 1상승
-			System.out.println(woringl);
+			Warningl++; // 1상승
 		}if(bt2_tem > 38) {
-			woringh++;
+			Warningh++;
 		}else if(bt2_tem < 36) {
-			
-			woringl++;
-			System.out.println(woringl);
+			Warningl++;
 		}if(bt3_tem > 38) {
-			woringh++;
+			Warningh++;
 		}else if(bt3_tem < 36) {
-			woringl++;
-			System.out.println(woringl);
+			Warningl++;
 		}
 		
 	}
 		
-		model.addAttribute("woringl", woringl);
-		model.addAttribute("woringh", woringh);
+		model.addAttribute("woringl", Warningl);
+		model.addAttribute("woringh", Warningh);
 		//값을 ti_301 db에 저장 및 갱신
 		bs.renewal_insert(bt1);
 		bs.renewal_insert(bt2);
@@ -322,12 +318,12 @@ public class BiometricController {
 		}
 	
 		//경고창
-		@GetMapping("Woring")
+		@GetMapping("Warning")
 		public String Woring(Model model, HttpSession session) {
 			model.addAttribute("bt301_1", session.getAttribute("name1"));
 			model.addAttribute("bt301_2", session.getAttribute("name2"));
 			model.addAttribute("bt301_3", session.getAttribute("name3"));
-			return "biometric/Woring";
+			return "biometric/Warning";
 		}
 
 }
