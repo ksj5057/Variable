@@ -28,13 +28,11 @@ public class TempleDTO {
 	public void setTemp(String temp) {
 		this.temp = temp;
 	}
-	
 	@Override
 	public String toString() {
-		return "TempleDTO [today=" + today + ", temp=" + temp + ", getToday()=" + getToday() + ", getTemp()="
-				+ getTemp() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
-				+ super.toString() + "]";
+		return "TempleDTO [today=" + today + ", temp=" + temp + ", bno=" + bno + "]";
 	}
+	
 	
 	
 }

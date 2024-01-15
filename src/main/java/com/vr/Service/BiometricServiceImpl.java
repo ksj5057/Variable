@@ -84,11 +84,18 @@ public class BiometricServiceImpl implements BiometricService {
 		return bm.baby_room_Overlapping(bd);
 	}
 	
-	public TempleDTO renewal() {
-			return bm.renewal();
+	public ArrayList<TempleDTO> renewal(int count) {
+			return bm.renewal(count);
 	}
 	public void renewal_insert(TempleDTO td) {
 		  bm.renewal_insert(td);
 	}
 	
+	public String renewal_name(BiometricDTO bd) {
+		return bm.renewal_name(bd);
+	}
+	
+	public int renewal_count() {
+		return bm.renewal_count();
+	}
 }

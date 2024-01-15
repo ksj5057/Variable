@@ -46,11 +46,17 @@ public interface BiometricService {
 	//중복 검사
 	public int baby_room_Overlapping(BiometricDTO bd);
 
+	//호실에 몇 명인지 체크
+	public int renewal_count();
+	
 	//호실 갱신
-	public TempleDTO renewal();
+	public ArrayList<TempleDTO> renewal(int count);
 	
 	//호실 갱신 후 아기 개인 백업
 	public void renewal_insert(TempleDTO td);
+	
+	//갱신 후 이름 값 가져오기
+	public String renewal_name(BiometricDTO bd);
 	
 
 }

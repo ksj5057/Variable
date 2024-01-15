@@ -83,15 +83,23 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	select count(*) from bt302 where bname= #{bname} and bno= #{bno} 
 	</select>
 	
-	<select id="renewal" resultType="com.vr.Model.TempleDTO">
-	select temp,today from bb_test order by today desc limit 1;
+	<!-- 301호 실 입원 아이 갯수 체크 -->
+	<select id="renewal_count" resultType="int">
+	SELECT count(DISTINCT bno) count FROM bt301 WHERE bno;
 	</select>
+	
+	<!-- 갯수 체크 한 이후 그값을 이용하여 온도값과 합쳐서 최신정보 3개를 가지고옴 -->
+	<select id="renewal" resultType="com.vr.Model.TempleDTO">
+	select distinct bno, temp, today from bb_test join bt301 order by today desc limit #{count};
+	</select>
+	
 	
 	<insert id="renewal_insert">
 		insert into ti_301(bno, today, temp) value(#{bno},#{today},#{temp});
 	</insert>
 	
-	
-	
+	<select id="renewal_name" resultType="String">
+	select bname from bt301 where bno = #{bno};
+	</select>
 	
 </mapper>
