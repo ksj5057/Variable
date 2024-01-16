@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 #h_f1 {
-	left: 29%;
+	left: 32%;
 }
 
 #h_f2 {
@@ -15,7 +15,7 @@
 }
 
 #l_f1 {
-	left: 31%;
+	left: 34%;
 }
 
 #l_f2 {
@@ -30,12 +30,12 @@
 
 .h_f {
 	position: absolute;
-	top: 75%;
+top: 35%;
 }
 
 .l_f {
 	position: absolute;
-	top: 75%;
+	top: 35%;
 }
 
 .val {
