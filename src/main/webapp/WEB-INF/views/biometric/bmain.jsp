@@ -220,10 +220,10 @@
 		 <img src="../../resources/image/biometric/lf_woring3.png"  class="l_f" id="l_f3"/>
 	</div>
 				<!--  38도 보다 크거나 36도 보다 작거나 -->
-	<c:choose>
-		<c:when test="${bt1 == bt1 or bt2 == bt2 or bt3 == bt3}">
+				<c:choose>		
+	<c:when test="${wif[0].temp gt '38' or wif[1].temp gt '38' or wif[2].temp gt '38'}">
 		<script>
-			//저열
+		//고열
 			let url = "Warning"
 			let option = 'width=600, height=20, top=20, left=200, scrollbars=no, resizeable=no';
 			letname = 'myPopup';
@@ -231,9 +231,19 @@
 			window.open(url, name, option);
 		</script>
 		</c:when>
+		
+		<c:when test="${wif[0].temp lt '36' or wif[1].temp lt '36' or wif[2].temp lt '36'}">
+		<Script>
+		//저열
+			let url = "Warning"
+			let option = 'width=600, height=20, top=20, left=200, scrollbars=no, resizeable=no';
+			letname = 'myPopup';
+
+			window.open(url, name, option);
+			</Script>
+		</c:when>
 		</c:choose>
 		
-
 
 	<!-- 푸터 -->
 	<jsp:include page="../include/footer.jsp"></jsp:include>

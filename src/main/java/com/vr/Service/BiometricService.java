@@ -57,6 +57,8 @@ public interface BiometricService {
 	
 	//갱신 후 이름 값 가져오기
 	public String renewal_name(BiometricDTO bd);
+	//갱신 후 온도 값 가져오기
+	public ArrayList<TempleDTO> renewal_tems(int count);
 	
 
 }

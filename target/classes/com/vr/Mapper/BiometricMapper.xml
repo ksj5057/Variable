@@ -102,4 +102,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	select bname from bt301 where bno = #{bno};
 	</select>
 	
+	<select id="renewal_tems" resultType="com.vr.Model.TempleDTO">
+	select distinct temp from ti_301 order by today desc limit #{count};
+	</select>
+	
 </mapper>

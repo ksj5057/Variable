@@ -52,4 +52,6 @@ public interface BiometricMapper {
 	public String renewal_name(BiometricDTO bd);
 	
 	public int renewal_count();
+	
+	public ArrayList<TempleDTO> renewal_tems(int count);
 }
