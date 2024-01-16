@@ -98,4 +98,8 @@ public class BiometricServiceImpl implements BiometricService {
 	public int renewal_count() {
 		return bm.renewal_count();
 	}
+	
+	public ArrayList<TempleDTO> renewal_tems(int count) {
+		return bm.renewal_tems(count);
+	}
 }
