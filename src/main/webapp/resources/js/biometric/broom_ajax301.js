@@ -159,13 +159,13 @@ $(document).ready(function() {
 		    		$("#bt2").html(data);
 		    	}
 		    	
-		    	//미열
-		    	if(data  > 37.5){
-		    		$("#bh0").html("미열");
+		    	//고열
+		    	if(data  > 39){
+		    		$("#bh0").html("고열");
 		    		$("#bh0").css("color", "red");
-		    		$("#bh1").html("미열");
+		    		$("#bh1").html("고열");
 		    		$("#bh1").css("color", "red");
-		    		$("#bh2").html("미열");
+		    		$("#bh2").html("고열");
 		    		$("#bh2").css("color", "red");
 		    	}
 		    	//발열
@@ -177,15 +177,15 @@ $(document).ready(function() {
 		    		$("#bh2").html("발열");
 		    		$("#bh2").css("color", "red");
 		    	}
-		    	//고열
-		    	else if(data > 39 ){
-		    		$("#bh0").html("고열");
+		    	//미열
+		    	else if(data > 37.5 ){
+		    		$("#bh0").html("미열");
 		    		$("#bh0").css("color", "red");
 		    		
-		    		$("#bh1").html("고열");
+		    		$("#bh1").html("미열");
 		    		$("#bh1").css("color", "red");
 		    		
-		    		$("#bh2").html("고열");
+		    		$("#bh2").html("미열");
 		    		$("#bh2").css("color", "red");
 		    		
 		    	}
